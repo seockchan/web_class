@@ -278,3 +278,13 @@ a {
         padding: 15px;
     }
 }
+.table {
+    border: 1px solid #000;   
+}
+.table thead {
+    background-color: aqua;   
+    
+}
+.table tbody {
+    background-color: aquamarine;   
+}
