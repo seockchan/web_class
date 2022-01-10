@@ -1,9 +1,9 @@
 # webs-class
 ## 메인 페이지
-https://seockchan.github.io/webs-class/
+https://seockchan.github.io/web_class/
 ## 자바스크립트
-https://seockchan.github.io/webs-class/script/index.html
+https://seockchan.github.io/web_class/javascript/index.html
 ## HTML 레퍼런스
-https://seockchan.github.io/webs-class/html/index.html
+https://seockchan.github.io/web_class/html/index.html
 ## CSS 레퍼런스
-https://seockchan.github.io/webs-class/css/index.html
+https://seockchan.github.io/web_class/css/index.html
