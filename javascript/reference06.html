@@ -51,6 +51,14 @@
     }                           //hello 출력
 </code></pre>
             </div>
+            <h4>예제</h4>
+            <p>조건식에 있는 0은 Boolean메서드에 0을 입력했을 때와 결과가 같습니다. 그 결과 flase를 반환하여 조건문의 코드를 실행하지 않습니다.</p>
+            <div class="code">
+<pre><code>   if(0){    //false를 반환합니다.
+    document.write("hello")
+    }
+</code></pre>
+            </div>
             <h4>조건식에 논리형 데이터가 아닌 다른 형이 오는 경우</h4>
             <p>조건식에 논리형 데이터(true, false)가 아닌 다른 형의 데이터가 입력되어도 true 또는 false로 인십됩니다.</p>
             <br>
@@ -58,6 +66,7 @@
             <div class="line">
                 0, null, ""(빈 문자), undefined
             </div>
+            <h4>예제</h4>
             <div class="code">
 <pre><code>   var userName = prompt("방문자의 이름은?","");
     if(userName){       //값을 입력하면 출력 
@@ -75,14 +84,14 @@
     }
 </code></pre>
             </div>
+            <h4>예제</h4>
             <div class="code">
 <pre><code> var num = prompt("당신이 좋아하는 숫자는?"."");
     if(num%2==0){       //짝수일 경우 실행
         document.write("당신이 좋아하는 숫자는 짝수입니다.");
     }   else {          //홀수일 경우 실행
         document.write("당신이 좋아하는 숫자는 홀수입니다.")
-    }       1입력시 else로 "당신이 좋아하는 숫자는 홀수입니다"출력
-    
+    }       1입력시 else로 "당신이 좋아하는 숫자는 홀수입니다"출력  
 </code></pre>                
             </div>
             <h3>else if문</h3>
@@ -104,6 +113,21 @@
         코드6;
     }
 </code></pre>
+            </div>
+            <h4>예제</h4>
+            <div class="code">
+ <pre><code>    var mon = prompt("현재는 몇 월입니까?","0");
+        
+    if(mon >=9 && mon&lt;=11){              //9~11
+        document.write("독서의 계절 가을이네요!!");
+    }else if(mon >=6 && mon &lt;=8){       //6~8
+        document.write("여행가기 좋은 여름이네요!!");
+    }else if(mon >=3 && mon &lt;=5){       //3~5
+        document.write("햇살 가득한 봄이네요!!");
+    }else {                                 //나머지 입력
+        document.write("스키의 계절 겨울이네요!!11")
+    }               //7입력시 6~8안에 있기 때문에 "여행하기 좋은 여름이네요!!"출력
+ </code></pre>
             </div>          
             <h3>중첩 if문</h3>
             <p>조건문 안에 조건문이 있으면 중첩 if문이라고 합니다. 중첩 if문의 기본형은 다음과 같습니다.</p>
@@ -115,9 +139,48 @@
     }
 </code></pre>               
             </div>
-            <p>중첩 if문은 바깥쪽에 있는 조건문인 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사합니다. 만일 안쪽 if문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건식1의 중괄호 안에 있는 코드만 실행하고 종료됩니다.</p>           
+            <p>중첩 if문은 바깥쪽에 있는 조건문인 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사합니다. 만일 안쪽 if문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건식1의 중괄호 안에 있는 코드만 실행하고 종료됩니다.</p> 
+            <div class="code">
+<pre><code>   var id = "haha";      //아이디
+    var pw = "hoho";                //비밀번호
+
+    var user_id = prompt("아이디는?","");  //아이디 입력
+    var user_pw = prompt("비번은?","");    //비밀번호 입력
+
+    if(id == user_id){      
+        if(pw == user_pw){                             //아이디가 일치하면 실행
+            document.write(user_id+"님 반갑습니다!"); //비밀번호가 일치하면 실행
+        }else {
+            alert("비밀번호가 일치하지 않습니다."); //비밀번호가 일치하지 않으면 실행
+            location.reload();//브라우저 새로고침
+        }else{
+            alert("아이디가 일치하지 않습니다.");  //아이디가 일치하지 않으면 실행
+            location.reload();
+        } 
+    }
+</code></pre>
+            </div>          
         </div>       
     </main>
+    <script>
+        var id = "haha";
+        var pw = "hoho";
+
+        var user_id = prompt("아이디는?","");
+        var user_pw = prompt("비번은?","");
+
+        if(id == user_id){
+            if(pw == user_pw){
+                document.write(user_id+"님 반갑습니다!");
+            }else {
+                alert("비밀번호가 일치하지 않습니다.");
+                location.reload();
+            }else{
+                alert("아이디가 일치하지 않습니다.");
+                location.reload();
+            } 
+        }
+    </script>
 </body>
 
 </html>
