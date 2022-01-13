@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <!--style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+    <!--script-->
+    <script src="assets/js/prism.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a hef="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+                <li><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
+                <li><a href="reference06.html">조건문</a></li>
+                <li class="active"><a href="reference07.html">반복문</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="doc">
+            <h2>반복문</h2>
+            <p>반복문을 이용하면 코드를 원하는 횟수만큼 반복하여 실행할 수 있습니다.반복문에는 while문과 do while문, for문이 있습니다.</p>               
+            <h3>while문</h3>
+            <p>while문은 조건식을 만족할 때까지 코드를 여러 회 반복하여 실행할 수 있습니다.</p>
+            <br>
+            <p>다음은 while 문의 기본형입니다. while 문은 조건식을 만족할 때까지 중괄호 안에 있는 코드를 반복하여 실행합니다. while 문의 실행 순서는 조건식을 검사하고, 만족하면 중괄호 안에 있는 코드와 증감식을 실행합니다. 그리고 다시 조건식을 검사합니다.</p>
+            <div class="code">
+<pre><code>    let 변수 = 초깃값;
+    while(조건식){
+        자바스크립트 코드;
+        증감식;
+    }
+</code></pre>
+            </div>
+            <h3>for문</h3>
+            <p>for문은 조건식을 만족할 때까지 특정 코드를 반복하여 실행합니다. 사용 방법은 while문과 같지만 while문보다 사용하기 편해 사용 빈도가 높은 편입니다.</p>
+            <div class="code">
+<pre><code>   for(초깃값; 조건식; 증감식){
+    자바스크립트 코드;
+    }
+
+</code></pre>               
+            </div>
+            <h3>break문</h3>
+            <p>반복문인 while문과 for문에서 break문을 실행하면 조건식과 상관없이 강제로 반복문을 종료합니다. 즉, break문은 반복문을 강제로 종료할 때 사용합니다.</p>
+            <br>
+            <p>다음은 for문과 while문에서 break문이 사용된 기본형입니다. break문이 코드보다 앞에 있으므로 코드는 실행되지 않고 for문과 while문이 바로 종료됩니다.</p>
+            <div class="code">
+<pre><code>   for(초깃값; 조건식; 증감식){
+    break; //   반복문을 강제로 종료합니다.
+    자바스크립트 코드;
+    }
+</code></pre>
+            </div>
+            <h3>continue문</h3>
+            <table>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+            
+
+        
+    </main>
+    <script>
+       
+    </script>
+</body>
+
+</html>
