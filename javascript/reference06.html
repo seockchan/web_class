@@ -86,7 +86,7 @@
             </div>
             <h4>예제</h4>
             <div class="code">
-<pre><code> var num = prompt("당신이 좋아하는 숫자는?"."");
+<pre><code>   var num = prompt("당신이 좋아하는 숫자는?"."");
     if(num%2==0){       //짝수일 경우 실행
         document.write("당신이 좋아하는 숫자는 짝수입니다.");
     }   else {          //홀수일 경우 실행
@@ -116,7 +116,7 @@
             </div>
             <h4>예제</h4>
             <div class="code">
- <pre><code>    var mon = prompt("현재는 몇 월입니까?","0");
+<pre><code>    var mon = prompt("현재는 몇 월입니까?","0");
         
     if(mon >=9 && mon&lt;=11){              //9~11
         document.write("독서의 계절 가을이네요!!");
@@ -127,7 +127,7 @@
     }else {                                 //나머지 입력
         document.write("스키의 계절 겨울이네요!!11")
     }               //7입력시 6~8안에 있기 때문에 "여행하기 좋은 여름이네요!!"출력
- </code></pre>
+</code></pre>
             </div>          
             <h3>중첩 if문</h3>
             <p>조건문 안에 조건문이 있으면 중첩 if문이라고 합니다. 중첩 if문의 기본형은 다음과 같습니다.</p>
@@ -141,7 +141,7 @@
             </div>
             <p>중첩 if문은 바깥쪽에 있는 조건문인 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사합니다. 만일 안쪽 if문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건식1의 중괄호 안에 있는 코드만 실행하고 종료됩니다.</p> 
             <div class="code">
-<pre><code>   var id = "haha";      //아이디
+<pre><code>    var id = "haha";      //아이디
     var pw = "hoho";                //비밀번호
 
     var user_id = prompt("아이디는?","");  //아이디 입력
@@ -152,12 +152,12 @@
             document.write(user_id+"님 반갑습니다!"); //비밀번호가 일치하면 실행
         }else {
             alert("비밀번호가 일치하지 않습니다."); //비밀번호가 일치하지 않으면 실행
-            location.reload();//브라우저 새로고침
-        }else{
-            alert("아이디가 일치하지 않습니다.");  //아이디가 일치하지 않으면 실행
-            location.reload();
-        } 
-    }
+            location.reload(); //브라우저 새로고침
+            }
+            }else{
+                alert("아이디가 일치하지 않습니다."); ////아이디가 일치하지 않으면 실행
+                location.reload();
+            } 
 </code></pre>
             </div>          
         </div>       
@@ -179,7 +179,6 @@
                 alert("아이디가 일치하지 않습니다.");
                 location.reload();
             } 
-        }
     </script>
 </body>
 
