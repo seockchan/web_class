@@ -28,6 +28,7 @@
             <li><a href="reference05.html">연산자</a></li>
             <li class="active"><a href="reference06.html">조건문</a></li>
             <li><a href="reference07.html">반복문</a></li>
+            <li><a href="reference08.html">함수</a></li>
             </ul>
         </nav>
     </header>
@@ -155,32 +156,13 @@
             location.reload(); //브라우저 새로고침
             }
             }else{
-                alert("아이디가 일치하지 않습니다."); ////아이디가 일치하지 않으면 실행
+                alert("아이디가 일치하지 않습니다.");   //아이디가 일치하지 않으면 실행
                 location.reload();
             } 
 </code></pre>
             </div>          
         </div>       
-    </main>
-    <script>
-        var id = "haha";
-        var pw = "hoho";
-
-        var user_id = prompt("아이디는?","");
-        var user_pw = prompt("비번은?","");
-
-        if(id == user_id){
-            if(pw == user_pw){
-                document.write(user_id+"님 반갑습니다!");
-            }else {
-                alert("비밀번호가 일치하지 않습니다.");
-                location.reload();
-            }
-            }else{
-                alert("아이디가 일치하지 않습니다.");
-                location.reload();
-            } 
-    </script>
+    </main>    
 </body>
 
 </html>
