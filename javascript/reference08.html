@@ -47,12 +47,32 @@
 </code></pre>
             </div>
             <h3>익명 함수</h3>
-            <p>설명</p>
+            <p>자바스크립트 익명 함수는 함수명 대신 변수명에 함수 코드를 저장하는 구현 방식이다. 익명 함수의 소스 코드는 변수값이므로 끝에 세미콜론;을 대입한다. 익명 함수는 호출 시 변수명을 함수명처럼 사용하면 된다.</p>
             <h4>기본형</h4>
             <div class="code">
-                <pre><code>    참조 변수 = function(){
-    자바스크립트 코드;
+                <pre><code>    var 변수명 = function(매개변수){
+    실행문;
+    };
+</code></pre>
+            </div>
+            <h4>예제</h4>
+            <p>선언적 함수와 익명 함수를 변수에 참조한 예입니다.</p>
+            <div class="code">
+<pre><code>    var count = 0;
+
+    myFnc();
+    
+    function myFnc(){
+        count++;
+        document.write("hello"+count,"&lt;br&gt;");
     }
+    myFnc();
+    
+    var theFnc = function(){
+        count++;
+        document.write("bye"+count,"&lt;br&gt;");
+    }
+    theFnc();
 </code></pre>
             </div>
 
@@ -61,14 +81,24 @@
                 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다. 이렇게 전달된 값은 매개변수가 받아 함수 정의문에서 사용할 수 있게 됩니다.</p>
             <h4>기본형</h4>
             <div class="code">
-                <pre><code>
-    
+<pre><code>    function 함수명(매개변수1, 매개변수2, ...매개변수n){
+    자바스크립트코드;
+    }
+    함수명(데이터1, 데이터2, ...데이터n);    
 </code></pre>
             </div>
             <h4>예제</h4>
             <div class="code">
-                <pre><code>
-                    
+<pre><code>    function myFnc(name, area){
+    document.write("안녕하세요." + name +"입니다.", "&lt;br&gt;"); 
+    document.write("사는곳은" + area + "입니다.", "&lt;br&gt;");
+    }
+
+    myFnc("홍당무","서울");      //안녕하세요.홍당무입니다.
+                                            사는곳은서울입니다.
+
+    myFnc("깍두기","부산");     //안녕하세요.깍두기입니다.
+                                            사는곳은부산입니다.                   
 </code></pre>
             </div>
             <h3>리턴값 함수</h3>
@@ -87,27 +117,27 @@
             </div>
             <h4>예제</h4>
             <div class="code">
-                <pre><code>
+<pre><code>   function testAvg(arrData) {
+    var sum = 0;
+    for (var i = 0; i &lt; arrData.length; i++) {
+        sum += Number(prompt(arrData[i] + "점수는?", "0"));
+    }
+    var avg = sum / arrData.length;
+    return avg;
+    }
+    var arrSubject = ["국어","수학"];         //국어 80
+    var result = testAvg(arrSubject);      //수학 70
 
+    document.write("평균 점수는" + result + "점입니다");
+    //평균 점수는 75점입니다.
 </code></pre>
-            </div>
-            <h4>예제</h4>
-            <div class="code">
-                <pre><code>
-
-</code></pre>
-            </div>
+            </div>            
     </main>
     <script>
-        function testAvg(arrData) {
-            var sum = 0;
-            for (var i = 0; i < arrData.length; i++) {
-                sum + Number(prompt(arrData[i] + "점수는?", "0"));
-            }
-            var avg = sum / arrData.length;
-            return avg;
-        }
+     
     </script>
+    
+    
 </body>
 
 </html>
