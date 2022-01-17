@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout03-1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        body {
+            background-color: #999;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #888;
+        }
+        #nav {
+            display: flex;
+        }
+        #nav .nav1{
+            width: 400px;
+            height: 100px;
+            background-color: #777;
+        }
+        #nav .nav2{
+            width: 400px;
+            height: 100px;
+            background-color: #666;
+        }
+        #nav .nav3{
+            width: 400px;
+            height: 100px;
+            background-color: #777;
+        }
+        #main {
+            display: flex;
+        }
+        #main .main1{
+            width: 300px;
+            height: 780px;
+            background-color: #666;
+        }
+
+      
+        
+        #main .main2 .mainT {
+            width: 600px;
+            height: 390px;
+            background-color: #444;
+        }
+        #main .main2 .mainB {
+            width: 600px;
+            height: 390px;
+            background-color: #555;
+        }
+        
+        #main .main3{
+            width: 300px;
+            height: 780px;
+            background-color: #888;
+        }
+        
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav">
+            <nav class="nav1"></nav>
+            <nav class="nav2"></nav>
+            <nav class="nav3"></nav>
+        </nav>
+        <main id="main">
+            <main class="main1"></main>
+            <main class="main2">
+                <section class="mainT"></section>
+                <section class="mainB"></section>
+            </main>
+            <main class="main3"></main>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

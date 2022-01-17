@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout05</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1920px;
+            margin: 0 auto;
+        }
+        #header {
+            display: flex;
+        }
+        #header .header1 {
+            width: 360px;
+            height: 100px;
+            background-color: #222;
+        }
+        #header .header2 {
+            width: 1200px;
+            height: 100px;
+            background-color: #333;
+        }
+        #header .header3 {
+            width: 360px;
+            height: 100px;
+            background-color: #222;
+        }
+        #nav {
+            display: flex;
+        }
+        #nav .nav1 {
+            width: 360px;
+            height: 100px;
+            background-color: #333;
+        }
+        #nav .nav2 {
+            width: 1200px;
+            height: 100px;
+            background-color: #444;
+        }
+        #nav .nav3 {
+            width: 360px;
+            height: 100px;
+            background-color: #333;
+        }
+        #main {
+           display: flex;
+        }
+        #main .main1 {
+            width: 360px;
+            height: 780px;
+            background-color: #555;
+        }
+        #main .main2 {
+            display: flex;
+
+            
+        }
+        #main .main2 .aside {
+            width: 360px;
+            height: 780px;
+            background-color: #222;
+        }
+        #main .main2 .article .section1{
+            width: 840px;
+            height: 390px;
+            background-color: #333;
+        }
+        #main .main2 .article .section2{
+            width: 840px;
+            height: 390px;
+            background-color: #444;
+        }
+        #main .main3 {
+            width: 360px;
+            height: 780px;
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <header class="header1"></header>
+            <header class="header2"></header>
+            <header class="header3"></header>
+        </header>
+        <nav id="nav">
+            <nav class="nav1"></nav>
+            <nav class="nav2"></nav>
+            <nav class="nav3"></nav>
+        </nav>
+        <main id="main">
+            <main class="main1"></main>
+            <main class="main2">
+                <aside class="aside"></aside>
+                <article class="article">
+                    <section class="section1"></section>
+                    <section class="section2"></section>
+                </article>
+
+            </main>
+            <main class="main3"></main>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Reference</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/html.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/html.png">
+    <link rel="icon" href="../assets/face/html.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+        <strong>배석찬</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="html.html">HTML <em>시맨틱 태그</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="html.html">속성</a></li>
+                <li><a href="htmlRefer01.html">기초 문법</a></li>
+                <li><a href="htmlRefer02.html">웹표준/웹접근성/웹호환성</a></li>
+                <li class="active"><a href="htmlRefer03.html">시맨틱 태그</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3>시맨틱 태그</h3>
+                <p>시맨틱(semantic) 태그란 그 이름 자체만으로 브라우저나 길 잃은 사람들, 지구 상의 원주민, 개발자, 수정자들에게 의미를 전달할 수 있는 태그다.</p>
+                <h3>사용하는 이유</h3>
+                <p>웹 브라우저가 HTML의 소스 코드만 보고도 어느 부분이 제목인지, 어느 부분이 메뉴이고 본문인지를 쉽게 알 수 있다. 그래서 글을 소리로 알려주는 기계를 통해 시각장애인이 사이트의
+                    구조를 소리로 구분할 수 있게 해준다.</p>
+                <br>
+                <p>검색엔진이 검색을 수행할 때에는 HTML 내에 있는 태그를 분석하는데, 태그들의 의미가 분명하다면 검색 엔진 입장에서 구분하기가 쉬워진다.</p>
+                <br>
+                <p>코드 가독성 및 유지보수가 쉬워지기 때문이다.</p>
+                <h3>종류</h3>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <th>요소</th>
+                            <th>설명</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>&lt;header&gt;</th>
+                                <td>사이트의 로고나 이름 등에 사용</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;nav&gt;</th>
+                                <td>웹 페이지의 메뉴를 만들 때 사용</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;main&gt;</th>
+                                <td>메인 콘텐츠를 나타내는데 사용
+                                    <br>
+                                    &lt;nav&gt;,&lt;aside&gt;,&lt;section&gt;,&lt;article&gt;등이 포함되어 있다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;section&gt;</th>
+                                <td>제목별로 나눌 수 있는 문서의 콘텐츠 영역을 구성하는 요소
+                                    <br>
+                                    &lt;article&gt;이 포함되어 있다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;article&gt;</th>
+                                <td>개별 콘텐츠를 나타내는 요소
+                                    <br>
+                                    콘텐츠별로 여러 개의 article을 사용할 수 있다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;aside&gt;</th>
+                                <td>좌우측의 사이드 영역 부분</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;footer&gt;</th>
+                                <td>사이트의 바닥부분. 회사 주소나 연락처 등에 사용</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;hgroup&gt;</th>
+                                <td>제목과 부제목을 묶어서 나타내는 요소</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <h3>HTML5에 없어진 태그</h3>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <th>요소</th>
+                            <th>설명</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>&lt;acronym&gt;</th>
+                                <td>HTML 요소를 통해 작성자 는 단어의 약어 또는 약어를 구성하는 일련의 문자를 명확하게 나타낼 수 있습니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;applet&gt;</th>
+                                <td>더 이상 사용되지 않는 HTML Applet 요소는 Java 애플릿을 문서에 포함합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;basefont&gt;</th>
+                                <td> 부모 요소에서 파생된 다른 요소의 기본 글꼴, 크기 및 색상을 설정합니다. 이 세트를 사용하면 요소 를 사용하여 기본 크기에 따라 글꼴 크기를 변경할
+                                    수 있습니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;bgsound&gt;</th>
+                                <td>페이지가 사용되는 동안 배경에서 재생할 사운드 파일을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;big&gt;</th>
+                                <td>HTML 요소 는 포함된 텍스트를 주변 텍스트보다 한 단계 더 큰 글꼴 크기로 렌더링합니다. 크기는 브라우저의 최대 허용 글꼴 크기로 제한됩니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;blink&gt;</th>
+                                <td>HTML 요소 는 포함된 텍스트가 느리게 깜박이도록 하는 비표준 요소입니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;center&gt;</th>
+                                <td>HTML 요소는 포함 하는 요소 내에서 수평으로 중앙에 배치된 블록 수준 또는 인라인 콘텐츠를 표시하는 블록 수준 요소입니다 . 컨테이너는 일반적으로
+                                    , 이어야 하는 것은 아닙니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;content&gt;</th>
+                                <td>웹 구성 요소 기술 제품군의 구식 부분인 HTML 요소는 Shadow DOM 내부에서 삽입 지점 으로 사용 되었으며 일반 HTML에서는 사용되지
+                                    않았습니다. 이제 요소로 대체되어 DOM에 Shadow DOM을 삽입할 수 있는 지점을 만듭니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;dir&gt;</th>
+                                <td>HTML 요소 는 파일 및/또는 폴더의 디렉토리에 대한 컨테이너로 사용되며, 잠재적으로 사용자 에이전트가 적용한 스타일과 아이콘과 함께 사용됩니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;font&gt;</th>
+                                <td>HTML 요소는 콘텐츠의 글꼴 크기, 색상 및 면을 정의합니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;frame&gt;</th>
+                                <td>HTML 요소 는 다른 HTML 문서가 표시될 수 있는 특정 영역을 정의합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;frameset&gt;</th>
+                                <td>HTML 요소는 요소를 포함하는 데 사용 됩니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;hgroup&gt;</th>
+                                <td>HTML 요소 는 문서 섹션에 대한 다단계 제목을 나타냅니다. 요소 집합을 그룹화합니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;image&gt;</th>
+                                <td>HTML 요소는 오래되고 제대로 지원되지 않는 요소의 전구체 입니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;keygen&gt;</th>
+                                <td>HTML 요소 는 키 자료 생성 및 HTML 양식 의 일부로 공개 키 제출을 용이하게 하기 위해 존재합니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;marquee&gt;</th>
+                                <td>HTML 요소는 텍스트 의 스크롤 영역을 삽입하는 데 사용됩니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;menuitem&gt;</th>
+                                <td>HTML 요소는 사용자가 팝업 메뉴를 통해 호출할 수 있는 명령을 나타냅니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;nobr&gt;</th>
+                                <td>HTML 요소는 포함된 텍스트가 자동으로 여러 줄에 걸쳐 배치되는 것을 방지하여 잠재적으로 사용자가 텍스트의 전체 너비를 보기 위해 수평으로 스크롤해야
+                                    하는 결과를 초래할 수 있습니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;noembed&gt;</th>
+                                <td>HTML 요소는 요소를 지원하지 않거나 작성자가 사용하려는 포함된 콘텐츠 유형을 지원 하지 않는 브라우저에 대체 콘텐츠 또는 "대체" 콘텐츠를 제공하는
+                                    구식 의 비표준 방식 입니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;noframes&gt;</th>
+                                <td>HTML 요소 는 요소를 지원하지 않는(또는 지원을 비활성화한) 브라우저에 표시할 콘텐츠를 제공합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;plaintext&gt;</th>
+                                <td>HTML 요소 는 다음 HTML을 무시하고 시작 태그 뒤에 오는 모든 것을 원시 텍스트로 렌더링합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;rb&gt;</th>
+                                <td>HTML 요소는 주석의 기본 텍스트 구성요소, 즉 주석이 추가되는 텍스트를 구분하는 데 사용 됩니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;shadow&gt;</th>
+                                <td>웹 구성 요소 기술 제품군 의 구식 부분인 HTML 요소 는 그림자 DOM 삽입 지점으로 사용하기 위한 것이었습니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;spacer&gt;</th>
+                                <td>HTML 요소 는 페이지에 빈 공간을 삽입할 수 있는 구식 HTML 요소입니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;strike&gt;</th>
+                                <td>HTML 요소 는 텍스트 위에 취소선(가로선)을 표시합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;tt&gt;</th>
+                                <td>HTML 요소 는 사용자 에이전트 기본 고정 폭 글꼴을 사용하여 표시되는 인라인 텍스트를 만듭니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;xmp&gt;</th>
+                                <td>HTML 요소는 고정 폭 글꼴을 사용하여 시작 태그와 끝 태그 사이에 있는 HTML을 해석하지 않고 텍스트를 렌더링합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>HTML5에 의미가 변경된 태그</h3>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <th>요소</th>
+                            <th>설명</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>&lt;a&gt;</th>
+                                <td>HTML4에서 &lt;a&gt;태그는 href=“#” 또는 href=“javascript:;”로 지정해야 널 링크로 사용할 수 있었지만, HTML5
+                                    에서는 href 속성 없이 사용해도 널 링크로 사용할 수 있게 되었습니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;address&gt;</th>
+                                <td>기존 HTML4에서는 주로 이름이나 이메일 주소, 전화번호 등과 같은 제작자에 대한 정보를 표시하는 역할을 했었지만, HTML5로 업데이트 되면서 실제
+                                    우편물 주소를 표시할 때 사용하는 태그로 변경되었습니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;b&gt;</th>
+                                <td>&lt;b&gt; 태그는 “굵게, 진하게”를 의미하는 Bold의 약어로 HTML4에서는 텍스트르 진하게 표시할 때 사용하였으나, HTML5로 업데이트가
+                                    되고 나서는 기존 텍스트를 진하게 표시할 때 사용할 뿐만 아니라, 제품 소개서 안에 들어가는 제품명이나 요약문서 안의 키워드처럼 특별하게 중요하지는
+                                    않지만 진하게 표시하고 싶을 때 사용됩니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;hr&gt;</th>
+                                <td>&lt;hr&gt; 태그는 HTML4에서는 가로줄을 표시할 때 사용하도록 정의되었습니다. 하지만 HTML5로 업데이트가 되면서 단락 단위로 주제를
+                                    바꾸고자 할 때 사용하도록 정의되었죠.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;i&gt;</th>
+                                <td>&lt;i&gt; 태그는 italic의 약어로 텍스트를 약간 오른쪽으로 기울어진 모양으로 보이도록 하는 태그입니다. 그러나, HTML5로 업데이트
+                                    되면서 기울임체 적용뿐만 아니라 중요한 정보가 들어 있지 않은 주변 콘텐츠로부터 텍스트를 따로 표시할 때 사용하도록 정의되었습니다.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;menu&gt;</th>
+                                <td>&lt;menu&gt; 태그는 HTML4에서 목록과 메뉴를 정의할 때 사용하나 W3C에서는 사용을 하지 않도록 권고되었던 태그였습니다. 하지만
+                                    HTML5로 업데이트 되면서 컨텐츠의 메뉴, 도구 모음 및 양식 컨트롤과 같이 실제 문서 메뉴 정보를 제공하는데 사용되도록 의미가 변경되었습니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&lt;small&gt;</th>
+                                <td>&lt;small&gt; 태그는 HTML4에서 작은 글자로 표시하는 태그에 불과했습니다. 하지만 HTML5로 업데이트 되면서 세부 주석이나, 법적
+                                    인쇄문서의 작은 인쇄 정보를 표시할 때 사용되도록 의미가 변경되었죠.</td>
+                            </tr>
+                            <tr>
+                                <th>&lt;strong&gt;</th>
+                                <td>&lt;strong&gt; 태그는 기존 HTML4에서만 해도 단순 글자를 강조할 때 사용한다라고 정의되어 있었습니다. 하지만 HTML5로 업데이트
+                                    되면서 단순히 진하게 표시하는 것보다 중요한 정보를 표시할 때 사용해야 한다고 정의하였습니다.</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+
+</body>
+
+</html>
