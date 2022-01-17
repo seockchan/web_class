@@ -204,12 +204,11 @@
                     <h3>07. 화살표 함수 : 매개변수 함수</h3>
                     <div class="code">
 <pre class="line-nembers"> <code class="language-js">   {
-    func = () => {
-        const str = "함수가실행되었습니다7";
-        return str;
+    func = (str) => {
+        document.write(str);
     }
-    document.write(func());
-    }  
+    func("함수가 실행되었습니다7");
+    }
 </code></pre>
                     </div>
                     <div class="result">
@@ -226,10 +225,11 @@
                     <h3>08 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
                     <div class="code">
 <pre class="line-nembers"> <code class="language-js">   {
-    const func = (str) => {
+    func = () => {
+        const str = "함수가 실행되었습니다8";
         return str;
     }
-    document.write(func("함수가 실행되었습니다8"));
+    document.write(func());
     }
 </code></pre>
                     </div>
@@ -298,19 +298,18 @@
         //     func();
         // }
         //07. 화살표 함수 : 매개변수 함수
-        // {
+        {
         //     function func(){
         //         const str = "함수가실행되었습니다7";
         //         return str;
         //     }
         //     document.write(func());
 
-        //     func = () => {
-        //         const str = "함수가실행되었습니다7";
-        //         return str;
-        //     }
-        //     document.write(func());
-        // }
+            func = (str) => {
+                document.write(str);
+            }
+            func("함수가 실행되었습니다7");
+        }
         //08 화살표 함수 : 익명함수 + 매개변수 + 리턴값
         // {
         //     const func = (str) => {
@@ -319,6 +318,13 @@
         //     document.write(func("함수가 실행되었습니다8"));
         // }
 
+        {
+            func = () => {
+                const str = "함수가 실행되었습니다8";
+                return str;
+            }
+            document.write(func());
+        }
        
     </script>
 </body>
