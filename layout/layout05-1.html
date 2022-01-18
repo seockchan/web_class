@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lauout05-1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #999;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #888;
+        }
+        #section {
+            width: 100%;
+            height: 780px;
+            background-color: #777;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #666;
+        }
+        .cont {
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+        #section .cont {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #section .cont .article1 {
+            width: 800px;
+            height: 390px;
+            background-color: #555;
+        }
+        #section .cont .article2 {
+            width: 800px;
+            height: 390px;
+            background-color: #444;
+        }
+        #section .cont .aside {
+            width: 400px;
+            height: 780px;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="cont"></div>
+        </header>
+        <nav id="nav">
+            <div class="cont"></div>
+        </nav>
+        <section id="section">
+            <div class="cont">
+                <div class="aside"></div>
+                <div class="article1"></div>
+                <div class="article2"></div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="cont"></div>
+        </footer>
+    </div>
+</body>
+</html>

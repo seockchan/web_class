@@ -51,9 +51,11 @@
                 <li>04. 리턴값 함수</li>                
                 <li>05. 화살표 함수 : 선언적 함수</li>                
                 <li>06. 화살표 함수 : 익명 함수</li>                
-                <li>07. 화살표 함수 : 리턴값 함수</li>                
-                <li>08. 화살표 함수 : 매개변수 함수</li>                
-                <li>09. 내부 함수</li>                                 
+                <li>07. 화살표 함수 : 매개변수 함수</li>                
+                <li>08. 화살표 함수 : 리턴값 함수</li>                
+                <li>09. 화살표 함수 : 익명함수 + 매개변수 함수 + 리턴값 함수</li>                
+
+                <li>09. 내부함수<li>                                 
                 <li>10. 즉시 실행함수</li>                
                 <li>11. 파라미터 함수</li>                
                 <li>12. 아규먼트 함수</li>                
@@ -222,7 +224,7 @@
 
                 <!--samlpe8-->
                 <div id="sample8" class="sample">
-                    <h3>08 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
+                    <h3>08. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
                     <div class="code">
 <pre class="line-nembers"><code class="language-js">{
     func = () => {
@@ -241,6 +243,88 @@
                     </div>
                 </div>
                 <!--//samlpe8-->
+
+                <!--samlpe9-->
+                <div id="sample9" class="sample">
+                    <h3>09. 화살표 함수 : 익명함수 + 매개변수 함수 + 리턴값 함수</h3>
+                    <div class="code">
+<pre class="line-nembers"><code class="language-js">{
+    const func = (str) =>{
+        return str;
+    }
+    document.write(func("함수가 실행되었습니다9"));
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <h4>결과보기</h4>
+                        <div class="result09">
+                            함수가 실행되었습니다9
+                        </div>
+                    </div>
+                </div>
+                <!--//samlpe9-->
+
+                <!--samlpe10-->
+                <div id="sample10" class="sample">
+                    <h3>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
+                    <div class="code">
+<pre class="line-nembers"><code class="language-js">{
+    const func = str => {  //매개변수가 하나일 경우 괄호 생략가능
+        return str;
+    }
+    document.write(func("함수가 실행되었습니다10"));
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <h4>결과보기</h4>
+                        <div class="result10">
+                            함수가 실행되었습니다10
+                        </div>
+                    </div>
+                </div>
+                <!--//samlpe10-->
+
+                <!--samlpe11-->
+                <div id="sample11" class="sample">
+                    <h3>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                    <div class="code">
+<pre class="line-nembers"><code class="language-js">{
+    const func = str => str;
+    
+    document.write(func("함수가 실행되었습니다11"));
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <h4>결과보기</h4>
+                        <div class="result11">
+                            함수가 실행되었습니다11
+                        </div>
+                    </div>
+                </div>
+                <!--//samlpe11-->
+
+                <!--samlpe12-->
+                <div id="sample12" class="sample">
+                    <h3>12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                    <div class="code">
+<pre class="line-nembers"><code class="language-js">{
+    func = str => str;
+    
+    document.write(func("함수가 실행되었습니다12"));
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <h4>결과보기</h4>
+                        <div class="result12">
+                            함수가 실행되었습니다12
+                        </div>
+                    </div>
+                </div>
+                <!--//samlpe12-->
             </div>
             <!-- script -->
     </main>
@@ -325,67 +409,39 @@
         //     }
         //     document.write(func());
         // }
-       function func(){
-           document.write("함1");
-       }
-       func();
-       {
-       const func = function(){
-           document.write("함2");
-       }
-       func();
-        }
+
+        //09. 화살표 함수 : 익명함수 + 매개변수 함수 + 리턴값 함수
         {
-            function func (str){
-                document.write(str)
-            }
-            func("함3");
-        }
-        {
-            function func(){
-                const str = "함수4";
+            const func = (str) =>{
                 return str;
             }
-            document.write(func());
+            document.write(func("함수가 실행되었습니다9"));
         }
+
+        //10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략
         {
-            func = () =>{
-                document.write("함5");
-            }
-            func();
-        }
-        {
-            const func = () =>{
-                document.write("함6");
-            }
-            func();
-        }
-        {
-            func = (str)=>{
-                document.write(str);
-            }
-            func("함7");
-        }
-        {
-            func = () =>{
-                const str = "함8";
+            const func = str => {  //매개변수가 하나일 경우 괄호 생략가능
                 return str;
             }
-            document.write(func());
+            document.write(func("함수가 실행되었습니다10"));
         }
+
+        //11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
         {
-            for(let i=1;i<=10;i++){
-                document.write(i);
-            }
+            const func = str => str;
             
+            document.write(func("함수가 실행되었습니다11"));
         }
+
+        //12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
         {
-            num = [100,200]
-            num.forEach(function(el){
-                document.write(el);
-            });
+            func = str => str;
+            
+            document.write(func("함수가 실행되었습니다12"));
         }
     </script>
+    <!-- script -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
