@@ -252,22 +252,12 @@ img {
     box-sizing: border-box;
 }
 
-.script .sample .view > div.blue {
+.script .sample .view > div.selected.blue {
     border: 4px solid blue;
     background-color: blue;
     border-radius: 1.3em;
 }
-.script .sample .view > div.blue img{
-    opacity: 0.3;
-}
-
-.script .sample .view > div.selec {
-    border: 4px solid blue;
-    background-color: blue;
-    border-radius: 1.3em;
-}
-
-.script .sample .view > div.selec img {
+.script .sample .view > div.selected.blue img{
     opacity: 0.3;
 }
 
