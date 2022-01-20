@@ -24,30 +24,42 @@ body {
     
 }
 #nav {
-    width: 1200px;
+    display: flex;
+}
+#nav .nav1 {
+    width: 600px;
     height: 100px;
     background-color: #444;
 }
-
+#nav .nav2 {
+    width: 600px;
+    height: 100px;
+    background-color: #888;
+}
 #section {
-    width: 1200px;
-    height: 780px;
     display: flex;
+
+
+}
+#section .aside {
+    width: 300px;
+    height: 520px;
+    background-color: #555;
 }
 #section .section1 {
-    width: 300px;
-    height: 780px;
+    width: 900px;
+    height: 260px;
     background-color: #333;
 }
 #section .section2 {
-    width: 600px;
-    height: 780px;
+    width: 900px;
+    height: 260px;
     background-color: #222;
 }
-#section .section3 {
-    width: 300px;
-    height: 780px;
-    background-color: #888;
+#main {
+    width: 1200px;
+    height: 260px;
+    background-color: #666;
 }
 #footer {
     width: 1200px;
@@ -59,12 +71,18 @@ body {
 <body>
     <div id="wrap">
         <header id="header"></header>
-        <nav id="nav"></nav>
+        <nav id="nav">
+            <nav class="nav1"></nav>
+            <nav class="nav2"></nav>
+        </nav>
         <section id="section">
+            <aside class="aside"></aside>
+            <section>
                 <section class="section1"></section>
                 <section class="section2"></section>
-                <section class="section3"></section>
+            </section>
         </section>
+        <main id="main"></main>
         <footer id="footer"></footer>
     </div>
 </body>
