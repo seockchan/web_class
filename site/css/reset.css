@@ -1,0 +1,221 @@
+/* 여백 초기화 */
+body,
+div,
+dl,
+dt,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 폰트 초기화 */
+body,
+button,
+input,
+select,
+table,
+textarea {
+    color: #222;
+    font-family: NexonLv1Gothic,AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,돋움;
+}
+.NexonLv1 {
+    font-family: 'NexonLv1Gothic';
+}
+.NexonLv1-300 {
+    font-family: 'NexonLv1Gothic';font-weight: 300;
+}
+.NexonLv1-400 {
+    font-family: 'NexonLv1Gothic';font-weight: 400;
+}
+.NexonLv1-700 {
+    font-family: 'NexonLv1Gothic';font-weight: 700;
+}
+.NexonLv2 {
+    font-family: 'NexonLv2Gothic';
+}
+.NexonLv2-300 {
+    font-family: 'NexonLv2Gothic';font-weight: 300;
+}
+.NexonLv2-400 {
+    font-family: 'NexonLv2Gothic';font-weight: 400;
+}
+.NexonLv2-500 {
+    font-family: 'NexonLv2Gothic';font-weight: 500;
+}
+.NexonLv2-700 {
+    font-family: 'NexonLv2Gothic';font-weight: 700;
+}  
+.Gmarket {
+    font-family: 'GmarketSans';
+}
+.Gmarket-300 {
+    font-family: 'GmarketSans';font-weight: 300;
+}
+.Gmarket-300 {
+    font-family: 'GmarketSans';font-weight: 300;
+}
+.Gmarket-500 {
+    font-family: 'GmarketSans';font-weight: 500;
+}
+.Gmarket-700 {
+    font-family: 'GmarketSans';font-weight: 700;
+}
+
+/* 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* 목록 초기화 */
+ol,
+ul {
+    list-style: none;
+}
+
+/* 스타일 초기화 */
+em {
+    font-style: normal;
+}
+/* 클리어 픽스 */
+.clearfix {
+    zoom: 1; /* ie 6,7,8 */
+}
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: block;
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* 
+    헤더1 float
+    float으로 인한 영역 깨짐 현상 발생 (height값을 인식 못 함)
+    1. 깨지는 영역에 clear : both 설정
+    2. 부모 영역한테 overflow : hidden;
+    3. 가상의 영역 속성을 만들어서 clearfix 속성을 설정
+*/
+
+/* 간격설정 */
+
+.mt0 {
+    margin-top: 0px !important;
+}
+
+.mt5 {
+    margin-top: 5px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt15 {
+    margin-top: 15px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt25 {
+    margin-top: 25px !important;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+.mt35 {
+    margin-top: 35px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.mt45 {
+    margin-top: 45px !important;
+}
+
+.mt50 {
+    margin-top: 50px !important;
+}
+
+.mt55 {
+    margin-top: 55px !important;
+}
+
+.mb0 {
+    margin-bottom: 0px !important;
+}
+
+.mb5 {
+    margin-bottom: 5px !important;
+}
+
+.mb10 {
+    margin-bottom: 10px !important;
+}
+
+.mb15 {
+    margin-bottom: 15px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+.mb25 {
+    margin-bottom: 25px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
+}
+
+.mb35 {
+    margin-bottom: 35px !important;
+}
+
+.mb40 {
+    margin-bottom: 40px !important;
+}
+
+.mb45 {
+    margin-bottom: 45px !important;
+}
+
+.mb50 {
+    margin-bottom: 50px !important;
+}
+
+.mb55 {
+    margin-bottom: 55px !important;
+}

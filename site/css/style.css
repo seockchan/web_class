@@ -1,0 +1,42 @@
+#header {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    min-width: 1200px;
+    white-space: nowrap;
+}
+#header .logo {
+    float: left;
+    width: 20%;
+    padding: 10px 20px;
+}
+#header .logo a {
+    font-size: 30px;
+}
+#header .logo a em {
+    font-size: 18px;
+    font-weight: 300;
+}
+#header .menu {
+    float: left;
+    width: 60%;
+    text-align: center;
+}
+#header .menu li {
+    display: inline;
+
+}
+#header .menu li a {
+    padding: 20px 30px;
+    display: inline-block;
+}
+#header .member {
+    float: right;
+    width: 20%;
+    text-align: right;
+    padding: 21px;
+}
+#header .member a {
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 7px 21px;
+}
