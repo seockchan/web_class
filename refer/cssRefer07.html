@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS prefix</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    
+    <header id="header">
+        <h1><a href="../index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>배석찬</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>벤더프리픽스</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">display속성</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssMargin.html">magin</a></li>
+                <li><a href="cssRefer06.html">float영역 깨짐 현상 정리</a></li>
+                <li  class="active"><a href="cssRefer07.html">벤더프리픽스</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3><strong>벤더프리픽스(Prefix)</strong></h3>
+                <p>CSS3는 현재 완료된 속성도 있지만 개발을 하고 있는 속성도 있습니다. 최신 속성은 브라우저마다 다른 방식으로 지원하기 때문에 접두사(Prefix)를 붙여 호환성을 맞추어 줍니다. 시간이 지나고 표준화가 되면 접두사를 쓰지 않아도 됩니다.</p>
+                <br>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>접두사</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>-webkit-</th>
+                                <td>웹킷 방식의 브라우저(크롬, 사파리, 웨일, 오페라)</td>
+                            </tr>
+                            <tr>
+                                <th>-moz-</th>
+                                <td>게코 방식의 브라우저(파이어 폭스)</td>
+                            </tr>
+                            <tr>
+                                <th>-o-</th>
+                                <td>오페라 브라우저(12버전 이하), 12버전 이상은 -webkit-으로 표현</td>
+                            </tr>
+                            <tr>
+                                <th>-ms-</th>
+                                <td>마이크로소프트 인터넷 익스플로러</td>
+                            </tr>
+                        </tbody>
+                    </table>                                  
+                </div>               
+            </div>
+        </div>
+        <!-- //refer -->
+    </main>
+        
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+    
+</body>
+</html>

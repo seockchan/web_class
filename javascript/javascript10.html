@@ -88,22 +88,23 @@
                 <div class="code">
 <pre class="line-nembers"><code class="language-js">{    
     //두번째 이미지 선택
-    document.querySelector("#sample1 .btn1").addEventListene("click",function(){
-        document.querySelector("#sample1 .view2").classList.ad("selected");
-    });
+    document.querySelector("#sample1 .btn1").addEventListener("click",function(){
+        document.querySelector("#sample1 .view2").classList.add("selected");
+        });
     //두번째 이미지 해제
-    document.querySelector("#sample1 .btn2").addEventListene("click",function(){
-        document.querySelector("#sample1 .view2").classListremove("selected");
+    document.querySelector("#sample1 .btn2").addEventListener("click",function(){
+        document.querySelector("#sample1 .view2").classList.remove("selected");
     });
+
     //모든 이미지 선택
-     document.querySelector("#sample1 .btn3").addEventListene("click", function(){
-        document.querySelectorAll("#sample1 .view > div").forEac(function(el){
+    document.querySelector("#sample1 .btn3").addEventListener("click", function(){
+        document.querySelectorAll("#sample1 .view > div").forEach(function(el){
             el.classList.add("selected");
         });
     });
     //모든 이미지 해제
-    document.querySelector("#sample1 .btn4").addEventListene("click", function(){
-        document.querySelectorAll("#sample1 .view > div").forEac(function(el){
+    document.querySelector("#sample1 .btn4").addEventListener("click", function(){
+        document.querySelectorAll("#sample1 .view > div").forEach(function(el){
             el.classList.remove("selected");
         });
     });
@@ -132,25 +133,25 @@
                 <div class="code">
 <pre class="line-nembers"><code class="language-js">{    
     //리셋
-    document.querySelector("#sample2 .btn0").addEventListene("click", function(){
-        document.querySelectorAll("#sample2 .view > div").forEac(function(el){
+    document.querySelector("#sample2 .btn0").addEventListener("click", function(){
+        document.querySelectorAll("#sample2 .view > div").forEach(function(el){
             el.classList.remove("selected");
         });
     });
     //이 버튼을 클릭하면 두번째 이미지가 선택 또는 해제됩니다.
-    document.querySelector("#sample2 .btn1").addEventListene("click",function(){
-        document.querySelector("#sample2 .view2").classListtoggle("selected");
+    document.querySelector("#sample2 .btn1").addEventListener("click",function(){
+        document.querySelector("#sample2 .view2").classList.toggle("selected");
     });
     //모든 이미지
-    document.querySelector("#sample2 .btn2").addEventListene("click",function(){
-        document.querySelectorAll("#sample2 .view > div").forEac(function(el){
+    document.querySelector("#sample2 .btn2").addEventListener("click",function(){
+        document.querySelectorAll("#sample2 .view > div").forEach(function(el){
             el.classList.toggle("selected");
         });
     });        
     //각각의 이미지를 클릭하면 각각의 이미지를 선택/해제
-    document.querySelectorAll("#sample2 .view > div").forEac(function(el){
+    document.querySelectorAll("#sample2 .view > div").forEach(function(el){
         el.addEventListener("click", function(){
-            el.classList.toggle("selected");
+                el.classList.toggle("selected");
         });
     });
 }
@@ -178,25 +179,27 @@
                 <div class="code">
 <pre class="line-nembers"><code class="language-js">{    
     //리셋
-    document.querySelector("#sample3 .btn0").addEventListene("click", function(){
-        document.querySelectorAll("#sample3 .view > div").forEac(function(el){
+    document.querySelector("#sample3 .btn0").addEventListener("click", function(){
+        document.querySelectorAll("#sample3 .view > div").forEach(function(el){
             el.classList.remove("selected", "blue");
         });
-        document.querySelector("#sample3 .view2").classList.ad("selected")
-        document.querySelector("#sample3 .view4").classList.ad("selected")
-        document.querySelector("#sample3 .view6").classList.ad("selected")
+        document.querySelector("#sample3 .view2").classList.add("selected")
+        document.querySelector("#sample3 .view4").classList.add("selected")
+        document.querySelector("#sample3 .view6").classList.add("selected")
     });
-    //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를삭제합니다.
-    document.querySelector("#sample3 .btn1").addEventListene("click", function(){
-        document.querySelectorAll("#sample3 .view > div").forEac(function(el){
+
+    //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.
+    document.querySelector("#sample3 .btn1").addEventListener("click", function(){
+        document.querySelectorAll("#sample3 .view > div").forEach(function(el){
             if(el.classList.contains("selected")){
                 el.classList.remove("selected");
             }
         });
     });
-    //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을파란색으로 나오게 하시요.
-    document.querySelector("#sample3 .btn2").addEventListene("click", function(){
-        document.querySelectorAll("#sample3 .view > div").forEac(function(el){
+
+    //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 파란색으로 나오게 하시요.
+    document.querySelector("#sample3 .btn2").addEventListener("click", function(){
+        document.querySelectorAll("#sample3 .view > div").forEach(function(el){
             if(el.classList.contains("selected")){
                 el.classList.add("blue");
             }

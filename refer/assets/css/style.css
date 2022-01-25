@@ -115,8 +115,6 @@ body {
     border: 1px solid #000;
     overflow-x: auto;
 }
-.refer .title {}
-.refer .title ul{}
 .refer .title li {
     display: inline;
 }
@@ -131,9 +129,25 @@ body {
     background-color: #000;
     color: #fff;
 }
+.refer .subTitle {
+    margin-top: 10px;
+}
+.refer .subTitle li {
+    display: inline-block;
+}
+.refer .subTitle li a {
+    margin-right: 10px;
+}
+.refer .subTitle li.active a {
+    border-bottom: 2px solid #000;
+}
 .refer .table {
     margin-top: 40px;
     overflow-x: auto;
+}
+.refer .table h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
 }
 .refer .table table {
     width: 100%;
@@ -247,4 +261,102 @@ body {
     .doc .code {
         color: #d2d2d2;
     }
+}
+
+/* 간격설정 */
+
+.mt0 {
+    margin-top: 0px !important;
+}
+
+.mt5 {
+    margin-top: 5px !important;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+
+.mt15 {
+    margin-top: 15px !important;
+}
+
+.mt20 {
+    margin-top: 20px !important;
+}
+
+.mt25 {
+    margin-top: 25px !important;
+}
+
+.mt30 {
+    margin-top: 30px !important;
+}
+
+.mt35 {
+    margin-top: 35px !important;
+}
+
+.mt40 {
+    margin-top: 40px !important;
+}
+
+.mt45 {
+    margin-top: 45px !important;
+}
+
+.mt50 {
+    margin-top: 50px !important;
+}
+
+.mt55 {
+    margin-top: 55px !important;
+}
+
+.mb0 {
+    margin-bottom: 0px !important;
+}
+
+.mb5 {
+    margin-bottom: 5px !important;
+}
+
+.mb10 {
+    margin-bottom: 10px !important;
+}
+
+.mb15 {
+    margin-bottom: 15px !important;
+}
+
+.mb20 {
+    margin-bottom: 20px !important;
+}
+
+.mb25 {
+    margin-bottom: 25px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
+}
+
+.mb35 {
+    margin-bottom: 35px !important;
+}
+
+.mb40 {
+    margin-bottom: 40px !important;
+}
+
+.mb45 {
+    margin-bottom: 45px !important;
+}
+
+.mb50 {
+    margin-bottom: 50px !important;
+}
+
+.mb55 {
+    margin-bottom: 55px !important;
 }

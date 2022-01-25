@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <h1><a href="../index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>배석찬</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>레퍼런스 북</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li class="active"><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">display속성</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssMargin.html">magin</a></li>
+                <li><a href="cssRefer06.html">float영역 깨짐 현상 정리</a></li>
+                <li><a href="cssRefer07.html">벤더프리픽스</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+
+            <div class="title">
+                <ul>
+                    <li><a href="css.html">Alphabet</a></li>
+                    <li><a href="cssSelector.html">Selector</a></li>
+                    <li><a href="cssFlex.html">flex</a></li>
+                    <li class="active"><a href="cssGrid.html">grid</a></li>
+                    <li><a href="cssTransform.html">transform</a></li>
+                    <li><a href="cssAnimation.html">animation</a></li>
+                </ul>
+            </div>
+
+            <div class="doc">
+                <div class="table">
+                    <table>                       
+                            <col style="width: 30%" />
+                            <col style="width: 70%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>grid</th>
+                                <td>grid CSS 속성은 외재적인 속성값과 내재적인 속성값을 한번에 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>grid-area</th>
+                                <td>grid-area 속성은 grid-row-start , grid-column-start, grid-row-end and grid-column-end 값을 한번에 설정하는 속성입니다. 해당 속성값은 grid item의 크기와 위치를 결정합니다.</td>
+                            </tr>
+                            <tr>
+                                <th>grid-auto-columns</th>
+                                <td>grid-auto-columns CSS 속성은 내재적 생성 그리드 컬럼의 크기를 지정 트랙 의 트랙 패턴.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>grid-auto-flow</th>
+                                <td>grid-auto-flow 자동 배치 알고리즘이 자동 배치 항목을 그리드로 유입 얻을 방법을 정확하게 지정 작동 방식 CSS 속성을 제어합니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>grid-auto-rows</th>
+                                <td>grid-auto-rows CSS 속성은 암시적으로 생성된 그리드 행 트랙 또는 트랙 패턴의 크기를 지정 합니다.
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>grid-column</th>
+                                <td>grid-column CSS 약식 속성 은 그리드 배치에 선, 범위 또는 아무것도 제공하지 않음(자동)을 통해 그리드 항목의 크기와 위치 를 지정하고 그리드 영역 의 인라인 시작 및 인라인 끝 가장자리를 지정합니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>grid-column-end</th>
+                                <td>grid-column-endCSS 등록함으로써 그 블록 엔드 에지 지정의 격자 위치에 라인, 스팬, 또는 아무것도 (자동)에 기여함으로써 그리드 칼럼 내의 격자 항목의 종료 위치를 지정하는 격자 영역 .</td>
+                            </tr>
+                            <tr>
+                                <th>grid-column-gap</th>
+                                <td>CSS의 속성은 갭 (크기 설정 홈통 소자의 열을 사이).column-gap</td>
+                            </tr>
+                            <tr>
+                                <th>grid-column-start</th>
+                                <td>grid-column-start CSS 속성은 그리드 위치에 선, 스팬, 또는 아무것도 (자동)를 기여함으로써 그리드 컬럼 내에서 그리드 항목의 시작 위치를 지정합니다. 이 시작 위치는 그리드 영역 의 블록 시작 가장자리를 정의합니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>grid-gap</th>
+                                <td>CSS 속성은 행과 열 사이의 간격( 거터 )을 설정 합니다. 및 의 줄임말 입니다 .gap row-gapcolumn-gap</td>
+                            </tr>
+                            <tr>
+                                <th>grid-row</th>
+                                <td>grid-row CSS의 단축형 속성 함으로써 개시 인라인 및 인라인 엔드 에지를 지정하여 그 격자 위치에 라인, 스팬, 또는 아무것도 (자동)에 기여함으로써 그리드 행 내의 격자 아이템의 크기 및 위치를 지정 격자 영역 .</td>
+                            </tr>
+                            <tr>
+                                <th>grid-row-end</th>
+                                <td>grid-row-end CSS 등록하여 해당의 인라인 단연 지정의 격자 위치에 라인, 스팬, 또는 아무것도 (자동)에 기여함으로써 그리드 행 내의 격자 항목의 종료 위치를 지정하는 격자 영역 .</td>
+                            </tr>
+                            <tr>
+                                <th>grid-row-gap</th>
+                                <td>CSS 속성 은 요소의 그리드 행 사이 의 간격( 거터 ) 크기를 설정합니다.row-gap</td>
+                            </tr>
+                            <tr>
+                                <th>grid-row-start</th>
+                                <td>grid-row-start CSS 등록하여 해당의 인라인 시작 에지 지정의 격자 위치에 라인, 스팬, 또는 아무것도 (자동)에 기여함으로써 그리드 행 내의 격자 항목의 시작 위치를 지정하는 격자 영역 .</td>
+                            </tr>
+                            <tr>
+                                <th>grid-template</th>
+                                <td>grid-template CSS 속성은 그리드 열 , 행 및 영역 을 정의하기 위한 약식 속성 입니다 .</td>
+                            </tr>
+                            <tr>
+                                <th>grid-template-areas</th>
+                                <td>grid-template-areas CSS 속성을 지정라는 그리드 영역 그리드의 셀을 수립하고 그들에게 이름을 할당.</td>
+                            </tr>
+                            <tr>
+                                <th>grid-template-columns</th>
+                                <td>grid-template-columns CSS 속성은 라인 이름과 트랙 크기 조정 기능을 정의</td>
+                            </tr>
+                            <tr>
+                                <th>grid-template-rows</th>
+                                <td>CSS 속성 은 행 이름을 정의하고 그리드 행grid-template-rows 의 크기 조정 기능을 추적합니다.</td>
+                            </tr>
+                </div>
+                <div class="line">
+                    grid: auto-flow / 1fr 1fr 1fr;
+                </div>
+                <img src="assets/img/그리드1.jpg" alt="그리드1">
+                <div class="line">
+                    grid: auto-flow dense / 40px 40px 1fr;
+                </div>
+                <img src="assets/img/그리드2.jpg" alt="그리드2">
+                <div class="line">
+                    grid: repeat(3, 80px) / auto-flow;
+                </div>
+                <img src="assets/img/그리드3.jpg" alt="그리드3">
+            </div>
+            <!-- //refer -->
+    </main>
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+
+</body>
+
+</html>

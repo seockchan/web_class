@@ -1,4 +1,11 @@
-#header {
+/* 
+    헤더1 float
+    float으로 인한 영역 깨짐 현상 발생 (height값을 인식 못 함)
+    1. 깨지는 영역에 clear : both 설정
+    2. 부모 영역한테 overflow : hidden;
+    3. 가상의 영역 속성을 만들어서 clearfix 속성을 설정
+*/
+/* #header {
     padding: 10px;
     border-bottom: 1px solid #eee;
     min-width: 1200px;
@@ -39,4 +46,24 @@
     border: 1px solid #000;
     border-radius: 50px;
     padding: 7px 21px;
+} */
+
+/* 헤더02 flex를 사용한 경우 */
+#header {
+    border-bottom: 1px solid #eee;
+    display: grid;
+
 }
+#header .logo {
+
+}
+#header .menu {
+    
+}
+#header .menu li {
+   
+}
+#header .member {
+   
+}
+
