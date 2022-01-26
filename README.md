@@ -8,4 +8,4 @@ https://seockchan.github.io/web_class/refer/html.html
 ## CSS 레퍼런스
 https://seockchan.github.io/web_class/refer/css.html
 ## 웹 표준 사이트 제작
-https://seockchan.github.io/web_class/site/webClass/index.html
+https://seockchan.github.io/web_class/site/index.html
