@@ -204,7 +204,7 @@
    height: 530px;
    margin-right: 20px;
    background-color: #ccc;
-   background-image: url(../img/img_text_bg01-min.jpg);
+   background-image: url(../img/text@1x.jpg);
    background-size: 100%;
 }
 .itType01 .img2 {
@@ -212,16 +212,16 @@
     width: 386.66px;
     height: 530px;
     background-color: #ccc;
-    background-image: url(../img/img_text_bg02-min.jpg);
+    background-image: url(../img/text@2x.jpg);
     background-size: 100%;
 }
 @media (-webkit-min-device-pixel-ratio:1.5){
     .itType01 .img1 {
-        background-image: url(../img/img_text_bg01@2x-min.jpg);
+        background-image: url(../img/text@2x.jpg);
     }
 }
 @media (-webkit-min-device-pixel-ratio:2.5){
     .itType01 .img1 {
-        background-image: url(../img/img_text_bg01@3x-min.jpg);
+        background-image: url(../img/text@3x.jpg);
     }
 }
