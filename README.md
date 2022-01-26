@@ -6,6 +6,6 @@ https://seockchan.github.io/web_class/javascript/index.html
 ## HTML 레퍼런스
 https://seockchan.github.io/web_class/html/index.html
 ## CSS 레퍼런스
-https://seockchan.github.io/web_class/css/index.html
+https://seockchan.github.io/web_class/refer/css.html
 ## 웹 표준 사이트 제작
 https://seockchan.github.io/web_class/site/webClass/index.html
