@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ir효과</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+</head>
+<body>
+    
+    <header id="header">
+        <h1><a href="../index.html">라인 중학교 1학년 코딩반</a></h1>
+        <strong>배석찬</strong>
+    </header>
+
+    <main id="contents">
+        <h2><a href="css.html">CSS <em>ir효과</em></a></h2>
+
+        <div class="menu">
+            <ul>
+                <li><a href="css.html">속성</a></li>
+                <li><a href="cssRefer01.html">기초 문법</a></li>
+                <li><a href="cssRefer02.html">display속성</a></li>
+                <li><a href="cssRefer03.html">CSS 단위</a></li>
+                <li><a href="cssRefer04.html">CSS 색상</a></li>
+                <li><a href="cssRefer05.html">id/class 차이점</a></li>
+                <li><a href="cssMargin.html">magin</a></li>
+                <li><a href="cssRefer06.html">float영역 깨짐 현상 정리</a></li>
+                <li><a href="cssRefer07.html">벤더프리픽스</a></li>
+                <li><a href="cssRefer08.html">이미지 표현방법</a></li>
+                <li class="active"><a href="cssRefer09.html">ir효과</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
+        <div class="refer">
+            <div class="doc">
+                <h3><strong>ir효과</strong></h3>
+                <br>
+                <p>IR(Image Replacement : 요소 숨김 처리)가 제대로 작동하기 위해서는 3가지 조건이 필요하다.</p>
+                
+                <h4>1. 시맨틱 마크업</h4>
+                <p>브라우저에 의미가 잘 전달 될 수 있는 마크업이 필요하다.</p>
+                <h4>2. 요소 숨김 처리</h4>
+                <p>접근성을 위해 처리한 마크업이 화면에 불필요하게 노출되지 않게 한다.</p>
+                <h4>3. 스크린리더가 숨김 처리한 요소를 읽을 수 있어야 함.</h4>
+                <p>접근성을 위해 가장 중요한 부분이다.</p>
+                <br>
+                <h3><strong>요소 숨김처리하는 방법</strong></h3>
+                <br>
+                <h4>스크린 리더가 인식하지 못하는 방법</h4>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>visibility : hidden</th>
+                                <td>opacity : 0 과 동일한 효과.<br>
+                                (요소를 투명하게 처리)</td>
+                            </tr>
+                            <tr>
+                                <th>display : none</th>
+                                <td>DOM에서 없애버리는 방법이므로, 브라우저가 못 읽는다.</td>
+                            </tr>
+                            <tr>
+                                <th>whidth : 0;<br>
+                                    height : 0;<br>
+                                    font-size : 0;<br>
+                                    line-height : 0;<br>
+                                </th>
+                                <td>요소의 크기를 0으로 만드는 방법.</td>
+                            </tr>
+                        </tbody>
+                    </table>                                  
+                </div>          
+                <br>
+                <h4>스크린 리더에서 인식가능하고, 레이아웃/성능에 영향이 없음.</h4>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>opacity : 0;</th>
+                                <td>요소를 투명하게 처리.</td>
+                                <td>투명하게 처리했을 뿐, 해당 요소가 레이아웃 상 존재.<br>
+                                전체 레이아웃에 영향을 주면 안되는 경우 단독사용할 수 없다.<br> 
+                                이를 위한 속성들을 추가하여 조절해야 한다.</td>
+                            </tr>
+                            <tr>
+                                <th>text-indent : -9999px;</th>
+                                <td>해상도의 범위를 넘는 들여쓰기로 화면 밖으로 날림.</td>
+                                <td>요소를 화면 밖으로 날렸을 뿐, 요소가 어딘가에 존재하므로 그 위치까지 포함하게 되어 전체 레이아웃이 너무 크게 설정됨.(성능이슈)<br>
+                                <strong>성능이슈 대처</strong><br>
+                                -요소의 크기 만큼만 화면 밖으로 밀어내면 해결가능.<br>
+                                -text-indent : 100% 로 처리하면 됨.<br>
+                                <strong>그럼에도 생기는 문제들</strong><br>
+                                -문단 첫 줄만 들여쓰기 처리되므로 아래 문단은 다 노출됨.<br>
+                                -요소가 안 보일뿐 요소의 위치가 잡혀있음.<br>
+                                전체 레이아웃에 영향을 주지 않도록 다른 속성과 같이 사용해야함.</td>
+                            </tr>
+                            <tr>
+                                <th>z-index : -1;
+                                </th>
+                                <td>이미지 밑으로 IR텍스트가 깔리도록 처리.</td>
+                                <td>positon ;static(defalt)인 경우 적용안됨.<br>
+                                대부분 relative를 사용하게 되는데, 숨김 처리해야할 텍스트 요소가 많아지면 성능이슈 발생</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                <h4>스크린 리더에서 인식가능하고, 레이아웃/성능에 영향이 없는 방식.</h4>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>positon : absolute;<br>
+                                clip : rect(0,0,0,0);<br>
+                                width : 1px;<br>
+                                height : 1px;<br>
+                                margin : -1px;<br>
+                                overflow : hidden;</th>
+                                <td>숨기고자 하는 요소의 모든 속성을 다 써서 조정하는 방법.<br>
+                                1. 레이아웃에 영향을 끼치지 않도록<br>
+                                -position : absolute나 fixed<br>
+                                2. 스크린 리더기가 읽을 수 있도록<br>
+                                -width,heght 지정<br>
+                                3. 눈에 보이는 부분 제거<br>
+                                -margin : -1px;<br>
+                                -overflow : hidden;</td>
+                                <td>clip의 경우, position : absolute나 fixed일 경우만 적용가능.<br>
+                                이 코드는 overflow : visible 이면 적용 불가.</td>
+                            </tr>                          
+                        </tbody>
+                    </table>                
+            </div>
+        </div>                
+            
+        <!-- //refer -->
+    </main>
+        
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+    
+</body>
+</html>
