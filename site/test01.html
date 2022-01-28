@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,111 +11,144 @@
             margin: 0;
             padding: 0;
         }
+
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+
+        }
+
         #header {
             width: 100%;
             height: 109px;
             background-color: #999;
         }
+
         #banner {
             width: 100%;
             height: 893px;
             background-color: #888;
         }
+
         #contents {
             width: 100%;
             height: 4966px;
             background-color: #777;
         }
+
         #footer {
             width: 100%;
             height: 399px;
             background-color: #666;
         }
+
         .cont {
             width: 1200px;
             height: inherit;
             background-color: rgba(0, 0, 0, 0.3);
             margin: 0 auto;
         }
-        #contents .cont {
-            
-        }
-        #contents .cont .cont1{
+
+        #contents .cont {}
+
+        #contents .cont .cont1 {
             width: 1200px;
             height: 640px;
             background: #555;
         }
-        #contents .cont .cont2{
+
+        #contents .cont .cont2 {
             width: 1200px;
             height: 3250px;
             background: #444;
         }
-        #contents .cont .cont3{
+
+        #contents .cont .cont3 {
             width: 1200px;
             height: 1076px;
             background-color: #fff;
         }
+
         #contents .cont .cont3 {
             overflow: hidden;
         }
+
         #contents .cont .cont3 .left {
             float: left;
-           width: 400px;
-           height: 700px;
+            width: 400px;
+            height: 700px;
         }
+
         #contents .cont .cont3 .left .img1 {
             width: 364px;
             height: 462px;
             background-image: url(img/imgg/Frame\ 1.jpg);
         }
+
         #contents .cont .cont3 .center {
             float: left;
             width: 400px;
-           height: 700px;
+            height: 700px;
         }
+
         #contents .cont .cont3 .center .img2 {
             width: 364px;
             height: 462px;
             background-image: url(img/imgg/Frame\ 2.jpg);
         }
+
         #contents .cont .cont3 .right {
             float: left;
             width: 400px;
-           height: 700px;
+            height: 700px;
         }
+
         #contents .cont .cont3 .right .img3 {
             width: 364px;
             height: 462px;
             background-image: url(img/imgg/Frame\ 3.jpg);
         }
+
         .cont3 h3 {
             font-family: 'NEXONLv1Gothic';
             font-size: 50px;
             margin-top: 114px;
             margin-bottom: 105px;
         }
-        .cont3 h4 {
+
+        .cont3 .text1 {
             font-family: 'NEXONLv1Gothic';
             font-size: 30px;
             margin-top: 34px;
+            display: block;
         }
-        .cont3 h5 {
+
+        .cont3 .text2 {
             font-family: 'NEXONLv1Gothic';
             font-size: 20px;
             margin-top: 18px;
             font-weight: 300;
+            display: block;
         }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <header id="header">
             <div class="cont"></div>
+            <h2 class="ir_so">헤더 영역</h2>
         </header>
         <nav id="banner">
             <div class="cont"></div>
+            <h2 class="ir_so">배너 영역</h2>
         </nav>
         <section id="contents">
+            <h2 class="ir_so">컨텐츠 영역</h2>
             <div class="cont">
                 <div class="cont1"></div>
                 <div class="cont2"></div>
@@ -122,24 +156,26 @@
                     <h3>FIND oppotunities</h3>
                     <div class="left">
                         <div class="img1"></div>
-                        <h4>Fintech</h4>
-                        <h5>payment</h5>
-                    </div>       
+                        <span class="text1">Fintech</span>
+                        <span class="text2">payment</span>
+                    </div>
                     <div class="center">
                         <div class="img2"></div>
-                        <h4>Digital Marketing</h4>
-                        <h5>IMS</h5>
-                    </div>                 
+                        <span class="text1">Digital Marketing</span>
+                        <span class="text2">IMS</span>
+                    </div>
                     <div class="right">
                         <div class="img3"></div>
-                        <h4>Pletform</h4>
-                        <h5>Commerce.Magazine</h5>
-                    </div>                  
+                        <span class="text1">Digital Marketing</span>
+                        <span class="text2">Commerce.Magazine</span>
+                    </div>
                 </div>
-            </div>         
+            </div>
         </section>
         <footer id="footer">
+            <h2 class="ir_so">푸터 영역</h2>
         </footer>
     </div>
 </body>
+
 </html>
