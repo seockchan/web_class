@@ -140,10 +140,11 @@ em {
 #skip a:focus {
     left: 5px;
 } 
+
 /* 클리어 픽스 */
 .clearfix {
     zoom: 1; /* ie 6,7,8 */
-}
+} */
 .clearfix::before,
 .clearfix::after {
     content: "";
