@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test02</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #skip {
+            position: relative;
+            z-index: 10000;
+        }
+
+        #skip a {
+            background: #000;
+            color: #fff;
+            position: absolute;
+            left: -400px;
+            top: 5px;
+            padding: 20px 40px;
+            display: inline-block;
+            transition: left 0.3s ease-in;
+        }
+
+        #skip a:focus {
+            left: 5px;
+        }
+
+        .ir_so {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        #header .logo a {
+            color: #000;
+            text-decoration: none;
+            padding-left: 35px;
+            
+        }
+        #header .menu  {
+            padding-right: 300px;
+            
+
+        }
+
+        #header .menu li a {
+            color: #000;
+            text-decoration: none;
+
+            font-weight: 1000px;
+            padding: 15px;
+            
+        }
+
+        #contents {
+            width: 100%;
+            height: 2499px;
+            
+        }
+
+        #footer {
+            width: 100%;
+            height: 370px;
+            background-color: #000;
+        }
+        #contents .cont {
+            width: 1120px;
+            height: 2499px;
+            margin: 0 auto;
+            background: #fff;
+        }
+        .cont h2 {
+            padding-top: 250px;
+            padding-bottom: 125px;
+            font-size: 50px;
+        }
+        .cont .sect1 {
+            height: 800px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .cont .sect1 .left {
+            padding-top: 90px;
+            width: 50%;
+            height: 800px;
+            background: url(img/Frame\ 1.jpg) no-repeat center 190px;
+        }
+        .cont .sect1 .right {
+            padding-top: 150px;
+            width: 50%;
+            height: 800;
+            background: url(img/Frame\ 2.jpg) no-repeat center 250px;
+        }
+        .cont .sect2 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .cont .sect2 .left {
+            padding-top: 90px;
+            width: 50%;
+            height: 800px;
+            background: url(img/Frame\ 3.jpg) no-repeat center 190px;
+        }
+        
+        .cont .sect2 .right {
+            padding-top: 150px;
+            width: 50%;
+            height: 800;
+            background: url(img/Frame\ 4.jpg) no-repeat center 250px;
+        }
+        p {
+            font-weight: 700;
+            font-size: 30px;
+            border-top: 1px solid #000;
+            padding-top: 35px;
+        }
+        
+        #header .menu li {
+            display: inline-block;
+            text-align: right;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="skip">
+        <a href="#contents">컨텐츠 바로가기</a>
+    </div>
+
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo">
+                <a href="#">IMFORM</a>
+            </h1>
+            <nav class="menu">
+                    <ul>                       
+                        <li><a href="#">SERVICE</a></li>
+                        <li><a href="#">WORK</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+            </nav>
+            
+        </header>
+        
+        </nav>
+        <section id="contents">
+            <div class="cont">
+           <h2>We research new opportunities<br>
+            that inspire success.</h2>
+            <div class="sect1">
+                <div class="left">
+                   
+                    <p> 스마트한 카라이프<br>
+                한국타이어</p></div>
+                <div class="right"><p>한섬 프리미엄 스타일<br>
+                모바일 룩북</p></div>
+            </div>
+            
+            <div class="sect2">
+                <div class="left">
+                    <p>나는 대만족합니다<br>
+                    대만관광청 홈페이지 리뉴얼</p>
+                </div>
+                <div class="right"><p>세련된 감각의 까마시아<br>
+                라이프스타일 매거진</p>
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <footer id="footer">
+           
+        </footer>
+    </div>
+</body>
+
+</html>
