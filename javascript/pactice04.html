@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice01-3</title>
+    <!--style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism3.css">
+    
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table td {
+            border: 1px solid #222;
+            font-size: 16px;
+            padding: 15px;
+            font-family: 'NexonLv1Gothic';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back"><a href="practice.html">Back</a></div>
+    
+    <main id="main">
+        <div class="test">
+            <h2>1. 테이블 출력하기</h2>
+            <!-- 01 -->
+            <h3>1. for문을 이용해서 테이블을 출력하시오.</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let table = "&lt;table&gt;";
+        for( let i=1; i&lt;=5; i++){
+            table += "&lt;tr&gt;";
+                for( let j=1;j&lt;=5;j++){
+                    table += "&lt;td&gt;1&lt;/td&gt;"                  
+                }
+            table += "&lt;/tr&gt;";
+        }
+
+        table += "&lt;/table&gt;";
+
+        document.write(table);    
+}</code></pre>
+            </div>
+            <div class="result01"></div>
+            <!-- //02 -->           
+
+            <h3>2. 1부터 25까지 숫자를 넣으시오.</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+    let num = 1;
+        let table ="&lt;table&gt;";
+
+            for( let i=1;i&lt;=5; i++){
+                table += "&lt;tr&gt;";
+                    for( let j=1; j&lt;=5; j++){
+                        table += "&lt;td&gt;"+num+"&lt;/td&gt;";
+                        num++
+                    }
+                table += "&lt;/tr&gt;";
+            }
+
+            table += "&lt;/table&gt;"
+
+            document.write(table);
+}</code></pre>
+            </div>
+            <div class="result02"></div>
+            <!-- //02 -->       
+        </div>
+        <!-- <table border="1">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </table> -->
+    </main>
+    <!-- script -->
+    <script src="assets/js/prism3.js"></script>
+    <script>
+    //숙제(정답 2개 이상)
+    {
+            arrBox = [100, 200, 300, 400, 500, 600, 700];
+            
+            //300, 400
+            const a4 = arrBox.slice(2,4);
+            console.log(a4);
+            const a5 = arrBox.splice(2,2);
+            console.log(a5);
+
+            //100, 300, 500, 700
+            
+
+
+            //700
+            const a2 = arrBox.find(el=> el ===700);
+            console.log(a2);
+
+            const a7 = arrBox.slice(6);
+            console.log(a7);
+
+            arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+
+            
+            //j
+            const aj = arrBox2.filter(el => el==='j');
+            console.log(aj);
+            const ajj =arrBox2.splice(0,1);
+            console.log(ajj);
+
+            //jc
+
+            //jbcd
+            const aa = arrBox2.pop();
+            console.log(aa);
+            console.log(arrBox2);
+            const ajb = arrBox2.slice(0,4);
+            console.log(ajb);
+        }
+    </script>
+</body>
+
+</html>

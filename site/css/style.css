@@ -411,14 +411,14 @@
 .img_type01 .img-wrap .left {
     width: 590px;
     height: 360px;
-    background: url(../img/imagetype01.jpg);
+    background: url(../img/imgType03.jpg);
     position: relative;
     overflow: hidden;
 }
 .img_type01 .img-wrap .right {
     width: 590px;
     height: 360px;
-    background: url(../img/imagetype02.jpg);
+    background: url(../img/imgType04.jpg);
     position: relative;
     overflow: hidden;
 }
