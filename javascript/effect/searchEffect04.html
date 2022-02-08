@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Effect04</title>
+    <style>
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'NexonLv1Gothic';
+            font-size: 16px;
+            line-height: 1.6;
+            word-break: break-all;
+            color: #223547;
+        }
+        a {
+            text-decoration: none;
+            color: #223547;
+        }
+        .number {
+            margin: 10px;
+        }
+        .number li {
+            list-style: none;
+            display: inline;
+        }
+        .number li a {
+            border: 1px solid #223547;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.3s;
+        }
+        .number li.active a {
+            background: #223547;
+            color: #fff;
+        }
+        .board {
+            margin: 5vw 10vw 10vw 10vw;
+            width: 80vw;
+            background: #F1F3F6;
+            border: 2px solid #223547;
+            padding: 3vw;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .board .sub {
+            font-size: 20px;
+        }
+        .board .sub a {
+            font-size: 20px;
+            border-bottom: 1px solid #223547;
+        }
+        .board h1 a {
+            font-family: 'TmonMonsori';
+            font-size: 80px;
+            margin-bottom: 2vw;
+        }
+        .board .search {
+            margin-bottom: 3vw;
+        }
+
+        .board .search label {
+            display: none;
+        }
+        .board .search input {
+            font-size: 24px;
+            border: 2px solid #223547;
+            padding: 10px 40px;
+            border-radius: 40px;
+            width: 50%;
+        }
+        .board .count {
+            text-align: right;
+            color: #777;
+        }
+        .board .count em {
+            font-style: normal;
+            color: #223547;
+        }
+        .board .list {
+            text-align: left;
+        }
+        .board .list li {
+            background-color: #bdd6e6;
+            margin: 5px 0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            list-style: none;
+            transition: all 0.3s;
+        }
+        .board .list li:hover {
+            background-color: #a5c3d5;
+            cursor: grabbing;
+        }
+        .board .list li.hide {
+            display: none;
+        }
+        @media (max-width: 800px){
+            .board {
+                margin: 2vw 2vw 2vw 2vw;
+                width: 96vw;
+                padding: 4vw 2vw;
+            }
+            .board .sub {
+                font-size: 14px;
+            }
+            .board .sub a {
+                font-size: 14px;
+            }
+            .board h1 a {
+                font-size: 40px;
+            }
+            .board .search input {
+                font-size: 16px;
+                padding: 5px 20px;
+                width: 100%;
+            }
+            .board .list li {
+                font-size: 14px;
+            }
+        }
+        /* option */
+        .board .desc {
+            background: #A5C3D5;
+            font-size: 18px;
+            margin: 5px 0;
+            border-radius: 4px;
+            padding: 15px 10px;
+        }
+        .board .list {
+            background: #A5C3D5;
+            padding: 15px 10px;
+            border-radius: 4px;
+        }
+        .board .list span {
+            border: 1px solid #223547;
+            border-radius: 20px;
+            padding: 5px 20px;
+            margin: 3px;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .board .list span:hover {
+            background: #223547;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="number">
+            <ul>
+                <li><a href="searchEffect01.html">1</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect03.html">3</a></li>
+                <li class="active"><a href="searchEffect04.html">4</a></li>
+            </ul>
+        </div>
+        <div class="board">
+            <span class="sub"><a href="../javascript06.html#sample11">find( )</a>를 이용하여 속성을 검색하면 설명 보여주기</span>
+            <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
+
+            <div class="search">
+                <label for="search-box">검색하기</label>
+                <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!!">
+            </div>
+
+            <!-- 전체 목록 갯수 -->
+            <div class="count">
+                전체 속성 갯수 : <em>0</em>개
+            </div>
+            <!-- CSS 설명 영역 -->
+            <div class="desc">아래의 속성을 검색하면 설명이 나옵니다.</div>
+
+            <!-- CSS 속성 리스트 -->
+            <div class="list">
+                <span>all</span>
+                <span>animation</span>
+            </div>                            
+        </div>
+    </div>
+    
+    <!-- script -->
+    <script>
+        const cssProperty = [
+            {name:"align-content",desc:"align-content 속성은 콘텐츠의 상하관계 정렬 상태를 정의합니다."},
+            {name:"align-items",desc:"align-items 속성은 콘텐츠 내부의 정렬 상태를 정의합니다."},
+            {name:"align-self",desc:"align-self 속성은 콘텐츠의 정렬 상태를 정의합니다."},
+            {name:"all",desc:"all 속성은 요소의 속성을 초기화 또는 상속을 설정합니다."},
+            {name:"animation",desc:"animation 속성은 애니메이션을 정의합니다."},
+            {name:"animation-delay",desc:"animation-delay 속성은 요소가 로드된 후 애니메이션이 시작될 때 까지의 시간을 나타냅니다."},
+            {name:"animation-derection",desc:"animation-derection 속성은 애니메이션이 시작되는 시간을 정의합니다."},
+            {name:"animation-duration",desc:"animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
+            {name:"animation-fill-mode",desc:"animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+            {name:"animation-fill-mode",desc:"animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+            {name:"background",desc:"background 속성은 "},
+            {name:"border",desc:"border 속성은."},
+            {name:"caption-side",desc:"caption-side 속성은 테이블 caption의 위치를 설정합니다."},
+            {name:"direction",desc:"direction 속성은 문장의 방향을 설정합니다."},
+            {name:"flex",desc:"flex 속성은 콘텐츠의 성질을 flex로 정의합니다."},
+            {name:"grid",desc:"grid CSS 속성은 외재적인 속성값과 내재적인 속성값을 한번에 설정합니다."},
+            {name:"grid-area",desc:"grid-area 속성은 grid-row-start , grid-column-start, grid-row-end and grid-column-end 값을 한번에 설정하는 속성입니다. 해당 속성값은 grid item의 크기와 위치를 결정합니다."},
+            {name:"grid-auto-columns",desc:"grid-auto-columns CSS 속성은 내재적 생성 그리드 컬럼의 크기를 지정 트랙 의 트랙 패턴."},
+            {name:"grid-auto-flow",desc:"grid-auto-flow 자동 배치 알고리즘이 자동 배치 항목을 그리드로 유입 얻을 방법을 정확하게 지정 작동 방식 CSS 속성을 제어합니다."},
+            {name:"grid-auto-rows",desc:"grid-auto-rows CSS 속성은 암시적으로 생성된 그리드 행 트랙 또는 트랙 패턴의 크기를 지정 합니다."},
+            {name:"grid-column",desc:"grid-column CSS 약식 속성 은 그리드 배치에 선, 범위 또는 아무것도 제공하지 않음(자동)을 통해 그리드 항목의 크기와 위치 를 지정하고 그리드 영역 의 인라인 시작 및 인라인 끝 가장자리를 지정합니다."},
+            {name:"grid-column-end",desc:"grid-column-endCSS 등록함으로써 그 블록 엔드 에지 지정의 격자 위치에 라인, 스팬, 또는 아무것도 (자동)에 기여함으로써 그리드 칼럼 내의 격자 항목의 종료 위치를 지정하는 격자 영역."},
+            {name:"grid-column-gap",desc:"CSS의 속성은 갭 (크기 설정 홈통 소자의 열을 사이).column-gap"},
+            {name:"grid-row",desc:"grid-row CSS의 단축형 속성 함으로써 개시 인라인 및 인라인 엔드 에지를 지정하여 그 격자 위치에 라인, 스팬, 또는 아무것도 (자동)에 기여함으로써 그리드 행 내의 격자 아이템의 크기 및 위치를 지정 격자 영역."},
+            {name:"grid-row",desc:"grid-row CSS의 단축형 속성 함으로써 개시 인라인 및 인라인 엔드 에지를 지정하여 그 격자 위치에 라인, 스팬, 또는 아무것도 (자동)에 기여함으로써 그리드 행 내의 격자 아이템의 크기 및 위치를 지정 격자 영역."},
+        ];
+
+        
+        const searchBox = document.querySelector("#search-box");
+        const cssCount = document.querySelector(".count");
+        const cssDesc = document.querySelector(".desc");
+        const cssLst = document.querySelector(".list");
+
+        //CSS 속성 값/전체 갯수 출력하기
+        cssProperty.map((element,index)=>{
+            cssCount.innerText = "전체 목록 갯수 : "+(index+1)+"개";
+            cssLst.innerHTML += "<span>"+element.name+"</span>"
+        });
+
+        // 사용자가 검색한 값
+        // searchBox.addEventListener("keyup",()=>{
+        //     const searchWord = searchBox.value;
+        //     // console.log(searchWord);
+
+        //     //사용자가 입력값 == CSS 속성 값
+        //     findProp(searchWord);
+
+        // });
+
+        // function findProp(searchWord){
+        //     const targetData = cssProperty.find((data)=>data.name === searchWord)
+
+        //     cssDesc.innerHTML = targetData.desc;
+        // }
+
+        //사용자가 검색한 값 --> searchWord
+        searchBox.addEventListener("keyup", () => {
+            const searchWord = searchBox.value;
+            //console.log(searchWord)
+
+            //사용자가 입력값 == CSS 속성 값
+            findProp(searchWord);
+        });
+
+        document.querySelectorAll(".list span").forEach(span => {
+            span.addEventListener("click",() => {
+                //클릭한 데이터 값을 가져오기
+                const listProp =span.innerText;
+                findProp(listProp);
+            })
+        })
+        function findProp(searchProp){
+            const targetData = cssProperty.find((data) => data.name === searchProp)
+
+            //찾는 데이터가 없을 때
+            if(targetData == null){
+                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해 주세요.";
+                return;
+            }
+            // console.log(targetData)
+            cssDesc.innerHTML = targetData.desc;
+        }
+
+    </script>
+</body>
+</html>
