@@ -179,6 +179,10 @@
                 <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
                 <li class="active"><a href="searchEffect04.html">4</a></li>
+                <li><a href="searchEffect05.html">5</a></li>
+                <li><a href="searchEffect06.html">6</a></li>
+                <li><a href="searchEffect07.html">7</a></li>
+                <li><a href="searchEffect08.html">8</a></li>
             </ul>
         </div>
         <div class="board">
@@ -263,12 +267,12 @@
         const searchBox = document.querySelector("#search-box");
         const cssCount = document.querySelector(".count");
         const cssDesc = document.querySelector(".desc");
-        const cssLst = document.querySelector(".list");
+        const cssList = document.querySelector(".list");
 
         //CSS 속성 값/전체 갯수 출력하기
         cssProperty.map((element,index)=>{
             cssCount.innerText = "전체 목록 갯수 : "+(index+1)+"개";
-            cssLst.innerHTML += "<span>"+element.name+"</span>"
+            cssList.innerHTML += "<span>"+element.name+"</span>"
         });
 
         // 사용자가 검색한 값
