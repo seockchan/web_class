@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트</title>
+    <title>문자열 객체</title>
     <!--style-->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
@@ -132,28 +132,20 @@
 <pre class="line-nembers"><code class="language-js">{
     const str1 = "자바스크립트";
     const str2 = "제이쿼리";
-
-        
     document.querySelector(".sample01_R1").innerHTML = str1+str2;
 
     const num1 = 100;
     const num2 = 100;
-
-        
     document.querySelector(".sample01_R2").innerHTML = num1 + num2;
 
     const txt1 = "모던";
     const txt2 = " 자바스크립트";
     const txt3 = "핵심";
-
-        
     document.querySelector(".sample01_R3").innerHTML = "나는 "+txt1+" (modern)"+txt2+"(javascript) "+txt3+"을 배우고 싶다";
 
     const tem1 = "모던";
     const tem2 = " 자바스크립트";
     const tem3 = "핵심";
-
-        
     document.querySelector(".sample01_R4").innerHTML = `나는 ${tem1}(modern) ${tem2}(javascript) ${tem3}을 배우고 싶다.`;
 }
 </code></pre>
@@ -200,14 +192,10 @@
 <pre class="line-nembers"><code class="language-js">{
     const str1 = "자바스크립트";
     const currentStr1 = str1.length;
-    
-    
     document.querySelector(".sample02_R1").innerHTML = currentStr1;
     
     const str2 = "javascript";
     const currentStr2 = str1.length;
-    
-    
     document.querySelector(".sample02_R2").innerHTML = currentStr2;       
 }
 </code></pre>
@@ -217,7 +205,7 @@
 
                 <!--samlpe3-->
                 <div id="sample02" class="sample">
-                    <h3>03. 문자열 메서드 : toUpperCase : 문자열 길이 구하기 : 반환(숫자)</h3>
+                    <h3>03. 문자열 메서드 : toUpperCase(), toLowerCase() : 문자열 대문자 변경, 문자열 소문자 변경 : 반환(문자열)</h3>
                     <div class="table">
                         <table>
                             <colgroup>
@@ -254,12 +242,10 @@
 <pre class="line-nembers"><code class="language-js">{
     const str1 = "javascript";
     const currentStr1 = str1.toUpperCase;
-    
     document.querySelector(".sample03_R1").innerHTML = currentStr1;
     
     const str2 = "JAVASCRIPT";
     const currentStr2 = str2.toLowerCase;
-    
     document.querySelector(".sample03_R2").innerHTML = currentStr2;  
 }
 </code></pre>
@@ -269,7 +255,7 @@
 
                 <!--samlpe4-->
                 <div id="sample04" class="sample">
-                    <h3>04. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경 : 반환(문자열)</h3>
+                    <h3>04. 문자열 메서드 : trim() : 문자열 공백 제거 : 반환(문자열)</h3>
                     <div class="table">
                         <table>
                             <colgroup>
@@ -310,11 +296,7 @@
                 
                 <!--samlpe5-->
                 <div id="sample05" class="sample">
-                    <h3>05. indexOf(), LastIndexOf() : 
-                        search() : 문자열
-                        includes() : 문자
-                        startWidth() : 문
-                        endWidth() : 문자</h3>
+                    <h3>05. indexOf(), LastIndexOf(), search(), includes(), startWidth(), endWidth()</h3>
                     <div class="table">
                         <table>
                             <colgroup>
@@ -417,7 +399,7 @@
     const text4 = str.indexOf('a');
     document.querySelector(".sample05_R4").innerHTML = text4;
 
-    const 6 = str.lastIndexOf('a');
+    const text5 = str.lastIndexOf('a');
     document.querySelector(".sample05_R5").innerHTML = text5;
 
     const text6 = str.search(/javascript/);
@@ -445,7 +427,7 @@
     
                 <!--samlpe6-->
                 <div id="sample06" class="sample">
-                    <h3>06. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경 : 반환(문자열)</h3>
+                    <h3>06. 문자열 메서드 : charAt() : 지정한 인덱스의 문자를 추출 : 반환(문자열)</h3>
                     <div class="table">
                         <table>
                             <colgroup>
@@ -495,7 +477,7 @@
 
                 <!--samlpe7-->
                 <div id="sample07" class="sample">
-                    <h3>07. </h3>
+                    <h3>07. 문자열 메서드 : slice(), substring(),  substr() : 지정한 범위 내 문자열을 추출 : 반환(문자열)</h3>
                     <div class="table">
                         <table>
                             <colgroup>
@@ -560,7 +542,31 @@
                     </div>
                     <div class="code">
 <pre class="line-nembers"><code class="language-js">{
-     
+    const str = "자바스크립트(javascript) 공부";
+
+    const text = str.slice(1,4);
+    document.querySelector(".sample07_R1").innerHTML = text;  
+
+    const text2 = str.slice(1);
+    document.querySelector(".sample07_R2").innerHTML = text2;  
+
+    const text3 = str.slice(3,-1);
+    document.querySelector(".sample07_R3").innerHTML = text3;  
+
+    const text4 = str.slice(7,17);
+    // const text4 = str.slice(7,-4);
+    // const text4 = str.slice(-14,-4);
+    // const text4 = str.slice(-14,17);
+    document.querySelector(".sample07_R4").innerHTML = text4;  
+
+    const text5 = str.slice(5,1);
+    document.querySelector(".sample07_R5").innerHTML = "실행 안됨";  
+
+    const text6 = str.substring(5,1);
+    document.querySelector(".sample07_R6").innerHTML = text6;  
+
+    const text7 = str.substr(4,2);
+    document.querySelector(".sample07_R7").innerHTML = text7;  
 }
 </code></pre>
                     </div>               
@@ -632,7 +638,7 @@
     // 04. 문자열 메서드 : toLowerCase() : 문자열 소문자 변경 : 반환(문자열)
     {
         const str1 = "javascript";
-        const currentStr1 = str1.toUpperCase;
+        const currentStr1 = str1.toUpperCase();
 
         document.querySelector(".sample03_N1").innerHTML = "1";
         document.querySelector(".sample03_Q1").innerHTML = str1;
@@ -640,10 +646,10 @@
         document.querySelector(".sample03_R1").innerHTML = currentStr1;
 
         const str2 = "JAVASCRIPT";
-        const currentStr2 = str2.toLowerCase;
+        const currentStr2 = str2.toLowerCase();
         
         document.querySelector(".sample03_N2").innerHTML = "2";
-        document.querySelector(".sample03_Q2").innerHTML = str1;
+        document.querySelector(".sample03_Q2").innerHTML = str2;
         document.querySelector(".sample03_M2").innerHTML = "toLowerCase()";
         document.querySelector(".sample03_R2").innerHTML = currentStr2;
     } 
