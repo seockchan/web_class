@@ -53,11 +53,11 @@
     <main id="main">
         <div class="list">
             <ul>
-                <li>01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)</li>
-                <li>02. 배열 메서드 : join() : 배열 요소 문자열 결합 : 반환(문자열)</li>
+                <li><a href="">01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)</a></li>
+                <li><a href="">02. 배열 메서드 : join() : 배열 요소 문자열 결합 : 반환(문자열)</a></li>
 
-                <li>03. 배열 메서드 : push() : 배열 마지막 요소에 추가 : 반환(문자열)</li>    
-                <li>04. 배열 메서드 : pop() : 배열 마지막 요소에 삭제 : 반환(삭제된 요소)</li>
+                <li><a href="">03. 배열 메서드 : push() : 배열 마지막 요소에 추가 : 반환(문자열)</a></li>    
+                <li><a href="">04. 배열 메서드 : pop() : 배열 마지막 요소에 삭제 : 반환(삭제된 요소)</a></li>
 
                 <li>05. 배열 메서드 : unshift() : 배열 처음 요소에 추가 : 반환(숫자)</li>
                 <li>06. 배열 메서드 : shift() : 배열 처음 요소 삭제 : 반환(삭제된 요소)</li>
@@ -979,6 +979,15 @@
 
     <!-- script -->
     <script>
+        //#id 이동하기
+        document.querySelectorAll("a[href^='#']").forEach(el=>{
+        el.addEventListener("click", (event)=>{
+            event.preventDefault();
+            document.querySelector(el.getAttribute("href")).scrollIntoView({
+                behavior:"smooth"
+            });
+        })
+    })
         //{1}
         //01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)
         {

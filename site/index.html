@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -42,7 +43,7 @@
 
     <div id="skip">
         <a href="#contents">컨텐츠 바로가기</a>
-    </div> 
+    </div>
     <!-- skip -->
     <div id="wrap">
         <header id="header">
@@ -73,8 +74,76 @@
 
             <section id="banner">
                 <h2 class="ir_so">배너 영역</h2>
-                <div class="img_type">
-                    <!-- <img src="img/bg01.jpg" alt="이미지01"> -->
+                <!-- <div class="img_type slider">
+                    <div class="slider-img">
+                        <div class="desc">
+                            <span>DEVELOPER</span>
+                            <h4>NEW FRONTED</h4>
+                            <p>당신이 만들어갈 새로운 이야기<br>
+                                당신도 할 수 있습니다.</p>
+                            <div class="btn">
+                                <a href="#" class="white">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-arrow">
+                        <a href="#" class="left"><span class="ir_pm">이전 이미지</span> </a>
+                        <a href="#" class="right"><span class="ir_pm">다음 이미지</span></a>
+                    </div>
+                    <div class="slider-dot">
+                        <a href="#" class="dot active"><span class="ir_pm">1</span></a>
+                        <a href="#" class="dot"><span class="ir_pm">2</span></a>
+                        <a href="#" class="dot"><span class="ir_pm">3</span></a>
+                        <a href="#" class="dot"><span class="ir_pm">4</span></a>
+                        <a href="#" class="play"><span class="ir_pm">자동 플레이</span></a>
+                        <a href="#" class="stop"><span class="ir_pm">정지</span></a>
+                    </div>
+                    </div> -->
+
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide s1">
+                            <div class="desc">
+                                <span>DEVELOPER01</span>
+                                <h4>NEW FRONTED</h4>
+                                <p>당신이 만들어갈 새로운 이야기<br>
+                                    당신도 할 수 있습니다.</p>
+                                <div class="btn">
+                                    <a href="#" class="white">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide s2">
+                            <div class="desc">
+                                <span>DEVELOPER02</span>
+                                <h4>NEW FRONTED</h4>
+                                <p>당신이 만들어갈 새로운 이야기<br>
+                                    당신도 할 수 있습니다.</p>
+                                <div class="btn">
+                                    <a href="#" class="white">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide s3">
+                            <div class="desc">
+                                <span>DEVELOPER03</span>
+                                <h4>NEW FRONTED</h4>
+                                <p>당신이 만들어갈 새로운 이야기<br>
+                                    당신도 할 수 있습니다.</p>
+                                <div class="btn">
+                                    <a href="#" class="white">자세히 보기</a>
+                                    <a href="#" class="black">사이트 보기</a>
+                                </div>
+                            </div>
+                        </div>
+                        ...
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </section>
             <!-- //banner -->
@@ -114,13 +183,13 @@
                     <p class="desc">
                         이미지와 텍스트를 같이 사용하는 경우입니다.<br>
                         레이아웃을 반반 나누어서 사용하는 경우입니다.<br>
-                        아트라니는  이탈리아 캄파니아주 살레르노도의 아말피 해안에 위치한 코무네다.<br>
+                        아트라니는 이탈리아 캄파니아주 살레르노도의 아말피 해안에 위치한 코무네다.<br>
                         아트라니는 이탈리아 남부에서 가장 작은 도시이고 아말피 해안의 절반 거리도 되지않는다.
                     </p>
                     <a href="#" class="view">자세히 보기</a>
                 </div>
-            </section>          
-            
+            </section>
+
             <section class="img_type01 container">
                 <h3>꽃 <em>이미지 유형01</em></h3>
                 <div class="img-wrap">
@@ -145,10 +214,10 @@
                 <div class="container">
                     <h3>아트라니(Atrani)</h3>
                     <p>
-                        아트라니는  이탈리아 캄파니아주 살레르노도의 아말피 해안에 <br>
+                        아트라니는 이탈리아 캄파니아주 살레르노도의 아말피 해안에 <br>
                         위치한 코무네다.<br>
                         아트라니는 이탈리아 남부에서 가장 작은 도시이고 아말피 해안의<br>
-                         절반 거리도 되지않는다.
+                        절반 거리도 되지않는다.
                     </p>
                     <a href="#">배너 유형 01</a>
                 </div>
@@ -182,7 +251,7 @@
                 </div>
             </section>
             <!-- //img_type02 -->
-           
+
         </main>
         <!-- contents -->
         <footer id="footer" class="footer_type01">
@@ -202,41 +271,41 @@
                     <div>
                         <h3>메뉴 영역</h3>
                         <ul>
-                            <li><a href="#">메뉴 유형01</a></li>                           
+                            <li><a href="#">메뉴 유형01</a></li>
                         </ul>
                     </div>
                     <div>
                         <h3>메인 영역</h3>
                         <ul>
-                            <li><a href="#">이미지 유형01</a></li>                           
-                            <li><a href="#">동영상 유형02</a></li>                           
-                            <li><a href="#">슬라이드 유형03</a></li>                           
+                            <li><a href="#">이미지 유형01</a></li>
+                            <li><a href="#">동영상 유형02</a></li>
+                            <li><a href="#">슬라이드 유형03</a></li>
                         </ul>
                     </div>
                     <div>
                         <h3>컨텐츠 영역</h3>
                         <ul>
-                            <li><a href="#">텍스트 유형01</a></li>                           
-                            <li><a href="#">이미지 유형02</a></li>                           
-                            <li><a href="#">이미지/텍스트 03</a></li>                           
-                            <li><a href="#">카드 유형 04</a></li>                           
-                            <li><a href="#">배너 유형 05</a></li>                           
+                            <li><a href="#">텍스트 유형01</a></li>
+                            <li><a href="#">이미지 유형02</a></li>
+                            <li><a href="#">이미지/텍스트 03</a></li>
+                            <li><a href="#">카드 유형 04</a></li>
+                            <li><a href="#">배너 유형 05</a></li>
                         </ul>
                     </div>
                     <div>
                         <h3>푸터 영역</h3>
                         <ul>
-                            <li><a href="#">컨택트 유형01</a></li>                           
-                            <li><a href="#">푸터 유형02</a></li>                                                                          
+                            <li><a href="#">컨택트 유형01</a></li>
+                            <li><a href="#">푸터 유형02</a></li>
                         </ul>
                     </div>
                     <div>
                         <h3>사이트</h3>
                         <ul>
-                            <li><a href="#">웹 표준 사이트</a></li>                           
-                            <li><a href="#">반응형 사이트</a></li>                                                      
-                            <li><a href="#">패럴랙스 사이트</a></li>                           
-                            <li><a href="#">포트폴리오 사이트</a></li>                           
+                            <li><a href="#">웹 표준 사이트</a></li>
+                            <li><a href="#">반응형 사이트</a></li>
+                            <li><a href="#">패럴랙스 사이트</a></li>
+                            <li><a href="#">포트폴리오 사이트</a></li>
                         </ul>
                     </div>
                 </div>
@@ -253,9 +322,32 @@
                 </address>
             </div>
         </footer>
-        
+
     </div>
     <!-- //wrap -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            effect: "slide",
+            // autoplay: {
+            //     delay: 5000,
+            // },
+
+
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable : true
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>
