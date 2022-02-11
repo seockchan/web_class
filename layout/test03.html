@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test03</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul,li {
+            list-style: none;
+            
+        }
+        #wrap {
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+        #wrap .img {
+            width: 1022px;
+            height: 853px;
+            background: url(../site/img/imgg/Image99.png) no-repeat ;
+            
+            position: absolute;
+            top: 4%;
+            right: 0;
+            z-index: -1;
+        }
+        #header {
+            
+            display: flex;
+            justify-content: space-between;
+            padding-left: 101px;
+            
+        }
+        #container #header {
+            width: 1200px;
+            height: 100px;
+            margin: 0 auto;
+
+        }
+        #header .logo {
+            margin-top: 65px;
+            background: url(../site/img/imgg/ic.svg);
+            background-position: -150px 0;
+            
+            
+        
+        }
+        #header .logo .icon {
+            
+        }
+        #header .logo p {
+            display: inline;
+            margin: -40px;
+        }
+        #header .menu {
+          margin-top: 65px;
+        }
+        #header .menu li {
+            display: inline;
+        }
+        #header .menu a {
+            text-decoration: none;
+            color: black;
+            margin-right: 60px;
+            
+        } 
+        #header .menu a:hover {
+            border-bottom: 2px solid #000;
+        }
+        #header .icon{
+            margin-top: 65px;
+            margin-right: 93px;
+        }
+        #header .icon li {
+            display: inline;
+        } 
+        #header .icon a {
+            margin-right: 30px;
+        }
+        #header .icon a.btn1 {
+            display: inline-block;
+            background: url(../site/img/imgg/ic.svg);
+            background-position: 0 0;
+            width: 20px;
+            height: 20px;
+        }
+        #header .icon a.btn2 {
+            display: inline-block;
+            background: url(../site/img/imgg/ic.svg);
+            background-position: -50px 0;
+            width: 20px;
+            height: 20px;
+        }
+        #header .icon a.btn3 {
+            display: inline-block;
+            background: url(../site/img/imgg/ic.svg);
+            background-position: -100px 0px;
+            width: 20px;
+            height: 20px;
+        }
+        #contents {
+            padding-left: 101px;
+            
+            
+        }
+        #contents .container {
+            width: 1200px;
+            height: 679px;
+            margin: 0 auto;
+        }
+        #contents .logo2 {
+            font-size: 80px;
+            text-align: left;
+            line-height: 76px;
+            letter-spacing: -1.6px;
+            margin-top: 150px;
+            z-index: 100;
+        }
+        #contents .desc {
+            font-size: 18px;
+            text-align: left;
+            line-height: 28px;
+            margin-top: 55px;
+            color: #72696a;
+            z-index: 100;
+        }
+        #contents .btn {
+
+        }
+        #contents .btn a {
+            font-size: 16px;
+            display: inline-block;
+            padding: 21px 45px 21px 36px;
+            margin: 35px 26px 49px 0;
+        }
+        #contents .btn a.left {
+            background-color: #c4a586;
+            color: #fff;
+        }
+        #contents .btn a.right {
+            background-color: #fff;
+            color: #c4a586;
+            border: solid 1px #c4a586;
+        }
+        #banner {
+            height: 300px;
+            background-color: #999;
+        }
+        #section {
+            display: flex;
+        }
+        #section .left {
+            width: 50%;
+            height: 388px;
+            background-color: #fcefe9;
+        }
+        #section .right {
+            width: 50%;
+            height: 388px;
+            background-color: #fae2c8;
+        }
+        #section2 {
+            height: 2415px;
+            background-color: #888;
+        }
+        #footer {
+            height: 746px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="img"></div>
+        <div id="container">
+            <div id="header">
+            
+                <h1 class="logo">
+                <span class="icon"></span><p>MISTRIUM</p> 
+                </h1>
+                <nav class="menu">
+                    <ul>                       
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">faqs</a></li>
+                        <li><a href="#">contact us</a></li>
+                    </ul>
+                </nav>
+                <div class="icon">
+                    <li><a href="#" class="btn1"></a></li>
+                    <li><a href="#" class="btn2"></a></li>
+                    <li><a href="#" class="btn3"></a></li>
+                </div>
+            </div>
+        </div>
+
+        <div id="contents">
+            <div class="container">
+            <h2 class="logo2">
+                Modern Furniture For<br>
+                Modern Living Style
+            </h2>
+            <p class="desc">
+                In unfeeling existence objection immediate<br>
+                repulsive on he in. Imprudence comparison<br>
+                uncommonly me he difficulty diminution<br>
+                resolution. Likewise proposal differed scarcely<br>
+                dwelling as on raillery. <br>
+                <br>
+                September few dependent extremity own<br>
+                continued and ten prevailed attending. Early to<br>
+                weeks we could. Do commanded an shameless we<br>
+                disposing do. Indulgence ten remarkably nor are<br>
+                impression out. Power is lived means oh every in<br> 
+                we quiet.
+            </p>
+            <div class="btn">              
+                    <a href="#" class="left">Request a Quote</a>           
+                    <a href="#" class="right">Watch Video</a>         
+            </div>
+        </div>
+        </div>
+        <div id="banner"></div>
+        <div id="section">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div id="section2"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
