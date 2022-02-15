@@ -13,6 +13,7 @@ const modal = function(){
     })
 }
 
+
 //tab menu
 const tabMenu = function(){
     const tabBtn = document.querySelectorAll(".view-title > ul > li");
