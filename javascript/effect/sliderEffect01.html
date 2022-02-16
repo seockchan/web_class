@@ -48,7 +48,7 @@
         .slider:nth-child(5) {z-index: 1;}
     </style>
 </head>
-<body>
+<body class="img01">
 
     <!-- main -->
     <main>
@@ -107,69 +107,101 @@
                         </div>
                         <div class="view-cont">
                             <div>
-<pre><code class="language-javascript">const modal = function(){
-    //버튼을 클릭하면 modal창을 보이게 해주세요.
-    document.querySelector(".source-btn").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.add("show");
-    })
-    //닫기 버튼을 클릭하면 없애주세요.
-    document.querySelector(".modal-close").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.remove("show");
-    })
-}
-modal();
-//버튼을 클릭하면 modal창을 보이게 해주세요.
-    document.querySelector(".source-btn").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.add("show");
-    })
-    //닫기 버튼을 클릭하면 없애주세요.
-    document.querySelector(".modal-close").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.remove("show");
-    })
-    //버튼을 클릭하면 modal창을 보이게 해주세요.
-    document.querySelector(".source-btn").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.add("show");
-    })
-    //닫기 버튼을 클릭하면 없애주세요.
-    document.querySelector(".modal-close").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.remove("show");
-    })
-    //버튼을 클릭하면 modal창을 보이게 해주세요.
-    document.querySelector(".source-btn").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.add("show");
-    })
-    //닫기 버튼을 클릭하면 없애주세요.
-    document.querySelector(".modal-close").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.remove("show");
-    })
-    //버튼을 클릭하면 modal창을 보이게 해주세요.
-    document.querySelector(".source-btn").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.add("show");
-    })
-    //닫기 버튼을 클릭하면 없애주세요.
-    document.querySelector(".modal-close").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.remove("show");
-    })
-    //버튼을 클릭하면 modal창을 보이게 해주세요.
-    document.querySelector(".source-btn").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.add("show");
-    })
-    //닫기 버튼을 클릭하면 없애주세요.
-    document.querySelector(".modal-close").addEventListener("click",()=>{
-        document.querySelector("#modal").classList.remove("show");
-    })
+<pre><code class="language-javascript">&lt;main&gt;
+    &lt;section id="sliderType01"&gt;
+        &lt;div class="slider__wrap"&gt;
+            &lt;div class="slider__img"&gt;
+                &lt;!-- slider*5&gt;img[src="img/img$$.jpg" alt="이미지$"] --&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img02-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img03-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img04-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img05-min.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/img06-min.jpg" alt="이미지5"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
 </code></pre>
                             </div>
                             <div>
                                
                                     <div>
-        css
+<pre><code class="language-javascript">/* slider */
+.slider__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.slider__img {
+    position: relative;
+    width: 800px;
+    height: 480px;
+}
+.slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slider::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+}
+.slider:nth-child(1)::before {content: '이미지1';}
+.slider:nth-child(2)::before {content: '이미지2';}
+.slider:nth-child(3)::before {content: '이미지3';}
+.slider:nth-child(4)::before {content: '이미지4';}
+.slider:nth-child(5)::before {content: '이미지5';}
+.slider:nth-child(1) {z-index: 5;}
+.slider:nth-child(2) {z-index: 4;}
+.slider:nth-child(3) {z-index: 3;}
+.slider:nth-child(4) {z-index: 2;}
+.slider:nth-child(5) {z-index: 1;}
+</code></pre>
                                     </div>
                             </div>
                             <div>
                               
                                     <div>
-        Javascript
+<pre><code class="language-javascript">//sldier01
+const sliderWrap = document.querySelector(".slider__wrap");
+const sliderImg = document.querySelector(".slider__img");
+const slider = document.querySelectorAll(".slider");
+
+let currentIndex = 0;               //현재 보이는 이미지
+let sliderCount = slider.length     //이미지 갯수
+
+console.log(slider)
+
+setInterval(() => {
+    let nextIndex = (currentIndex + 1) % 5;
+
+    slider[currentIndex].style.opacity= "0" //첫 번째 이미지 안 보이게
+    slider[nextIndex].style.opacity= "1" //두 번째 이미지 보이게
+
+    // console.log("currentIndex :"+currentIndex)
+    // console.log("nextIndex :"+nextIndex)
+
+    slider.forEach(slider=>{
+        slider.style.transition ="all 1s";
+    });
+
+    currentIndex = nextIndex;
+
+    //2초가 지나면 
+    // 첫번째 이미지는 opacity0
+    // 두번째 이미지는 opacity1
+
+    //2초가 지나면 
+    // 첫번째 이미지는 opacity0
+    // 두번째 이미지는 opacity0
+    // 세번째 이미지는 opacity1
+}, 2000);
+</code></pre>
                                     </div>
                             </div>
                             <div>jQuery</div>

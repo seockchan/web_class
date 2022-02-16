@@ -19,11 +19,28 @@ img {
 body {
     width: 100%;
     height: 100vh;
-    background-image: url(../img/img01-min.jpg);
     background-size: cover;
     background-position: center center;
     overflow: hidden;
     color: #fff;
+}
+body.img01 {
+    background: url(../img/img01-min.jpg);
+}
+body.img02 {
+    background: url(../img/img02-min.jpg);
+}
+body.img03 {
+    background: url(../img/img03-min.jpg);
+}
+body.img04 {
+    background: url(../img/img04-min.jpg);
+}
+body.img05 {
+    background: url(../img/img05-min.jpg);
+}
+body.img06 {
+    background: url(../img/img06-min.jpg);
 }
 body::before {
     content: '';
