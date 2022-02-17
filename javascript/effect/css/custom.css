@@ -42,13 +42,58 @@ body.img05 {
 body.img06 {
     background: url(../img/img06-min.jpg);
 }
-body::before {
+body.img01::before {
     content: '';
     position: absolute;
     left: 0;top: 0;
     width: 100%;
     height: 100vh;
     background: rgb(54 12 12 / 80%);
+    z-index: -1;
+}
+body.img02::before {
+    content: '';
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(34, 75, 43, 0.8);
+    z-index: -1;
+}
+body.img03::before {
+    content: '';
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(84, 100, 65, 0.8);
+    z-index: -1;
+}
+body.img04::before {
+    content: '';
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(54 12 12 / 80%);
+    z-index: -1;
+}
+body.img05::before {
+    content: '';
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(148, 141, 110, 0.8);
+    z-index: -1;
+}
+body.img06::before {
+    content: '';
+    position: absolute;
+    left: 0;top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(163, 160, 146, 0.8);
     z-index: -1;
 }
 /* info */

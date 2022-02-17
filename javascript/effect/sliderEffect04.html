@@ -24,9 +24,9 @@
             overflow: hidden;
         }
         .slider__inner { /* 이미지 움직이는 영역 */
-            display: flex;
-            width: 4800px;  /* 이미지 총 길이*/
-            transform: translateX(0);
+            
+            height: 2400px;
+            position: relative; /* left를 사용하기 위해서 */
         }
         .slider {          
             width: 800px;
@@ -45,10 +45,9 @@
         .slider:nth-child(3)::before {content: '이미지3';}
         .slider:nth-child(4)::before {content: '이미지4';}
         .slider:nth-child(5)::before {content: '이미지5';}
-        .slider:nth-child(6)::before {content: '이미지1';}
     </style>
 </head>
-<body class="img03">
+<body class="img04">
 
     <!-- main -->
     <main>
@@ -56,7 +55,7 @@
             <div class="slider__wrap">
                 <div class="slider__img">
                     <!-- slider*5>img[src="img/img$$.jpg" alt="이미지$"] -->
-                    <div class="slider__inner">
+                        <div class="slider__inner">
                         <div class="slider"><img src="img/img02-min.jpg" alt="이미지1"></div>
                         <div class="slider"><img src="img/img03-min.jpg" alt="이미지2"></div>
                         <div class="slider"><img src="img/img04-min.jpg" alt="이미지3"></div>
@@ -72,8 +71,8 @@
     <!-- info -->
     <div class="info">
         <div class="title">
-        <h1><a href="sliderEffect.html">Javascript Slider Effect03</a></h1>
-        <p>이미지 슬라이드 - 연속적으로 움직이기</p>
+        <h1><a href="sliderEffect.html">Javascript Slider Effect04</a></h1>
+        <p>이미지 슬라이드 - 위로 움직이기</p>
         </div>
     
         <div class="number">
@@ -88,34 +87,34 @@
             <li><a href="sliderEffect08.html">8</a></li>
         </ul>
         </div>
-        <!-- source -->
-        <div class="source">
-            <button class="source-btn">소스보기</button>
-            <div id="modal">
-                <div class="modal-wrap">
-                    <div class="modal-cont">
-                        <div class="code-view">
-                            <div class="view-header" aria-hidden="true">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="view-title">
-                                <ul>
-                                    <li class="active"><a href="#">HTML</a></li>
-                                    <li><a href="#">CSS</a></li>
-                                    <li><a href="#">Javascript</a></li>
-                                    <li><a href="#">jQuery</a></li>
-                                </ul>
-                            </div>
-                            <div class="view-cont">
-                                <div>
+                <!-- source -->
+                <div class="source">
+                    <button class="source-btn">소스보기</button>
+                    <div id="modal">
+                        <div class="modal-wrap">
+                            <div class="modal-cont">
+                                <div class="code-view">
+                                    <div class="view-header" aria-hidden="true">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="view-title">
+                                        <ul>
+                                            <li class="active"><a href="#">HTML</a></li>
+                                            <li><a href="#">CSS</a></li>
+                                            <li><a href="#">Javascript</a></li>
+                                            <li><a href="#">jQuery</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="view-cont">
+                                        <div>
 <pre><code class="language-javascript">&lt;main&gt;
     &lt;section id="sliderType01"&gt;
         &lt;div class="slider__wrap"&gt;
             &lt;div class="slider__img"&gt;
                 &lt;!-- slider*5&gt;img[src="img/img$$.jpg" alt="이미지$"] --&gt;
-                &lt;div class="slider__inner"&gt;
+                    &lt;div class="slider__inner"&gt;
                     &lt;div class="slider"&gt;&lt;img src="img/img02-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
                     &lt;div class="slider"&gt;&lt;img src="img/img03-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
                     &lt;div class="slider"&gt;&lt;img src="img/img04-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
@@ -127,11 +126,12 @@
     &lt;/section&gt;
 &lt;/main&gt;
 </code></pre>
-                                </div>
-                                <div>
-                                   
+                                        </div>
                                         <div>
-<pre><code class="language-javascript">.slider__wrap {
+                                           
+                                                <div>
+<pre><code class="language-javascript">/* slider */
+.slider__wrap {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,10 +142,9 @@
     height: 480px;
     overflow: hidden;
 }
-.slider__inner { /* 이미지 움직이는 영역 */
-    display: flex;
-    width: 4800px;  /* 이미지 총 길이*/
-    transform: translateX(0);
+.slider__inner { /* 이미지 움직이는 영역 */  
+    height: 2400px;
+    position: relative; /* left를 사용하기 위해서 */
 }
 .slider {          
     width: 800px;
@@ -164,96 +163,170 @@
 .slider:nth-child(3)::before {content: '이미지3';}
 .slider:nth-child(4)::before {content: '이미지4';}
 .slider:nth-child(5)::before {content: '이미지5';}
-.slider:nth-child(6)::before {content: '이미지1';}
 </code></pre>
+                                                </div>
                                         </div>
-                                </div>
-                                <div>
-                                  
                                         <div>
-<pre><code class="language-javascript">//sldier03
+                                          
+                                                <div>
+<pre><code class="language-javascript">//sldier04
 const sliderWrap = document.querySelector(".slider__wrap");
 const sliderImg = document.querySelector(".slider__img");   //이미지 보이는 영역
 const sliderInner = document.querySelector(".slider__inner");   //이미지 움직이는 영역 
 const slider = document.querySelectorAll(".slider");
 
+// console.log(slider); 이미지가 배열로 들어가 있음
+
 let currentIndex = 0;   //첫 번째 이미지 (현재 보이는 이미지)
-let sliderCount = slider.length;    //이미지 갯수
-let sliderWidth = sliderImg.offsetWidth;    //이미지 가로값
-//sliderInner:first .css
-let sliderClone = sliderInner.firstElementChild.cloneNode(true);  //.javascript  , 이미지 복사
-sliderInner.appendChild(sliderClone); //첫번째 이미지를 마지막에 넣어줌
 
-function sliderEffect(){
-    currentIndex++;
-    sliderInner.style.transition= "all 0.3s";
-    sliderInner.style.transform = "translateX(-"+sliderWidth*currentIndex+"px)"
+// setInterval(() => {
+//     let nextIndex = (currentIndex+1)%5;
+//     console.log(currentIndex);
+//     currentIndex++;
+//     currentIndex=nextIndex;
+// }, 2000);
 
-    //마지막 사진에 갔을 때
-    if(currentIndex == sliderCount){
-        setTimeout(() => {
-            //초기화
-            sliderInner.style.transition= "0s";
-            sliderInner.style.transform = "translateX(0px)"
-            
-        }, 300);
-        currentIndex = 0;
-    }
-}
-setInterval(sliderEffect, 2000);
+// setInterval(() => {
+//     let nextIndex = (currentIndex+1)%5;
+//     currentIndex++;
+//     if(currentIndex=nextIndex){
+//         console.log(currentIndex);
+// }
+// }, 2000);
+
+// setInterval(() => {
+//     console.log(currentIndex);
+//     currentIndex = (currentIndex+1)%5
+// }, 1000);
+
+let sliderCount = slider.length;
+
+    setInterval(() => {
+    
+    // if(currentIndex &lt; sliderCount){
+    //     console.log(currentIndex);      
+    //     currentIndex++;     
+    // }else{
+    //     currentIndex=0;
+    // }
+
+    (currentIndex &lt; sliderCount -1 ) ? currentIndex++ : currentIndex = 0;
+
+    // sliderInner.style.top = "-0px"     //480*0
+    // sliderInner.style.top = "-480px"   //480*1
+    // sliderInner.style.top = "-960px"  //480*2
+    // sliderInner.style.top = "-1440px"  //480*3
+    // sliderInner.style.top = "-1920px"  //480*4
+
+    // javascript 애니메이션
+    // sliderInner.style.top = -480*currentIndex+"px";
+    // sliderInner.style.transition = "all 0.6s ease"
+
+    //gsap 애니메이션
+    gsap.to(sliderInner,{
+        duration:1,
+        top:-480*currentIndex,
+        ease: "slow(0.7, 0.7, false)"
+    });
+
+}, 2000);
 </code></pre>
+                                                </div>
                                         </div>
+                                        <div>jQuery</div>
+                                    </div>
                                 </div>
-                                <div>jQuery</div>
                             </div>
+                            <button class="modal-close">닫기</button>
                         </div>
                     </div>
-                    <button class="modal-close">닫기</button>
-                </div>
-            </div>
-            </div>
-            <!-- //source -->
-            </div>
+                    </div>
+                    <!-- //source -->
     </div>
     <script src="js/gsap.min.js"></script>
     <script src="js/highlight.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
 
-        highlight();
-        modal();
-        tabMenu();
+        highlight()
+        modal()
+        tabMenu()
 
-        //sldier03
+        //sldier04
         const sliderWrap = document.querySelector(".slider__wrap");
         const sliderImg = document.querySelector(".slider__img");   //이미지 보이는 영역
         const sliderInner = document.querySelector(".slider__inner");   //이미지 움직이는 영역 
         const slider = document.querySelectorAll(".slider");
 
+        // console.log(slider); 이미지가 배열로 들어가 있음
+
         let currentIndex = 0;   //첫 번째 이미지 (현재 보이는 이미지)
-        let sliderCount = slider.length;    //이미지 갯수
-        let sliderWidth = sliderImg.offsetWidth;    //이미지 가로값
-        //sliderInner:first .css
-        let sliderClone = sliderInner.firstElementChild.cloneNode(true);  //.javascript  , 이미지 복사
-        sliderInner.appendChild(sliderClone); //첫번째 이미지를 마지막에 넣어줌
 
-        function sliderEffect(){
-            currentIndex++;
-            sliderInner.style.transition= "all 0.3s";
-            sliderInner.style.transform = "translateX(-"+sliderWidth*currentIndex+"px)"
+        // setInterval(() => {
+        //     let nextIndex = (currentIndex+1)%5;
+        //     console.log(currentIndex);
+        //     currentIndex++;
+        //     currentIndex=nextIndex;
+        // }, 2000);
+        
+        // setInterval(() => {
+        //     let nextIndex = (currentIndex+1)%5;
+        //     currentIndex++;
+        //     if(currentIndex=nextIndex){
+        //         console.log(currentIndex);
+        // }
+        // }, 2000);
+        
+        // setInterval(() => {
+        //     console.log(currentIndex);
+        //     currentIndex = (currentIndex+1)%5
+        // }, 1000);
 
-            //마지막 사진에 갔을 때
-            if(currentIndex == sliderCount){
-                setTimeout(() => {
-                    //초기화
-                    sliderInner.style.transition= "0s";
-                    sliderInner.style.transform = "translateX(0px)"
-                    
-                }, 300);
-                currentIndex = 0;
-            }
-        }
-        setInterval(sliderEffect, 2000);
+        let sliderCount = slider.length;
+
+            setInterval(() => {
+            
+            // if(currentIndex < sliderCount){
+            //     console.log(currentIndex);      
+            //     currentIndex++;     
+            // }else{
+            //     currentIndex=0;
+            // }
+
+            (currentIndex < sliderCount -1 ) ? currentIndex++ : currentIndex = 0;
+
+            // sliderInner.style.top = "-0px"     //480*0
+            // sliderInner.style.top = "-480px"   //480*1
+            // sliderInner.style.top = "-960px"  //480*2
+            // sliderInner.style.top = "-1440px"  //480*3
+            // sliderInner.style.top = "-1920px"  //480*4
+
+            // javascript 애니메이션
+            // sliderInner.style.top = -480*currentIndex+"px";
+            // sliderInner.style.transition = "all 0.6s ease"
+
+            //gsap 애니메이션
+            gsap.to(sliderInner,{
+                duration:1,
+                top:-480*currentIndex,
+                ease: "slow(0.7, 0.7, false)"
+            });
+
+        }, 2000);
     </script>
+
+    <!-- 제이쿼리 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        const modal =function(){
+            $(".source-btn").click(()=>{
+                $("#modal").addClass("show");
+            })
+            $(".modal-close").click(()=>{
+                $("#modal").removeClass("show");
+            })
+        }
+        modal();
+    </script> -->
 </body>
 </html>
