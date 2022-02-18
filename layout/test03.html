@@ -355,8 +355,8 @@
             color: #a9a7a6;
         }
         #footer {
-            height: 746px;
-            background-color: #888;
+            height: 600px;
+
         }
         
         
@@ -452,7 +452,7 @@
         }
 
         .cont3 {
-            
+            height: 1000px;
         }
         .cont3 .rad {
             color: #fff;
@@ -480,6 +480,122 @@
             display: inline-block;
         }
         
+        .contents4 {
+            height: 600px;
+            
+            background: #fbfbfb;
+            position: relative;
+            padding-left: 300px;
+            
+        }
+        .contents4 .section .img {
+            position: absolute;
+            background: url(img/man.png);
+            width: 600px;
+            height: 600px;
+        }
+        .contents4 .section {
+            position: absolute;
+            background: url(img/man.png)no-repeat;
+            width: 1440px;
+            height: 600px;
+
+        }
+        .contents4 .section .desc {
+            padding-top: 90px;
+            padding-left: 700px;
+        }
+        .contents4 h2 {
+            font-size: 53px;
+            text-align-last: left;
+            color: #3d3d3f;
+            line-height: 56px;
+            font-weight: 700;
+        }
+        .contents4 p {
+            padding-top: 70px;
+            font-size: 18px;
+            text-align: left;
+            color: 72696a;
+            line-height: 28px;
+        }
+
+        .contents5 {
+            width: 100%;
+            height: 450px;
+            padding-left: 300px;
+        }
+        .contents5 .section{
+            background: url(img/man2.png) no-repeat right;
+            margin-top: 100px;
+            margin-right: 500px;
+        }
+        .contents5  .mi {
+           padding-bottom: 40px;
+        }
+        .contents5  .mi a {
+            
+            text-decoration: none;
+            padding: 8px 36px;
+            color : #fe8432;
+            font-size: 14px;
+            border: 1px solid #fe8432;
+            width: 112px;
+            height: 20px;
+            border-radius: 18px;
+        }
+        .contents5 h2 {
+            font-size: 53px;
+            text-align: left;
+            font-weight: 700;
+        }
+        .contents5 .link {
+            position: relative;
+        }
+        
+        .contents5 .link a {
+            position: absolute;
+            top: -35px;
+            left: 1;
+            font-size: 15px;
+            text-align: left;
+            color: #2e2e2e;
+            padding-left: 50px;
+            display: inline-block;
+            margin-top: 50px;
+            vertical-align: center;
+            margin-bottom: 30px;
+        }
+        .contents5 .link .icc {
+            padding-left: 550px;
+            display: inline-block;
+            
+        }
+        .contents5 .link .icc::before {
+            content: '';
+            background: url(img/iccc.svg) no-repeat;
+            background-position: 0 0;
+            width: 71px;
+            height: 59px;
+            display: inline-block;
+           
+            
+        }
+        #footer #container #header {
+            width: 1400px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        /* .contents5 .link a::before {
+            content: '';
+            background: url(img/iccc.svg) ;
+            background-position: 0 0;
+            bottom: 100px;
+            width: 71px;
+            height: 59px;
+            display: inline-block;
+        } */
+
     </style>
 </head>
 <body>
@@ -649,9 +765,50 @@
                 </div>
             </div>
             </div>
+            <div class="contents4">
+                <div class="section">
+                    <div class="desc">
+                        <div class="img"></div>
+                        <h2>Let’s see what our<br>
+                            customer’s say</h2>
+                        <p>Dwelling and speedily ignorant any steepest.<br> Admiration instrument affronting invitation reasonably<br> up do of prosperous in. Shy saw declared age debating <br>ecstatic man. Call in so want pure rank am dear were.<br> Remarkably to continuing in surrounded diminution on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contents5">
+                <div class="section">
+                    <div class="mi"><a href="#">Mistrium Interiror</a></div>
+                    <h2>Signup to receive updates<br> about new products</h2>
+                </div>
+                <div class="link">
+                    <div class="icc"></div>
+                    <a href="#">watch into video</a>
+                </div>
+            </div>
         </div>     
 
-        <div id="footer"></div>
+        <div id="footer">
+            <div id="container">
+                <div id="header">
+                
+                    <h1 class="logo">
+                    <span class="icon"></span><p>MISTRIUM</p> 
+                    </h1>
+                    <nav class="menu">
+                        <ul>                       
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">products</a></li>
+                            <li><a href="#">faqs</a></li>
+                            <li><a href="#">contact us</a></li>
+                        </ul>
+                    </nav>
+                    <div class="icon">
+                        <li><a href="#" class="btn1"></a></li>
+                        <li><a href="#" class="btn2"></a></li>
+                        <li><a href="#" class="btn3"></a></li>
+                    </div>
+                </div>
     </div>
 </body>
 </html>
