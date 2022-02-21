@@ -20,9 +20,13 @@
             font-weight: normal;
             font-style: normal;
         }
-        *, *::before, *::after {
+
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
         }
+
         * {
             margin: 0;
             padding: 0;
@@ -95,6 +99,7 @@
             transition: all 0.2s;
             border: 1px dashed #fff;
         }
+
         #header nav li.active a {
             background: #fff;
             color: #262626;
@@ -105,17 +110,19 @@
         }
 
         /* footer */
-        #footer {        
+        #footer {
             margin-top: 200px;
             width: 100%;
             background: #4a4a4a;
             text-align: center;
         }
+
         #footer a {
             color: #000;
             font-size: 16px;
 
         }
+
         /* quiz wrap */
         .quiz__wrap {
             display: flex;
@@ -184,6 +191,7 @@
             background-color: #f5f5f5;
             position: relative;
         }
+
         .quiz__view .true {
             position: absolute;
             left: 70%;
@@ -199,6 +207,7 @@
             color: #fff;
             opacity: 0;
         }
+
         .quiz__view .false {
             position: absolute;
             right: 70%;
@@ -214,6 +223,33 @@
             background: #fff;
             opacity: 0;
         }
+
+        .quiz__view.like .true {
+            opacity: 1;
+            animation: wobble 0.6s;
+        }
+
+        .quiz__view.dislike .false {
+            opacity: 1;
+            animation: wobble 0.6s;
+        }
+
+        @keyframes wobble {
+            0% {transform: translateZ(0)}
+
+            15% {transform: translate3d(-25%, 0, 0) rotate(-5deg)}
+
+            30% {transform: translate3d(20%, 0, 0) rotate(3deg)}
+
+            45% {transform: translate3d(-15%, 0, 0) rotate(-3deg)}
+
+            60% {transform: translate3d(10%, 0, 0) rotate(2deg)}
+
+            75% {transform: translate3d(-5%, 0, 0) rotate(-1deg)}
+
+            to {transform: translateZ(0)}
+        }
+
         .quiz__answer {
             background-color: #f5f5f5;
             border-top: 6px ridge #cacaca;
@@ -239,11 +275,12 @@
             width: 100%;
             font-size: 22px;
             padding: 13px 20px;
-            background: #d6d6d6;
+            background: #fff;
             font-family: 'Cafe24Dangdanghae';
             text-shadow: 1px 1px 1px #fff;
-            display: none;
+            /* display: none; */
         }
+
         .quiz__input {
             border-top: 6px ridge #cacaca;
             width: 100%;
@@ -259,12 +296,13 @@
         .dog {
             padding-top: 50px;
         }
+
         .dog .head,
         .dog .body {
             position: relative;
             width: 115px;
         }
-        
+
         .dog .head {
             height: 115px;
             border-radius: 50% 50% 0 0;
@@ -276,7 +314,7 @@
             top: -14%;
             width: 100%;
         }
-        
+
         .dog .ears::before,
         .dog .ears::after {
             content: "";
@@ -294,12 +332,12 @@
             left: 0;
             border-radius: 50% 45% 0 0;
         }
-        
+
         .dog .ears::after {
             right: 0;
             border-radius: 45% 50% 0 0;
         }
-        
+
         .dog .face {
             position: absolute;
             background: #F7AA2B;
@@ -322,7 +360,7 @@
             margin-top: 24px;
             border-radius: 20px 20px 0 0;
         }
-        
+
         .dog .face::after {
             position: absolute;
             bottom: -1px;
@@ -371,7 +409,7 @@
             background: #451d1c;
             margin: auto;
         }
-        
+
         .dog .mouth {
             position: relative;
             top: 34.5%;
@@ -381,7 +419,7 @@
             text-align: center;
             background: #451d1c;
         }
-        
+
         .dog .mouth::before,
         .dog .mouth::after {
             content: "";
@@ -408,7 +446,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .dog .tongue::before,
         .dog .tongue::after {
             content: "";
@@ -424,7 +462,7 @@
             background: #451d1c;
             z-index: -1;
         }
-        
+
         .dog .tongue::after {
             top: 14px;
             left: -4px;
@@ -447,7 +485,7 @@
             border-radius: 2px;
             z-index: 0;
         }
-        
+
         .dog .body {
             position: relative;
             height: 139px;
@@ -468,14 +506,14 @@
             margin: auto;
             background: #F7AA2B;
         }
-        
+
         .dog .body::after {
             top: -2px;
             bottom: -1px;
             width: 60px;
             background: #FEFEFE;
         }
-        
+
         .dog .tail {
             position: absolute;
             left: -60%;
@@ -489,7 +527,7 @@
             z-index: -2;
             animation: movetail 0.1s linear infinite alternate forwards;
         }
-        
+
         .dog .legs {
             position: absolute;
             bottom: 0;
@@ -499,7 +537,7 @@
             background: #F7AA2B;
             border-radius: 10px 10px 0 0;
         }
-        
+
         .dog .legs::before,
         .dog .legs::after {
             content: "";
@@ -508,105 +546,127 @@
             background: #CB7A1D;
             z-index: -1;
         }
-        
+
         .dog .legs::before {
             left: -7.5%;
             width: 115%;
             height: 55%;
             border-radius: 5px 5px 0 0;
         }
-        
+
         .dog .legs::after {
             left: -3.5%;
             width: 107%;
             height: 250%;
             border-radius: 20px 20px 35px 35px;
         }
+
         /* .dog.like */
-        .dog.like .face::before {
+        .like .dog .face::before {
             margin-top: 10px;
         }
-        .dog.like .face::after {
+
+        .like .dog .face::after {
             height: 85px;
         }
-        .dog.like .eyes {
+
+        .like .dog .eyes {
             top: 13%;
         }
-        .dog.like .eyes::before,
-        .dog.like .eyes::after {
+
+        .like .dog .eyes::before,
+        .like .dog .eyes::after {
             width: 18px;
             height: 5px;
             margin: 0px 12.5%;
             transform: rotate(-37.5deg);
             border-radius: 20px;
         }
-        .dog.like .eyes::after {
+
+        .like .dog .eyes::after {
             transform: rotate(37.5deg);
         }
-        .dog.like .nose {
+
+        .like .dog .nose {
             top: 18%;
         }
-        .dog.like .mouth {
+
+        .like .dog .mouth {
             top: 16.5%;
         }
-        .dog.like .tongue::before {
+
+        .like .dog .tongue::before {
             height: 12px;
         }
-        .dog.like .tongue::after {
+
+        .like .dog .tongue::after {
             height: 24px;
             animation: movetongue 0.1s linear 0.35s infinite alternate forwards;
         }
-        .dog.like .chin {
-        top: 34%;
+
+        .like .dog .chin {
+            top: 34%;
         }
-        .dog.like .tail {
+
+        .like .dog .tail {
             animation: movetail 0.1s linear infinite alternate forwards;
         }
 
-        /* .dog.dislike */
-        .dog.dislike .ears::before {
+        /* .dislike.dog*/
+        .dislike .dog .ears::before {
             transform: rotate(-50deg) translate(-7px, 2px);
         }
-        .dog.dislike .ears::after {
+
+        .dislike .dog .ears::after {
             transform: rotate(50deg) translate(7px, 2px);
         }
-        .dog.dislike .face::before {
+
+        .dislike .dog .face::before {
             margin-top: 28px;
         }
-        .dog.dislike .face::after {
+
+        .dislike .dog .face::after {
             height: 55px;
         }
-        .dog.dislike .eyes {
+
+        .dislike .dog .eyes {
             top: 38%;
         }
-        .dog.dislike .eyes::before,
-        .dog.dislike .eyes::after {
+
+        .dislike .dog .eyes::before,
+        .dislike .dog .eyes::after {
             width: 18px;
             height: 5px;
             margin: 0px 14.5%;
             transform: rotate(-37.5deg);
             border-radius: 20px;
         }
-        .dog.dislike .eyes::after {
+
+        .dislike .dog .eyes::after {
             transform: rotate(37.5deg);
         }
-        .dog.dislike .teardrop {
+
+        .dislike .dog .teardrop {
             animation: cry 0.1s ease-in 0.25s forwards;
         }
-        .dog.dislike .nose {
+
+        .dislike .dog .nose {
             top: 44%;
         }
-        .dog.dislike .mouth {
+
+        .dislike .dog .mouth {
             top: 42%;
         }
-        .dog.dislike .chin {
+
+        .dislike .dog .chin {
             top: 52%;
         }
-        .dog.dislike .tail {
+
+        .dislike .dog .tail {
             transform: rotate(0);
             animation: none;
         }
-        
+
         @keyframes movetongue {
             100% {
                 height: 27px;
@@ -618,12 +678,12 @@
                 height: 27px;
             }
         }
-        
+
         @keyframes movetail {
             0% {
                 transform: rotate(37deg);
             }
-            
+
             100% {
                 transform: rotate(52deg);
             }
@@ -713,17 +773,17 @@
     </main>
 
     <footer id="footer">
-       <a href="mailto:baeseockchan@gmail.com">mailto:baeseockchan@gmail.com</a>
+        <a href="mailto:baeseockchan@gmail.com">mailto:baeseockchan@gmail.com</a>
     </footer>
 
     <script>
-        const quizType = document.querySelector(".quiz__type")  //퀴즈 종류
-        const quizNumber = document.querySelector(".quiz__number")  //퀴즈 번호
-        const quizAsk = document.querySelector(".quiz__ask")      //퀴즈 질문
-        const quizConfirm = document.querySelector(".quiz__confirm")    //정답 확인 버튼
-        const quizResult = document.querySelector(".quiz__result")  //정답 결과
-        const quizDog = document.querySelector(".quiz__view .dog") //강아지
-        const quizInput = document.querySelector(".quiz__input")
+        const quizType = document.querySelector(".quiz__type") //퀴즈 종류
+        const quizNumber = document.querySelector(".quiz__number") //퀴즈 번호
+        const quizAsk = document.querySelector(".quiz__ask") //퀴즈 질문
+        const quizConfirm = document.querySelector(".quiz__confirm") //정답 확인 버튼
+        const quizResult = document.querySelector(".quiz__result") //정답 결과
+        const quizView = document.querySelector(".quiz__view") //강아지
+        const quizInput = document.querySelector(".quiz__input") //input 박스
 
         //문제 정보
         const answerType = "javascript";
@@ -735,23 +795,48 @@
         quizType.textContent = answerType;
         quizNumber.textContent = answerNum + ".";
         quizAsk.textContent = answerAsk;
-        quizResult.textContent = answerResult;
+        quizResult.textContent = "정답은 : "+answerResult+" 입니다.";
 
-        quizConfirm.addEventListener("click", ()=>{
-            quizConfirm.style.display="none";
-            quizResult.style.display="block";
-            if(quizInput===quizResult){
-                console.log(1)
-                quizDog.classList.add("like")
-            }else{
-                console.log(2)
-                quizDog.classList.add("dislike")
+        //정답 숨기기
+        quizResult.style.display = "none";
+
+        //정답 확인
+        quizConfirm.addEventListener("click", () => {
+            quizConfirm.style.display = "none";
+            quizResult.style.display = "block";
+            
+            const userWord = quizInput.value.toLowerCase().trim(); //사용자가 쓴 데이터
+
+            //사용자 데이터 == 정답
+            if (userWord == answerResult) {
+                quizView.classList.add("like");
+                quizResult.style.display="none";
+            } else {
+                quizView.classList.add("dislike");
+                quizInput.style.display="none";
             }
-                
-        })
 
-        
-        
+            console.log(userWord);
+        });
+
+
+
+
+
+
+        // quizConfirm.addEventListener("click", ()=>{
+        //     quizConfirm.style.display="none";
+        //     quizResult.style.display="block";
+        //     if(quizInput===quizResult){
+        //         console.log(1)
+        //         quizDog.classList.add("like")
+        //     }else{
+        //         console.log(2)
+        //         quizDog.classList.add("dislike")
+
+        //     }
+
+        // })
     </script>
 </body>
 
