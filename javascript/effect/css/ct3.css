@@ -71,15 +71,15 @@
   transform: rotate(90deg);
 }
 
-.menu-bar > span {
+.view-title > li {
   padding: 8px;
   display: inline-block;
   cursor: pointer;
 }
-.menu-bar > span::first-letter {
+.view-title > li::first-letter {
   text-decoration: underline;
 }
-.menu-bar > span:hover {
+.view-title > li:hover {
   background-color: #bababa;
 }
 
@@ -89,17 +89,17 @@
   border-right: 2px solid #FCFCFC;
   border-bottom: 2px solid #FCFCFC;
 }
-.content-container > .content {
+.content-container > .view-cont {
   display: flex;
   height: 260px;
 }
-.content-container > .content > .main, .content-container > .content > .scroll-left {
+.content-container > .view-cont > .main, .content-container > .view-cont > .scroll-left {
   height: 100%;
 }
-.content-container > .content > .main {
+.content-container > .view-cont > .main {
   width: calc(100% - 26px);
 }
-.content-container > .content > .scroll {
+.content-container > .view-cont > .scroll {
   width: 26px;
 }
 
