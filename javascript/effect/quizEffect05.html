@@ -117,6 +117,7 @@
             width: 100%;
             background: #4a4a4a;
             text-align: center;
+            padding: 20px;
         }
 
         #footer a {
@@ -949,15 +950,15 @@
         function answerQuiz(){
             const quizSelects =document.querySelectorAll(".quiz__selects");             //보기 선택 박스
             const quizView =document.querySelectorAll(".quiz__view");                   //강아지
-            const quizResult =document.querySelector(".quiz__result");                   //결과 박스
+            const quizResult =document.querySelector(".quiz__result");                  //결과 박스
 
 
             let scoreCurrent = 0;
             
             quizInfo.forEach((question, number)=>{
-                const quizSelectsWrap = quizSelects[number];                            //전체 보기 박스
-                const userSelector = `input[name=select${number}]:checked`              //사용자가 클릭한 것
-                const userAnswer = (quizSelectsWrap.querySelector(userSelector)||{}).value    //클릭한 값의 속성 값을 가져옴
+                const quizSelectsWrap = quizSelects[number];                                    //전체 보기 박스
+                const userSelector = `input[name=select${number}]:checked`                      //사용자가 클릭한 것
+                const userAnswer = (quizSelectsWrap.querySelector(userSelector)||{}).value      //클릭한 값의 속성 값을 가져옴
                 
                 if(userAnswer == question.answerResult){
                     console.log("정답입니다!")

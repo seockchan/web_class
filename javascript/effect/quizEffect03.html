@@ -115,6 +115,7 @@
             width: 100%;
             background: #4a4a4a;
             text-align: center;
+            padding: 20px;
         }
 
         #footer a {
@@ -847,13 +848,14 @@
     </footer>
 
     <script>
-        const quizType =document.querySelectorAll(".quiz__type");  //문제 유형
-        const quizNumber =document.querySelectorAll(".quiz__number");  //문제 번호
-        const quizAsk =document.querySelectorAll(".quiz__ask");    //문제 질문
-        const quizConfirm =document.querySelectorAll(".quiz__confirm");    //문제 정답 버튼
-        const quizResult =document.querySelectorAll(".quiz__result");    //문제 정답
-        const quizView =document.querySelectorAll(".quiz__view");    //문제 화면
-        const quizInput =document.querySelectorAll(".quiz__input");    //사용자 정답
+
+        const quizType =document.querySelectorAll(".quiz__type");           //문제 유형
+        const quizNumber =document.querySelectorAll(".quiz__number");       //문제 번호
+        const quizAsk =document.querySelectorAll(".quiz__ask");             //문제 질문
+        const quizConfirm =document.querySelectorAll(".quiz__confirm");     //문제 정답 버튼
+        const quizResult =document.querySelectorAll(".quiz__result");       //문제 정답
+        const quizView =document.querySelectorAll(".quiz__view");           //문제 화면
+        const quizInput =document.querySelectorAll(".quiz__input");         //사용자 정답
 
         //문제 정보
         const quizInfo = [
@@ -902,6 +904,7 @@
         // }
 
         //forEach문
+        //문제 출력
         quizInfo.forEach((e, i)=>{
             quizType[i].textContent = quizInfo[i].answerType;
             quizNumber[i].textContent = quizInfo[i].answerNum+".";
@@ -935,8 +938,6 @@
                 }
             })
         })
-
-
     </script>
 </body>
 

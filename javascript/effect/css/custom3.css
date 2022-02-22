@@ -12,90 +12,7 @@ a {
 li {
     list-style: none;
 }
-img {
-    width: 100%;
-    vertical-align: top; /*이미지 여백 제거*/
-}
-body {
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    overflow: hidden;
-    color: #fff;
-}
-body.img01 {
-    background: url(../img/img01-min.jpg);
-}
-body.img02 {
-    background: url(../img/img02-min.jpg);
-}
-body.img03 {
-    background: url(../img/img03-min.jpg);
-}
-body.img04 {
-    background: url(../img/img04-min.jpg);
-}
-body.img05 {
-    background: url(../img/img05-min.jpg);
-}
-body.img06 {
-    background: url(../img/img06-min.jpg);
-}
-body.img01::before {
-    content: '';
-    position: absolute;
-    left: 0;top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgb(54 12 12 / 80%);
-    z-index: -1;
-}
-body.img02::before {
-    content: '';
-    position: absolute;
-    left: 0;top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(34, 75, 43, 0.8);
-    z-index: -1;
-}
-body.img03::before {
-    content: '';
-    position: absolute;
-    left: 0;top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(84, 100, 65, 0.8);
-    z-index: -1;
-}
-body.img04::before {
-    content: '';
-    position: absolute;
-    left: 0;top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgb(54 12 12 / 80%);
-    z-index: -1;
-}
-body.img05::before {
-    content: '';
-    position: absolute;
-    left: 0;top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(148, 141, 110, 0.8);
-    z-index: -1;
-}
-body.img06::before {
-    content: '';
-    position: absolute;
-    left: 0;top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgb(96 94 86 / 80%);
-    z-index: -1;
-}
+
 /* info */
 .title {
     position: absolute;
@@ -145,10 +62,10 @@ body.img06::before {
     bottom: 20px;
 }
 .source button {
-    border: 1px solid #fff;
+    border: 1px solid #000;
     background: transparent;
     font-family: 'NexonLv1Gothic';
-    color: #fff;
+    color: #000;
     font-size: 16px;
     padding: 10px 30px;
     border-radius: 50px;
@@ -236,44 +153,8 @@ body.img06::before {
     overflow-x: hidden;
    
 }
-.code-view::-webkit-scrollbar {
-    width: 4px; /*스크롤바의 너비*/
-}
-.code-view::-webkit-scrollbar-thumb {
-    background-color: #a2fca2; /*스크롤바의 색상*/
-}
-.code-view::-webkit-scrollbar-track {
-    background-color: #ffa; /*스크롤바 트랙 색상*/
-}
-.code-view::-webkit-scrollbar-corner {
-    background-color: #ffa; /*스크롤바 코너 색상*/
-}
-.view-header {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 32px;
-    background: #fff;
-    padding: 7px 0 7px 10px;
-    border-bottom: 1px solid #e2e8f0;
-    border-radius: 5px 5px 0 0;
-}
-.view-header > span {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    border-radius: 10px;
-}
-.view-header > span:nth-child(1) {
-    background-color: #f56565;
-}
-.view-header > span:nth-child(2) {
-    background-color: #f6e05e;
-}
-.view-header > span:nth-child(3) {
-    background-color: #4ebb7b;
-}
+
+
 .view-title {
     position: absolute;
     left: 0;

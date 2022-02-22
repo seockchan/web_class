@@ -115,6 +115,7 @@
             width: 100%;
             background: #4a4a4a;
             text-align: center;
+            padding: 20px;
         }
 
         #footer a {
@@ -777,13 +778,13 @@
     </footer>
 
     <script>
-        const quizType = document.querySelector(".quiz__type") //퀴즈 종류
-        const quizNumber = document.querySelector(".quiz__number") //퀴즈 번호
-        const quizAsk = document.querySelector(".quiz__ask") //퀴즈 질문
-        const quizConfirm = document.querySelector(".quiz__confirm") //정답 확인 버튼
-        const quizResult = document.querySelector(".quiz__result") //정답 결과
-        const quizView = document.querySelector(".quiz__view") //강아지
-        const quizInput = document.querySelector(".quiz__input") //input 박스
+        const quizType = document.querySelector(".quiz__type")          //퀴즈 종류
+        const quizNumber = document.querySelector(".quiz__number")      //퀴즈 번호
+        const quizAsk = document.querySelector(".quiz__ask")            //퀴즈 질문
+        const quizConfirm = document.querySelector(".quiz__confirm")    //정답 확인 버튼
+        const quizResult = document.querySelector(".quiz__result")      //정답 결과
+        const quizView = document.querySelector(".quiz__view")          //강아지
+        const quizInput = document.querySelector(".quiz__input")        //input 박스
 
         //문제 정보
         const answerType = "javascript";
@@ -805,7 +806,7 @@
             quizConfirm.style.display = "none";
             quizResult.style.display = "block";
             
-            const userWord = quizInput.value.toLowerCase().trim(); //사용자가 쓴 데이터
+            const userWord = quizInput.value.toLowerCase().trim();      //사용자가 쓴 데이터
 
             //사용자 데이터 == 정답
             if (userWord == answerResult) {
@@ -818,25 +819,6 @@
 
             console.log(userWord);
         });
-
-
-
-
-
-
-        // quizConfirm.addEventListener("click", ()=>{
-        //     quizConfirm.style.display="none";
-        //     quizResult.style.display="block";
-        //     if(quizInput===quizResult){
-        //         console.log(1)
-        //         quizDog.classList.add("like")
-        //     }else{
-        //         console.log(2)
-        //         quizDog.classList.add("dislike")
-
-        //     }
-
-        // })
     </script>
 </body>
 

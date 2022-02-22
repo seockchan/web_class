@@ -8,10 +8,8 @@
     <title>퀴즈 이펙트 01</title>
     <style>
         @import url(css/agate.min.css);
-        /* @import url(css/custom2.css); */
-        @import url(css/custom.css);
-
-        @import url(css/ct3.css);
+        @import url(css/window.css);
+        @import url(css/custom2.css);
 
         @font-face {
             font-family: 'DungGeunMo';
@@ -125,7 +123,7 @@
         }
 
         #footer a {
-            color: #000;
+            color: #fff;
             font-size: 16px;
 
         }
@@ -188,10 +186,12 @@
 
         .quiz__number {
             font-family: 'Cafe24Dangdanghae';
+            color: #000;
         }
 
         .quiz__ask {
             font-family: 'Cafe24Dangdanghae';
+            color: #000;
         }
 
         .quiz__view {
@@ -224,6 +224,7 @@
             font-size: 22px;
             padding: 13px 20px;
             background: #fff;
+            color: #000;
             font-family: 'Cafe24Dangdanghae';
             text-shadow: 1px 1px 1px #fff;
             display: none;
@@ -710,7 +711,6 @@
                 <div class="modal-wrap">
                     <div class="modal-cont">
                         <div class="code-view">
-                            <!-- a -->
                             <div class="window">
                                 <div class="title-bar">
                                     <div class="minimize">
@@ -723,71 +723,54 @@
                                         <div class="symbol"></div>
                                     </div>
                                 </div>
-                                <div class="view-title">
-                                    <ul>
-                                        <li><a href="#">HTML</a></li>
-                                        <li><a href="#">CSS</a></li>
-                                        <li><a href="#">Javascript</a></li>
-                                    </ul>
-                                </div>
-                                <!-- a -->
+                                <div class="menu-bar"><span>HTML</span><span>CSS</span><span>Javascript</span></div>
                                 <div class="content-container">
-                                    
-                                    <div class="view-cont">
-                                        <div>
-<pre><code class="language-javascript">&lt;main&gt;
-                &lt;section id="sliderType01"&gt;
-                    &lt;div class="slider__wrap"&gt;
-                        &lt;div class="slider__img"&gt;
-                            &lt;!-- slider*5&gt;img[src="img/img$$.jpg" alt="이미지$"] --&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img02-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img03-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img04-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img05-min.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img06-min.jpg" alt="이미지5"&gt;&lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/section&gt;
-            &lt;/main&gt;
-</code></pre>
+                                    <div class="content">
+                                        <div class="main view-cont">
+                                            <pre><code class="language-javascript">&lt;main&gt;
+                                                &lt;section id="sliderType01"&gt;
+                                                    &lt;div class="slider__wrap"&gt;
+                                                        &lt;div class="slider__img"&gt;
+                                                            &lt;!-- slider*5&gt;img[src="img/img$$.jpg" alt="이미지$"] --&gt;
+                                                            &lt;div class="slider"&gt;&lt;img src="img/img02-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                                                            &lt;div class="slider"&gt;&lt;img src="img/img03-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                                                            &lt;div class="slider"&gt;&lt;img src="img/img04-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                                                            &lt;div class="slider"&gt;&lt;img src="img/img05-min.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                                                            &lt;div class="slider"&gt;&lt;img src="img/img06-min.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/section&gt;
+                                            &lt;/main&gt;
+                                </code></pre>
                                         </div>
-                                        <div class="main"></div>
-                                    </div>
-
-                                    <div class="view-cont">
-                                        <div>
-<pre><code class="language-javascript">&lt;main&gt;
-                &lt;section id="sliderType01"&gt;
-                    &lt;div class="slider__wrap"&gt;
-                        &lt;div class="slider__img"&gt;
-                            &lt;!-- slider*5&gt;img[src="img/img$$.jpg" alt="이미지$"] --&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img02-min.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img03-min.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img04-min.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img05-min.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                            &lt;div class="slider"&gt;&lt;img src="img/img06-min.jpg" alt="이미지5"&gt;&lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/section&gt;
-            &lt;/main&gt;
-</code></pre>
+                                        <div class="scroll">
+                                            <div class="start"></div>
+                                            <div class="progress"></div>
+                                            <div class="end"></div>
                                         </div>
-                                        
-                                        <div class="main"></div>
                                     </div>
-                                    
+                                    <div class="scroll -row">
+                                        <div class="start"></div>
+                                        <div class="progress"></div>
+                                        <div class="end"></div>
+                                    </div>
+                                </div>
+                                <div class="footer"></div>
+                            </div>
 
-                                </div>
-                                <!-- //a -->
-                                <!-- <div class="footer"></div> -->
-                            </div>
-                                </div>
-                            </div>
+
+
+
                         </div>
                     </div>
-                    <button class="modal-close">닫기</button>
                 </div>
             </div>
+        </div>
+        </div>
+        </div>
+        <button class="modal-close">닫기</button>
+        </div>
+        </div>
         </div>
     </main>
 
@@ -795,7 +778,8 @@
         <a href="mailto:baeseockchan@gmail.com">mailto:baeseockchan@gmail.com</a>
     </footer>
     <script src="js/highlight.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/custom2.js"></script>
+
     <script>
         highlight();
         modal();
@@ -827,6 +811,7 @@
             quizResult.style.display = "block";
             quizDog.classList.add("like");
         })
+        
     </script>
 </body>
 

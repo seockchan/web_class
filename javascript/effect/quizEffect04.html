@@ -117,6 +117,7 @@
             width: 100%;
             background: #4a4a4a;
             text-align: center;
+            padding: 20px;
         }
 
         #footer a {
@@ -837,15 +838,16 @@
     </footer>
 
     <script>
-        const quizType =document.querySelector(".quiz__type");  //문제 유형
-        const quizNumber =document.querySelector(".quiz__number");  //문제 번호
-        const quizAsk =document.querySelector(".quiz__ask");    //문제 질문
+
+        const quizType =document.querySelector(".quiz__type");          //문제 유형
+        const quizNumber =document.querySelector(".quiz__number");      //문제 번호
+        const quizAsk =document.querySelector(".quiz__ask");            //문제 질문
         const quizConfirm =document.querySelector(".quiz__confirm");    //문제 정답 버튼
-        const quizResult =document.querySelector(".quiz__result");    //문제 설명
-        const quizView =document.querySelector(".quiz__view");    //문제 화면
+        const quizResult =document.querySelector(".quiz__result");      //문제 설명
+        const quizView =document.querySelector(".quiz__view");          //문제 화면
         const quizSelects =document.querySelector(".quiz__selects");    //객관식 보기
-        const quizChoice =quizSelects.querySelectorAll(".choice");    //객관식 보기
-        const quizSelect =quizSelects.querySelectorAll(".select");    //객관식 보기
+        const quizChoice =quizSelects.querySelectorAll(".choice");      //객관식 보기
+        const quizSelect =quizSelects.querySelectorAll(".select");      //객관식 보기
 
         //문제 정보
         const quizInfo = [
