@@ -159,6 +159,16 @@ body.img06::before {
     background: #fff;
     color: #000;
 }
+
+/* attr */
+.attr {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
 /* modal */
 #modal {
     position: fixed;

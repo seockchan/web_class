@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃06</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: #fff;
+        }
+        #header .container{
+            height: 100px;
+            background: #333;
+        }
+        #nav .container{
+            height: 100px;
+            background: #999;
+        }
+        #section .container{
+            display: flex;
+        }
+        #section .sect1 {
+            height: 780px;
+            width: 40%;
+            background: #666;
+        }
+        #section .sect1 {
+            height: 780px;
+            width: 60%;
+            background: #444;
+
+        }
+        #footer .container{
+            height: 100px;
+            background: #888;
+        }
+        .container {
+            width: 80%;
+            height: inherit;
+            background: rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="container"></div>
+    </header>
+    <nav id="nav">
+    <div class="container"></div>
+</nav>
+    <section id="section">
+        <div class="container">
+        <div class="sect1"></div>
+        <div class="sect2"></div>
+    </div>
+    </section>
+    <footer id="footer">
+        <div class="container"></div>
+    </footer>
+</body>
+</html>
