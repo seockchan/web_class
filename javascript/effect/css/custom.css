@@ -26,21 +26,33 @@ body {
 }
 body.img01 {
     background: url(../img/img01-min.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 body.img02 {
     background: url(../img/img02-min.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 body.img03 {
     background: url(../img/img03-min.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 body.img04 {
     background: url(../img/img04-min.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 body.img05 {
     background: url(../img/img05-min.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 body.img06 {
     background: url(../img/img06-min.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 body.img01::before {
     content: '';
