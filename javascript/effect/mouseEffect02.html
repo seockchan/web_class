@@ -14,9 +14,6 @@
         body::before {
             background: rgb(54 12 12 / 80%);
         }
-        #mouseType01 {
-
-        }
         .mouse__wrap {
             display: flex;
             align-items: center;
@@ -141,22 +138,139 @@
                         <div class="view-cont">
                             <div>
 <pre><code class="language-javascript">&lt;main&gt;
+    &lt;section id="mouseType01"&gt;
+        &lt;div class="cursor"&gt;&lt;/div&gt;
+        &lt;div class="cursor-follower"&gt;&lt;/div&gt;
+
+        &lt;div class="mouse__wrap"&gt;
+            &lt;p&gt;&lt;span&gt;Strive&lt;/span&gt; for progress, not &lt;span&gt;perfection&lt;/span&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;span&gt;완벽&lt;/span&gt;을 추구할 것이 아니라 앞으로 나아가기 위해 &lt;span&gt;갈망하라&lt;/span&gt;&lt;/p&gt;
+        &lt;/div&gt;
+
+    &lt;/section&gt;
+&lt;/main&gt;
     
 </code></pre>
                             </div>
                             <div>
                                
                                     <div>
-<pre><code class="language-javascript">/* slider */
-
+<pre><code class="language-javascript">body::before {
+    background: rgb(54 12 12 / 80%);
+}
+.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+}
+.mouse__wrap p {
+    font-size: 2.5vw;
+    line-height: 2;
+    font-weight: 300;
+}
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 400;
+}
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed orange;
+    color: orange;
+}
+.cursor {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 10px;
+    height: 10px;
+    z-index: 9999;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s,opacity 0.2s;
+}
+.cursor-follower {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    z-index: 9999;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3);
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.3s,opacity 0.2s;
+}
+.cursor.active {
+    transform:scale(0);
+}
+.cursor-follower.active {
+    transform:scale(10);
+    background: rgba(255, 166, 0, 0.6);
+}
+.cursor.show {
+    transform:scaleY(3);
+    background: rgba(125, 0, 125, 0.8);
+}
+.cursor-follower.show {
+    transform:scaleX(5); 
+    background: rgba(0, 255, 0, 0.6);
+}
 </code></pre>
                                     </div>
                             </div>
                             <div>
                               
                                     <div>
-<pre><code class="language-javascript">//sldier01
+<pre><code class="language-javascript">const cursor = document.querySelector(".cursor");
+    const follower = document.querySelector(".cursor-follower");
 
+    window.addEventListener("mousemove", e=>{
+        // // 커서 좌표값 할당
+        // cursor.style.left = e.pageX-5 +"px";
+        // cursor.style.top = e.pageY-5 +"px";
+        // follower.style.left = e.pageX-15 +"px";
+        // follower.style.top = e.pageY-15 +"px";
+
+        gsap.to(cursor,{dration: .1, left: e.pageX-5,top: e.pageY-5});
+        gsap.to(follower,{dration: .3, left: e.pageX-15,top: e.pageY-15});
+
+        // 오버효과
+        // span 오버 했을 때 active 추가 / 나갔을 때 active 삭제
+        //mouseover,mouseenter/ mouseout,mouseleave / 이벤트 버블링
+        document.querySelectorAll(".mouse__wrap span").forEach(span=>{
+            span.addEventListener("mouseenter", ()=>{
+                cursor.classList.add("active");
+                follower.classList.add("active");
+            })
+            span.addEventListener("mouseleave", ()=>{
+                cursor.classList.remove("active");
+                follower.classList.remove("active");
+            })
+        })
+
+        // 인포에 갔을 때
+
+        document.querySelector(".info").addEventListener("mouseenter", ()=>{
+            cursor.classList.add("show");
+                follower.classList.add("show");
+        })
+        document.querySelector(".info").addEventListener("mouseleave", ()=>{
+            cursor.classList.remove("show");
+                follower.classList.remove("show");
+        })
+
+        // 출력
+        document.querySelector(".pageX").innerText = e.pageX;
+        document.querySelector(".pageY").innerText = e.pageY;
+    })
 </code></pre>
                                     </div>
                             </div>
