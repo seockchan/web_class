@@ -297,7 +297,6 @@
             margin-right: 32px;
             width: 280px;
             height: 41px;
-            text-align: center;
         }
         #cont_sub .input input.last {
             width: 602px;
@@ -349,12 +348,20 @@
             margin-bottom: 42px;
         }
         #cont_inf .inf_desc .right span {
-            color: #fff;
+            border-radius: 6px;
             padding: 13px 24px;
             background: #f9995d;
         }
+        #cont_inf .inf_desc .right span a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 700;
+        }
         #cont_inf .inf_desc .right p {
             color: #2947a9;
+        }
+        #cont_inf .inf_desc .right .icon img {
+            margin-right: 20px;
         }
         #footer {
             width: 1440px;
@@ -490,9 +497,13 @@
             </div>
             <div class="right">
                 <p>새소식 받아보기</p>
-                <input type="text" placeholder="Your email here"><span>Subscribe</span>
+                <input type="text" placeholder="Your email here"><span><a href="#">Subscribe</a></span>
                 <p>소셜</p>
-                <div class="icon"></div>
+                <div class="icon">
+                    <img src="img/akar-icons_facebook-fill.svg" alt="아이콘1">
+                    <img src="img/entypo-social_linkedin-with-circle.svg" alt="아이콘2">
+                    <img src="img/entypo-social_twitter-with-circle.svg" alt="아이콘3">
+                </div>
             </div>
         </div>
     </section>
