@@ -60,16 +60,29 @@
             color: #2947a9;
             padding-left: 80px;
             font-size: 30px;
+            margin: 0;
         }
         #header .menu {
             font-size: 18px;
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            z-index: 1000;
         }
         #header .menu ul {
 
         }
         #header .menu ul li {
             display: inline-block;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
             
+        }
+        #header .menu ul li.active a {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            border-radius: 5px;
         }
         #header .menu li a {
             color: black;
@@ -318,7 +331,9 @@
         }
         #cont_inf {
             width: 1440px;
-            height: 377px;
+            /* height: 377px; */
+            height: 1177px;
+            background: #cdcdcd;
         }
         #cont_inf .inf_desc {
             padding-top: 86px;
@@ -375,6 +390,31 @@
             padding-top: 25px;
             font-weight: 300;
         }
+        /* info */
+        .scrollTop {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 10px 30px;
+            border-radius: 50px;
+        }
+        .scrollInfo {
+            position: fixed;
+            left: 20px;
+            bottom: 70px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .scrollInfo li {
+            list-style: none;
+            line-height: 1.6;
+        }
     </style>
 </head>
 
@@ -383,10 +423,14 @@
         <div class="logo">문푸사</div>
         <div class="menu">
             <ul>
-                <li><a href="#">문제풀기</a></li>
-                <li><a href="#">자유게시판</a></li>
-                <li><a href="#">건의사항</a></li>
-                <li><a href="#">내정보</a></li>
+                <li class="active"><a href="#cont_pic">Team Project</a></li>
+                <li><a href="#cont_bri">Project Brief</a></li>
+                <li><a href="#cont_serv">Service</a></li>
+                <li><a href="#cont_flow">flow chart</a></li>
+                <li><a href="#cont_ban">banner</a></li>
+                <li><a href="#cont_typ">문제 유형</a></li>
+                <li><a href="#cont_sub">sub</a></li>
+                <li><a href="#cont_inf">info</a></li>
                 <li class="last"><a href="#">로그인</a></li>
             </ul>
         </div>
@@ -395,13 +439,13 @@
         <h2>problematic<br>
             people</h2>
         </main>
-    <section id="cont_pic">
+    <section id="cont_pic" class="content__item">
         <h3>Team Project</h3>
         <img class="img1" src="img/tp1.jpg" alt="이미지1">
         <img src="img/tp2.jpg" alt="이미지2">
         <img src="img/tp3.jpg" alt="이미지3">
     </section>
-    <section id="cont_bri">
+    <section id="cont_bri" class="content__item">
         <div class="bri_desc">
             <h3>Project Brief</h3>
             <p>여러가지 문제 풀기를 좋아하는 사람들, <br>
@@ -412,7 +456,7 @@
             <a href="#">More on Our History</a>
         </div>
     </section>
-    <section id="cont_serv">
+    <section id="cont_serv" class="content__item">
         <h3>Service</h3>
         <div class="pic1">
             <img src="img/sv1.jpg" alt="이미지1">
@@ -423,7 +467,7 @@
             <img src="img/sv6.jpg" alt="이미지6">
         </div>
     </section>
-    <section id="cont_flow">
+    <section id="cont_flow" class="content__item">
         <div class="flow_desc">
             <h3>flow<br> 
                 chart</h3>
@@ -435,7 +479,7 @@
             <a href="#">Contact Us</a>
         </div>
     </section>
-    <section id="cont_ban">
+    <section id="cont_ban" class="content__item">
         <div class="ban_desc">
             <h3>Take the quiz as many times as you like There are<br>
                 many opportunities</h3>
@@ -443,7 +487,7 @@
         </div>
         <a href="#">Get your quiz</a>
     </section>
-    <section id="cont_typ">
+    <section id="cont_typ" class="content__item">
         <div class="typ_info">
             <h3>뇌풀기 문제</h3>
             <h4>난이도</h4>
@@ -463,7 +507,7 @@
             </div>
         </div>
     </section>
-    <section id="cont_sub">
+    <section id="cont_sub" class="content__item">
         <h3>Do you wanna take a quiz?</h3>
         <p>We are ready to work on a project of any complexity,<br> 
         whether it’s commercial or residential.</p>
@@ -477,12 +521,12 @@
                 <input type="text"placeholder="Phone">
             </div>
             <input class="last" type="text" placeholder="Message">
-            <p>indicates a required field</p>
-            <a href="#">Submit</a>
+            <p>* indicates a required field</p>
+                <a href="#">Submit</a>
         </div>
 
     </section>
-    <section id="cont_inf">
+    <section id="cont_inf" class="content__item">
         <div class="inf_desc">
             <div class="left">
                 <p>ADDRESS:</p>
@@ -509,7 +553,68 @@
     </section>
     <footer id="footer">
         <h4>MPS Company © 2022. All Rights Reserved</h4>
-    </section>
+    </footer>
+
+    <!-- info -->
+    <div class="scrollTop">
+        scrollTop : <span>0</span>px
+    </div>
+    <div class="scrollInfo">
+        <ul>
+            <li>#cont_pic offset() : <span class="offset1">0</span>px</li>
+            <li>#cont_bri offset() : <span class="offset2">0</span>px</li>
+            <li>#cont_serv offset() : <span class="offset3">0</span>px</li>
+            <li>#cont_flow offset() : <span class="offset4">0</span>px</li>
+            <li>#cont_ban offset() : <span class="offset5">0</span>px</li>
+            <li>#cont_typ offset() : <span class="offset6">0</span>px</li>
+            <li>#cont_sub offset() : <span class="offset7">0</span>px</li>
+            <li>#cont_inf offset() : <span class="offset8">0</span>px</li>
+        </ul>
+    </div>
+    <!-- //info -->
+
+    <script>
+        document.querySelectorAll("#header li a").forEach(li=>{
+            li.addEventListener("click", (e)=>{
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior:"smooth"
+                })
+            })
+        })
+        window.addEventListener("scroll", ()=>{
+            // let scrollTop = window.pageYOffset;
+            // let scrollTop = document.documentElement.scrollTop;
+            // let scrollTop = window.scrollY;
+
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+
+           
+            
+            // forEach
+            document.querySelectorAll(".content__item").forEach((element, index) =>{
+                if( scrollTop>= element.offsetTop-2){
+                    document.querySelectorAll("#header ul li").forEach(li =>{
+                        li.classList.remove("active");
+                    });
+                    document.querySelector("#header ul li:nth-child("+(index+1)+")").classList.add("active");
+                }
+            })
+
+
+            //info
+            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+
+            document.querySelector(".offset1").innerText = document.getElementById("cont_pic").offsetTop;
+            document.querySelector(".offset2").innerText = document.getElementById("cont_bri").offsetTop;
+            document.querySelector(".offset3").innerText = document.getElementById("cont_serv").offsetTop;
+            document.querySelector(".offset4").innerText = document.getElementById("cont_flow").offsetTop;
+            document.querySelector(".offset5").innerText = document.getElementById("cont_flow").offsetTop;
+            document.querySelector(".offset6").innerText = document.getElementById("cont_typ").offsetTop;
+            document.querySelector(".offset7").innerText = document.getElementById("cont_sub").offsetTop;
+            document.querySelector(".offset8").innerText = document.getElementById("cont_inf").offsetTop;
+        })
+    </script>
 </body>
 
 </html>
