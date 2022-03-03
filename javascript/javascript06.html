@@ -973,6 +973,64 @@
                 </div>               
             </div>
             <!--//samlpe13-->
+
+            <!--samlp14-->
+            <div id="sample14" class="sample">
+                <h3>14. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 4%;"> 
+                            <col style="width: 32%;"> 
+                            <col style="width: 28%;">   
+                            <col style="width: 36%;"> 
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>결괏값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample14_N1"></td>
+                                <td class="sample14_Q1"></td>
+                                <td class="sample14_M1"></td>
+                                <td class="sample14_R1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample14_N2"></td>
+                                <td class="sample14_Q2"></td>
+                                <td class="sample14_M2"></td>
+                                <td class="sample14_R2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample14_N3"></td>
+                                <td class="sample14_Q3"></td>
+                                <td class="sample14_M3"></td>
+                                <td class="sample14_R3"></td>
+                            </tr>         
+                        </tbody>
+                    </table>
+                </div>
+                <div class="code">
+<pre class="line-nembers"><code class="language-js">{
+    const text = "javascript";
+    const result = Array.from(text);
+
+    const text2 = "javascript";
+    const result2 = Array.from(text2, el=>el+"10");
+
+    const text3 = "javascript";
+    const result3 = [...text3].map(el=>el);
+}
+</code></pre>
+                </div>               
+            </div>
+            <!--//samlpe14-->
+
         </div>
         <!-- //script -->
     </main>
@@ -1501,27 +1559,33 @@
             document.querySelector(".sample13_R4").innerHTML = result4;
         }
 
-        //숙제(정답 2개 이상)
+        //{14}
+        //21.배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)
         {
-            arrBox = [100, 200, 300, 400, 500, 600, 700];
-            
-            //300, 400
+            const text = "javascript";
+            const result = Array.from(text);
 
-            //100, 300, 500, 700
+            document.querySelector(".sample14_N1").innerHTML = 1;
+            document.querySelector(".sample14_Q1").innerHTML = "javascript";
+            document.querySelector(".sample14_M1").innerHTML = "Array.from()";        
+            document.querySelector(".sample14_R1").innerHTML = result;
 
-            //700
+            const text2 = "javascript";
+            const result2 = Array.from(text2, el=>el+"10");
 
-            arrBox2 = ['j', 'b', 'c', 'd', 'e'];
+            document.querySelector(".sample14_N2").innerHTML = 2;
+            document.querySelector(".sample14_Q2").innerHTML = "javascript";
+            document.querySelector(".sample14_M2").innerHTML = "Array.from()";        
+            document.querySelector(".sample14_R2").innerHTML = result2;
 
-            // const a1 = artBox2.pop('b','c','d','e');
-            // console.log(a1);
-            //j
+            const text3 = "javascript";
+            const result3 = [...text3].map(el=>el);
 
-            //jc
-
-            //jbcd
+            document.querySelector(".sample14_N3").innerHTML = 3;
+            document.querySelector(".sample14_Q3").innerHTML = "javascript";
+            document.querySelector(".sample14_M3").innerHTML = "map()";        
+            document.querySelector(".sample14_R3").innerHTML = result3;
         }
-
 
     </script>
 </body>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background:#999;
+        }
+        #wrap {
+            margin: 0 auto;
+        }
+        #header {
+            height: 100px;
+            background: #000;
+        }
+        #main {
+            display: flex;
+        }
+        #aside {
+            width: 20%;
+            height: 880px;
+            background: #777;
+            
+        }
+        #cont1 {
+            width: 60%;
+            height: 880px;
+            background: #333;
+        }
+        #cont2 {
+            width: 20%;
+            height: 880px;
+            background: #666;
+        }
+        #footer {
+            height: 100px;
+            background: #444;
+        }
+        @media (max-width:1300px){
+            #header {
+                height:200px;
+            }
+            #main {
+                flex-wrap: wrap;
+            }
+            #aside {
+                width: 30%;
+            }
+            #cont1 {
+                width: 70%;
+            }
+            #cont2 {
+                width: 100%;
+                height: 200px;
+            }
+            #footer {
+                display: none;
+            }
+        }
+        @media (max-width:768px){
+            #header {
+                height:300px;
+            }
+            #aside {
+                display: none;
+            }
+            #cont1 {
+                width: 100%;
+                height: 480px;
+            }
+            #cont2 {
+                height: 100px;
+            }
+        }
+        @media (max-width:480px){
+            #header {
+                height:350px;
+            }
+            #cont1 {
+                height: 480px;
+            }
+            #cont2 {
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <main id="main">
+            <section id="aside"></section>
+            <section id="cont1"></section>
+            <section id="cont2"></section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

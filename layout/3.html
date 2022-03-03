@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background:#999;
+        }
+        #wrap {
+            width: 1440px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "aside article"
+            "aside section"
+            "aside div"
+            "footer footer";
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 150px 260px 260px 260px 150px;
+        }
+        header {
+            background: #000;
+            grid-area: header;
+        }
+        aside {
+            background: #777;
+            grid-area: aside;
+        }
+        article {
+            background: #333;
+            grid-area: article;
+        }
+        section {
+            background: #666;
+            grid-area: section;
+        }
+        div {
+            background: #444;
+            grid-area: div;
+        }
+        footer {
+            background: #222;
+            grid-area: footer;
+        }
+        @media (max-width:1300px){
+            #wrap {
+                width: 100%;
+                grid-template-areas: 
+                "header header"
+                "aside article"
+                "aside section";
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 300px 390px 390px;
+            }
+            div {
+                display: none;
+            }
+            footer {
+                display: none;
+            }
+        }
+        @media (max-width:768px){
+            #wrap {
+                grid-template-areas: 
+                "header header"
+                "aside aside"
+                "article section";
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 300px 300px 390px;
+            }
+        }
+        @media (max-width:480px){
+            #wrap {
+                grid-template-areas: 
+                "header"
+                "aside"
+                "article";
+                grid-template-columns: 100%;
+                grid-template-rows: 300px 490px 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <aside></aside>
+        <article></article>
+        <section></section>
+        <div></div>
+        <footer></footer>
+    </div>
+</body>
+</html>

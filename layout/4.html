@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background:#999;
+        }
+        #wrap {
+            width: 1440px;
+            margin: 0 auto;
+        }
+        #header {
+            height: 100px;
+            background: #000;
+        }
+        #nav {
+            height: 400px;
+            background: #777;
+        }
+        #section {
+            height: 480px;
+            background: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #section #box {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background: #333;
+        }
+        #section .box .box1{}
+        #footer {
+            height: 100px;
+            background: #111;
+        }
+        @media (max-width:1300px){
+           #wrap {
+               width: 100%;
+           }
+           #cont5 {
+               display: none;
+           }
+        }
+        @media (max-width:768px){
+            #cont5 {
+               display: block;
+               
+           }
+           #cont5 .box10 {
+               display: none;
+           }
+        }
+        @media (max-width:480px){
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="section">
+            <div id="cont1">
+                <div id="box"  class="box01"></div>
+                <div id="box"  class="box02"></div>
+            </div>
+            <div id="cont2">
+                <div id="box"  class="box03"></div>
+                <div id="box"  class="box04"></div>
+               
+            </div>
+            <div id="cont3">
+                <div id="box"  class="box05"></div>
+                <div id="box"  class="box06"></div>
+               
+            </div>
+            <div id="cont4">
+                <div id="box"  class="box07"></div>
+                <div id="box"  class="box08"></div>
+                
+            </div>
+            <div id="cont5">
+                <div id="box"  class="box09"></div>
+                <div id="box"  class="box10"></div>             
+            </div>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
