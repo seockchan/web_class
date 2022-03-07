@@ -53,11 +53,15 @@
         #parallax__nav {
             position: fixed;
             right: 20px;
-            top: 20px;
+            top: -200px;
             z-index: 1000;
             background-color: rgba(0, 0, 0, 0.4);
             padding: 15px 20px;
             border-radius: 50px;
+            transition: top .3s ease-in-out;
+        }
+        #parallax__nav.show {
+            top: 20px;
         }
 
         #parallax__nav li {
@@ -67,9 +71,7 @@
 
         #parallax__nav li a {
             display: inline-block;
-            width: 30px;
-            height: 30px;
-            padding: 5px;
+            padding: 5px 20px;
             text-align: center;
             line-height: 30px;
         }
@@ -77,7 +79,7 @@
         #parallax__nav li.active a {
             background: #fff;
             color: #000;
-            border-radius: 50%;
+            border-radius: 30px;
         }
 
         #parallax__cont {
@@ -269,25 +271,25 @@
     <!-- parallax__title -->
     <header id="parallax__title">
         <h1><a href="parallaxEffect01.html">Javascript Parallax Effect02</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 사이드 메뉴</p>
+        <p>패럴랙스 스크롤링 효과 - 숨김 메뉴</p>
     </header>
     <!-- //parallax__title -->
 
-    <!-- parallax__dot -->
-    <nav id="parallax__dot">
+    <!-- parallax__nav -->
+    <nav id="parallax__nav">
         <ul>
-            <li><a href="#section1"><span>s1</span></a></li>
-            <li class="active"><a href="#section2"><span>s2</span></a></li>
-            <li><a href="#section3"><span>s3</span></a></li>
-            <li><a href="#section4"><span>s4</span></a></li>
-            <li><a href="#section5"><span>s5</span></a></li>
-            <li><a href="#section6"><span>s6</span></a></li>
-            <li><a href="#section7"><span>s7</span></a></li>
-            <li><a href="#section8"><span>s8</span></a></li>
-            <li><a href="#section9"><span>s9</span></a></li>
+            <li><a href="#section1"><span>메뉴1</span></a></li>
+            <li><a href="#section2"><span>메뉴2</span></a></li>
+            <li class="active"><a href="#section3"><span>메뉴3</span></a></li>
+            <li><a href="#section4"><span>메뉴4</span></a></li>
+            <li><a href="#section5"><span>메뉴5</span></a></li>
+            <li><a href="#section6"><span>메뉴6</span></a></li>
+            <li><a href="#section7"><span>메뉴7</span></a></li>
+            <li><a href="#section8"><span>메뉴8</span></a></li>
+            <li><a href="#section9"><span>메뉴9</span></a></li>
         </ul>
     </nav>
-    <!-- //parallax__dot -->
+    <!-- //parallax__nav -->
 
     <!-- main -->
     <main id="parallax__cont">
@@ -386,68 +388,53 @@
 
     <!-- script -->
     <script>
-        document.querySelectorAll("#parallax__dot a").forEach(el=>{
-            el.addEventListener("click", e => {
-                e.preventDefault();
+    //    window.addEventListener("scroll",()=>{
+    //     let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
 
-                // window.scroll(0,1000);
-                // window.scroll({left:0,top:1000});
-                // window.scroll({left:0,top:1000,behavior:"smooth"});
+    //     // 스크롤 값이 0보다 크면 show 클래스를 추가
+        
+    //     // if(scrollTop>0){
+    //     //     document.querySelector("#parallax__nav").classList.add(show);
+    //     // }else{
+    //     //     document.querySelector("#parallax__nav").classList.remove(show);
+    //     // }
+        
 
-                // window.scrollTo(0,1000);
-                // window.scrollTo({left:0,top:1000});
-                // window.scrollTo({left:0,top:1000,behavior:"smooth"});
+    //     document.querySelector(".scrollTop span").innerText=Math.round(scrollTop);
+    //    })
 
-                // window.scrollBy(0,1000);
-                // window.scrollBy({left:0,top:1000});
-                // window.scrollBy({left:0,top:1000,behavior:"smooth"});
+    let nowScroll = true;
+    let lastScroll = 0;
 
-                document.querySelector(el.getAttribute("href")).scrollIntoView({behavior:"smooth"})
-            })
-        })
+    function scrollProgress(){
+        nowScroll = true;
 
-       window.addEventListener("scroll", ()=>{
+        setInterval(() => {
+            if(nowScroll){
+                nowScroll = false;
+                hasScroll();
+            }
+        }, 300);
+
+        console.log(nowScroll);
+    }
+    
+    function hasScroll(){
         let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
 
-        document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
-
-        for(let i =1;i<=9;i++){
-            if(scrollTop>= document.getElementById("section"+i).offsetTop-2){
-                document.querySelectorAll("#parallax__dot li").forEach(li=>{
-                    li.classList.remove("active");
-                })
-                document.querySelector("#parallax__dot li:nth-child("+i+")").classList.add("active");
-            }
+        if(scrollTop > lastScroll){
+            document.querySelector("#parallax__nav").classList.add("show");
+        }else{
+            document.querySelector("#parallax__nav").classList.remove("show");
         }
 
-        // document.querySelectorAll(".content__item").forEach((el, index)=>{
-        //     if (scrollTop>=Element.offsetTop-2){
-        //         document.querySelectorAll("#parallax__dot li").forEach(li=>{
-        //             li.classList.remove("active");
-        //         });
-        //         document.querySelector("#parallax__dot li:nth-child("+(index+1)+"").classList.add("active");
-        //     }
-        // })
+        lastScroll=scrollTop;
 
-        //    //스크롤 값 구하기
-        //    window.screenY //ie X
-        //    window.pageYOffset
-        //    document.documentElement.scrollTop
-
-        //    window.screenX
-        //    window.pageXOffset
-        //    document.documentElement.scrollLeft
-
-        //    //스크롤 값으로 이동하기
-        //     window.scroll()
-        //     window.scrollTo()
-        //     window.scrollBy()
-
-        //     element.scroll()
-        //     element.scrollTo()
-        //     element.scrollBy()
-        //     element.scrollIntoView()
-       })
+        console.log("lastScroll :"+lastScroll);
+        console.log("scrollTop :"+scrollTop);
+    }
+       
+    window.addEventListener("scroll", scrollProgress)
     </script>
 </body>
 
