@@ -386,8 +386,59 @@
 
     <!-- script -->
     <script>
+        document.querySelectorAll("#parallax__dot a").forEach(el=>{
+            el.addEventListener("click", e => {
+                e.preventDefault();
 
-       
+                // window.scroll(0,1000);
+                // window.scroll({left:0,top:1000});
+                // window.scroll({left:0,top:1000,behavior:"smooth"});
+
+                // window.scrollTo(0,1000);
+                // window.scrollTo({left:0,top:1000});
+                // window.scrollTo({left:0,top:1000,behavior:"smooth"});
+
+                // window.scrollBy(0,1000);
+                // window.scrollBy({left:0,top:1000});
+                // window.scrollBy({left:0,top:1000,behavior:"smooth"});
+
+                document.querySelector(el.getAttribute("href")).scrollIntoView({behavior:"smooth"})
+            })
+        })
+
+       window.addEventListener("scroll", ()=>{
+        let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
+
+        document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+
+        for(let i =1;i<=9;i++){
+            if(scrollTop>= document.getElementById("section"+i).offsetTop-2){
+                document.querySelectorAll("#parallax__dot li").forEach(li=>{
+                    li.classList.remove("active");
+                })
+                document.querySelector("#parallax__dot li:nth-child("+i+")").classList.add("active");
+            }
+        }
+
+        //    //스크롤 값 구하기
+        //    window.screenY //ie X
+        //    window.pageYOffset
+        //    document.documentElement.scrollTop
+
+        //    window.screenX
+        //    window.pageXOffset
+        //    document.documentElement.scrollLeft
+
+        //    //스크롤 값으로 이동하기
+        //     window.scroll()
+        //     window.scrollTo()
+        //     window.scrollBy()
+
+        //     element.scroll()
+        //     element.scrollTo()
+        //     element.scrollBy()
+        //     element.scrollIntoView()
+       })
     </script>
 </body>
 
