@@ -147,12 +147,50 @@
         //     document.write(text);
         //     document.write(arr);
         // }
-        {
-            const num = [100,200,300,400,500];
+        // {
+        //     const num = [100,200,300,400,500];
             
-            for(let i=0; i<num.length;i+=3){
-                document.write(num[i]);
+        //     for(let i=0; i<num.length;i+=3){
+        //         document.write(num[i]);
+        //     }
+        // }
+        // {
+        //     const arrNum1 = [100,200,300,400,500];
+        //     const result1 = arrNum1.map(element=>element+"j");
+        //     document.write(result1);
+        // }
+        // {
+        //     const arrNum2 = [{a:100},{a:200},{a:300}];
+        //     const result2 = arrNum2.map(element=>element.a);
+        //     document.write(result2);
+        // }
+        // {
+        //     const arrNum1 = [100,200,300,400,500];
+        //     let result = 0;
+        //    for(let i=0;i<arrNum1.length;i++){
+        //        result += arrNum1[i]
+        //    }
+        //    document.write(result);
+           
+        // }
+        // {
+        //     const str = "자바스크립트(javascript) 공부"
+
+        //     // const text5 = str.lastIndexOf("a");
+        //     // document.write(text5);
+
+        //     const text6 = str.slice(19,21);
+        //     document.write(text6);
+        // }
+        {
+            function func(data, exp){
+                let result = 1;
+                for(let i = 0; i<exp;i++){
+                    result = result * data;
+                }
+                document.write(result);
             }
+            func(2,5);
         }
     </script>
 </body>
