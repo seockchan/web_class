@@ -433,6 +433,42 @@
             </div>
             <!--//samlpe16-->
 
+             <!--samlpe17-->
+             <div id="sample17" class="sample">
+                <h3>17. 재귀 함수</h3>
+                <div class="code">
+<pre class="line-nembers"><code class="language-js">{
+    // function func(){             //(무한 로딩)
+    //     document.write("함수가 실행되었습니다.8")
+    //     func();
+    // } 
+    // func();
+
+    function func(num){
+        if(num&lt;=1){
+            document.write("함수가 실행되었습니다8.")
+        }else{
+            document.write("함수가 실행되었습니다9.")
+            func(num-1);
+        }
+    } 
+    func(5);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div>
+                        함수가 실행되었습니다9.<br>
+                        함수가 실행되었습니다9.<br>
+                        함수가 실행되었습니다9.<br>
+                        함수가 실행되었습니다9.<br>
+                        함수가 실행되었습니다8.
+                    </div>
+                </div>
+            </div>
+            <!--//samlpe17-->
+
             </div>
             <!-- script -->
     </main>
@@ -594,6 +630,29 @@
             //     }
             //     func("함수가 실행되었습니다6.","함수가 실행되었습니다7.");
             // }
+
+            //17. 재귀 함수 : 자기 스스로를 호출
+            {
+                // function func(){             //(무한 로딩)
+                //     document.write("함수가 실행되었습니다.8")
+                //     func();
+                // } 
+                // func();
+
+                function func(num){
+                    if(num<=1){
+                        document.write("함수가 실행되었습니다8.")
+                    }else{
+                        document.write("함수가 실행되었습니다9.")
+                        func(num-1);
+                    }
+                } 
+                func(5);
+            }
+            //18. 콜백 함수 : 내가 실행한 다음 함수 실행
+            {
+
+            }
     </script>
     <!-- script -->
     <script src="assets/js/script.js"></script>

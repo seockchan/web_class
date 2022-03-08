@@ -53,11 +53,15 @@
         #parallax__nav {
             position: fixed;
             right: 20px;
-            top: 20px;
+            top: -200px;
             z-index: 1000;
             background-color: rgba(0, 0, 0, 0.4);
             padding: 15px 20px;
             border-radius: 50px;
+            transition: top .3s ease-in-out;
+        }
+        #parallax__nav.show {
+            top: 20px;
         }
 
         #parallax__nav li {
@@ -67,9 +71,7 @@
 
         #parallax__nav li a {
             display: inline-block;
-            width: 30px;
-            height: 30px;
-            padding: 5px;
+            padding: 5px 20px;
             text-align: center;
             line-height: 30px;
         }
@@ -77,7 +79,7 @@
         #parallax__nav li.active a {
             background: #fff;
             color: #000;
-            border-radius: 50%;
+            border-radius: 30px;
         }
 
         #parallax__cont {
@@ -199,8 +201,6 @@
             margin-right: -4vw;
         }
 
-        #parallax__footer {}
-
         /* info */
         .scrollTop {
             position: fixed;
@@ -226,29 +226,162 @@
             list-style: none;
             line-height: 1.6;
         }
+        #parallax__dot {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px 10px;
+            border-radius: 30px;
+        }
+        #parallax__dot li {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            list-style: none;
+            margin: 12px 8px;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+            transition: box-shadow .2s ease;
+        }
+        #parallax__dot li a {
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            transition: all .2s ease;
+        }
+        #parallax__dot li.active {
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
+        }
+        #parallax__dot li.active a {
+            transform: scale(0.4);
+        }
+        /* option */
+        /* 한번에 나타나기 */
+        /* .content__item__desc span{
+            opacity: 0;
+            transition: all 0.33s ease-in-out;
+        }
+        .content__item__desc span:nth-child(1){
+            transition-delay: 0.1s;
+        }
+        .content__item__desc span:nth-child(2){
+            transition-delay: 0.2s;
+        }
+        .content__item__desc span:nth-child(3){
+            transition-delay: 0.3s;
+            
+        }
+        .content__item__desc span:nth-child(4){
+            transition-delay: 0.4s;
+        }
+        .content__item__desc span:nth-child(5){
+            transition-delay: 0.5s;
+        }
+        .content__item__desc span:nth-child(6){
+            transition-delay: 0.6s;
+        }
+        .content__item__desc span:nth-child(7){
+            transition-delay: 0.7s;
+        }
+        .content__item__desc span:nth-child(8){
+            transition-delay: 0.8s;
+        }
+        .content__item__desc span:nth-child(9){
+            transition-delay: 0.9s;
+        } */
+        /* .content__item__desc.show span:nth-child(1){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(2){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(3){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(4){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(5){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(6){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(7){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(8){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(9){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(1){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(2){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(3){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(4){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(5){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(6){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(7){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(8){
+            opacity: 1;
+        }
+        .content__item__desc.show span:nth-child(9){
+            opacity: 1;
+        } */
+
+        /* 순차적으로 나타나기 */
+        .content__item__desc span {
+            opacity: 0;
+            transition: all 0.33s ease-in-out;
+        }
+        .content__item__desc span.show {
+            opacity: 1;
+        }
     </style>
 </head>
 
 <body>
     <!-- parallax__title -->
     <header id="parallax__title">
-        <h1><a href="parallaxEffect.html">Javascript Parallax Effect01</a></h1>
-        <p>패럴랙스 스크롤링 효과 - 메뉴 이동</p>
+        <h1><a href="parallaxEffect.html">Javascript Parallax Effect06</a></h1>
+        <p>패럴랙스 스크롤링 효과 - 텍스트 효과</p>
     </header>
     <!-- //parallax__title -->
 
     <!-- parallax__nav -->
     <nav id="parallax__nav">
         <ul>
-            <li class="active"><a href="#section1">s1</a></li>
-            <li><a href="#section2">s2</a></li>
-            <li><a href="#section3">s3</a></li>
-            <li><a href="#section4">s4</a></li>
-            <li><a href="#section5">s5</a></li>
-            <li><a href="#section6">s6</a></li>
-            <li><a href="#section7">s7</a></li>
-            <li><a href="#section8">s8</a></li>
-            <li><a href="#section9">s9</a></li>
+            <li><a href="#section1"><span>메뉴1</span></a></li>
+            <li><a href="#section2"><span>메뉴2</span></a></li>
+            <li><a href="#section3"><span>메뉴3</span></a></li>
+            <li><a href="#section4"><span>메뉴4</span></a></li>
+            <li><a href="#section5"><span>메뉴5</span></a></li>
+            <li class="active"><a href="#section6"><span>메뉴6</span></a></li>
+            <li><a href="#section7"><span>메뉴7</span></a></li>
+            <li><a href="#section8"><span>메뉴8</span></a></li>
+            <li><a href="#section9"><span>메뉴9</span></a></li>
         </ul>
     </nav>
     <!-- //parallax__nav -->
@@ -345,133 +478,55 @@
     <div class="scrollTop">
         scrollTop : <span>0</span>px
     </div>
-    <div class="scrollInfo">
-        <ul>
-            <li>#section1 offset() : <span class="offset1">0</span>px</li>
-            <li>#section2 offset() : <span class="offset2">0</span>px</li>
-            <li>#section3 offset() : <span class="offset3">0</span>px</li>
-            <li>#section4 offset() : <span class="offset4">0</span>px</li>
-            <li>#section5 offset() : <span class="offset5">0</span>px</li>
-            <li>#section6 offset() : <span class="offset6">0</span>px</li>
-            <li>#section7 offset() : <span class="offset7">0</span>px</li>
-            <li>#section8 offset() : <span class="offset8">0</span>px</li>
-            <li>#section9 offset() : <span class="offset9">0</span>px</li>
-        </ul>
-    </div>
+   
     <!-- //info -->
 
     <!-- script -->
+    <script src="js/gsap.min.js"></script>
     <script>
+        //글씨 쪼개기
+        // let text = document.querySelector("#section1 .content__item__desc");
+        // let splitText =text.innerText;
+        // let splitWrap = splitText.split('').join("</span><span>");
+        //     splitWrap = "<span>"+splitWrap+"</span>";
+        //     text.innerHTML = splitWrap;
 
-        document.querySelectorAll("#parallax__nav li a").forEach(li=>{
-            li.addEventListener("click", (e)=>{
-                e.preventDefault();
-                document.querySelector(li.getAttribute("href")).scrollIntoView({
-                    behavior:"smooth"
-                })
-            })
+        // 여러개 글씨 쪼개기
+        document.querySelectorAll(".content__item__desc").forEach(desc=>{
+            let splitText =desc.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+                splitWrap = "<span aria-hidden='true'>"+splitWrap+"</span>";
+                desc.innerHTML = splitWrap;
+                desc.setAttribute("aria-label", splitText);
         })
 
-        // document.querySelectorAll("").forEach((element, index)=>{
-        //     element.addEventListener("click", (e))
-        // })
+        
 
-        window.addEventListener("scroll", ()=>{
-            // let scrollTop = window.pageYOffset;
-            // let scrollTop = document.documentElement.scrollTop;
-            // let scrollTop = window.scrollY;
+        function scroll(){
+            let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
 
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-
-            // if(scrollTop > document.getElementById("section1").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(1)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section2").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(2)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section3").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(3)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section4").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(4)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section5").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(5)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section6").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(6)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section7").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(7)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section8").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(8)").classList.add("active");
-            // }
-            // if(scrollTop > document.getElementById("section9").offsetTop){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child(9)").classList.add("active");
-            // }
-
-            //for
-            // for(let i=1;i<=9;i++){
-            //     if(scrollTop >= document.getElementById("section"+i).offsetTop-2){
-            //     document.querySelectorAll("#parallax__nav ul li").forEach(li=>{
-            //         li.classList.remove("active");
-            //     })
-            //     document.querySelector("#parallax__nav ul li:nth-child("+i+")").classList.add("active");
+            document.querySelector(".scrollTop span").innerText=Math.round(scrollTop);
+            
+            // document.querySelectorAll(".content__item").forEach(item=>{
+            //     if(scrollTop>=item.offsetTop){
+            //         item.querySelector(".content__item__desc").classList.add("show");
             //     }
-            // }
+            // })
 
-            // forEach
-            document.querySelectorAll(".content__item").forEach((element, index) =>{
-                if( scrollTop>= element.offsetTop-2){
-                    document.querySelectorAll("#parallax__nav ul li").forEach(li =>{
-                        li.classList.remove("active");
+            document.querySelectorAll(".content__item").forEach(item=>{
+                if(scrollTop>=item.offsetTop){
+                    item.querySelectorAll(".content__item__desc span").forEach((span, index)=>{
+                        setTimeout(()=>{
+                            span.classList.add("show");
+                        },50*(index+1));
+                        
                     });
-                    document.querySelector("#parallax__nav ul li:nth-child("+(index+1)+")").classList.add("active");
                 }
             })
 
-
-            //info
-            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
-
-            document.querySelector(".offset1").innerText = document.getElementById("section1").offsetTop;
-            document.querySelector(".offset2").innerText = document.getElementById("section2").offsetTop;
-            document.querySelector(".offset3").innerText = document.getElementById("section3").offsetTop;
-            document.querySelector(".offset4").innerText = document.getElementById("section4").offsetTop;
-            document.querySelector(".offset5").innerText = document.getElementById("section5").offsetTop;
-            document.querySelector(".offset6").innerText = document.getElementById("section6").offsetTop;
-            document.querySelector(".offset7").innerText = document.getElementById("section7").offsetTop;
-            document.querySelector(".offset8").innerText = document.getElementById("section8").offsetTop;
-            document.querySelector(".offset9").innerText = document.getElementById("section9").offsetTop;
-        })
+            requestAnimationFrame(scroll);
+        }
+        scroll();
     </script>
 </body>
 
