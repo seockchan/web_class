@@ -49,6 +49,30 @@
         #parallax__title p {
             font-size: 16px;
         }
+         
+        #parallax__title li {
+            display: inline;
+        }
+
+        #parallax__title ul {
+            margin-top: 10px;
+        }
+
+        #parallax__title li a {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px dashed #fff;
+            display: inline-block;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+        }
+
+        #parallax__title li.active a {
+            background: #fff;
+            color: #000;
+        }
 
         #parallax__nav {
             position: fixed;
@@ -234,13 +258,22 @@
     <header id="parallax__title">
         <h1><a href="parallaxEffect.html">Javascript Parallax Effect01</a></h1>
         <p>패럴랙스 스크롤링 효과 - 메뉴 이동</p>
+        <ul>
+            <li class="active"><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
+        </ul>
     </header>
     <!-- //parallax__title -->
 
     <!-- parallax__nav -->
     <nav id="parallax__nav">
         <ul>
-            <li class="active"><a href="#section1">s1</a></li>
+            <li><a href="#section1">s1</a></li>
             <li><a href="#section2">s2</a></li>
             <li><a href="#section3">s3</a></li>
             <li><a href="#section4">s4</a></li>
