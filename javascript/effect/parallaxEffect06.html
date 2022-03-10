@@ -60,6 +60,7 @@
             border-radius: 50px;
             transition: top .3s ease-in-out;
         }
+
         #parallax__nav.show {
             top: 20px;
         }
@@ -146,10 +147,12 @@
             filter: saturate(0%);
             transition: all 1s;
         }
+
         .content__item__img:hover {
             filter: saturate(100%);
             transform: scale(1.025);
         }
+
         .content__item:nth-child(1) .content__item__img {
             background-image: url(img/img01-min.jpg);
         }
@@ -212,6 +215,7 @@
             padding: 10px 30px;
             border-radius: 50px;
         }
+
         .scrollInfo {
             position: fixed;
             left: 20px;
@@ -222,10 +226,12 @@
             padding: 10px 20px;
             border-radius: 10px;
         }
+
         .scrollInfo li {
             list-style: none;
             line-height: 1.6;
         }
+
         #parallax__dot {
             position: fixed;
             right: 20px;
@@ -236,6 +242,7 @@
             padding: 20px 10px;
             border-radius: 30px;
         }
+
         #parallax__dot li {
             position: relative;
             width: 20px;
@@ -246,6 +253,7 @@
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
             transition: box-shadow .2s ease;
         }
+
         #parallax__dot li a {
             background: #fff;
             width: 100%;
@@ -256,12 +264,15 @@
             border-radius: 50%;
             transition: all .2s ease;
         }
+
         #parallax__dot li.active {
             box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
         }
+
         #parallax__dot li.active a {
             transform: scale(0.4);
         }
+
         /* option */
         /* 한번에 나타나기 */
         /* .content__item__desc span{
@@ -352,12 +363,287 @@
         } */
 
         /* 순차적으로 나타나기 */
-        .content__item__desc span {
+        /* sectiono1 */
+        #section1 .content__item__desc span {
             opacity: 0;
             transition: all 0.33s ease-in-out;
         }
-        .content__item__desc span.show {
+
+        #section1 .content__item__desc span.show {
             opacity: 1;
+        }
+
+        /* section2 */
+        #section2 .content__item__desc span {
+            opacity: 0;
+            display: inline-block;
+            min-width: 20px;
+            transform: translateY(50px) rotate(10deg);
+            transition: all 0.33s ease-in-out;
+        }
+
+        #section2 .content__item__desc span.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* section3 */
+        #section3 .content__item__desc span {
+            display: inline-block;
+            min-width: 1.1vw;
+            opacity: 0;
+        }
+
+        #section3 .content__item__desc span.show {
+            opacity: 1;
+            animation: tada 0.3s;
+        }
+
+        @keyframes tada {
+            0% {
+                transform: scaleX(1)
+            }
+
+            10%,
+            20% {
+                transform: scale3d(.9, .9, .9) rotate(-3deg)
+            }
+
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: scale3d(1.1, 1.1, 1.1) rotate(3deg)
+            }
+
+            40%,
+            60%,
+            80% {
+                transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg)
+            }
+
+            to {
+                transform: scaleX(1)
+            }
+        }
+
+        /* section4 */
+        #section4 .content__item__desc span {
+            display: inline-block;
+            min-width: 1.1vw;
+            opacity: 0;
+        }
+
+        #section4 .content__item__desc span.show {
+            opacity: 1;
+            animation: lightSpeedInRight 0.3s;
+        }
+
+        @keyframes lightSpeedInRight {
+            0% {
+                transform: translate3d(100%, 0, 0) skewX(-30deg);
+                opacity: 0
+            }
+
+            60% {
+                transform: skewX(20deg);
+                opacity: 1
+            }
+
+            80% {
+                transform: skewX(-5deg)
+            }
+
+            to {
+                transform: translateZ(0)
+            }
+        }
+
+        /* section5 */
+        #section5 .content__item__desc span {
+            display: inline-block;
+            min-width: 1.1vw;
+            opacity: 0;
+        }
+
+        #section5 .content__item__desc span.show {
+            opacity: 1;
+            animation: jello 0.3s;
+        }
+
+        @keyframes jello {
+
+            0%,
+            11.1%,
+            to {
+                transform: translateZ(0)
+            }
+
+            22.2% {
+                transform: skewX(-12.5deg) skewY(-12.5deg)
+            }
+
+            33.3% {
+                transform: skewX(6.25deg) skewY(6.25deg)
+            }
+
+            44.4% {
+                transform: skewX(-3.125deg) skewY(-3.125deg)
+            }
+
+            55.5% {
+                transform: skewX(1.5625deg) skewY(1.5625deg)
+            }
+
+            66.6% {
+                transform: skewX(-.78125deg) skewY(-.78125deg)
+            }
+
+            77.7% {
+                transform: skewX(.390625deg) skewY(.390625deg)
+            }
+
+            88.8% {
+                transform: skewX(-.1953125deg) skewY(-.1953125deg)
+            }
+        }
+
+        /* section6 */
+        #section6 .content__item__desc span {
+            display: inline-block;
+            min-width: 1.1vw;
+            opacity: 0;
+        }
+
+        #section6 .content__item__desc span.show {
+            opacity: 1;
+            animation: bounceIn 0.3s;
+        }
+
+        @keyframes bounceIn {
+
+            0%,
+            20%,
+            40%,
+            60%,
+            80%,
+            to {
+                animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+            }
+
+            0% {
+                opacity: 0;
+                transform: scale3d(.3, .3, .3)
+            }
+
+            20% {
+                transform: scale3d(1.1, 1.1, 1.1)
+            }
+
+            40% {
+                transform: scale3d(.9, .9, .9)
+            }
+
+            60% {
+                opacity: 1;
+                transform: scale3d(1.03, 1.03, 1.03)
+            }
+
+            80% {
+                transform: scale3d(.97, .97, .97)
+            }
+
+            to {
+                opacity: 1;
+                transform: scaleX(1)
+            }
+        }
+
+        /* section7 */
+        #section7 .content__item__desc span {
+            display: inline-block;
+            min-width: 1.4vw;
+            opacity: 0;
+        }
+
+        #section7 .content__item__desc span.show {
+            opacity: 1;
+            animation: fadeInDown 0.3s;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, -100%, 0)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateZ(0)
+            }
+        }
+
+        /* section8 */
+        #section8 .content__item__desc span {
+            display: inline-block;
+            min-width: 1.4vw;
+            opacity: 0;
+        }
+
+        #section8 .content__item__desc span.show {
+            opacity: 1;
+            animation: fadeInLeftBig 0.3s;
+        }
+
+        @keyframes fadeInLeftBig {
+            0% {
+                opacity: 0;
+                transform: translate3d(-2000px, 0, 0)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateZ(0)
+            }
+        }
+
+        /* section9 */
+        #section9 .content__item__desc span {
+            display: inline-block;
+            min-width: 1.4vw;
+            opacity: 0;
+        }
+
+        #section9 .content__item__desc span.show {
+            opacity: 1;
+            animation: flip 0.3s;
+        }
+
+        @keyframes flip {
+            0% {
+                transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+                animation-timing-function: ease-out
+            }
+
+            40% {
+                transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+                animation-timing-function: ease-out
+            }
+
+            50% {
+                transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+                animation-timing-function: ease-in
+            }
+
+            80% {
+                transform: perspective(400px) scale3d(.95, .95, .95) translateZ(0) rotateY(0deg);
+                animation-timing-function: ease-in
+            }
+
+            to {
+                transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+                animation-timing-function: ease-in
+            }
         }
     </style>
 </head>
@@ -478,7 +764,7 @@
     <div class="scrollTop">
         scrollTop : <span>0</span>px
     </div>
-   
+
     <!-- //info -->
 
     <!-- script -->
@@ -492,34 +778,34 @@
         //     text.innerHTML = splitWrap;
 
         // 여러개 글씨 쪼개기
-        document.querySelectorAll(".content__item__desc").forEach(desc=>{
-            let splitText =desc.innerText;
+        document.querySelectorAll(".content__item__desc").forEach(desc => {
+            let splitText = desc.innerText;
             let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
-                splitWrap = "<span aria-hidden='true'>"+splitWrap+"</span>";
-                desc.innerHTML = splitWrap;
-                desc.setAttribute("aria-label", splitText);
+            splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+            desc.innerHTML = splitWrap;
+            desc.setAttribute("aria-label", splitText);
         })
 
-        
 
-        function scroll(){
+
+        function scroll() {
             let scrollTop = window.screenY || window.pageYOffset || document.documentElement.scrollTop;
 
-            document.querySelector(".scrollTop span").innerText=Math.round(scrollTop);
-            
+            document.querySelector(".scrollTop span").innerText = Math.round(scrollTop);
+
             // document.querySelectorAll(".content__item").forEach(item=>{
             //     if(scrollTop>=item.offsetTop){
             //         item.querySelector(".content__item__desc").classList.add("show");
             //     }
             // })
 
-            document.querySelectorAll(".content__item").forEach(item=>{
-                if(scrollTop>=item.offsetTop){
-                    item.querySelectorAll(".content__item__desc span").forEach((span, index)=>{
-                        setTimeout(()=>{
+            document.querySelectorAll(".content__item").forEach(item => {
+                if (scrollTop >= item.offsetTop) {
+                    item.querySelectorAll(".content__item__desc span").forEach((span, index) => {
+                        setTimeout(() => {
                             span.classList.add("show");
-                        },50*(index+1));
-                        
+                        }, 50 * (index + 1));
+
                     });
                 }
             })
