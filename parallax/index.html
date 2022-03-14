@@ -111,7 +111,7 @@
         .section2__bg {
             width: 100%;
             height: 100vh;
-            background: #333;
+            background: #222;
         }
         .section2__text1 {
             font-size: 4vw;
@@ -119,7 +119,21 @@
             white-space: nowrap;
         }
         .section2__img1 {
-            width: 50w;
+            width: 70vw;
+            top: 80%;
+        }
+        .section2__img1_site {
+            position: absolute;
+            left: 50%;top: 1.5vw;
+            transform: translate(-50%);
+            width: 55vw;
+            height: calc(100% - 5vw);
+            border-radius: 1vw 1vw 0 0;
+            overflow: hidden;
+        }
+        .section2__img1_site .move {
+            position: absolute;
+            left: 0;top: 0;
         }
     </style>
 </head>
@@ -176,11 +190,20 @@
             <div class="section2__text1 fixed"
                 data-8500="transform: translate(-50%,-50%) scale(0.7);"
                 data-10500="transform: translate(-50%,-50%) scale(1);"
-            >
+                data-11500="transform: translate(-50%,-500%) scale(1);">
                 I've Been Working In On Sites
             </div>
-            <div class="section2__img1 fixed">
+            <div class="section2__img1 fixed"
+                data-10500="top:200%"
+                data-12000="top:70%">
                 <img src="img/macBook.png" alt="맥북">
+                <div class="section2__img1_site">
+                    <div class="move"
+                        data-12000="top:0%"
+                        data-14000="top:-400%">
+                        <img src="img/site.jpg" alt="사이트">
+                    </div>
+                </div>
             </div>
         </section>
         <!-- section2 -->
