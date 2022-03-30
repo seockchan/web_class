@@ -455,6 +455,8 @@ Query OK, 1 row affected (0.00 sec)
                     </div>
                     <h4 class="pt20">모든 회원의 비밀번호를 '1234'로 변경</h4>
 <pre class="language-js"><code>UPDATE myMember SET youPass = "1234";</code></pre> 
+                    <h4 class="pt20">아이디 번호가 3번인 회원의 비밀번호를 '1234'로 변경</h4> 
+<pre class="language-js"><code>UPDATE myMember SET youPass = "1234" WHERE memberID = 3;</code></pre> 
                     <h4 class="pt20">5회원부터 10회원까지의 비밀번호를 '1234567'로 변경</h4>
 <pre class="language-js"><code>UPDATE myMember SET youPass = "1234567" WHERE memberID BETWEEN 5 AND 10;</code></pre> 
                     <h4 class="pt20">아이디를 기준으로 내림차순</h4>
