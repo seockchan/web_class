@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slideList {position: relative; width: 3000px; z-index: 50;}
+        .slideList .slideImg {position: relative; width: 1000px; float: left;}
+        .slideList .slideImg h2 {position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%,-50%); background: rgba(0,0,0,0.4); padding: 10px 30px;
+        border-radius: 20px;}
+
+        .layer_bg {display: none; position: fixed; left: 0; top: 0; z-index: 900;
+        width: 100%; height: 100%; background: rgba(0,0,0,0.8);}
+        .layer {display: none; position: absolute; left: 30px; top: 30px; z-index: 1000;
+        width: 500px; height: 500px; border: 3px solid #000; background: #fff;}
+        .layer h2 {padding: 20px; color: #000;}
+        .layer .close {position: absolute; bottom: 20px; right: 20px;}
+    </style>
+</head>
+<body>
+    <div class="slideList">
+        <div class="slideImg">
+            <h2>이미지1</h2>
+            <img src="img/Slice 2.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트1">
+        </div>
+        <div class="slideImg">
+            <h2>이미지2</h2>
+            <img src="img/Slice 3.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트2">
+        </div>
+        <div class="slideImg">
+            <h2>이미지3</h2>
+            <img src="img/Slice 4.jpg" alt="쿡킷을 더 편리하게 COOKIT 앱 런칭기념 이벤트3">
+        </div>
+    </div>
+
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="script/custum.js"></script>
+    <script>
+        var currentIndex = 0;
+
+        // 이미지 슬라이드
+        var currentIndex = 0;
+
+        setInterval(() => {
+            if(currentIndex<2){
+                currentIndex++;
+            }else{
+                currentIndex=0;
+            }
+            var sliderPosition = currentIndex * (-1000)+"px";
+            $(".slideList").animate({left:sliderPosition});
+        }, 3000);
+
+        $(".right").click(function(){
+            $(".layer").slideDown(300);
+            $(".layer_bg").show();
+        })
+        $(".layer .close").click(function(){
+            $(".layer").slideUp(300);
+            $(".layer_bg").hide();
+        })
+    </script>
+</body>
+</html>

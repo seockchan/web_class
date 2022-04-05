@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데월드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 960px;
+            margin: 0 auto;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 60px;
+            margin-bottom: 40px;
+        }
+        header .logo {
+            background: url(img/Slice\ 6.jpg);
+            width: 110px;
+            height: 80px;
+        }
+        header menu {
+            padding-top: 50px;
+        }
+        header menu li {
+            display: inline-block;
+            margin-right: 30px;
+        }
+        header menu li:last-child {
+            margin-right: 0;
+        }
+        header menu li a {
+            font-size: 18px;
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+        }
+        .pic {
+            background: url(img/Slice\ 1.jpg);
+            width: 960px;
+            height: 360px;
+            margin-bottom: 20px;
+        }
+        main .banner{
+            display: flex;
+        }
+        main .left {
+            width: calc(49% - 60px);
+            height: 150px;
+            border: 1px solid #cdcdcd;
+            margin-right: 20px;
+            padding: 30px;
+        }
+        main .left h3 {
+            font-size: 18px;
+            display: inline-block;
+        }
+        main .left .more {
+            float: right;
+        }
+        main .left h3 span {
+            border-left: 2px solid #000;
+            padding-left: 5px;
+            color: #c4c4c4;
+            display: inline-block;
+        }
+        main .left li {
+            list-style: none;
+        }
+        main .left li a {
+            text-decoration: none;
+            color: #999;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        main .left a span {
+            float: right;
+            font-size: 12px;
+        }
+        main .right {
+            background: url(img/Slice1.jpg) no-repeat;
+            width: calc(49% - 60px);
+            height: 150px;
+            padding: 30px;
+            color: #fff;
+        }
+        main .right h3 {
+            padding-top: 20px;
+            font-size: 20px;
+        }
+        main .right h3 span {
+            font-size: 36px;
+            font-weight: 700;
+        }
+        main .right a {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 10px;
+            color: #fff;
+            background: red;
+            border: 2px solid #fff;
+            margin-top: 10px;
+            margin-left: 60px;
+        }
+        main .content {
+            display: flex;
+        }
+        main .bot {
+            margin-top: 35px;
+            
+        }
+        main .bot .pic {
+            margin-top: 15px;
+            width: 230px;
+            height: 230px;
+            margin-right: 10px;
+            position: relative;
+        }
+        main .bot .pic a {
+            position: absolute;
+            left: 0;
+            top: 250px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #000;
+        }
+        main .bot .cont1 {
+            background: url(img/Slice\ 2.jpg) no-repeat;
+        }
+        main .bot .cont2 {
+            background: url(img/Slice\ 3.jpg) no-repeat;
+        }
+        main .bot .cont3 {
+            background: url(img/Slice\ 4.jpg) no-repeat;
+        }
+        main .bot .cont4 {
+            background: url(img/Slice\ 5.jpg) no-repeat;
+        }
+        footer {
+            border-top: 1px solid #c4c4c4;
+            color: #c4c4c4;
+            margin-top: 70px;
+            padding-top: 20px;
+            margin-bottom: 70px;
+        }
+        footer .p1 {
+            color: #999;
+            line-height: 1.6;
+        }
+        footer .p2 {
+            color: #c4c4c4;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="logo">
+            </div>
+            <menu>
+                <li><a href="#">즐길거리</a></li>
+                <li><a href="#">요금/우대혜택</a></li>
+                <li><a href="#">참여프로그램</a></li>
+                <li><a href="#">이용가이드</a></li>
+                <li><a href="#">소통서비스</a></li>
+            </menu>
+            
+        </header>
+        <div class="pic"></div>
+        <main>
+            <div class="banner">
+                <div class="left">
+                    <h3>
+                        롯데월드 소식 <span>  뉴스공지</span>
+                        <a href="#" class="more">더 보기</a>
+                    </h3>
+                    
+                    <menu>
+                        <li><a href="#">그럴싸진관 미라클<span>2018.11.19</span></a></li>
+                        <li><a href="#">드림스테이지 '힘내 소중한 너'<span>2018.11.20</span></a></li>
+                        <li><a href="#">'힘내 소중한 너'음원 발표<span>2018.11.13</span></a></li>
+                        <li><a href="#">이용 요금 조정 안내<span>2018.11.12</span></a></li>
+                    </menu>
+                </div>
+                <div class="right">
+                    <h3>매 시간, 매일 밤 롯데 ON으로<br>
+                    <span>온종일 혜택 ON</span></h3>
+                    <a href="#">바로 온</a>
+                </div>
+            </div>
+            <div class="bot">
+                <h3>특별한 경험</h3>
+                <div class="content">
+                    <div class="pic cont1"><a href="#">연간회원안내</a></div>
+                    <div class="pic cont2"><a href="#">프리미엄투어</a></div>
+                    <div class="pic cont3"><a href="#">공연참여 프로그램</a></div>
+                    <div class="pic cont4"><a href="#">단체프로그램</a></div>                                                             
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer__desc">
+                <p class="p1">서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드 대표자:박동기<br>
+                사업자등록번호:219-85-00014 통신판매업신고번호:송파 제5513호 전화:1661-2000</p>
+
+                <p class="p2">COPYRIGHT 2018 LOTTEWORLD.ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
