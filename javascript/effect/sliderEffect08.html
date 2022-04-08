@@ -122,10 +122,10 @@
         .slider__dot .dot.active {
             background: rgba(255, 255, 255, 0.9);
         }
+
         .slider__dot .play {
             width: 20px;
             height: 20px;
-            background: #000;
             display: inline-block;
             vertical-align: 9px;
             margin: 3px;
@@ -134,51 +134,58 @@
             position: relative;
             display: none;
         }
+
         .slider__dot .play.show {
             display: inline-block;
         }
+
         .slider__dot .play::after {
             content: '';
-            border-style: solid;
-            border-width: 5px 0 5px 9px;
-            border-color: transparent transparent transparent #fff;
             position: absolute;
-            left: 1px;
-            top: 0px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-style: solid;
+            border-width: 10px 0 10px 18px;
+            border-color: transparent transparent transparent #fff;
+            border-radius: 2px;
 
         }
+
         .slider__dot .stop {
             width: 20px;
             height: 20px;
-            background: red;
             display: inline-block;
             vertical-align: 9px;
             margin: 3px;
             text-indent: -9999px;
-            border-radius: 50%;
             position: relative;
             display: none;
         }
+
         .slider__dot .stop.show {
             display: inline-block;
         }
+
+        .slider__dot .stop::after,
         .slider__dot .stop::before {
             content: '';
-            border-style: solid;
-            border-width: 5px 0 5px 9px;
-            border-color: transparent transparent transparent #fff;
             position: absolute;
-            left: 7px;
-            top: 5px;
+            top: 50%;
+            width: 7px;
+            height: 20px;
+            background: #fff;
+            border-radius: 1px;
         }
+
         .slider__dot .stop::after {
-            content: '';
-            border-style: solid;
-            border-width: 5px 0 5px 9px;
-            border-color: transparent transparent transparent #fff;
-            position: absolute;
-            left: 27px;
-            top: 5px;
+            left: 0;
+            transform: translate(0, -50%);
+        }
+
+        .slider__dot .stop::before {
+            right: 0;
+            transform: translate(0, -50%);
         }
     </style>
 </head>
@@ -301,7 +308,7 @@
         highlight();
         modal();
         tabMenu();
-        
+
 
         // slider08
         const sliderWrap = document.querySelector(".slider__wrap");
@@ -350,16 +357,16 @@
             sliderDot.firstElementChild.classList.add("active");
         }
         dotInit();
-        
+
         // 자동재생
-        function autoPlay(){
+        function autoPlay() {
             sliderTimer = setInterval(() => {
-                gotoSlider(currentIndex+1);
+                gotoSlider(currentIndex + 1);
             }, interval);
         }
         autoPlay();
 
-        function stopPlay(){
+        function stopPlay() {
             clearInterval(sliderTimer);
         }
         //버튼 클릭하기
@@ -384,30 +391,28 @@
             }
         });
 
-        sliderInner.addEventListener("mouseenter", ()=>{
+        sliderInner.addEventListener("mouseenter", () => {
             stopPlay();
         })
         sliderInner.addEventListener("mouseleave", () => {
-            if(document.querySelector(".play").classList.contains("show")){
+            if (document.querySelector(".play").classList.contains("show")) {
                 stopPlay();
             } else {
                 autoPlay();
             }
         })
 
-        document.querySelector(".play").addEventListener("click", ()=>{
-            
+        document.querySelector(".play").addEventListener("click", () => {
+
             document.querySelector(".play").classList.remove("show");
             document.querySelector(".stop").classList.add("show");
             autoPlay();
         })
-        document.querySelector(".stop").addEventListener("click", ()=>{
+        document.querySelector(".stop").addEventListener("click", () => {
             document.querySelector(".stop").classList.remove("show");
             document.querySelector(".play").classList.add("show");
             stopPlay();
         })
-
-        
     </script>
 </body>
 
