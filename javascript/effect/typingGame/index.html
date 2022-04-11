@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins";
+        }
+        body {
+            background: #17A2B8;    
+        }
+        .typing__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .typing__inner {
+            width: 60vw;
+            min-width: 900px;
+            min-height: 40vh;
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+        }
+        .input__field {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            padding: 10px;
+        }
+        .typing__text {
+            border: 1px solid #c3c3c3;
+            border-radius: 10px;
+            padding: 20px;
+            min-height: 300px;
+            font-size: 22px;
+            font-weight: 300;
+            padding: 30px;
+            text-align: justify;
+            word-break: break-all;
+        }
+        .typing__info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .typing__info button {
+            width: 210px;
+            background: #17A2B8;
+            color:#fff;
+            font-family: "Poppins";
+            border: 0;
+            margin: 20px 0;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 22px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .typing__info ul {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .typing__info ul li {
+            width: 20%;
+            list-style: none;
+            display: flex;
+            font-size: 20px;
+            border-left: 1px solid #C3C3C3;
+            padding-left: 40px;
+        }
+        .typing__info ul li:first-child {
+            padding-left: 0;
+            border-left: 0;
+        }
+        .typing__info li p {
+            white-space: nowrap;
+        }
+        .typing__info li span {
+            padding: 0 10px;
+        }
+        .typing__text p span.correct {
+            color: blue;
+            background: #9f9fe9;
+            outline: 1px solid #fff;
+            border-radius: 4px;
+        }
+        .typing__text p span.incorrect {
+            color: red;
+            background: #db8e8e;
+            outline: 1px solid #fff;
+            border-radius: 4px;
+        }
+        .typing__text p span {
+            position: relative;
+        }
+        .typing__text p span.active {
+            color: green;         
+        }
+        .typing__text p span.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;height: 2px;
+            background: green;
+            animation: blink 1s ease-in-out infinite;
+            opacity: 0;
+        }
+        @keyframes blink {
+            50% {opacity: 1;}     
+        }
+    </style>
+</head>
+<body>
+    <div class="typing__wrap">
+        <input type="text" class="input__field">
+        <div class="typing__inner">
+            <div class="typing__text">
+                <p></p>
+            </div>
+            <div class="typing__info">
+                <ul>
+                    <li class="time">
+                        <p>Time Left : </p>
+                        <span><b>60</b>s</span>
+                    </li>
+                    <li class="mistake">
+                        <p>Mistakes : </p>
+                        <span>0</span>
+                    </li>
+                    <li class="wpm">
+                        <p>wpm : </p>
+                        <span><b>0</b></span>
+                    </li>
+                    <li class="cpm">
+                        <p>cpm : </p>
+                        <span><b>0</b></span>
+                    </li>
+                </ul>
+                <button class="again">Try again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const paragraphs = [
+            "1 XE is a hybrid of the two now-familiar strains of Omicron: BA.1 (the original Omicron strain) and BA.2 (the more infectious related strain that’s now dominant in the U.S. and other countries). XE is known as a recombinant variant, which forms “when one SARS-CoV-2 strain picks up some genetic material from another SARS-CoV-2 strain,” explains Dr. Andrew Badley, a professor of infectious disease at the Mayo Clinic and chair of the SARS-CoV-2 COVID-19 Task Force for Mayo Clinic. That means the new recombinant variant picks up attributes associated with each strain, but not always that it turns into a more threatening version. “Recombinant variants are well described for other viruses and are not often associated with more danger,” Badley says.",
+            "Experts say that since BA.1 and BA.2 are both circulating widely at the moment, it’s not surprising that a new combination strain has recently popped up. “Recombinant variants are not an unusual occurrence, particularly when there are several variants in circulation, and several have been identified over the course of the pandemic to date,” said Susan Hopkins, chief medical advisor of UKHSA, in a statement. “As with other kinds of variant[s], most will die off relatively quickly.”",
+            "2 Researchers are still studying how easily the XE variant spreads. U.K. researchers have found that when they first analyzed XE sequences, the variant was about as transmissible as BA.2, but more recent data indicate that the variant may be 10% more transmissible. The World Health Organization’s (WHO) April 5 report also says XE is about 10% more transmissible than BA.2, but notes that the number requires further confirmation.",
+            "The first known case of XE was detected in the U.K. on January 19, 2022. So far, more than 600 cases of XE have been identified there, according to a March 25 report from UKHSA—which is less than 1% of total sequenced cases. That’s nowhere near the rate of cases caused by BA.2, which is now the dominant form of SARS-CoV-2 both in the U.K. and globally.",
+            "3 The good news is that there are still relatively few XE cases. “We’ve known about the existence of the XE variant since the middle of January,” Badley says. “Now, two and a half months later, we’re still seeing cases, but it hasn’t exploded.” To put that in context, “Omicron was first identified in November, and within four weeks it was all over the world. So it’s not as dominant a new strain as Omicron was,” he says.",
+            "4 However, it’s possible to infer some clues from the two strains that comprise it. “We know the vaccines work to protect against symptomatic disease for BA.1 and BA.2, and therefore we have every reason to suspect that vaccination strategies will have activity to protect against symptomatic disease caused by XE,” Badley says. Another hint is that “BA.1 and BA.2 each can escape some of the monoclonal antibody therapies,” so those drugs aren’t likely to work as well against XE either, Badley says. “We also know that the other therapies that are being used particularly in the outpatient setting—Paxlovid and molnupiravir—should, based on how they work, have continued activity against the XE strain.”",
+            "5 UKHSA is currently monitoring XE and two other recombinant lineages—XF and XD, which are both recombinants of Delta and Omicron BA.1. So far, UKHSA says that fewer than 40 cases of XF have been detected, all in the U.K. (though none have been seen since mid-February). XD has not been found in the U.K., but 49 cases—mostly in France—have been reported to global databases. The World Health Organization is also tracking XE, XD, and other recombinants, according to the group’s most recent report.",
+            "6 “For not winning an event, yes. Yes, without a doubt,’ Woods said. ”I don’t think people really understand. The people who are close to me understand. They’ve seen it. Some of the players who are close to me have seen it and have seen some of the pictures and the things that I have had to endure. They appreciate it probably more than anyone else because they know what it takes to do this out here at this level.”",
+            "7 one in four American adults is unvaccinated or only partially vaccinated, and that number isn’t budging much these days. Fewer than 80,000 adults are getting their first shot every day a 96% drop from the more than 2 million a day in April 2021. It’s easy to believe that anyone who hasn’t gotten a shot by now is unlikely to get one in the future—but there is still a group of people, however small, just finally coming",
+            "8 Along the way, business has grown from a very small portion of our coverage to about one-fifth of all the content we publish. That’s as it should be. From the vaccines that are pulling the world out of the worst depths of the pandemic to the unprecedented withdrawal of Western companies from Russia as a tool of war, business has never had a greater impact. And certainly not always for the good, as reflected in Billy Perrigo’s ongoing reporting on the all-too-frequent prioritization of profits over people in the tech world.",
+            "9 You can see all that on display in our second annual TIME100 Companies list, included in this issue and featuring the world’s most influential businesses. Some, like pharmaceutical upstart Moderna and space-junk removal firm Astroscale, are pushing the boundaries of technology in new and potentially world-changing ways. Moderna is developing new mRNA vaccines for a host of pathogens, while Astroscale is developing technology to safely deorbit satellites after their useful lives are over.",
+            "10 “Taken together, these 100 companies—and the executives who run them—represent the firms and leaders who are charting an essential path forward,” says senior editor Alex Fitzpatrick, who oversaw the list. As TIME’s business coverage continues throughout the year, these are the companies we’ll be watching most closely—and we suggest you do the same.",
+            "11 Your privacy is important to us. This Privacy Policy describes how TIME USA, LLC and its affiliates (“Time,” “we,” or “our”) collect, use, and disclose information when you interact with Time, including via our website ( https://time.com/ ), mobile apps, email newsletters, online subscriptions, other product offerings, and any other services that display this Privacy Policy (collectively referred to as the “Services”). This Privacy Policy also applies to any offline data collection, such as the contact information you provide to create or update your print subscriptions.",
+            "12 In this Policy, “personal information” means information that identifies, relates to, describes, is reasonably capable of being associated with, or could reasonably be linked, directly or indirectly, with a particular individual.",
+            "13 Individuals from different countries or jurisdictions may have different rights with respect to their personal information. In particular, the European Union Privacy Policy applies to individuals in the European Union, United Kingdom, Switzerland, Norway, Lichtenstein, Iceland, Australia, and New Zealand in lieu of this Privacy Policy. We reserve the ability to limit our response to any request to exercise your rights based on the law that is applicable to you.",
+            "14 Through the Services, you can, among other activities, order publications and products, including print and digital subscriptions and newsletters; sign up for events; engage in various activities including entering contests or sweepstakes, voting in polls or otherwise expressing an opinion or participate in one of our online forums or communities.",
+            "15 Information you give us about yourself or others: You give information to us directly when, for example, you register for a subscription or newsletter, purchase a product from us, disclose information in response to a survey, apply for a job, or contact our customer service department.",
+            "16 Through some features of the Services and through certain promotions, you can submit information about other people. For example, you might submit a person's name, mailing and/or e-mail address to send a gift or electronic greeting card. The types of personal information that may be collected about other people at these pages include: recipient's name, address, e-mail address and telephone number. Please ensure that you notify the person whose information you are providing to us.",
+            "17 Please remember that any information you disclose in any public forum or community areas becomes public information and is immediately accessible to other users, so it is important for you to carefully consider what, if any, information you reveal in these areas.",
+            "18 Information we collect automatically: When you interact with our Services, we (and our partners, advertisers, advertising networks and other third party service providers) automatically collect certain information. For example, we collect information about the webpages you view and how you move through our Services, how you reached our Services, how you interact with our social media pages, and how you interact with our email communications."
+        ]
+
+        const typingText = document.querySelector(".typing__text p");
+        const inputField = document.querySelector(".input__field");
+        const typingMistake = document.querySelector(".mistake span")
+        const typingTime = document.querySelector(".time span b")
+        const typingWpm = document.querySelector(".wpm span") //1분 동안 친 단어
+        const typingCpm = document.querySelector(".cpm span") //1분 동안 친 글자수
+        const typingAgain = document.querySelector(".again")
+
+        let charIndex = 0;
+        let mistakes = 0;
+        let timer;
+        let maxTime = 60;
+        let timeLeft = maxTime;
+        let isTyping = 0;
+        
+        function randomParagraph(){
+            let randIndex = Math.floor(Math.random() * paragraphs.length);
+            typingText.innerHTML ="";
+
+            paragraphs[randIndex].split("").forEach(span =>{
+                let spanTag = `<span>${span}</span>`;
+                typingText.innerHTML += spanTag;
+            });
+            document.addEventListener("keydown", ()=>{
+                inputField.focus();
+            });
+            typingText.addEventListener("click",()=>{
+                inputField.focus();
+            });
+        }
+
+        function initTyping(){
+            const characters = typingText.querySelectorAll("span");
+            let typedText = inputField.value.split("")[charIndex];
+            
+            if(charIndex < characters.length -1 && timeLeft > 0){
+                if(!isTyping){
+                    timer = setInterval(initTimer,1000);
+                    isTyping =true;
+                }
+
+                if(typedText ==null){
+                    charIndex--;
+                    if(characters[charIndex].classList.contains("incorrect")){
+                        mistakes--;
+                    }
+                    characters[charIndex].classList.remove("correct","incorrect");
+                }else{
+                    if(characters[charIndex].innerText === typedText){
+                        characters[charIndex].classList.add("correct");
+                    }else{
+                        mistakes++;
+                        characters[charIndex].classList.add("incorrect");
+                    }
+                    charIndex++; 
+                }
+                characters.forEach(span => span.classList.remove("active"));
+                // characters[charIndex-1].classList.remove("active"); 맨처음 갔을 때 작동X
+                characters[charIndex].classList.add("active");
+                typingMistake.innerText = mistakes;
+
+                // 전체 글자수 : charIndex
+                let wpm = Math.round((((charIndex - mistakes)/5) / (maxTime - timeLeft)) * 60);
+                wpm = wpm < 0 || !wpm || wpm == Infinity ? 0 : wpm;
+                typingWpm.innerText = wpm;
+                typingCpm.innerText = charIndex - mistakes;
+            }else{
+                clearInterval(timer);
+                inputField.value='';
+            }
+           
+        }
+
+        function initTimer(){
+            if(timeLeft > 0){
+                timeLeft--;
+                typingTime.innerText = timeLeft;
+            }else{
+                clearInterval(timer);
+            }
+        }
+
+        
+
+        function resetGame(){
+            randomParagraph();
+            // clearInterval(timer);
+            timeLeft = maxTime;
+            isTyping = charIndex = mistakes = 0;
+
+            typingMistake.innerText = 0;
+            typingWpm.innerText = 0;
+            typingCpm.innerText = 0;
+            inputField.value = "";
+        }
+
+        randomParagraph();
+        inputField.addEventListener("input",initTyping);
+        typingAgain.addEventListener("click", resetGame);
+    </script>
+</body>
+</html>
