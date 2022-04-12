@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마우스 이펙트05</title>
+    <title>마우스 이펙트06</title>
 
     <link rel="stylesheet" href="css/NexonLv1Gothic.css">
     <link rel="stylesheet" href="css/agate.min.css">
@@ -26,58 +26,61 @@
             cursor: none;
         }
         .mouse__img {
-            position: relative;
-            text-align: center;
-            transform: rotateX(0deg) rotateY(0deg) perspective(600px);
-            transform-style: preserve-3d;
-            will-change: transform;
-            transition: all 0.2s;
-        }
-        .mouse__img figure {
-            width: 50vw;
-            position: relative;
-        }
-        .mouse__img figure::before {
-            content: '';
-            position: absolute;
-            left: 5%;
-            bottom: -30px;
-            width: 90%;
-            height: 40px;
-            overflow: hidden;
-            background: url(img/img05-min.jpg) center center no-repeat;
-            background-size: 100% 40px;
-            filter: blur(15px);
-            opacity: 0.9;
-            z-index: -1;
-        }
-        .mouse__img figcaption {
             position: absolute;
             left: 50%;
             top: 50%;
-            font-size: 1vw;
-            white-space: nowrap;
-            line-height: 1.6;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 1vw 2vw; 
-            transform: translate3d(-50%, -50%, 150px);
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            width: 50%;
+        }
+        .mouse__text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-20%);
+            color: #fff;
+            font-size: 3vw;
+            line-height: 1.5;
+        }
+        .mouse__text .line {
+            width: 100%;
+            display: flex;
+        }
+        .mouse__text .line .left {
+            width: 50vw;
+            color: orange;
+            transform: skew(0deg, -15deg);
+            overflow: hidden;
+        }
+        .mouse__text .line .left .spanWrap {
+            width: 100vw;
+            text-align: center;
+        }
+        .mouse__text .line .right {
+            width: 50vw;
+            transform: skew(0deg, 15deg);
+            overflow: hidden;
+        }
+        .mouse__text .line .right .spanWrap {
+            width: 100vw;
+            text-align: center;
+            transform: translate(-50vw);
         }
         .cursor {
             position: absolute;
             left: 0;
             top: 0;
-            width: 100px;
-            height: 100px;
-            background: #fff;
+            width: 20px;
+            height: 20px;
+            z-index: 9999;
             border-radius: 50%;
-            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
             user-select: none;
             pointer-events: none;
-            mix-blend-mode: difference;
         }
     </style>
 </head>
-<body class="img05">
+<body class="img06">
     
     <!-- main -->
     <main>
@@ -87,12 +90,58 @@
             <div class="mouse__wrap">
                 <div class="mouse__img">
                     <figure>
-                        <img src="img/img05-min.jpg" alt="이미지">
-                    </figure>
-                    <figcaption>
-                        <p>Do not try to be original, just try to be good.</p>
-                        <p>독특한 사람이 되려 하지 말아라. 좋은 사람이 되도록 해라</p>
-                    </figcaption>
+                        <img src="img/img06-min.jpg" alt="이미지">
+                    </figure>      
+                </div>
+                <div class="mouse__text">
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanSlow">just try</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanSlow">just try</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanFast">to be good.</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanFast">to be good.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanSlow">좋은 사람이</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanSlow">좋은 사람이</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <div class="left">
+                            <div class="spanWrap">
+                                <div class="spanFast">되도록 해라</div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="spanWrap">
+                                <div class="spanFast">되도록 해라</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -102,8 +151,8 @@
     <!-- info -->
     <div class="info">
         <div class="title">
-        <h1><a href="mouseEffect.html">Javascript Mouse Effect05</a></h1>
-        <p>마우스 이펙트 - 이미지 효과</p>
+        <h1><a href="mouseEffect.html">Javascript Mouse Effect06</a></h1>
+        <p>마우스 이펙트 - 텍스트 효과</p>
         </div>
     
         <div class="number">
@@ -112,8 +161,8 @@
             <li><a href="mouseEffect02.html">2</a></li>
             <li><a href="mouseEffect03.html">3</a></li>
             <li><a href="mouseEffect04.html">4</a></li>
-            <li class="active"><a href="mouseEffect05.html">5</a></li>
-            <li><a href="mouseEffect06.html">6</a></li>
+            <li><a href="mouseEffect05.html">5</a></li>
+            <li class="active"><a href="mouseEffect06.html">6</a></li>
             <li><a href="mouseEffect07.html">7</a></li>
             <li><a href="mouseEffect08.html">8</a></li>
         </ul>
@@ -274,17 +323,6 @@
             </div>
         </div>
         </div>
-
-        <div class="attr">
-            <ul>         
-                <li>mousePageX : <span class="mousePageX">0</span>px</li>
-                <li>mousePageY : <span class="mousePageY">0</span>px</li>
-                <li>centerPageX : <span class="centerPageX">0</span>px</li>
-                <li>centerPageY : <span class="centerPageY">0</span>px</li>
-                <li>maxPageX : <span class="maxPageX">0</span>px</li>
-                <li>maxPageY : <span class="maxPageY">0</span>px</li>
-            </ul>
-        </div>
     </div>
 
     <script src="js/highlight.min.js"></script>
@@ -294,62 +332,17 @@
         highlight();
         modal();
         tabMenu();
-        const circle = document.querySelector(".cursor").getBoundingClientRect()
-        
-        function mouseMove(e){
 
-            // 마우스 좌표 값
-            let mousePageX = e.pageX;
-            let mousePageY = e.pageY;
+        function mousemove(e){
+            let positionSlow = (e.pageX-(window.innerWidth/2))*0.1;
+            let positionFast = (e.pageX-(window.innerWidth/2))*0.3;
 
-            // 마우스 좌표 기준점을 가운데로 변경
-            let centerPageX = window.innerWidth/2 - mousePageX;
-            let centerPageY = window.innerHeight/2 - mousePageY;
-
-            // 최솟값은 -50 최댓값은 50 설정
-            let maxPageX =Math.max(-300, Math.min(300, centerPageX));
-            let maxPageY =Math.max(-300, Math.min(300, centerPageY));
-
-            // 각도 줄이는 설정
-            let anlexpageX = maxPageX*0.12;
-            let anlexpageY = maxPageY*0.12;
-
-            // 부드럽게 설정
-            let softPageX=0,softPageY=0;
-                softPageX += (anlexpageX-softPageX)*0.4;
-                softPageY += (anlexpageY-softPageY)*0.4;
-
-            //이미지 움직이기
-            //transform: rotateX(0deg) rotateY(0deg);
-            const imgMove = document.querySelector(".mouse__img");
-            imgMove.style.transform = "perspective(600px) rotateX("+softPageY+"deg) rotateY("+-softPageX+"deg)"
-
-            // 원 크기
-            let circleWidth = mousePageX-circle.width/2;
-            let circleHeight = mousePageY-circle.height/2;
-            
-            //  커서
-            gsap.to(".cursor", {dration: .3, left: circleWidth, top: circleHeight})
-            
-            //  출력
-            document.querySelector(".mousePageX").textContent = mousePageX;
-            document.querySelector(".mousePageY").textContent = mousePageY;
-            document.querySelector(".centerPageX").textContent = centerPageX;
-            document.querySelector(".centerPageY").textContent = centerPageY;
-            document.querySelector(".maxPageX").textContent = maxPageX;
-            document.querySelector(".maxPageY").textContent = maxPageY;
+            gsap.to(".spanSlow", {duration:0.4, x:positionSlow});
+            gsap.to(".spanFast", {duration:0.4, x:-positionFast});
+            gsap.to(".cursor",{duration:0.3,left:e.pageX, top:e.pageY});
         }
-        document.addEventListener("mousemove", mouseMove);
         
-
-
-
-       
-
-        
-        
-
-        
+        document.addEventListener("mousemove", mousemove);
         
     </script>
 </body>
