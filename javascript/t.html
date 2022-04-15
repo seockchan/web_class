@@ -8,205 +8,44 @@
 </head>
 <body>
     <script>
-        // {
-        //     if({}){
-        //         document.write("true");
-        //     }else{
-        //         document.write("false");
-        //     }
-        // }
-        // {
-        //     if(num==100){
-        //         document.write("true");
-        //     }else{
-        //         document.write("false");
-        //     }
-        // }
-        // {
-        //     for(let i=1;i<=1;i++){
-        //         document.write(i);
-        //         for(let j=1;j<=5;j++){
-        //         document.write(j);
+        // function func(){
+        //     let i=10,hap=0;
+        //     while (i>1){
+        //         if(i%3==1){
+        //             hap+=i;
         //         }
+        //         i--;
         //     }
+        //     document.write(hap);
         // }
-        // {
-        //     const func = ()=>{
-        //         document.write("실행1")
+        // func();
+
+        // function func() {
+        //     let a =[];
+
+        //     for(i=1;i<=5;i++){
+        //         a+=[i];
         //     }
-        //     func();
-        // }
-
-        // {
-        //     const num = [100,200,300,400,500];
-
-        //     for(let i=0;i<num.length;i++){
-        //         document.write(num[i]);
-        //     }
-        // }
-        // {
-        //     const num = [100,200,300,400,500];
-
-        //     for(let i of num){
-        //         document.write(i);
-        //     }
-        // }
-        // {
-        //     const num = [100,200,300,400,500];
-
-        //     for(let i in num){
-        //         document.write(num[i]);
-        //     }
-        // }
-        // {
-        //     function func(){
-        //         document.write("함수가 실행되었습니다.");
-        //     }
-        //     func();
-
-        //     (function(){
-        //     document.write("함수가 실행되었습니다3.");
-        //     }());
-
-        //     (()=>{
-        //         document.write("함수가 실행되었습니다4.");
-        //     })();
-        // }
-        // {
-        //     function func(a,b,c){
-        //         document.write(arguments[0]);
-        //         document.write(arguments[1]);
-        //         document.write(arguments[2]);
-        //         document.write(arguments[3]);
-        //         document.write(c);
-        //     }
-        //     func("함수가 실행되었습니다6.","함수가 실행되었습니다7.","함수가 실행되었습니다8.");
-        // }
-        // {
-        //     const func = str =>{
-        //         str;
-        //     }
-        //     document.write("실");
-        // }
-        // {
-        //     let sum = 0;
-        //     for(let i =1; i<=100; i++){
-        //         sum = sum+i;
-        //     }
-        //     document.write(sum);
-        // }
-        // {
-        //     const obj = {
-        //         a:100,
-        //         b:200,
-        //         c:"javascript"
-        //     }
-        //     const {a:100,b:200,c:javascript}=name;
-        //     document.write(name1);
-        //     document.write(name2);
-        //     document.write(name3);
-        // }
-        // {
-        //     const arrNum = [100,200,300,400,500];
-        //     const arrNumLength =arrNum.length;
-
-        //     document.write(arrNumLength);
-        // }
-        // {
-        //     const arr = [100,200,300,400,500];
-        //     const text =arr.unshift(600);
-
-        //     document.write(text);
-        //     document.write(arr);
-        // }
-        // {
-        //     const arr = [100,200,300,400,500];
-        //     const text =arr.shift();
-
-        //     document.write(text);
-        //     document.write(arr);
-        // }
-        // {
-        //     const arr = [100,200,300,400,500];
-        //     const text =arr.sort(function(a,b){return a-b});
-
-        //     document.write(text);
-        // }
-        // {
-        //     const num1 = [100,200,300];
-        //     const num2 = [400,500,600];
-
-        //     const result = num1.concat(num2);
-
-        //     document.write(result);
-        // }
-        // {
-        //     const arr = [100,200,300,400,500];
-        //     const text =arr.slice(2,5);
-
-        //     document.write(text);
-        //     document.write(arr);
-        // }
-        // {
-        //     const num = [100,200,300,400,500];
+        //     document.write(a[2]);
             
-        //     for(let i=0; i<num.length;i+=3){
-        //         document.write(num[i]);
-        //     }
         // }
-        // {
-        //     const arrNum1 = [100,200,300,400,500];
-        //     const result1 = arrNum1.map(element=>element+"j");
-        //     document.write(result1);
-        // }
-        // {
-        //     const arrNum2 = [{a:100},{a:200},{a:300}];
-        //     const result2 = arrNum2.map(element=>element.a);
-        //     document.write(result2);
-        // }
-        // {
-        //     const arrNum1 = [100,200,300,400,500];
-        //     let result = 0;
-        //    for(let i=0;i<arrNum1.length;i++){
-        //        result += arrNum1[i]
-        //    }
-        //    document.write(result);
-           
-        // }
-        // {
-        //     const str = "자바스크립트(javascript) 공부"
+        // func();
 
-        //     // const text5 = str.lastIndexOf("a");
-        //     // document.write(text5);
-
-        //     const text6 = str.slice(19,21);
-        //     document.write(text6);
-        // }
-        // {
-        //     function func(data, exp){
-        //         let result = 1;
-        //         for(let i = 0; i<exp;i++){
-        //             result = result * data;
-        //         }
-        //         document.write(result);
+        // function func(data,exp){
+        //     let result = 1;
+        //     for(i=1;i<exp;i++){
+        //         result =result*i;
         //     }
-        //     func(2,5);
+        //     document.write(result+data);
         // }
-        // {
-        //     function solution(a, b) {
-        //         let num = a > b;
-        //         return num;
-        //     }
-        //     document.write(solution(5, 9))
-        // }
-        {
-    for(let i = 0; i < 5; i++)  {
-        for(let j = 0; j < 5; j++)  {
-            document.write('*');
+        // func(1,5);
+        function solution(n){
+            var answer = [];
+            answer = n.toString().split('').reverse();
+            return answer;
         }
-        document.write('<br>');
-    }
-}
+        document.write(solution(12345));
+        console.log(solution(12345));
     </script>
 </body>
 </html>
