@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <style>
         *{
             margin: 0;
@@ -87,18 +88,58 @@
             80% {transform: translateX(8px);}
             100% {transform: translateX(0);}
         }
+        .cards__sound {
+            position: absolute;
+            right: 20px;
+            top: 20px;  
+        }
+        .cards__sound button {
+            line-height: 40px;
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            color: #007bff;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 0;
+        }
+        .card__start {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+        .card__start button {
+            line-height: 40px;
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            color: #007bff;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 0;
+        }
     </style>
 </head>
 <body>
     <div class="wrap__card">
         <div class="card__inner">
+            <div class="card__start">
+                <button class="material-icons">face</button>
+            </div>
+            <div class="cards__sound">
+                <button class="material-icons">volume_off</button>
+                <!-- <span class="material-icons">volume_up</span> -->
+                <audio id="song" src="audio/Jeremy_Black.mp3" loop="loop"></audio>
+            </div>
             <ul class="cards">
                 <li>
                     <div class="view front">
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/buffalo.png" alt="buffalo">
+                        <img src="../img/icon/img-1.png" alt="buffalo">
                     </div>
                 </li>
                 <li>
@@ -106,7 +147,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/buffalo.png" alt="buffalo">
+                        <img src="../img/icon/img-1.png" alt="buffalo">
                     </div>
                 </li>
                 <li>
@@ -114,7 +155,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/crocodile.png" alt="crocodile">
+                        <img src="../img/icon/img-2.png" alt="crocodile">
                     </div>
                 </li>
                 <li>
@@ -122,7 +163,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/crocodile.png" alt="crocodile">
+                        <img src="../img/icon/img-2.png" alt="crocodile">
                     </div>
                 </li>
                 <li>
@@ -130,7 +171,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/elephant.png" alt="elephant">
+                        <img src="../img/icon/img-3.png" alt="elephant">
                     </div>
                 </li>
                 <li>
@@ -138,7 +179,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/elephant.png" alt="elephant">
+                        <img src="../img/icon/img-3.png" alt="elephant">
                     </div>
                 </li>
                 <li>
@@ -146,7 +187,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/frog.png" alt="frog">
+                        <img src="../img/icon/img-4.png" alt="frog">
                     </div>
                 </li>
                 <li>
@@ -154,7 +195,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/frog.png" alt="frog">
+                        <img src="../img/icon/img-4.png" alt="frog">
                     </div>
                 </li>
                 <li>
@@ -162,7 +203,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/lion.png" alt="lion">
+                        <img src="../img/icon/img-5.png" alt="lion">
                     </div>
                 </li>
                 <li>
@@ -170,7 +211,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/lion.png" alt="lion">
+                        <img src="../img/icon/img-5.png" alt="lion">
                     </div>
                 </li>
                 <li>
@@ -178,7 +219,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/owl.png" alt="owl">
+                        <img src="../img/icon/img-6.png" alt="owl">
                     </div>
                 </li>
                 <li>
@@ -186,7 +227,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/owl.png" alt="owl">
+                        <img src="../img/icon/img-6.png" alt="owl">
                     </div>
                 </li>
                 <li>
@@ -194,7 +235,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/pig.png" alt="pig">
+                        <img src="../img/icon/img-7.png" alt="pig">
                     </div>
                 </li>
                 <li>
@@ -202,7 +243,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/pig.png" alt="pig">
+                        <img src="../img/icon/img-7.png" alt="pig">
                     </div>
                 </li>
                 <li>
@@ -210,7 +251,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/rhino.png" alt="rhino">
+                        <img src="../img/icon/img-8.png" alt="rhino">
                     </div>
                 </li>
                 <li>
@@ -218,7 +259,7 @@
                         <img src="../img/icon/whale.png" alt="whale">
                     </div>
                     <div class="view back">
-                        <img src="../img/icon/rhino.png" alt="rhino">
+                        <img src="../img/icon/img-8.png" alt="rhino">
                     </div>
                 </li>
             </ul>
@@ -233,12 +274,31 @@
         // 05. 두개의 이미지 비교하기
         // 06. 틀린 이미지 애니메이션 효과 주기
         // 07. 빨리 클릭하면 버그 발생 처리하기
-
+        // 08. 다 완성했을 때
+        // 09. 카드 섞기
+        
         const cards =document.querySelectorAll(".cards li");
-
+        const cardSound =document.querySelector(".cards__sound button");
+        const cardSong =document.querySelector("#song");
+        const cardStart =document.querySelector(".card__start");
+        
+        
         let cardOne, cardTwo;
         // 07. 빨리 클릭하면 버그 발생 처리하기
         let disableDeck = false;
+        // 맞춘 카드
+        let matchedCard = 0;
+
+        let sound=[
+            "audio/match2.mp3",
+            "audio/match.mp3",
+            "audio/up.mp3"
+        ]
+        let soundMatch = new Audio(sound[0]);
+        let soundNoMatch = new Audio(sound[1]);
+        let soundSuccess = new Audio(sound[2]);
+        
+        
 
         function flipCard(e) {
             let clickedCard = e.target;
@@ -261,10 +321,18 @@
         // 05. 두개의 이미지 비교하기
         function matchCards(img1, img2){
             if(img1 == img2){
-                cardOne.removeEventListener("click", flipCard);
-                cardTwo.removeEventListener("click", flipCard);
+                matchedCard++;
+
+                if(matchedCard==8){
+                    setTimeout(() => {
+                        shuffledCard();
+                    }, 1000);   
+                }
+                // cardOne.removeEventListener("click", flipCard);
+                // cardTwo.removeEventListener("click", flipCard);
                 cardOne = cardTwo = "";
                 return disableDeck =false;
+                soundMatch.play();
             }else{
                 // 06. 틀린 이미지 애니메이션 효과 주기
                 setTimeout(() => {
@@ -278,9 +346,70 @@
                     cardOne = cardTwo = "";
                     return disableDeck =false;
                 }, 1200);
+
+                soundNoMatch.play();
             }
         }
 
+        // 카드섞기
+        function shuffledCard(){
+            cardOne = cardTwo = "";
+            disableDeck =false;
+            matchedCard=0;
+            
+            let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
+            let result =arr.sort(()=>Math.random()>0.5?1:-1);
+
+            cards.forEach((card,index)=>{
+                card.classList.remove("flip");
+
+                setTimeout(() => {
+                    card.classList.add("flip");
+                }, 200*index);
+
+                setTimeout(() => {
+                    card.classList.remove("flip");
+                }, 4000);
+
+                let imgTag = card.querySelector(".back img");
+                imgTag.src = `../img/icon/img-${arr[index]}.png`;
+            }) 
+        }
+        // shuffledCard();
+
+        // 뮤직재생
+        // 화살표 함수
+        // cardSound.addEventListener("click", ()=>{
+        //     cardSound.classList.toggle("is-playing");
+
+        //     if(cardSound.classList.contains("is-playing")){
+        //         cardSound.innerText="volume_up";
+        //         cardSong.play();
+        //     }else{
+        //         cardSound.innerText="volume_off";
+        //         cardSong.pause();
+        //     };
+        // })
+
+        // 예전 방식 this를 쓰고 싶으면 function을 쓰면 된다.
+        cardSound.addEventListener("click", function(){
+            this.classList.toggle("is-playing");
+
+            if(this.classList.contains("is-playing")){
+                this.innerText="volume_up";
+                cardSong.play();
+            }else{
+                this.innerText="volume_off";
+                cardSong.pause();
+            };
+        });
+
+        // 시작 버튼
+        cardStart.addEventListener("click", ()=>{
+            shuffledCard();
+        })
+
+        // 카드 클릭
         cards.forEach(card => {
             card.addEventListener("click", flipCard);
         });
