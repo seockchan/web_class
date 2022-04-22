@@ -31,7 +31,7 @@
         html {
             width: 100%;
             height: 100vh;
-            background: linear-gradient(to bottom, #11E8BB 0%, #8200C9 100%);
+            background: linear-gradient(to bottom, #c8e811 0%, #0014c9 100%);
             overflow: hidden;
         }
 
@@ -45,7 +45,7 @@
             font-weight: normal;
             transform: translate(-50%, -50%);
             letter-spacing: 2vw;
-            background: -webkit-linear-gradient(#590e81, #11E8BB);
+            background: -webkit-linear-gradient(#0014c9, #c8e811);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -175,9 +175,9 @@
         const lights = [];
         lights[0] = new THREE.DirectionalLight(0xffffff, 1);
         lights[0].position.set(1, 0, 0);
-        lights[1] = new THREE.DirectionalLight(0x11E8BB, 1);
+        lights[1] = new THREE.DirectionalLight(0xc8e811, 1);
         lights[1].position.set(0.75, 1, 0.5);
-        lights[2] = new THREE.DirectionalLight(0x8200C9, 1);
+        lights[2] = new THREE.DirectionalLight(0x0014c9, 1);
         lights[2].position.set(-0.75, -1, 0.5);
         scene.add(ambientLight);
         scene.add(lights[0]);
