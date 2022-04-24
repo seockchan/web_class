@@ -250,7 +250,7 @@
     <div class="wrap__music">
         <div class="music__inner">
             <div class="music__top">
-                <i class="material-icons">expand_more</i>
+                <i class="material-icons expand">expand_more</i>
                 <h3>Now Playing</h3>
                 <i class="material-icons">more_horiz</i>
             </div>
@@ -311,6 +311,7 @@
             <!-- /music__list -->
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="api/music.js"></script>
     <script>
         const musicWrap = document.querySelector(".wrap__music");
@@ -330,6 +331,7 @@
         const musicListBtn = musicWrap.querySelector("#control-list");
         const musicListClose = musicList.querySelector(".close");
         const musicListUl = musicList.querySelector(".list ul");
+        const musicExpand =musicWrap.querySelector(".expand");
 
         let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 
@@ -341,6 +343,10 @@
             musicAudio.src = `songs/${allMusic[num-1].audio}.mp3`
 
         }
+
+        $(".expand").click( function() {
+          $("body").slideUp();
+        })
 
 
 
