@@ -18,8 +18,6 @@
     <header id="header">
         <h1>GAME SITE</h1>
         <div id="time">현재 <span id="clock"></span> 입니다<br /></div>
-
-
     </header>
         <div class="dot"></div>
         <div class="dot"></div>
@@ -34,23 +32,30 @@
             </a>
         </div>
         <div class="btn btn2">
-            <a href="#" target="blink">
+            <a href="#">
                 <img src="img/computer.svg"
                     alt="TypingGame">
                 <span>TypingGame</span>
             </a>
         </div>
         <div class="btn btn3">
-            <a href="#" target="blink"><img src="img/question.svg"
+            <a href="#"><img src="img/question.svg"
                     alt="MemoryGame">
                 <span>MemoryGame</span>
             </a>
         </div>
 
         <div class="btn btn4">
-            <a href="https://secokchan.netlify.app" target="blink"><img src="img/sun.svg"
+            <a href="https://secokchan.netlify.app"><img src="img/sun.svg"
                     alt="React">
                 <span>React</span>
+            </a>
+        </div>
+
+        <div class="btn btn5">
+            <a href="#"><img src="img/sun.svg"
+                    alt="tetrisGame">
+                <span>tetrisGame</span>
             </a>
         </div>
         
@@ -64,8 +69,12 @@
     <div class="memoryGame">
         <iframe src="memoryGame/index.html" frameborder="0"></iframe>
     </div>
-    <div class="memoryBox">
+    <div class="memoryBox" style="display: none;">
         <iframe src="memoryGame/index2.html" frameborder="0"></iframe>
+    </div>
+
+    <div class="tetrisBox">
+        <iframe src="tetrisGame/index.html" frameborder="0"></iframe>
     </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -86,6 +95,9 @@
         });
         $(".btn3").click(function () {
             $(".memoryGame").toggleClass("show")
+        });
+        $(".btn5").click(function () {
+            $(".tetrisBox").toggleClass("show")
         });
 
         function printTime() {
