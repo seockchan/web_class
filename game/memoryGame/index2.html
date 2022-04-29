@@ -310,6 +310,7 @@
 
     <!-- 카드 박스 -->
     <div class="card__wrap">
+        <button class="close">닫기</button>
         <div class="card__inner">
             <ul class="cards">
                 <li>
@@ -456,13 +457,16 @@
         </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         const startBtn = document.querySelector(".start__btn");
+        const closeBtn = document.querySelector(".close");
         const infoBox = document.querySelector(".info__box");
         const resultBox = document.querySelector(".result__box");
         const cardWrap = document.querySelector(".card__wrap");
         const cards = document.querySelectorAll(".cards li");
         const infoBoxStart = infoBox.querySelector(".start");
+        const infoBoxStop = infoBox.querySelector(".stop");
         const resultBoxRestart = resultBox.querySelector(".restart");
         const score = document.querySelector(".score span");
         let cardOne, cardTwo;
@@ -477,6 +481,10 @@
         let soundMatch = new Audio(sound[0]);
         let soundNoMatch = new Audio(sound[1]);
         let soundSuccess = new Audio(sound[2]);
+        // 닫기 버튼
+        // $(".close").click( function() {
+        //   $("body").slideUp();
+        // })
         // 시작 버튼
         startBtn.onclick = () => {
             infoBox.classList.add("active");

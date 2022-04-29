@@ -67,7 +67,7 @@
         <iframe src="typingGame/index.html" frameborder="0"></iframe>
     </div>
     <div class="memoryGame">
-        <iframe src="memoryGame/index.html" frameborder="0"></iframe>
+        <iframe class="iii" src="memoryGame/index2.html" frameborder="0"></iframe>
     </div>
     <div class="memoryBox" style="display: none;">
         <iframe src="memoryGame/index2.html" frameborder="0"></iframe>
@@ -96,6 +96,9 @@
         $(".btn3").click(function () {
             $(".memoryGame").toggleClass("show")
         });
+        $(".iii .close").click( function() {
+          $(".memoryGame").remove("show");
+        })
         $(".btn5").click(function () {
             $(".tetrisBox").toggleClass("show")
         });
@@ -130,6 +133,7 @@
             });
         });
 
+       
     </script>
 </body>
 
