@@ -230,14 +230,13 @@
       // 스크롤 했을 때 left: scrollTop
       function scroll() {
         let scrollTop =
-          window.screenY ||
-          window.pageYOffset ||
-          document.documentElement.scrollTop;
+          //   window.screenY ||
+          window.pageYOffset || document.documentElement.scrollTop;
 
         document.querySelector(".scrollTop span").innerText =
           Math.round(scrollTop);
 
-        gsap.to(parallaxCont, { left: -scrollTop });
+        gsap.to(parallaxCont, { left: -scrollTop * contentItemRate });
 
         requestAnimationFrame(scroll);
       }
