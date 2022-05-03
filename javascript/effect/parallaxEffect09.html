@@ -129,15 +129,31 @@
       #section4 {
         background-color: #666;
         z-index: 4000;
-        height: 500vh;
+        height: 700vh;
       }
       #section4 .sec4 {
         position: fixed;
         left: 0;
         top: 0;
-        width: 400vh;
-        height: 100%;
         background: red;
+        display: flex;
+      }
+      #section4 .sec4 .item {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
+      #section4 .sec4 .item:nth-child(1) {
+        background: red;
+      }
+      #section4 .sec4 .item:nth-child(2) {
+        background: orange;
+      }
+      #section4 .sec4 .item:nth-child(3) {
+        background: green;
+      }
+      #section4 .sec4 .item:nth-child(4) {
+        background: blue;
       }
       #section5 {
         background-color: #555;
@@ -149,7 +165,32 @@
       }
       #section7 {
         background-color: #333;
-        z-index: 7000;
+        z-index: 4000;
+        height: 700vh;
+      }
+      #section7 .sec7 {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: red;
+        display: flex;
+      }
+      #section7 .sec7 .item {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
+      #section7 .sec7 .item:nth-child(1) {
+        background: red;
+      }
+      #section7 .sec7 .item:nth-child(2) {
+        background: orange;
+      }
+      #section7 .sec7 .item:nth-child(3) {
+        background: green;
+      }
+      #section7 .sec7 .item:nth-child(4) {
+        background: blue;
       }
       #section8 {
         background-color: #222;
@@ -194,7 +235,18 @@
       <!-- //section3 -->
       <section id="section4" class="content__item">
         <div class="sec4">
-          <span class="content__item__num">04</span>
+          <div class="item">
+            <span class="content__item__num">04-1</span>
+          </div>
+          <div class="item">
+            <span class="content__item__num">04-2</span>
+          </div>
+          <div class="item">
+            <span class="content__item__num">04-3</span>
+          </div>
+          <div class="item">
+            <span class="content__item__num">04-4</span>
+          </div>
         </div>
       </section>
       <!-- //section4 -->
@@ -207,7 +259,20 @@
       </section>
       <!-- //section6 -->
       <section id="section7" class="content__item">
-        <span class="content__item__num">07</span>
+        <div class="sec7">
+          <div class="item">
+            <span class="content__item__num">04-1</span>
+          </div>
+          <div class="item">
+            <span class="content__item__num">04-2</span>
+          </div>
+          <div class="item">
+            <span class="content__item__num">04-3</span>
+          </div>
+          <div class="item">
+            <span class="content__item__num">04-4</span>
+          </div>
+        </div>
       </section>
       <!-- //section7 -->
       <section id="section8" class="content__item">
