@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // function func(){
-        //     let i=10,hap=0;
-        //     while (i>1){
-        //         if(i%3==1){
-        //             hap+=i;
-        //         }
-        //         i--;
-        //     }
-        //     document.write(hap);
-        // }
-        // func();
+      // function func(){
+      //     let i=10,hap=0;
+      //     while (i>1){
+      //         if(i%3==1){
+      //             hap+=i;
+      //         }
+      //         i--;
+      //     }
+      //     document.write(hap);
+      // }
+      // func();
 
-        // function func() {
-        //     let a =[];
+      // function func() {
+      //     let a =[];
 
-        //     for(i=1;i<=5;i++){
-        //         a+=[i];
-        //     }
-        //     document.write(a[2]);
-            
-        // }
-        // func();
+      //     for(i=1;i<=5;i++){
+      //         a+=[i];
+      //     }
+      //     document.write(a[2]);
 
-        // function func(data,exp){
-        //     let result = 1;
-        //     for(i=1;i<exp;i++){
-        //         result =result*i;
-        //     }
-        //     document.write(result+data);
-        // }
-        // func(1,5);
-        function solution(n){
-            var answer = [];
-            answer = n.toString().split('').reverse();
-            return answer;
+      // }
+      // func();
+
+      // function func(data,exp){
+      //     let result = 1;
+      //     for(i=1;i<exp;i++){
+      //         result =result*i;
+      //     }
+      //     document.write(result+data);
+      // }
+      // func(1,5);
+      // function solution(n){
+      //     var answer = [];
+      //     answer = n.toString().split('').reverse();
+      //     return answer;
+      // }
+      // document.write(solution(12345));
+      // console.log(solution(12345));
+      function solution(new_id) {
+        var answer = new_id;
+        answer = answer.toLowerCase();
+        // 1단계 toLowerCase()함수를 이용하여 소문자로 바꿔준다.
+        answer = answer.replace(/[^a-z0-9-_.]/g, "");
+        // 2단계 replace를 이용하여 []내용을 ""안에 내용으로 바꿔준다. ^의 의미는 제외한다는 뜻 []내용을 제외한 문자열을 빈 문자열로 바꿔준다.
+        answer = answer.replace(/\.+/g, ".");
+        // 3단계 정규 표현식에서 .은 어떤 문자든 상관없이 1개의 문자 자체를 뜻한다. .을 식별하기 위해 \를 사용해야한다. .이 포함된 문자열을 찾으란 의미이고 +는 한개 이상이 포함이라는 뜻이다. 즉 .이 한개 이상 포함된 문자열이면 .한개로 치환하라는 의미이다.
+        answer = answer.replace(/^\.|\.$/g, "");
+        // 4단계 []밖에서의 의미는 첫 문자라는 의미,|는 또는 $ 마지막이라는 의미 즉, 첫번째 글자나 마지막 글자가 .이면 빈문자열로 치환하라는 의미이다.
+        if (answer === "") {
+          answer += "a";
         }
-        document.write(solution(12345));
-        console.log(solution(12345));
+        // 5단계 answer가 빈문자열이면 a를 추가한다.
+        if (answer.length >= 16) {
+          answer = answer.substring(0, 15);
+        }
+        answer = answer.replace(/\.$/, "");
+        // 6단계 answer가 16글자 이상이면 뒤에 글자를 없앤다.
+        while (answer.length <= 2) {
+          answer += answer.charAt(answer.length - 1);
+        }
+        // 7단계 글자수가 3보다 작으면 3이 될때까지 추가한다.
+
+        return answer;
+      }
+
+      let x = 100; //전역변수
+      let y = 200; //전역변수
+
+      function func() {
+        let x = 100; //지역변수
+        let z = "javascript"; //지역변수
+        x = 200; //지역변수 100>200
+        y = 300; //전역변수 200>300
+        document.write(x);
+        document.write(y);
+        document.write(z);
+      }
+      func();
+      // document.write(x);
+      // document.write(y);
+      // document.write(z);
     </script>
-</body>
+  </body>
 </html>
