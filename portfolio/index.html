@@ -1,39 +1,241 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        #wrap {
-            background: #000;
-        }
-        #header {
-            width: 100%;
-            height: 1280px;
-            
-        }
-        .header_text {
-            text-align: center;
-            font-size: 10vw;
-            color: #fff;
-        }
-    </style>
-</head>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+      @font-face {
+        font-family: "GmarketSans";
+        font-weight: 300;
+        font-style: normal;
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot");
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2")
+            format("woff2"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff")
+            format("woff"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf")
+            format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "GmarketSans";
+        font-weight: 500;
+        font-style: normal;
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot");
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2")
+            format("woff2"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff")
+            format("woff"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf")
+            format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "GmarketSans";
+        font-weight: 700;
+        font-style: normal;
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot");
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2")
+            format("woff2"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff")
+            format("woff"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf")
+            format("truetype");
+        font-display: swap;
+      }
 
-<body>
+      * {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+      }
+      #wrap {
+        background: #000;
+        height: 20000px;
+      }
+      #header {
+        width: 100%;
+        position: relative;
+      }
+      .headerMenu {
+        font-size: 1vw;
+        text-align: center;
+        padding: 1.5vw;
+        font-family: "GmarketSans";
+      }
+      .headerTitle {
+        font-size: 10vw;
+        font-family: "Orbitron";
+        background: url(assets/img/bg2.jpg) no-repeat;
+        background-position: center;
+        width: 90vw;
+        border-radius: 10vw;
+        height: 80vh;
+        margin: auto;
+        font-weight: 400;
+      }
+      .headerTitle .text1 {
+        color: #94feea;
+        position: absolute;
+        left: 1.5vw;
+        top: 28vh;
+      }
+      .headerTitle .text2 {
+        position: absolute;
+        right: 1.5vw;
+        bottom: 50vh;
+      }
+      .headerText {
+        text-align: center;
+        margin-top: 7.5vw;
+        font-size: 2vw;
+        font-weight: 300;
+        font-family: "GmarketSans";
+        line-height: 1.6;
+      }
+      .green {
+        color: #98fcea;
+      }
+
+      @media (max-width: 1200px) {
+        .headerMenu {
+          font-size: 2.5vw;
+        }
+        .headerTitle {
+          font-size: 12vw;
+          height: 55vh;
+        }
+        .headerTitle .text1 {
+          top: 12vh;
+          left: 10vw;
+        }
+        .headerTitle .text2 {
+          bottom: 25vw;
+          right: 12vw;
+        }
+        .headerText {
+          font-size: 2.2vw;
+        }
+      }
+      @media (max-width: 800px) {
+        .headerMenu {
+          font-size: 3.5vw;
+          padding: 3vw;
+        }
+        .headerTitle {
+          height: 40vh;
+        }
+        .headerTitle .text2 {
+          bottom: 30vw;
+        }
+        .headerText {
+          font-size: 2.6vw;
+        }
+      }
+      @media (max-width: 600px) {
+        .headerMenu {
+          font-size: 4vw;
+          padding: 3vw;
+        }
+        .headerTitle {
+          height: 32vh;
+        }
+        .headerTitle .text2 {
+          bottom: 30vw;
+        }
+        .headerText {
+          font-size: 2.8vw;
+        }
+      }
+      /* .Cont1 {
+        font-family: "GmarketSans";
+      }
+      .Cont1 .bgText {
+        margin-left: -20vw;
+        font-size: 20vw;
+        opacity: 0.15;
+        font-family: "Orbitron";
+        z-index: -1;
+      }
+      .Cont1 .webStan {
+        margin-top: -15vw;
+        margin-left: 10vw;
+      }
+      .Cont1 .siteImg {
+        background: url(assets/img/stan1.jpg) no-repeat;
+        width: 44vw;
+        height: 28vw;
+        background-size: cover;
+        border-radius: 6.5vw;
+        z-index: 1;
+        border: 8px solid #98fcea;
+      }
+      .Cont1 .webStan .siteDesc {
+        padding: 1vw 0 0 4vw;
+      }
+      .siteDesc .siteTitle {
+        font-size: 2.5vw;
+        padding-bottom: 1vw;
+      }
+      .Cont1 .webStan .siteDesc .siteInfo p {
+        padding-bottom: 1vw;
+        font-size: 1vw;
+        font-weight: 300;
+      } */
+    </style>
+  </head>
+
+  <body>
     <div id="wrap">
-        <header id="header">
-            <div class="header_text">
-                <div class="text1">unboring</div>
-                <div class="text2">boring</div>
-            </div> 
-        </header>
+      <header id="header">
+        <div class="headerMenu">PORTFOLIO</div>
+        <div class="headerTitle">
+          <div class="text1">PORTFOLIO</div>
+          <div class="text2">WELCOME</div>
+        </div>
+        <div class="headerText">
+          <p>
+            어떤 일이라도 <span class="green">노력</span>하고
+            <span class="green">즐기면</span> 그 결과는
+            <span class="green">빛</span>을 바란다고 생각합니다.<br />
+            신입의 <span class="green">열정</span>과
+            <span class="green">도전정신</span>을 깊숙히 새기며 배움에 있어
+            <span class="green">겸손함</span>을 유지하며<br />
+            세부적인 곳까지 파고드는 <span class="green">개발자</span>가
+            되겠습니다.
+          </p>
+        </div>
+      </header>
+      <!-- <main>
+        <div class="Cont1">
+          <div class="bgText">WEBSTANDARDSITE</div>
+          <div class="webStan">
+            <div class="siteImg"></div>
+            <div class="siteDesc">
+              <div class="siteTitle">WEBSTANDARD SITE</div>
+              <div class="siteInfo">
+                <p>
+                  <span class="green">웹표준형</span> 사이트입니다.
+                  <span class="green">웹접근성</span>에 근거하여 모든
+                  사용자가<br />
+                  사용함에 있어 불편함없이 설계된 사이트입니다.
+                </p>
+              </div>
+              <button>VIEW</button>
+              <button>CODE</button>
+            </div>
+          </div>
+        </div>
+      </main> -->
     </div>
-</body>
+  </body>
 </html>
