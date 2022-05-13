@@ -1,118 +1,122 @@
 let allMusic = [
-    {
-        name : "music1",
-        artist : "1번가수",
-        img : "music-01",
-        audio : "music-01"
-    },
-    {
-        name : "music2",
-        artist : "2번가수",
-        img : "music-02",
-        audio : "music-02"
-    },
-    {
-        name : "music3",
-        artist : "3번가수",
-        img : "music-03",
-        audio : "music-03"
-    },
-    {
-        name : "music4",
-        artist : "4번가수",
-        img : "music-04",
-        audio : "music-04"
-    },
-    {
-        name : "music5",
-        artist : "5번가수",
-        img : "music-05",
-        audio : "music-05"
-    },
-    {
-        name : "music6",
-        artist : "6번가수",
-        img : "music-06",
-        audio : "music-06"
-    },
-    {
-        name : "music7",
-        artist : "7번가수",
-        img : "music-07",
-        audio : "music-07"
-    },
-    {
-        name : "music8",
-        artist : "8번가수",
-        img : "music-08",
-        audio : "music-08"
-    },
-    {
-        name : "music9",
-        artist : "9번가수",
-        img : "music-09",
-        audio : "music-09"
-    },
-    {
-        name : "music10",
-        artist : "10번가수",
-        img : "music-10",
-        audio : "music-10"
-    },
-    {
-        name : "music11",
-        artist : "11번가수",
-        img : "music-11",
-        audio : "music-11"
-    },
-    {
-        name : "music12",
-        artist : "12번가수",
-        img : "music-12",
-        audio : "music-12"
-    },
-    {
-        name : "music13",
-        artist : "13번가수",
-        img : "music-13",
-        audio : "music-13"
-    },
-    {
-        name : "music14",
-        artist : "14번가수",
-        img : "music-14",
-        audio : "music-14"
-    },
-    {
-        name : "music15",
-        artist : "15번가수",
-        img : "music-15",
-        audio : "music-15"
-    },
-    {
-        name : "music16",
-        artist : "16번가수",
-        img : "music-16",
-        audio : "music-16"
-    }, {
-        name : "music17",
-        artist : "17번가수",
-        img : "music-17",
-        audio : "music-17"
-    }, {
-        name : "music18",
-        artist : "18번가수",
-        img : "music-18",
-        audio : "music-18"
-    }, {
-        name : "music19",
-        artist : "19번가수",
-        img : "music-19",
-        audio : "music-19"
-    }, {
-        name : "music20",
-        artist : "20번가수",
-        img : "music-20",
-        audio : "music-20"
-    },
-]
+  {
+    name: "서랍",
+    artist: "10CM",
+    img: "music-01",
+    audio: "music-01",
+  },
+  {
+    name: "Off My Face",
+    artist: "Justin Bieber",
+    img: "music-02",
+    audio: "music-02",
+  },
+  {
+    name: "고백",
+    artist: "멜로망스",
+    img: "music-03",
+    audio: "music-03",
+  },
+  {
+    name: "문득",
+    artist: "비오",
+    img: "music-04",
+    audio: "music-04",
+  },
+  {
+    name: "어제처럼",
+    artist: "폴킴",
+    img: "music-05",
+    audio: "music-05",
+  },
+  {
+    name: "밤하늘의 별을",
+    artist: "경서",
+    img: "music-06",
+    audio: "music-06",
+  },
+  {
+    name: "Blueming",
+    artist: "아이유",
+    img: "music-07",
+    audio: "music-07",
+  },
+  {
+    name: "Bad Habits",
+    artist: "Ed Sheeran",
+    img: "music-08",
+    audio: "music-08",
+  },
+  {
+    name: "봄날",
+    artist: "방탄소년단",
+    img: "music-09",
+    audio: "music-09",
+  },
+  {
+    name: "Savage",
+    artist: "aespa",
+    img: "music-10",
+    audio: "music-10",
+  },
+  {
+    name: "바라만 본다",
+    artist: "MSG워너비",
+    img: "music-11",
+    audio: "music-11",
+  },
+  {
+    name: "내 손을 잡아",
+    artist: "아이유",
+    img: "music-12",
+    audio: "music-12",
+  },
+  {
+    name: "회전목마",
+    artist: "sokodomo",
+    img: "music-13",
+    audio: "music-13",
+  },
+  {
+    name: "Weekend",
+    artist: "태연",
+    img: "music-14",
+    audio: "music-14",
+  },
+  {
+    name: "SMILEY",
+    artist: "YENA",
+    img: "music-15",
+    audio: "music-15",
+  },
+  {
+    name: "MY BAG",
+    artist: "(여자)아이들",
+    img: "music-16",
+    audio: "music-16",
+  },
+  {
+    name: "ELEVEN",
+    artist: "IVE",
+    img: "music-17",
+    audio: "music-17",
+  },
+  {
+    name: "아버지",
+    artist: "임영웅",
+    img: "music-18",
+    audio: "music-18",
+  },
+  {
+    name: "취중고백",
+    artist: "김민석",
+    img: "music-19",
+    audio: "music-19",
+  },
+  {
+    name: "GANADARA",
+    artist: "박재범",
+    img: "music-20",
+    audio: "music-20",
+  },
+];

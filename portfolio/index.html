@@ -76,7 +76,7 @@
       .headerTitle {
         font-size: 10vw;
         font-family: "Orbitron";
-        background: url(assets/img/bg0.jpg) no-repeat;
+        background: url(assets/img/bg.jpg) no-repeat;
         background-position: center;
         max-width: 90vw;
         border-radius: 15vw;
@@ -116,7 +116,7 @@
         color: #76c0b3;
       }
       .purple {
-        color: #4c348e;
+        color: #bd99f8;
       }
 
       @media (max-width: 1200px) {
@@ -194,19 +194,19 @@
         border: 0.8vw solid #4c348e;
       }
       #Cont .siteImg.img1 {
-        background: url(assets/img/contstan1.jpg) no-repeat;
+        background: url(assets/img/contstan.jpg) no-repeat;
         background-size: cover;
       }
       #Cont .siteImg.img2 {
-        background: url(assets/img/contrespon1.jpg) no-repeat;
+        background: url(assets/img/contrespon.jpg) no-repeat;
         background-size: cover;
       }
       #Cont .siteImg.img3 {
-        background: url(assets/img/contphp1.jpg) no-repeat;
+        background: url(assets/img/contphp.jpg) no-repeat;
         background-size: cover;
       }
       #Cont .siteImg.img4 {
-        background: url(assets/img/contreact1.jpg) no-repeat;
+        background: url(assets/img/contreact.jpg) no-repeat;
         background-size: cover;
       }
       #Cont .webStan .siteDesc {
@@ -280,6 +280,9 @@
         height: 23vw;
         margin-bottom: 10vw;
       }
+      #banner.banner2 {
+        background: url(assets/img/banner02.jpg) no-repeat;
+      }
       .bannerTitle {
         color: #fff;
         font-size: 10vw;
@@ -310,7 +313,7 @@
       }
       #studyCont ul {
         display: flex;
-        height: 15vw;
+        height: 20vw;
       }
       #studyCont ul li {
         background: #262628;
@@ -334,18 +337,46 @@
         margin-left: -60vw;
       }
       /* effectCont */
+      #effectCont {
+        display: flex;
+        width: 70%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-family: "GmarketSans";
+        margin-bottom: 10vw;
+      }
       #effectCont .effectCont {
         display: flex;
+        flex-direction: column;
         width: 100%;
       }
+      #effectCont .effectCont.center {
+        margin-top: 10vw;
+      }
       #effectCont .effectCont .effectLeft {
-        width: 33%;
+        width: 100%;
+        margin: 2vw;
       }
       #effectCont .effectCont .effectCenter {
-        width: 33%;
+        width: 100%;
+        margin: 2vw;
       }
       #effectCont .effectCont .effectRight {
-        width: 33%;
+        width: 100%;
+        margin: 2vw;
+      }
+      #effectCont .effectImg img {
+        border-radius: 10%;
+        object-fit: cover;
+      }
+      #effectCont .effectCont .effectTitle {
+        font-size: 2vw;
+        margin-top: 1vw;
+        margin-bottom: 1.5vw;
+      }
+      #effectCont .effectCont .effectDesc {
+        font-size: 1.2vw;
+        font-weight: 300;
       }
     </style>
   </head>
@@ -526,85 +557,149 @@
       <section id="effectCont">
         <div class="effectCont">
           <div class="effectLeft">
-            <div class="effectImg"></div>
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect01-tetris.jpg"
+                alt="tetris"
+              />
+            </div>
             <div class="effectInfo">
               <div class="effectTitle">테트리스 게임</div>
               <div class="effectDesc">
-                자바스크립트로 만든 테트리스 게임입니다.
+                자바스크립트로 만든
+                <span class="green">테트리스 게임</span>입니다.
               </div>
             </div>
           </div>
           <div class="effectCenter">
-            <div class="effectImg"></div>
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect02-music.jpg" alt="music" />
+            </div>
             <div class="effectInfo">
               <div class="effectTitle">뮤직 플레이어</div>
               <div class="effectDesc">
-                자바스크립트로 만든 뮤직 플레이어입니다.
+                자바스크립트로 만든
+                <span class="green">뮤직 플레이어</span>입니다.
               </div>
             </div>
           </div>
           <div class="effectRight">
-            <div class="effectImg"></div>
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect03-typing.jpg"
+                alt="typing"
+              />
+            </div>
             <div class="effectInfo">
               <div class="effectTitle">타자 게임</div>
               <div class="effectDesc">
-                자바스크립트로 만든 타이핑 게임입니다.
+                자바스크립트로 만든
+                <span class="green">타이핑 게임</span>입니다.
               </div>
             </div>
           </div>
         </div>
-        <div class="effectCont">
+        <div class="effectCont center">
           <div class="effectLeft">
-            <div class="effectImg"></div>
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect04-quiz.jpg" alt="quiz" />
+            </div>
             <div class="effectInfo">
               <div class="effectTitle">퀴즈 게임</div>
-              <div class="effectDesc">자바스크립트로 만든 퀴즈 게임입니다.</div>
+              <div class="effectDesc">
+                자바스크립트로 만든 <span class="green">퀴즈 게임</span>입니다.
+              </div>
             </div>
           </div>
           <div class="effectCenter">
-            <div class="effectImg"></div>
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect05-search.jpg"
+                alt="search"
+              />
+            </div>
             <div class="effectInfo">
               <div class="effectTitle">검색 게임</div>
-              <div class="effectDesc">자바스크립트로 만든 검색 게임입니다.</div>
+              <div class="effectDesc">
+                자바스크립트로 만든 <span class="green">검색 게임</span>입니다.
+              </div>
             </div>
           </div>
           <div class="effectRight">
-            <div class="effectImg"></div>
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect06-memory.jpg"
+                alt="memory"
+              />
+            </div>
             <div class="effectInfo">
               <div class="effectTitle">메모리 게임</div>
               <div class="effectDesc">
-                자바스크립트로 만든 같은 그림 찾기 게임입니다.
+                자바스크립트로 만든
+                <span class="green">같은 그림 찾기 게임</span>입니다.
               </div>
             </div>
           </div>
         </div>
         <div class="effectCont">
           <div class="effectLeft">
-            <div class="effectImg"></div>
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect07-mouse.jpg" alt="mouse" />
+            </div>
             <div class="effectInfo">
               <div class="effectTitle">마우스 이펙트</div>
               <div class="effectDesc">
-                자바스크립트로 만든 마우스 이펙트입니다.
+                자바스크립트로 만든
+                <span class="green">마우스 이펙트</span>입니다.
               </div>
             </div>
           </div>
           <div class="effectCenter">
-            <div class="effectImg"></div>
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect08-slide.jpg" alt="slide" />
+            </div>
             <div class="effectInfo">
               <div class="effectTitle">슬라이드 이펙트</div>
               <div class="effectDesc">
-                자바스크립트로 만든 슬라이드 이펙트입니다.
+                자바스크립트로 만든
+                <span class="green">슬라이드 이펙트</span>입니다.
               </div>
             </div>
           </div>
           <div class="effectRight">
-            <div class="effectImg"></div>
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect09-parallax.jpg"
+                alt="parallax"
+              />
+            </div>
             <div class="effectInfo">
               <div class="effectTitle">패럴랙스 이펙트</div>
               <div class="effectDesc">
-                자바스크립트로 만든 패럴랙스 이펙트입니다.
+                자바스크립트로 만든
+                <span class="green">패럴랙스 이펙트</span>입니다.
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section id="banner" class="banner2">
+        <div class="bannerTitle">contact</div>
+      </section>
+      <section id="contact">
+        <div class="contactImg"></div>
+        <div class="contactInfo">
+          <div class="infoName">
+            <h3>name :</h3>
+            <p>배석찬</p>
+          </div>
+          <div class="infoEmail">
+            <h3>e-mail :</h3>
+            <p>sna12345@naver.com</p>
+          </div>
+          <div class="infoPhone">
+            <h3>phone :</h3>
+            <p>010-3312-5279</p>
           </div>
         </div>
       </section>
