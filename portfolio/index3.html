@@ -158,26 +158,39 @@
       }
       #Cont {
         font-family: "GmarketSans";
+        overflow: hidden;
+        margin-bottom: 5vw;
       }
-      #Cont .bgText {
-        margin-left: -10vw;
+      #Cont .contBox {
+        position: relative;
+      }
+      #Cont .contBox .bgText {
+        position: absolute;
+        left: -50vw;
+        top: -3vw;
         font-size: 20vw;
         opacity: 0.15;
         font-family: "Orbitron";
-        z-index: -1;
         text-transform: uppercase;
         white-space: nowrap;
-        overflow: hidden;
+        z-index: -1;
       }
-      .ContLeft .webStan {
-        margin-top: -12vw;
+      .ContLeft .contBox .bgText {
+        left: -20vw !important;
+      }
+      .ContLeft .contBox {
         margin-left: 10vw;
         z-index: 1;
       }
-      .ContRight .webStan {
-        margin-top: -13vw;
+      .ContRight .contBox {
         margin-left: 40vw;
         z-index: 1;
+      }
+      .ContRight .contBox .bgText {
+        left: -40vw;
+      }
+      .contBox .contInfo {
+        padding-top: 10vw;
       }
       .ContLeft .siteImg {
         width: 44vw;
@@ -209,7 +222,7 @@
         background: url(assets/img/contreact.jpg) no-repeat;
         background-size: cover;
       }
-      #Cont .webStan .siteDesc {
+      #Cont .contBox .siteDesc {
         padding: 1vw 0 0 4vw;
         position: relative;
       }
@@ -217,7 +230,7 @@
         font-size: 2.5vw;
         padding-bottom: 1vw;
       }
-      #Cont .webStan .siteDesc .siteInfo p {
+      #Cont .contBox .siteDesc .siteInfo p {
         padding-bottom: 1vw;
         font-size: 1vw;
         font-weight: 300;
@@ -240,7 +253,7 @@
       .ContRight button {
         background: #4c348e;
       }
-      #Cont .webStan .siteDesc .htmlIcon {
+      #Cont .contBox .siteDesc .htmlIcon {
         background: url(assets/img/html.jpg) no-repeat;
         background-size: cover;
         border-radius: 50%;
@@ -250,7 +263,7 @@
         width: 2.3vw;
         height: 2.3vw;
       }
-      #Cont .webStan .siteDesc .cssIcon {
+      #Cont .contBox .siteDesc .cssIcon {
         background: url(assets/img/css.jpg) no-repeat;
         background-size: cover;
         border-radius: 50%;
@@ -324,12 +337,15 @@
         min-width: 300px;
         height: 300px;
         margin: 1vw;
+        margin-bottom: 0;
         border-radius: 15%;
         text-align: center;
       }
       #studyCont ul li a {
         display: inline-block;
-        margin-top: 20%;
+        margin-top: 30%;
+        color: #76c0b3;
+        text-decoration: none;
       }
       #studyCont ul:nth-child(2) {
         margin-left: -15vw;
@@ -507,86 +523,94 @@
       </header>
       <main>
         <div id="Cont" class="ContLeft">
-          <div class="bgText">STANDARDSITE</div>
-          <div class="webStan">
-            <div class="siteImg img1"></div>
-            <div class="siteDesc">
-              <div class="siteTitle">WEBSTANDARD SITE</div>
-              <div class="siteInfo">
-                <p>
-                  <span class="green">웹표준형</span> 사이트입니다.
-                  <span class="green">웹접근성</span>에 근거하여 모든
-                  사용자가<br />
-                  사용함에 있어 불편함없이 설계된 사이트입니다.
-                </p>
+          <div class="contBox">
+            <div class="bgText">STANDARDSITE</div>
+            <div class="contInfo">
+              <div class="siteImg img1"></div>
+              <div class="siteDesc">
+                <div class="siteTitle">WEBSTANDARD SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="green">웹표준형</span> 사이트입니다.
+                    <span class="green">웹접근성</span>에 근거하여 모든
+                    사용자가<br />
+                    사용함에 있어 불편함없이 설계된 사이트입니다.
+                  </p>
+                </div>
+                <button>VIEW</button>
+                <button>CODE</button>
+                <span class="htmlIcon"></span>
+                <span class="cssIcon"></span>
               </div>
-              <button>VIEW</button>
-              <button>CODE</button>
-              <span class="htmlIcon"></span>
-              <span class="cssIcon"></span>
             </div>
           </div>
         </div>
         <div id="Cont" class="ContRight">
-          <div class="bgText">responsiveSITE</div>
-          <div class="webStan">
-            <div class="siteImg img2"></div>
-            <div class="siteDesc">
-              <div class="siteTitle">WEB RESPONSIVE SITE</div>
-              <div class="siteInfo">
-                <p>
-                  <span class="purple">반응형</span> 웹 사이트입니다. 웹표준을
-                  준수하며<br />
-                  <span class="purple">스크립트요소들을 활용</span>하여
-                  반응형까지 지원하는 페이지입니다.
-                </p>
+          <div class="contBox">
+            <div class="bgText">responsiveSITE</div>
+            <div class="contInfo">
+              <div class="siteImg img2"></div>
+              <div class="siteDesc">
+                <div class="siteTitle">WEB RESPONSIVE SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="purple">반응형</span> 웹 사이트입니다. 웹표준을
+                    준수하며<br />
+                    <span class="purple">스크립트요소들을 활용</span>하여
+                    반응형까지 지원하는 페이지입니다.
+                  </p>
+                </div>
+                <button>VIEW</button>
+                <button>CODE</button>
+                <span class="htmlIcon"></span>
+                <span class="cssIcon"></span>
               </div>
-              <button>VIEW</button>
-              <button>CODE</button>
-              <span class="htmlIcon"></span>
-              <span class="cssIcon"></span>
             </div>
           </div>
         </div>
         <div id="Cont" class="ContLeft">
-          <div class="bgText">PHP SITE</div>
-          <div class="webStan">
-            <div class="siteImg img3"></div>
-            <div class="siteDesc">
-              <div class="siteTitle">PHP SITE</div>
-              <div class="siteInfo">
-                <p>
-                  <span class="green">PHP</span> 사이트입니다. 닷홈을 이용하여
-                  서버를 만들고<br />
-                  <span class="green"
-                    >회원가입, 로그인, 로그아웃, 글쓰기 등</span
-                  >을 만든<br />사이트입니다.
-                </p>
+          <div class="contBox">
+            <div class="bgText">PHP SITE</div>
+            <div class="contInfo">
+              <div class="siteImg img3"></div>
+              <div class="siteDesc">
+                <div class="siteTitle">PHP SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="green">PHP</span> 사이트입니다. 닷홈을 이용하여
+                    서버를 만들고<br />
+                    <span class="green"
+                      >회원가입, 로그인, 로그아웃, 글쓰기 등</span
+                    >을 만든<br />사이트입니다.
+                  </p>
+                </div>
+                <button>VIEW</button>
+                <button>CODE</button>
+                <span class="htmlIcon"></span>
+                <span class="cssIcon"></span>
               </div>
-              <button>VIEW</button>
-              <button>CODE</button>
-              <span class="htmlIcon"></span>
-              <span class="cssIcon"></span>
             </div>
           </div>
         </div>
         <div id="Cont" class="ContRight">
-          <div class="bgText">REACT SITE</div>
-          <div class="webStan">
-            <div class="siteImg img4"></div>
-            <div class="siteDesc">
-              <div class="siteTitle">REACT SITE</div>
-              <div class="siteInfo">
-                <p>
-                  <span class="purple">REACT</span> 사이트입니다.<br />
-                  <span class="purple">컴퍼넌트</span>를 활용하여 반응형까지
-                  지원하는 페이지입니다.
-                </p>
+          <div class="contBox">
+            <div class="bgText">REACT SITE</div>
+            <div class="contInfo">
+              <div class="siteImg img4"></div>
+              <div class="siteDesc">
+                <div class="siteTitle">REACT SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="purple">REACT</span> 사이트입니다.<br />
+                    <span class="purple">컴퍼넌트</span>를 활용하여 반응형까지
+                    지원하는 페이지입니다.
+                  </p>
+                </div>
+                <button>VIEW</button>
+                <button>CODE</button>
+                <span class="htmlIcon"></span>
+                <span class="cssIcon"></span>
               </div>
-              <button>VIEW</button>
-              <button>CODE</button>
-              <span class="htmlIcon"></span>
-              <span class="cssIcon"></span>
             </div>
           </div>
         </div>
@@ -618,40 +642,40 @@
           <li><a href="#">const</a></li>
         </ul>
         <ul>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li>
-          <li>16</li>
-          <li>17</li>
-          <li>18</li>
-          <li>19</li>
-          <li>20</li>
+          <li><a href="#">if</a></li>
+          <li><a href="#">some</a></li>
+          <li><a href="#">semantic</a></li>
+          <li><a href="#">break</a></li>
+          <li><a href="#">grid</a></li>
+          <li><a href="#">window</a></li>
+          <li><a href="#">defer</a></li>
+          <li><a href="#">let</a></li>
+          <li><a href="#">css</a></li>
+          <li><a href="#">const</a></li>
         </ul>
         <ul>
-          <li>21</li>
-          <li>22</li>
-          <li>23</li>
-          <li>24</li>
-          <li>25</li>
-          <li>26</li>
-          <li>27</li>
-          <li>28</li>
-          <li>29</li>
-          <li>30</li>
+          <li><a href="#">if</a></li>
+          <li><a href="#">some</a></li>
+          <li><a href="#">semantic</a></li>
+          <li><a href="#">break</a></li>
+          <li><a href="#">grid</a></li>
+          <li><a href="#">window</a></li>
+          <li><a href="#">defer</a></li>
+          <li><a href="#">let</a></li>
+          <li><a href="#">css</a></li>
+          <li><a href="#">const</a></li>
         </ul>
         <ul>
-          <li>31</li>
-          <li>32</li>
-          <li>33</li>
-          <li>34</li>
-          <li>35</li>
-          <li>36</li>
-          <li>37</li>
-          <li>38</li>
-          <li>39</li>
-          <li>40</li>
+          <li><a href="#">if</a></li>
+          <li><a href="#">some</a></li>
+          <li><a href="#">semantic</a></li>
+          <li><a href="#">break</a></li>
+          <li><a href="#">grid</a></li>
+          <li><a href="#">window</a></li>
+          <li><a href="#">defer</a></li>
+          <li><a href="#">let</a></li>
+          <li><a href="#">css</a></li>
+          <li><a href="#">const</a></li>
         </ul>
       </section>
       <section id="effectCont">

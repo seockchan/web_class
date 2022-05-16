@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #000;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        color: #fff;
+      }
+      #wrap {
+        background: #000;
+        height: 20000px;
+      }
+      #Cont {
+        font-family: "GmarketSans";
+        overflow: hidden;
+      }
+      #Cont .contBox {
+        position: relative;
+      }
+      #Cont .contBox .bgText {
+        position: absolute;
+        left: -65vw;
+        top: -5vw;
+        font-size: 20vw;
+        opacity: 0.15;
+        font-family: "Orbitron";
+        text-transform: uppercase;
+        white-space: nowrap;
+        z-index: -1;
+      }
+      .ContLeft .contBox {
+        margin-left: 10vw;
+        z-index: 1;
+      }
+      .ContRight .contBox {
+        margin-left: 40vw;
+        z-index: 1;
+      }
+      .ContRight .contBox .bgText {
+        left: -40vw;
+      }
+      .contBox .contInfo {
+        padding-top: 10vw;
+      }
+      .ContLeft .siteImg {
+        width: 44vw;
+        height: 28vw;
+        border-radius: 6.5vw;
+        border: 0.8vw solid #76c0b3;
+        z-index: 1;
+      }
+      .ContRight .siteImg {
+        width: 44vw;
+        height: 28vw;
+        background-size: cover;
+        border-radius: 6.5vw;
+        border: 0.8vw solid #4c348e;
+      }
+      #Cont .siteImg.img1 {
+        background: url(assets/img/contstan.jpg) no-repeat;
+        background-size: cover;
+      }
+      #Cont .siteImg.img2 {
+        background: url(assets/img/contrespon.jpg) no-repeat;
+        background-size: cover;
+      }
+      #Cont .siteImg.img3 {
+        background: url(assets/img/contphp.jpg) no-repeat;
+        background-size: cover;
+      }
+      #Cont .siteImg.img4 {
+        background: url(assets/img/contreact.jpg) no-repeat;
+        background-size: cover;
+      }
+      #Cont .contBox .siteDesc {
+        padding: 1vw 0 0 4vw;
+        position: relative;
+      }
+      .siteDesc .siteTitle {
+        font-size: 2.5vw;
+        padding-bottom: 1vw;
+      }
+      #Cont .contBox .siteDesc .siteInfo p {
+        padding-bottom: 1vw;
+        font-size: 1vw;
+        font-weight: 300;
+        line-height: 1.6;
+        margin-bottom: 0.5vw;
+      }
+      #Cont button {
+        border: none;
+        padding: 0.5vw 1vw;
+        font-size: 1.1vw;
+        border-radius: 50px;
+        margin-right: 0.5vw;
+        font-family: "GmarketSans";
+        font-weight: 300;
+        color: #fff;
+      }
+      .ContLeft button {
+        background: #76c0b3;
+      }
+      .ContRight button {
+        background: #4c348e;
+      }
+      #Cont .contBox .siteDesc .htmlIcon {
+        background: url(assets/img/html.jpg) no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        position: absolute;
+        left: 16.2vw;
+        bottom: 0;
+        width: 2.3vw;
+        height: 2.3vw;
+      }
+      #Cont .contBox .siteDesc .cssIcon {
+        background: url(assets/img/css.jpg) no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        position: absolute;
+        left: 19vw;
+        bottom: 0;
+        width: 2.3vw;
+        height: 2.3vw;
+      }
+      #Cont:last-child {
+        margin-bottom: 20vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <main>
+        <div id="Cont" class="ContLeft">
+          <div class="contBox">
+            <div class="bgText">webSTANDARDSITE</div>
+            <div class="contInfo">
+              <div class="siteImg img1"></div>
+              <div class="siteDesc">
+                <div class="siteTitle">WEBSTANDARD SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="green">웹표준형</span> 사이트입니다.
+                    <span class="green">웹접근성</span>에 근거하여 모든
+                    사용자가<br />
+                    사용함에 있어 불편함없이 설계된 사이트입니다.
+                  </p>
+                </div>
+                <button>VIEW</button>
+                <button>CODE</button>
+                <span class="htmlIcon"></span>
+                <span class="cssIcon"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Cont" class="ContRight">
+          <div class="contBox">
+            <div class="bgText">webresponsiveSITE</div>
+            <div class="contInfo">
+              <div class="siteImg img2"></div>
+              <div class="siteDesc">
+                <div class="siteTitle">WEB RESPONSIVE SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="purple">반응형</span> 웹 사이트입니다. 웹표준을
+                    준수하며<br />
+                    <span class="purple">스크립트요소들을 활용</span>하여
+                    반응형까지 지원하는 페이지입니다.
+                  </p>
+                </div>
+                <button>VIEW</button>
+                <button>CODE</button>
+                <span class="htmlIcon"></span>
+                <span class="cssIcon"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Cont" class="ContLeft">
+          <div class="contBox">
+            <div class="bgText">webSTANDARDSITE</div>
+            <div class="contInfo">
+              <div class="siteImg img1"></div>
+              <div class="siteDesc">
+                <div class="siteTitle">WEBSTANDARD SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="green">웹표준형</span> 사이트입니다.
+                    <span class="green">웹접근성</span>에 근거하여 모든
+                    사용자가<br />
+                    사용함에 있어 불편함없이 설계된 사이트입니다.
+                  </p>
+                </div>
+                <button>VIEW</button>
+                <button>CODE</button>
+                <span class="htmlIcon"></span>
+                <span class="cssIcon"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="Cont" class="ContRight">
+          <div class="contBox">
+            <div class="bgText">webresponsiveSITE</div>
+            <div class="contInfo">
+              <div class="siteImg img2"></div>
+              <div class="siteDesc">
+                <div class="siteTitle">WEB RESPONSIVE SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="purple">반응형</span> 웹 사이트입니다. 웹표준을
+                    준수하며<br />
+                    <span class="purple">스크립트요소들을 활용</span>하여
+                    반응형까지 지원하는 페이지입니다.
+                  </p>
+                </div>
+                <button>VIEW</button>
+                <button>CODE</button>
+                <span class="htmlIcon"></span>
+                <span class="cssIcon"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
