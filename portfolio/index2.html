@@ -277,7 +277,7 @@
       #Cont:last-child {
         margin-bottom: 20vw;
       }
-      @media (max-width: 1200px) {
+      /* @media (max-width: 1200px) {
         #Cont .contBox {
           margin-left: 20vw;
         }
@@ -300,8 +300,50 @@
           padding-bottom: 1vw;
           margin-bottom: 0;
         }
+      } */
+      @media (max-width: 1200px) {
+        #Cont .contInfo {
+          display: flex;
+          margin: 0;
+        }
+        .ContRight .contInfo {
+          flex-direction: row-reverse;
+        }
+        #Cont .siteImg {
+          width: 50vw;
+          height: 36vw;
+          border-radius: 10vw;
+        }
+        .ContRight .siteImg {
+          margin-right: 3vw;
+        }
+        #Cont .contBox {
+          margin-left: 5vw;
+        }
+        #Cont.ContRight .contBox {
+          margin-left: 0;
+        }
+        #Cont .siteDesc {
+          margin-left: 0;
+          margin-right: 3vw;
+          margin-top: 10vw;
+          text-align: center;
+          padding: 0;
+        }
+        .ContRight .siteDesc {
+          margin-right: 0;
+        }
+        .siteDesc .siteTitle {
+          font-size: 3vw;
+          padding-bottom: 2vw;
+        }
+        #Cont .contBox .siteDesc .siteInfo p {
+          font-size: 1.5vw;
+          padding-bottom: 1vw;
+          margin-bottom: 0;
+        }
       }
-      @media (max-width: 800px) {
+      /* @media (max-width: 800px) {
         #Cont .contInfo {
           display: flex;
           margin: 0;
@@ -336,7 +378,7 @@
           padding-top: 1vw;
           padding-bottom: 1vw;
         }
-      }
+      } */
       @media (max-width: 800px) {
         #Cont .contBox .siteDesc .siteInfo p {
           font-size: 2.2vw;
