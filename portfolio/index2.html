@@ -392,6 +392,91 @@
         }
       }
       /* scriptCont */
+
+      #studyCont {
+        background: #000;
+        overflow: hidden;
+        height: 52vw;
+        margin-bottom: 1vw;
+      }
+      #studyCont ul {
+        display: flex;
+      }
+      #studyCont ul li {
+        background: #262628;
+        list-style: none;
+        color: #76c0b3;
+        font-size: 2.4vw;
+        border: none;
+        min-width: 16vw;
+        height: 16vw;
+        margin: 1vw;
+        border-radius: 1vw;
+        text-align: center;
+      }
+      #studyCont ul li a {
+        display: inline-block;
+        margin-top: 6.5vw;
+        color: #76c0b3;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: "Orbitron";
+      }
+      #studyCont ul:nth-child(2) {
+        margin-left: -15vw;
+      }
+      #studyCont ul:nth-child(3) {
+        margin-left: -35vw;
+      }
+      #studyCont ul:nth-child(4) {
+        margin-left: -60vw;
+      }
+      /* studyCont */
+
+      #effectCont {
+        display: flex;
+        justify-content: center;
+        font-family: "GmarketSans";
+        margin-bottom: 20vw;
+      }
+      #effectCont .effectCont {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #effectCont .effectCont.center {
+        margin-top: 15vw;
+      }
+      #effectCont .effectCont .effectBox {
+        margin: 1vw 1vw 2vw 1vw;
+      }
+      #effectCont .effectImg img {
+        width: 25vw;
+        border-radius: 1vw;
+        object-fit: cover;
+      }
+      #effectCont .effectCont .effectTitle {
+        font-size: 2vw;
+        margin-top: 1vw;
+        margin-bottom: 1.5vw;
+      }
+      #effectCont .effectCont .effectTitle::after {
+        content: "";
+        display: inline-block;
+        background: url(assets/img/arrow.jpg) no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        width: 1.7vw;
+        height: 1.7vw;
+        vertical-align: -0.2vw;
+        margin-left: 0.5vw;
+      }
+      #effectCont .effectCont .effectDesc {
+        font-size: 1.2vw;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+      /* effectCont */
     </style>
   </head>
 
@@ -537,6 +622,199 @@
         </ul>
       </section>
       <!-- //scriptCont -->
+
+      <!-- studyCont -->
+      <section id="studyCont">
+        <ul>
+          <li><a href="../javascript/javascript01.html#sample1">if</a></li>
+          <li><a href="#">some</a></li>
+          <li><a href="#">semantic</a></li>
+          <li><a href="#">break</a></li>
+          <li><a href="#">grid</a></li>
+          <li><a href="#">window</a></li>
+          <li><a href="#">defer</a></li>
+          <li><a href="#">let</a></li>
+          <li><a href="#">css</a></li>
+          <li><a href="#">const</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">if</a></li>
+          <li><a href="#">some</a></li>
+          <li><a href="#">semantic</a></li>
+          <li><a href="#">break</a></li>
+          <li><a href="#">grid</a></li>
+          <li><a href="#">window</a></li>
+          <li><a href="#">defer</a></li>
+          <li><a href="#">let</a></li>
+          <li><a href="#">css</a></li>
+          <li><a href="#">const</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">if</a></li>
+          <li><a href="#">some</a></li>
+          <li><a href="#">semantic</a></li>
+          <li><a href="#">break</a></li>
+          <li><a href="#">grid</a></li>
+          <li><a href="#">window</a></li>
+          <li><a href="#">defer</a></li>
+          <li><a href="#">let</a></li>
+          <li><a href="#">css</a></li>
+          <li><a href="#">const</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">if</a></li>
+          <li><a href="#">some</a></li>
+          <li><a href="#">semantic</a></li>
+          <li><a href="#">break</a></li>
+          <li><a href="#">grid</a></li>
+          <li><a href="#">window</a></li>
+          <li><a href="#">defer</a></li>
+          <li><a href="#">let</a></li>
+          <li><a href="#">css</a></li>
+          <li><a href="#">const</a></li>
+        </ul>
+      </section>
+      <!-- studyCont -->
+
+      <!-- effectCont -->
+      <section id="effectCont">
+        <div class="effectCont">
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect01-tetris.jpg"
+                alt="tetris"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">테트리스 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">테트리스 게임</span>입니다.
+              </div>
+            </div>
+          </div>
+          <div class="effectBox">
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect02-music.jpg" alt="music" />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">뮤직 플레이어</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">뮤직 플레이어</span>입니다.
+              </div>
+            </div>
+          </div>
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect03-typing.jpg"
+                alt="typing"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">타자 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">타이핑 게임</span>입니다.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="effectCont center">
+          <div class="effectBox">
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect04-quiz.jpg" alt="quiz" />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">퀴즈 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">퀴즈 게임</span>입니다.
+              </div>
+            </div>
+          </div>
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect05-search.jpg"
+                alt="search"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">검색 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">검색 게임</span>입니다.
+              </div>
+            </div>
+          </div>
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect06-memory.jpg"
+                alt="memory"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">메모리 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">같은 그림 찾기 게임</span>입니다.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="effectCont">
+          <div class="effectBox">
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect07-mouse.jpg" alt="mouse" />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">마우스 이펙트</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">마우스 이펙트</span>입니다.
+              </div>
+            </div>
+          </div>
+          <div class="effectBox">
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect08-slide.jpg" alt="slide" />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">슬라이드 이펙트</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">슬라이드 이펙트</span>입니다.
+              </div>
+            </div>
+          </div>
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect09-parallax.jpg"
+                alt="parallax"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">패럴랙스 이펙트</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">패럴랙스 이펙트</span>입니다.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //effectCont -->
+
+      <!-- banner2 -->
+      <section id="banner" class="banner2">
+        <div class="bannerTitle">contact</div>
+      </section>
+      <!-- banner2 -->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
