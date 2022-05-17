@@ -119,15 +119,15 @@
           border-radius: 10vw;
         }
         .headerMenu {
-          font-size: 24px;
+          font-size: 1.5vw;
         }
         .headerText {
-          font-size: 24px;
+          font-size: 2vw;
         }
       }
       @media (max-width: 800px) {
         .headerMenu {
-          font-size: 28px;
+          font-size: 2.5vw;
           padding: 3vw;
         }
         .headerTitle .text1 {
@@ -143,17 +143,19 @@
           transform: translate(-50%, -50%);
         }
         .headerText {
-          font-size: 18px;
+          font-size: 3vw;
         }
       }
       @media (max-width: 600px) {
         .headerMenu {
-          font-size: 22px;
+          font-size: 3.5vw;
         }
         .headerText {
-          font-size: 16px;
+          font-size: 3vw;
         }
       }
+      /* header */
+
       #Cont {
         font-family: "GmarketSans";
         overflow: hidden;
@@ -340,11 +342,62 @@
           font-size: 2.2vw;
         }
       }
+      /* main */
+
+      #banner {
+        background: url(assets/img/banner.jpg) no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 22vw;
+        margin-bottom: 10vw;
+      }
+      #banner.banner2 {
+        background: url(assets/img/banner02.jpg) no-repeat;
+      }
+      .bannerTitle {
+        color: #fff;
+        font-size: 8.5vw;
+        text-transform: uppercase;
+        font-family: "Orbitron";
+        text-align: center;
+        padding-top: 5vw;
+      }
+      /* banner */
+
+      #scriptCont {
+        height: 50vw;
+        padding-left: 9vw;
+        margin-bottom: 10vw;
+      }
+      #scriptCont ul li {
+        list-style: none;
+      }
+      #scriptCont ul li a {
+        text-decoration: none;
+        font-size: 5.5vw;
+        text-transform: uppercase;
+        font-family: "Orbitron";
+        color: #76c0b3;
+        line-height: 1.3;
+      }
+      @media (max-width: 800px) {
+        #scriptCont {
+          padding-left: 0;
+        }
+        #scriptCont ul li {
+          text-align: center;
+        }
+        #scriptCont ul li a {
+          font-size: 7vw;
+        }
+      }
+      /* scriptCont */
     </style>
   </head>
 
   <body>
     <div id="wrap">
+      <!-- header -->
       <header id="header">
         <div class="headerMenu">PORTFOLIO</div>
 
@@ -367,6 +420,9 @@
           </p>
         </div>
       </header>
+      <!-- //header -->
+
+      <!-- main -->
       <main>
         <div id="Cont" class="ContLeft">
           <div class="contBox">
@@ -461,6 +517,26 @@
           </div>
         </div>
       </main>
+      <!-- //main -->
+
+      <!-- banner -->
+      <section id="banner">
+        <div class="bannerTitle">javascript</div>
+      </section>
+      <!-- //banner -->
+
+      <!-- scriptCont -->
+      <section id="scriptCont">
+        <ul>
+          <li><a href="#">tetris game</a></li>
+          <li><a href="#">music player</a></li>
+          <li><a href="#">typing game</a></li>
+          <li><a href="#">quiz game</a></li>
+          <li><a href="#">search game</a></li>
+          <li><a href="#">memory game</a></li>
+        </ul>
+      </section>
+      <!-- //scriptCont -->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
