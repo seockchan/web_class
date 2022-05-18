@@ -187,6 +187,11 @@
       }
       #Cont .contBox {
         position: relative;
+        opacity: 0;
+      }
+      #Cont .contBox.show {
+        opacity: 1;
+        /* animation: fadeInDown 0.5s; */
       }
       #Cont .contBox .bgText {
         position: absolute;
@@ -205,6 +210,8 @@
       .ContLeft .contBox {
         margin-left: 10vw;
         z-index: 1;
+        opacity: 0;
+        transform: translateX(-100%);
       }
       .ContRight .contBox {
         margin-left: 40vw;
@@ -1044,14 +1051,31 @@
           if (scrollTop >= item.offsetTop - 500) {
             item
               .querySelectorAll(".headerText .textEffect")
-              .forEach((textEffect, index) => {
+              .forEach((span, index) => {
                 setTimeout(() => {
-                  textEffect.classList.add("show");
+                  span.classList.add("show");
                 }, 300 * (index + 1));
               });
           }
         });
 
+        document.querySelectorAll("#Cont").forEach((item) => {
+          if (scrollTop >= item.offsetTop) {
+            item.querySelectorAll(".contBox").forEach((contBox, index) => {
+              setTimeout(() => {
+                contBox.classList.add("show");
+                gsap.to(".ContLeft .contBox", {
+                  duration: 1,
+                  opacity: 1,
+                  scale: 1,
+                  x: 0,
+                  delay: 0.4,
+                  ease: "slow(0.7, 0.7, false)",
+                });
+              }, 300 * (index + 1));
+            });
+          }
+        });
         requestAnimationFrame(scroll);
       }
       scroll();
