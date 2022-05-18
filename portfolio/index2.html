@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Portfolio01</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
       @font-face {
@@ -84,19 +84,25 @@
         margin: auto;
         font-weight: 400;
         position: relative;
+        opacity: 0;
+        transform: scale(0);
       }
       .headerTitle .text1 {
         color: #94feea;
         position: absolute;
         top: 40%;
         left: -3%;
-        transform: translate(0, -50%);
+        /* transform: translate(0, -50%); */
+        opacity: 0;
+        transform: translate(-100%, -50%);
       }
       .headerTitle .text2 {
         position: absolute;
         bottom: 16%;
         right: -4%;
-        transform: translate(0%, -50%);
+        /* transform: translate(0%, -50%); */
+        opacity: 0;
+        transform: translate(200%, -50%);
       }
       .headerText {
         text-align: center;
@@ -106,6 +112,24 @@
         font-family: "GmarketSans";
         line-height: 1.6;
         margin-bottom: 7.5vw;
+      }
+      .headerText .textEffect {
+        opacity: 0;
+      }
+      .headerText .textEffect.show {
+        opacity: 1;
+        animation: fadeInDown 3s;
+      }
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, -100%, 0);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateZ(0);
+        }
       }
       .green {
         color: #76c0b3;
@@ -134,7 +158,7 @@
           position: absolute;
           top: 36%;
           left: 50%;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%) !important;
         }
         .headerTitle .text2 {
           position: absolute;
@@ -252,7 +276,7 @@
       .ContRight button {
         background: #4c348e;
       }
-      #Cont .contBox .siteDesc button.htmlIcon {
+      #Cont .contBox .siteDesc .htmlIcon {
         background: url(assets/img/html.jpg) no-repeat;
         background-size: cover;
         border-radius: 50%;
@@ -277,30 +301,7 @@
       #Cont:last-child {
         margin-bottom: 20vw;
       }
-      /* @media (max-width: 1200px) {
-        #Cont .contBox {
-          margin-left: 20vw;
-        }
-        #Cont .siteImg {
-          width: 54vw;
-          height: 40vw;
-          border-radius: 10vw;
-        }
-        #Cont .siteDesc {
-          margin-left: -30vw;
-          text-align: center;
-          padding: 0;
-        }
-        .siteDesc .siteTitle {
-          font-size: 3vw;
-          padding-bottom: 2vw;
-        }
-        #Cont .contBox .siteDesc .siteInfo p {
-          font-size: 1.5vw;
-          padding-bottom: 1vw;
-          margin-bottom: 0;
-        }
-      } */
+
       @media (max-width: 1200px) {
         #Cont .contInfo {
           display: flex;
@@ -327,7 +328,6 @@
           margin-left: 0;
           margin-right: 3vw;
           margin-top: 10vw;
-          text-align: center;
           padding: 0;
         }
         .ContRight .siteDesc {
@@ -343,43 +343,50 @@
           margin-bottom: 0;
         }
       }
-      /* @media (max-width: 800px) {
-        #Cont .contInfo {
-          display: flex;
-          margin: 0;
-        }
-        .ContRight .contInfo {
-          flex-direction: row-reverse;
-        }
-        .ContRight .siteImg {
-          margin-right: 3vw;
-        }
+      @media (max-width: 800px) {
         #Cont .contBox {
-          margin-left: 5vw;
+          margin-left: 15vw;
         }
         #Cont.ContRight .contBox {
-          margin-left: 0;
+          margin-left: 15vw;
+        }
+        #Cont .contInfo {
+          display: block;
+        }
+        #Cont .siteImg {
+          width: 60vw;
+          height: 44vw;
         }
         #Cont .siteDesc {
-          margin-left: 0;
-          margin-right: 3vw;
+          margin-top: 0;
+          margin-left: -20vw;
           text-align: center;
-          padding: 0;
         }
-        .ContRight .siteDesc {
-          margin-right: 0;
+        #Cont .contBox .siteDesc {
+          padding: 0;
         }
         .siteDesc .siteTitle {
           font-size: 4vw;
           padding-top: 4vw;
         }
         #Cont .contBox .siteDesc .siteInfo p {
-          font-size: 1.8vw;
+          font-size: 2.5vw;
           padding-top: 1vw;
-          padding-bottom: 1vw;
+          padding-bottom: 2vw;
         }
-      } */
-      @media (max-width: 800px) {
+        #Cont button {
+          font-size: 3vw;
+        }
+        #Cont .contBox .siteDesc .htmlIcon {
+          width: 4.9vw;
+          height: 4.9vw;
+        }
+        #Cont .contBox .siteDesc .cssIcon {
+          width: 4.9vw;
+          height: 4.9vw;
+        }
+      }
+      @media (max-width: 600px) {
         #Cont .contBox .siteDesc .siteInfo p {
           font-size: 2.2vw;
         }
@@ -473,6 +480,21 @@
       #studyCont ul:nth-child(4) {
         margin-left: -60vw;
       }
+
+      @media (max-width: 800px) {
+        #studyCont {
+          height: 60vw;
+        }
+        #studyCont ul li {
+          font-size: 3.5vw;
+          min-width: 24vw;
+          height: 24vw;
+          margin: 1.5vw;
+        }
+        #studyCont ul li a {
+          margin-top: 10vw;
+        }
+      }
       /* studyCont */
 
       #effectCont {
@@ -518,7 +540,120 @@
         font-weight: 300;
         line-height: 1.5;
       }
+
+      @media (max-width: 800px) {
+        #effectCont {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 10vw;
+        }
+        #effectCont .effectImg img {
+          width: 50vw;
+          height: 40vw;
+          border-radius: 6vw;
+          border: 1vw solid #76c0b3;
+          object-fit: cover;
+        }
+        #effectCont .effectCont {
+          text-align: center;
+        }
+        #effectCont .effectCont .effectTitle {
+          font-size: 4vw;
+          margin-top: 2vw;
+          margin-bottom: 1.5vw;
+        }
+        #effectCont .effectCont .effectTitle::after {
+          width: 3.4vw;
+          height: 3.4vw;
+          margin-left: 1vw;
+        }
+        #effectCont .effectCont .effectDesc {
+          font-size: 2.4vw;
+          white-space: wrap;
+        }
+        #effectCont .effectCont.center {
+          margin-top: 0;
+        }
+      }
       /* effectCont */
+
+      #contact {
+        width: 70vw;
+        background: #222;
+        height: 40vw;
+        border-radius: 2vw;
+        margin: auto;
+        margin-bottom: 20vw;
+      }
+      #contact .contact {
+        margin-top: 15vw;
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+      #contact .contactImg {
+        width: 40%;
+        margin-left: 5vw;
+        margin-top: 5vw;
+      }
+      #contact .contactImg img {
+        height: 30vw;
+        border-radius: 2vw;
+        background-size: cover;
+      }
+      #contact .contactInfo {
+        width: 60%;
+        margin-left: 6vw;
+        margin-top: 6vw;
+      }
+      #contact .contactInfo .info {
+        margin-bottom: 1vw;
+      }
+      #contact .contactInfo h3 {
+        font-size: 3vw;
+        font-weight: 700;
+        color: #76c0b3;
+        font-family: "Orbitron";
+        margin-bottom: 1vw;
+        text-transform: uppercase;
+      }
+      #contact .contactInfo p {
+        font-size: 2vw;
+        font-weight: 500;
+        font-family: "GmarketSans";
+      }
+      #contact .contactInfo .name {
+        font-size: 2.5vw;
+      }
+      /* contact */
+
+      /* info */
+      .scrollTop {
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 10px 30px;
+        border-radius: 50px;
+      }
+
+      .scrollInfo {
+        position: fixed;
+        left: 20px;
+        bottom: 70px;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      .scrollInfo li {
+        list-style: none;
+        line-height: 1.6;
+      }
     </style>
   </head>
 
@@ -536,14 +671,20 @@
         </div>
         <div class="headerText">
           <p>
-            어떤 일이라도 <span class="green">노력</span>하고
-            <span class="green">즐기면</span> 그 결과는
-            <span class="green">빛</span>을 바란다고 생각합니다.<br />
-            신입의 <span class="green">열정</span>과
-            <span class="green">도전정신</span>을 깊숙히 새기며 배움에 있어
-            <span class="green">겸손함</span>을 유지하며<br />
-            세부적인 곳까지 파고드는 <span class="green">개발자</span>가
-            되겠습니다.
+            <span class="textEffect"
+              >어떤 일이라도 <span class="green">노력</span>하고
+              <span class="green">즐기면</span> 그 결과는
+              <span class="green">빛</span>을 바란다고 생각합니다.<br
+            /></span>
+            <span class="textEffect"
+              >신입의 <span class="green">열정</span>과
+              <span class="green">도전정신</span>을 깊숙히 새기며 배움에 있어
+              <span class="green">겸손함</span>을 유지하며<br
+            /></span>
+            <span class="textEffect"
+              >세부적인 곳까지 파고드는 <span class="green">개발자</span>가
+              되겠습니다.</span
+            >
           </p>
         </div>
       </header>
@@ -857,9 +998,88 @@
         <div class="bannerTitle">contact</div>
       </section>
       <!-- banner2 -->
+
+      <!-- contact -->
+      <section id="contact">
+        <div class="contact">
+          <div class="contactImg">
+            <img src="assets/img/contactIMG.jpg" alt="프로필" />
+          </div>
+          <div class="contactInfo">
+            <div class="info">
+              <h3>name :</h3>
+              <p class="name">배석찬</p>
+            </div>
+            <div class="info">
+              <h3>e-mail :</h3>
+              <p>sna12345@naver.com</p>
+            </div>
+            <div class="info">
+              <h3>phone :</h3>
+              <p>010-3312-5279</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- info -->
+      <div class="scrollTop">scrollTop : <span>0</span>px</div>
+      <!-- //info -->
+
+      <!-- contact -->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script></script>
+    <script>
+      function scroll() {
+        let scrollTop =
+          window.screenY ||
+          window.pageYOffset ||
+          document.documentElement.scrollTop;
+
+        document.querySelector(".scrollTop span").innerText =
+          Math.round(scrollTop);
+
+        document.querySelectorAll(".headerText").forEach((item) => {
+          if (scrollTop >= item.offsetTop - 500) {
+            item
+              .querySelectorAll(".headerText .textEffect")
+              .forEach((textEffect, index) => {
+                setTimeout(() => {
+                  textEffect.classList.add("show");
+                }, 300 * (index + 1));
+              });
+          }
+        });
+
+        requestAnimationFrame(scroll);
+      }
+      scroll();
+
+      setTimeout(() => {
+        gsap.to(".headerTitle", {
+          duration: 1,
+          opacity: 1,
+          scale: 1,
+          x: 0,
+          delay: 0.4,
+          ease: "slow(0.7, 0.7, false)",
+        });
+        gsap.to(".headerTitle .text1", {
+          duration: 1,
+          opacity: 1,
+          x: 0,
+          delay: 1.4,
+          ease: "slow(0.7, 0.7, false)",
+        });
+        gsap.to(".headerTitle .text2", {
+          duration: 1,
+          opacity: 1,
+          x: 0,
+          delay: 2.4,
+          ease: "slow(0.7, 0.7, false)",
+        });
+      }, 1000);
+    </script>
   </body>
 </html>
