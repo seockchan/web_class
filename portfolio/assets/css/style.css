@@ -1,14 +1,84 @@
+#header {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: "GmarketSans";
+  z-index: 3;
+}
+#header h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
 #sect1 {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background: #000;
+  background: url(https://images.unsplash.com/photo-1543083115-638c32cd3d58?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632)
+    center center no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+#sect1::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: -1;
 }
 canvas {
   width: 100%;
   height: 100vh;
 }
+#sect1 .sect1Text {
+  font-size: 8vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Orbitron";
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+}
+#sect1 .sect1Text .t1 {
+  color: #94feea;
+}
 #sect2 {
   width: 100%;
   height: 100vh;
   background: #333;
+}
+
+/* info */
+#scrollTop {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+#scrollTop.s1 {
+  left: auto;
+  right: 30px;
+  bottom: 20px;
+}
+#scrollTop.s2 {
+  left: 20px;
+  bottom: auto;
+  top: 20px;
+}
+#scrollTop.s3 {
+  left: auto;
+  bottom: auto;
+  right: 30px;
+  top: 20px;
 }
