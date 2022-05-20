@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>포폴 틀</title>
     <link rel="stylesheet" href="assets/css/font.css" />
     <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style2.css" />
     <style>
       html {
         scroll-behavior: smooth;
@@ -81,16 +81,8 @@
               STANDARD SITE
             </div>
             <div class="contInfo">
-              <div
-                class="siteImg img1"
-                data-1200="transform: scale(0);"
-                data-1400="transform: scale(1);"
-              ></div>
-              <div
-                class="siteDesc"
-                data-1200="transform:translate(-30%,0%) scale(0); top: 200%;"
-                data-1300="transform:translate(0%,0%) scale(1); top: 50%;"
-              >
+              <div class="siteImg img1"></div>
+              <div class="siteDesc">
                 <div class="siteTitle">WEBSTANDARD SITE</div>
                 <div class="siteInfo">
                   <p>
@@ -118,16 +110,8 @@
               responsive SITE
             </div>
             <div class="contInfo">
-              <div
-                class="siteImg img2"
-                data-2400="transform: scale(0);"
-                data-2600="transform: scale(1);"
-              ></div>
-              <div
-                class="siteDesc"
-                data-2500="transform:translate(-30%,0%) scale(0); top: 200%;"
-                data-2600="transform:translate(0%,0%) scale(1); top: 50%;"
-              >
+              <div class="siteImg img2"></div>
+              <div class="siteDesc">
                 <div class="siteTitle">WEB RESPONSIVE SITE</div>
                 <div class="siteInfo">
                   <p>
@@ -155,16 +139,8 @@
               PHP SITE
             </div>
             <div class="contInfo">
-              <div
-                class="siteImg img3"
-                data-3600="transform: scale(0);"
-                data-3800="transform: scale(1);"
-              ></div>
-              <div
-                class="siteDesc"
-                data-3700="transform:translate(-30%,0%) scale(0); top: 200%;"
-                data-3800="transform:translate(0%,0%) scale(1); top: 50%;"
-              >
+              <div class="siteImg img3"></div>
+              <div class="siteDesc">
                 <div class="siteTitle">PHP SITE</div>
                 <div class="siteInfo">
                   <p>
@@ -193,16 +169,8 @@
               REACT SITE
             </div>
             <div class="contInfo">
-              <div
-                class="siteImg img4"
-                data-4800="transform: scale(0);"
-                data-5000="transform: scale(1);"
-              ></div>
-              <div
-                class="siteDesc"
-                data-4900="transform:translate(-30%,0%) scale(0); top: 200%;"
-                data-5000="transform:translate(0%,0%) scale(1); top: 50%;"
-              >
+              <div class="siteImg img4"></div>
+              <div class="siteDesc">
                 <div class="siteTitle">REACT SITE</div>
                 <div class="siteInfo">
                   <p>
@@ -223,14 +191,8 @@
       <!-- //siteCont -->
 
       <!-- banner -->
-      <section id="banner">
-        <div
-          class="bannerTitle"
-          data-5700="opacity:0; transform:scale(0);"
-          data-6200="opacity:1; transform:scale(1);"
-        >
-          javascript
-        </div>
+      <section id="banner" class="reveal">
+        <div class="bannerTitle">javascript</div>
       </section>
       <!-- //banner -->
 
@@ -485,6 +447,7 @@
     <!-- //main -->
 
     <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
     <script>
       var s = skrollr.init();
@@ -500,8 +463,8 @@
           el.innerText = Math.round(scrollTop);
         });
 
-        document.querySelectorAll(".content__item").forEach((el) => {
-          if (scrollTop >= el.offsetTop) {
+        document.querySelectorAll("#contents").forEach((el) => {
+          if (scrollTop >= el.offsetTop - 100) {
             el.classList.add("show");
           }
         });
@@ -509,6 +472,53 @@
         requestAnimationFrame(scroll);
       }
       scroll();
+    </script>
+    <script>
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.9,
+      };
+
+      let revealCallback = (entries, self) => {
+        entries.forEach((entry) => {
+          let container = entry.target;
+          let img = entry.target.querySelector("img");
+          const easeInOut = "power3.out";
+          const revealAnim = gsap.timeline({ ease: easeInOut });
+
+          if (entry.isIntersecting) {
+            revealAnim.set(container, {
+              visibility: "visible",
+            });
+            revealAnim.fromTo(
+              container,
+              {
+                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+              },
+              {
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                duration: 1,
+                ease: easeInOut,
+              }
+            );
+            revealAnim.from(img, 4, {
+              scale: 1.4,
+              ease: easeInOut,
+              delay: -1,
+            });
+            self.unobserve(entry.target);
+          }
+        });
+      };
+
+      let revealObserver = new IntersectionObserver(revealCallback, options);
+
+      document.querySelectorAll(".reveal").forEach((reveal) => {
+        revealObserver.observe(reveal);
+      });
     </script>
     <script type="x-shader/x-vertex" id="vertexshader">
       varying vec2 vUv;
