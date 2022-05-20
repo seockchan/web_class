@@ -1,3 +1,8 @@
+body {
+  width: 100%;
+  height: 20000px;
+  background: #000;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -320,20 +325,291 @@ main {
   background-size: cover;
   width: 100%;
   height: 23vw;
-  margin-bottom: 1000px;
+  margin-bottom: 10vw;
 }
 #banner.banner2 {
   background: url(../img/banner02.jpg) no-repeat;
 }
 .bannerTitle {
   color: #fff;
-  font-size: 10vw;
+  font-size: 8.5vw;
   text-transform: uppercase;
   font-family: "Orbitron";
   text-align: center;
   padding-top: 5vw;
 }
 /* banner */
+
+#scriptCont {
+  height: 50vw;
+  padding-left: 9vw;
+  margin-bottom: 10vw;
+}
+#scriptCont ul li {
+  list-style: none;
+}
+#scriptCont ul li a {
+  text-decoration: none;
+  font-size: 5.5vw;
+  text-transform: uppercase;
+  font-family: "Orbitron";
+  color: #76c0b3;
+  line-height: 1.3;
+}
+@media (max-width: 800px) {
+  #scriptCont {
+    padding-left: 0;
+  }
+  #scriptCont ul li {
+    text-align: center;
+  }
+  #scriptCont ul li a {
+    font-size: 7vw;
+  }
+}
+/* scriptCont */
+
+#studyCont {
+  background: #000;
+  overflow: hidden;
+  height: 52vw;
+  margin-bottom: 1vw;
+}
+#studyCont ul {
+  display: flex;
+}
+#studyCont ul li {
+  background: #262628;
+  list-style: none;
+  color: #76c0b3;
+  font-size: 2.4vw;
+  border: none;
+  min-width: 16vw;
+  height: 16vw;
+  margin: 1vw;
+  border-radius: 1vw;
+  text-align: center;
+}
+#studyCont ul li a {
+  display: inline-block;
+  margin-top: 6.5vw;
+  color: #76c0b3;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Orbitron";
+}
+#studyCont ul:nth-child(2) {
+  margin-left: -15vw;
+}
+#studyCont ul:nth-child(3) {
+  margin-left: -35vw;
+}
+#studyCont ul:nth-child(4) {
+  margin-left: -60vw;
+}
+
+@media (max-width: 800px) {
+  #studyCont {
+    height: 60vw;
+  }
+  #studyCont ul li {
+    font-size: 3.5vw;
+    min-width: 24vw;
+    height: 24vw;
+    margin: 1.5vw;
+  }
+  #studyCont ul li a {
+    margin-top: 10vw;
+  }
+}
+/* studyCont */
+
+#effectCont {
+  display: flex;
+  justify-content: center;
+  font-family: "GmarketSans";
+  margin-bottom: 20vw;
+}
+#effectCont .effectCont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#effectCont .effectCont.center {
+  margin-top: 15vw;
+}
+#effectCont .effectCont .effectBox {
+  margin: 1vw 1vw 2vw 1vw;
+}
+#effectCont .effectImg img {
+  width: 25vw;
+  border-radius: 1vw;
+  object-fit: cover;
+}
+#effectCont .effectCont .effectTitle {
+  font-size: 2vw;
+  margin-top: 1vw;
+  margin-bottom: 1.5vw;
+}
+#effectCont .effectCont .effectTitle::after {
+  content: "";
+  display: inline-block;
+  background: url(assets/img/arrow.jpg) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 1.7vw;
+  height: 1.7vw;
+  vertical-align: -0.2vw;
+  margin-left: 0.5vw;
+}
+#effectCont .effectCont .effectDesc {
+  font-size: 1.2vw;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  #effectCont {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vw;
+  }
+  #effectCont .effectImg img {
+    width: 50vw;
+    height: 40vw;
+    border-radius: 6vw;
+    border: 1vw solid #76c0b3;
+    object-fit: cover;
+  }
+  #effectCont .effectCont {
+    text-align: center;
+  }
+  #effectCont .effectCont .effectTitle {
+    font-size: 4vw;
+    margin-top: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  #effectCont .effectCont .effectTitle::after {
+    width: 3.4vw;
+    height: 3.4vw;
+    margin-left: 1vw;
+  }
+  #effectCont .effectCont .effectDesc {
+    font-size: 2.4vw;
+    white-space: wrap;
+  }
+  #effectCont .effectCont.center {
+    margin-top: 0;
+  }
+}
+/* effectCont */
+
+#contact {
+  width: 70vw;
+  background: #222;
+  height: 40vw;
+  border-radius: 2vw;
+  margin: auto;
+  margin-bottom: 20vw;
+}
+#contact .contact {
+  margin-top: 15vw;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#contact .contactImg {
+  width: 40%;
+  margin-left: 5vw;
+  margin-top: 5vw;
+}
+#contact .contactImg img {
+  height: 30vw;
+  border-radius: 2vw;
+  background-size: cover;
+}
+#contact .contactInfo {
+  width: 60%;
+  margin-left: 6vw;
+  margin-top: 6vw;
+}
+#contact .contactInfo .info {
+  margin-bottom: 1vw;
+}
+#contact .contactInfo h3 {
+  font-size: 3vw;
+  font-weight: 700;
+  color: #76c0b3;
+  font-family: "Orbitron";
+  margin-bottom: 1vw;
+  text-transform: uppercase;
+}
+#contact .contactInfo p {
+  font-size: 2vw;
+  font-weight: 500;
+  font-family: "GmarketSans";
+}
+#contact .contactInfo .name {
+  font-size: 2.5vw;
+}
+/* contact */
+
+#send {
+  text-align: center;
+  font-family: "GmarketSans";
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#send h4 {
+  font-weight: 300;
+  font-size: 2vw;
+  margin-bottom: 3vw;
+}
+#send h3 {
+  font-weight: 700;
+  font-size: 3vw;
+  margin-bottom: 4vw;
+}
+#send a {
+  font-size: 1.5vw;
+  margin-bottom: 3vw;
+  padding: 1vw 2vw;
+  background: #76c0b3;
+  border-radius: 100px;
+  text-decoration: none;
+  color: #000;
+}
+#send .sendDesc {
+  white-space: nowrap;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+#send img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 10%;
+  position: relative;
+}
+#send .small1 {
+  position: absolute;
+  left: 15.5vw;
+  bottom: 10.5vw;
+  width: 10vw;
+  height: 10vw;
+  z-index: 1;
+  border-radius: 0;
+}
+#send .small2 {
+  position: absolute;
+  right: 15.5vw;
+  top: 10.5vw;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 0;
+}
+/* send */
 
 #scrollTop {
   position: fixed;
