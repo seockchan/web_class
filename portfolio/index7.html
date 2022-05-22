@@ -92,8 +92,8 @@
                     사용함에 있어 불편함없이 설계된 사이트입니다.
                   </p>
                 </div>
-                <button>VIEW</button>
-                <button>CODE</button>
+                <button class="btn-animate">VIEW</button>
+                <button class="btn-animate">CODE</button>
                 <button class="htmlIcon"></button>
                 <button class="cssIcon"></button>
               </div>
@@ -121,8 +121,8 @@
                     반응형까지 지원하는 페이지입니다.
                   </p>
                 </div>
-                <button>VIEW</button>
-                <button>CODE</button>
+                <button class="btn-animate">VIEW</button>
+                <button class="btn-animate">CODE</button>
                 <button class="htmlIcon"></button>
                 <button class="cssIcon"></button>
               </div>
@@ -151,8 +151,8 @@
                     >을 만든 사이트입니다.
                   </p>
                 </div>
-                <button>VIEW</button>
-                <button>CODE</button>
+                <button class="btn-animate">VIEW</button>
+                <button class="btn-animate">CODE</button>
                 <button class="htmlIcon"></button>
                 <button class="cssIcon"></button>
               </div>
@@ -179,8 +179,8 @@
                     지원하는 페이지입니다.
                   </p>
                 </div>
-                <button>VIEW</button>
-                <button>CODE</button>
+                <button class="btn-animate">VIEW</button>
+                <button class="btn-animate">CODE</button>
                 <button class="htmlIcon"></button>
                 <button class="cssIcon"></button>
               </div>
@@ -199,12 +199,12 @@
       <!-- scriptCont -->
       <section id="scriptCont">
         <ul>
-          <li><a href="#">tetris game</a></li>
-          <li><a href="#">music player</a></li>
-          <li><a href="#">typing game</a></li>
-          <li><a href="#">quiz game</a></li>
-          <li><a href="#">search game</a></li>
-          <li><a href="#">memory game</a></li>
+          <li><a href="#" class="t1">tetris game</a></li>
+          <li><a href="#" class="t2">music player</a></li>
+          <li><a href="#" class="t3">typing game</a></li>
+          <li><a href="#" class="t4">quiz game</a></li>
+          <li><a href="#" class="t5">search game</a></li>
+          <li><a href="#" class="t6">memory game</a></li>
         </ul>
       </section>
       <!-- //scriptCont -->
@@ -449,6 +449,7 @@
     <!-- script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
+    <script src="../javascript/effect/js/gsap.min.js"></script>
     <script>
       var s = skrollr.init();
 
@@ -466,8 +467,56 @@
         document.querySelectorAll("#contents").forEach((el) => {
           if (scrollTop >= el.offsetTop - 100) {
             el.classList.add("show");
+            
           }
         });
+
+        document.querySelectorAll(".siteTitle").forEach((desc) => {
+        let splitText = desc.innerText;
+        let splitWrap = splitText
+          .split("")
+          .join("</span><span aria-hidden='true'>");
+        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+        desc.innerHTML = splitWrap;
+        desc.setAttribute("aria-label", splitText);
+      });
+
+      document.querySelectorAll(".contBox").forEach((item) => {
+          if (scrollTop >= item.offsetTop) {
+            item
+              .querySelectorAll(".siteTitle span")
+              .forEach((span) => {
+                span.classList.add("show");
+              })
+        }});
+
+        document.querySelectorAll(".siteInfo p").forEach((desc) => {
+        let splitText = desc.innerText;
+        let splitWrap = splitText
+          .split("")
+          .join("</span><span aria-hidden='true'>");
+        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+        desc.innerHTML = splitWrap;
+        desc.setAttribute("aria-label", splitText);
+      });
+
+      document.querySelectorAll(".contBox").forEach((item) => {
+          if (scrollTop >= item.offsetTop) {
+            item
+              .querySelectorAll(".siteInfo p span")
+              .forEach((span) => {
+                span.classList.add("show");
+              })
+        }});
+
+        document.querySelectorAll("#scriptCont ul li a").forEach((el) => {
+          if (scrollTop >= el.offsetTop - 400) {
+            el.classList.add("show");
+            
+          }
+        });
+
+        
 
         requestAnimationFrame(scroll);
       }
