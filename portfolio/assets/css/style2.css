@@ -226,10 +226,11 @@ main {
 .siteDesc .siteTitle span {
   display: inline-block;
   opacity: 0;
+  transition: all 1s;
 }
 .siteDesc .siteTitle span.show {
   opacity: 1;
-  animation: flip 1s;
+  animation: flip 2s;
 }
 @keyframes flip {
   0% {
@@ -267,38 +268,24 @@ main {
   margin-bottom: 1vw;
   transition: all 1s;
 }
-#contents .contBox .siteDesc .siteInfo p span {
+#contents .contBox .siteDesc .siteInfo p .infoText {
   opacity: 0;
+  transition: all 1s;
+  display: block;
 }
-#contents .contBox .siteDesc .siteInfo p span.show {
+#contents .contBox .siteDesc .siteInfo p .infoText.show {
   opacity: 1;
-  animation: flip 2s;
+  animation: fadeInLeftBig 10s;
 }
-@keyframes flip {
+@keyframes fadeInLeftBig {
   0% {
-    transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
-    animation-timing-function: ease-out;
-  }
-
-  40% {
-    transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
-    animation-timing-function: ease-out;
-  }
-
-  50% {
-    transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
-    animation-timing-function: ease-in;
-  }
-
-  80% {
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0)
-      rotateY(0deg);
-    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
   }
 
   to {
-    transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
-    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateZ(0);
   }
 }
 
@@ -441,6 +428,13 @@ main {
 #contents:last-child {
   margin-bottom: 20vw;
 }
+.siteDesc button {
+  opacity: 0;
+  transition: all 1s;
+}
+.siteDesc button.show {
+  opacity: 1;
+}
 
 @media (max-width: 1200px) {
   #contents .contInfo {
@@ -579,6 +573,13 @@ main {
   font-family: "Orbitron";
   text-align: center;
   padding-top: 5vw;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.bannerTitle.show {
+  opacity: 1;
+  transform: translateX(0%);
 }
 
 /* banner */
@@ -604,7 +605,7 @@ main {
 #scriptCont ul li a span {
   opacity: 0;
   transform: translateY(50px) rotate(10deg);
-  transition: all 0.33s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 #scriptCont ul li a span.show {
   opacity: 1;

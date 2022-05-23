@@ -862,6 +862,7 @@
 
         document.querySelectorAll(".content__item").forEach((item) => {
           if (scrollTop >= item.offsetTop) {
+            console.log(item.offsetTop);
             item
               .querySelectorAll(".content__item__desc span")
               .forEach((span, index) => {
