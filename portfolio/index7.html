@@ -82,7 +82,7 @@
             </div>
             <div class="contInfo">
               <div class="siteImg img1"></div>
-              <div class="siteDesc">
+              <div class="siteDesc D1">
                 <p class="siteTitle">WEBSTANDARD SITE</p>
                 <div class="siteInfo">
                   <p>
@@ -115,7 +115,7 @@
             </div>
             <div class="contInfo">
               <div class="siteImg img2"></div>
-              <div class="siteDesc">
+              <div class="siteDesc D2">
                 <div class="siteTitle">WEB RESPONSIVE SITE</div>
                 <div class="siteInfo">
                   <p>
@@ -148,7 +148,7 @@
             </div>
             <div class="contInfo">
               <div class="siteImg img3"></div>
-              <div class="siteDesc">
+              <div class="siteDesc D3">
                 <div class="siteTitle">PHP SITE</div>
                 <div class="siteInfo">
                   <p>
@@ -182,7 +182,7 @@
             </div>
             <div class="contInfo">
               <div class="siteImg img4"></div>
-              <div class="siteDesc">
+              <div class="siteDesc D4">
                 <div class="siteTitle">REACT SITE</div>
                 <div class="siteInfo">
                   <p>
@@ -507,10 +507,14 @@
           }
         });
 
-        document.querySelectorAll(".siteDesc").forEach((el) => {
+        // console.log(document.querySelectorAll(".siteDesc"));
+
+        // 1
+        document.querySelectorAll(".siteDesc.D1").forEach((el) => {
           if (scrollTop >= el.offsetTop) {
+            console.log(el.offsetTop);
             document
-              .querySelectorAll(".siteTitle span")
+              .querySelectorAll(".siteDesc.D1 .siteTitle span")
               .forEach((span, index) => {
                 setTimeout(() => {
                   span.classList.add("show");
@@ -519,31 +523,154 @@
           }
         });
 
-        document.querySelectorAll(".siteDesc").forEach((el) => {
+        document.querySelectorAll(".siteDesc.D1").forEach((el) => {
           if (scrollTop >= el.offsetTop) {
             document
-              .querySelectorAll(".siteInfo p .infoText")
+              .querySelectorAll(".siteDesc.D1 .siteInfo p .infoText")
               .forEach((span, index) => {
                 setTimeout(() => {
                   span.classList.add("show");
-                }, 300 * (index + 1));
+                }, 50 * (index + 1));
               });
           }
         });
 
-        document.querySelectorAll(".siteDesc").forEach((item) => {
+        document.querySelectorAll(".siteDesc.D1").forEach((item) => {
           if (scrollTop >= item.offsetTop) {
             console.log(item.offsetTop);
-            item.querySelectorAll(".siteDesc button").forEach((btn, index) => {
-              setTimeout(() => {
-                btn.classList.add("show");
-              }, 700 * (index + 1));
-            });
+            item
+              .querySelectorAll(".siteDesc.D1 button")
+              .forEach((btn, index) => {
+                setTimeout(() => {
+                  btn.classList.add("show");
+                }, 700 * (index + 1));
+              });
+          }
+        });
+        // 1
+
+        // 2
+        document.querySelectorAll(".siteDesc.D2").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            console.log(el.offsetTop);
+            document
+              .querySelectorAll(".siteDesc.D2 .siteTitle span")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 100 * (index + 1));
+              });
           }
         });
 
-        document.querySelectorAll("#scriptCont ul li a").forEach((item) => {
+        document.querySelectorAll(".siteDesc.D2").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            document
+              .querySelectorAll(".siteDesc.D2 .siteInfo p .infoText")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 50 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D2").forEach((item) => {
           if (scrollTop >= item.offsetTop) {
+            console.log(item.offsetTop);
+            item
+              .querySelectorAll(".siteDesc.D2 button")
+              .forEach((btn, index) => {
+                setTimeout(() => {
+                  btn.classList.add("show");
+                }, 700 * (index + 1));
+              });
+          }
+        });
+        // 2
+
+        // 3
+        document.querySelectorAll(".siteDesc.D3").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            console.log(el.offsetTop);
+            document
+              .querySelectorAll(".siteDesc.D3 .siteTitle span")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 100 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D3").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            document
+              .querySelectorAll(".siteDesc.D3 .siteInfo p .infoText")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 50 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D3").forEach((item) => {
+          if (scrollTop >= item.offsetTop) {
+            console.log(item.offsetTop);
+            item
+              .querySelectorAll(".siteDesc.D3 button")
+              .forEach((btn, index) => {
+                setTimeout(() => {
+                  btn.classList.add("show");
+                }, 700 * (index + 1));
+              });
+          }
+        });
+        // 3
+
+        // 4
+        document.querySelectorAll(".siteDesc.D4").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            console.log(el.offsetTop);
+            document
+              .querySelectorAll(".siteDesc.D4 .siteTitle span")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 100 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D4").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            document
+              .querySelectorAll(".siteDesc.D4 .siteInfo p .infoText")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 50 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D4").forEach((item) => {
+          if (scrollTop >= item.offsetTop) {
+            console.log(item.offsetTop);
+            item
+              .querySelectorAll(".siteDesc.D4 button")
+              .forEach((btn, index) => {
+                setTimeout(() => {
+                  btn.classList.add("show");
+                }, 700 * (index + 1));
+              });
+          }
+        });
+        // 4
+
+        document.querySelectorAll("#scriptCont ul li a").forEach((item) => {
+          if (scrollTop >= item.offsetTop - 500) {
             item
               .querySelectorAll("#scriptCont ul li a span")
               .forEach((span, index) => {
@@ -554,7 +681,7 @@
           }
         });
         let banner = document.querySelector("#banner");
-        if (scrollTop >= banner.offsetTop) {
+        if (scrollTop >= banner.offsetTop - 300) {
           document.querySelector(".bannerTitle").classList.add("show");
         }
 

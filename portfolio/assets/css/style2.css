@@ -271,7 +271,7 @@ main {
 #contents .contBox .siteDesc .siteInfo p .infoText {
   opacity: 0;
   transition: all 1s;
-  display: block;
+  display: inline-block;
 }
 #contents .contBox .siteDesc .siteInfo p .infoText.show {
   opacity: 1;
