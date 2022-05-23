@@ -406,7 +406,7 @@
       <section id="contact">
         <div class="contact">
           <div class="contactImg">
-            <img src="assets/img/contactIMG.jpg" alt="프로필" />
+            <img src="assets/img/face.jpg" alt="프로필" />
           </div>
           <div class="contactInfo">
             <div class="info">
@@ -467,56 +467,72 @@
         document.querySelectorAll("#contents").forEach((el) => {
           if (scrollTop >= el.offsetTop - 100) {
             el.classList.add("show");
-            
           }
         });
 
         document.querySelectorAll(".siteTitle").forEach((desc) => {
-        let splitText = desc.innerText;
-        let splitWrap = splitText
-          .split("")
-          .join("</span><span aria-hidden='true'>");
-        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
-        desc.innerHTML = splitWrap;
-        desc.setAttribute("aria-label", splitText);
-      });
+          let splitText = desc.innerText;
+          let splitWrap = splitText
+            .split("")
+            .join("</span><span aria-hidden='true'>");
+          splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+          desc.innerHTML = splitWrap;
+          desc.setAttribute("aria-label", splitText);
+        });
 
-      document.querySelectorAll(".contBox").forEach((item) => {
+        document.querySelectorAll(".contBox").forEach((item) => {
           if (scrollTop >= item.offsetTop) {
-            item
-              .querySelectorAll(".siteTitle span")
-              .forEach((span) => {
-                span.classList.add("show");
-              })
-        }});
-
-        document.querySelectorAll(".siteInfo p").forEach((desc) => {
-        let splitText = desc.innerText;
-        let splitWrap = splitText
-          .split("")
-          .join("</span><span aria-hidden='true'>");
-        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
-        desc.innerHTML = splitWrap;
-        desc.setAttribute("aria-label", splitText);
-      });
-
-      document.querySelectorAll(".contBox").forEach((item) => {
-          if (scrollTop >= item.offsetTop) {
-            item
-              .querySelectorAll(".siteInfo p span")
-              .forEach((span) => {
-                span.classList.add("show");
-              })
-        }});
-
-        document.querySelectorAll("#scriptCont ul li a").forEach((el) => {
-          if (scrollTop >= el.offsetTop - 400) {
-            el.classList.add("show");
-            
+            item.querySelectorAll(".siteTitle span").forEach((span) => {
+              span.classList.add("show");
+            });
           }
         });
 
-        
+        document.querySelectorAll(".siteInfo p").forEach((desc) => {
+          let splitText = desc.innerText;
+          let splitWrap = splitText
+            .split("")
+            .join("</span><span aria-hidden='true'>");
+          splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+          desc.innerHTML = splitWrap;
+          desc.setAttribute("aria-label", splitText);
+        });
+
+        document.querySelectorAll(".contBox").forEach((item) => {
+          if (scrollTop >= item.offsetTop) {
+            item.querySelectorAll(".siteInfo p span").forEach((span) => {
+              span.classList.add("show");
+            });
+          }
+        });
+
+        // document.querySelectorAll("#scriptCont ul li a").forEach((el) => {
+        //   if (scrollTop >= el.offsetTop - 400) {
+        //     el.classList.add("show");
+        //   }
+        // });
+        document.querySelectorAll("#scriptCont ul li a").forEach((desc) => {
+          let splitText = desc.innerText;
+          let splitWrap = splitText
+            .split("")
+            .join("</span><span aria-hidden='true'>");
+          splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+          desc.innerHTML = splitWrap;
+          desc.setAttribute("aria-label", splitText);
+        });
+
+        document.querySelectorAll("#scriptCont ul li a").forEach((item) => {
+          if (scrollTop >= item.offsetTop - 400) {
+            item
+              .querySelectorAll("#scriptCont ul li a span")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 50 * (index + 1));
+              });
+            item.preventDefault();
+          }
+        });
 
         requestAnimationFrame(scroll);
       }
