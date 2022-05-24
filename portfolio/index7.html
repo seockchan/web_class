@@ -512,7 +512,6 @@
         // 1
         document.querySelectorAll(".siteDesc.D1").forEach((el) => {
           if (scrollTop >= el.offsetTop) {
-            console.log(el.offsetTop);
             document
               .querySelectorAll(".siteDesc.D1 .siteTitle span")
               .forEach((span, index) => {
@@ -537,7 +536,6 @@
 
         document.querySelectorAll(".siteDesc.D1").forEach((item) => {
           if (scrollTop >= item.offsetTop) {
-            console.log(item.offsetTop);
             item
               .querySelectorAll(".siteDesc.D1 button")
               .forEach((btn, index) => {
@@ -552,7 +550,6 @@
         // 2
         document.querySelectorAll(".siteDesc.D2").forEach((el) => {
           if (scrollTop >= el.offsetTop) {
-            console.log(el.offsetTop);
             document
               .querySelectorAll(".siteDesc.D2 .siteTitle span")
               .forEach((span, index) => {
@@ -577,7 +574,6 @@
 
         document.querySelectorAll(".siteDesc.D2").forEach((item) => {
           if (scrollTop >= item.offsetTop) {
-            console.log(item.offsetTop);
             item
               .querySelectorAll(".siteDesc.D2 button")
               .forEach((btn, index) => {
@@ -592,7 +588,6 @@
         // 3
         document.querySelectorAll(".siteDesc.D3").forEach((el) => {
           if (scrollTop >= el.offsetTop) {
-            console.log(el.offsetTop);
             document
               .querySelectorAll(".siteDesc.D3 .siteTitle span")
               .forEach((span, index) => {
@@ -617,7 +612,6 @@
 
         document.querySelectorAll(".siteDesc.D3").forEach((item) => {
           if (scrollTop >= item.offsetTop) {
-            console.log(item.offsetTop);
             item
               .querySelectorAll(".siteDesc.D3 button")
               .forEach((btn, index) => {
@@ -630,43 +624,69 @@
         // 3
 
         // 4
-        document.querySelectorAll(".siteDesc.D4").forEach((el) => {
-          if (scrollTop >= el.offsetTop) {
-            console.log(el.offsetTop);
-            document
-              .querySelectorAll(".siteDesc.D4 .siteTitle span")
-              .forEach((span, index) => {
-                setTimeout(() => {
-                  span.classList.add("show");
-                }, 100 * (index + 1));
-              });
-          }
-        });
+        // document.querySelectorAll(".siteDesc.D4").forEach((el) => {
+        //   if (scrollTop >= el.offsetTop) {
+        //     console.log(el.offsetTop);
+        //     document
+        //       .querySelectorAll(".siteDesc.D4 .siteTitle span")
+        //       .forEach((span, index) => {
+        //         setTimeout(() => {
+        //           span.classList.add("show");
+        //         }, 100 * (index + 1));
+        //       });
+        //   }
+        // });
 
-        document.querySelectorAll(".siteDesc.D4").forEach((el) => {
-          if (scrollTop >= el.offsetTop) {
-            document
-              .querySelectorAll(".siteDesc.D4 .siteInfo p .infoText")
-              .forEach((span, index) => {
-                setTimeout(() => {
-                  span.classList.add("show");
-                }, 50 * (index + 1));
-              });
-          }
-        });
+        // document.querySelectorAll(".siteDesc.D4").forEach((el) => {
+        //   if (scrollTop >= el.offsetTop) {
+        //     document
+        //       .querySelectorAll(".siteDesc.D4 .siteInfo p .infoText")
+        //       .forEach((span, index) => {
+        //         setTimeout(() => {
+        //           span.classList.add("show");
+        //         }, 50 * (index + 1));
+        //       });
+        //   }
+        // });
 
-        document.querySelectorAll(".siteDesc.D4").forEach((item) => {
-          if (scrollTop >= item.offsetTop) {
-            console.log(item.offsetTop);
-            item
-              .querySelectorAll(".siteDesc.D4 button")
-              .forEach((btn, index) => {
-                setTimeout(() => {
-                  btn.classList.add("show");
-                }, 700 * (index + 1));
-              });
-          }
-        });
+        // document.querySelectorAll(".siteDesc.D4").forEach((item) => {
+        //   if (scrollTop >= item.offsetTop) {
+        //     console.log(item.offsetTop);
+        //     item
+        //       .querySelectorAll(".siteDesc.D4 button")
+        //       .forEach((btn, index) => {
+        //         setTimeout(() => {
+        //           btn.classList.add("show");
+        //         }, 700 * (index + 1));
+        //       });
+        //   }
+        // });
+
+        let D4 = document.querySelector(".siteDesc.D4");
+        if (scrollTop >= D4.offsetTop) {
+          console.log(D4.offsetTop);
+          document
+            .querySelectorAll(".siteDesc.D4 .siteTitle span")
+            .forEach((span, index) => {
+              setTimeout(() => {
+                span.classList.add("show");
+              }, 100 * (index + 1));
+            });
+          document
+            .querySelectorAll(".siteDesc.D4 .siteInfo p .infoText")
+            .forEach((span, index) => {
+              setTimeout(() => {
+                span.classList.add("show");
+              }, 100 * (index + 1));
+            });
+          document
+            .querySelectorAll(".siteDesc.D4 button")
+            .forEach((btn, index) => {
+              setTimeout(() => {
+                btn.classList.add("show");
+              }, 100 * (index + 1));
+            });
+        }
         // 4
 
         document.querySelectorAll("#scriptCont ul li a").forEach((item) => {
@@ -684,6 +704,28 @@
         if (scrollTop >= banner.offsetTop - 300) {
           document.querySelector(".bannerTitle").classList.add("show");
         }
+
+        document.querySelectorAll(".effectCont").forEach((item) => {
+          let offset1 = (scrollTop - item.offsetTop) * 0.1;
+          let offset2 = (scrollTop - item.offsetTop) * 0.1;
+
+          const target1 = item.querySelectorAll(".effectImg");
+          const target2 = item.querySelectorAll(".effectInfo");
+
+          gsap.to(target1, { dration: 0.3, y: offset1, ease: "power1.out" });
+          gsap.to(target2, { dration: 0.3, y: offset2 });
+        });
+
+        document.querySelectorAll(".effectCont.center").forEach((item) => {
+          let offset1 = (scrollTop - item.offsetTop) * 0.2;
+          let offset2 = (scrollTop - item.offsetTop) * 0.2;
+
+          const target1 = item.querySelectorAll(".effectImg");
+          const target2 = item.querySelectorAll(".effectInfo");
+
+          gsap.to(target1, { dration: 0.3, y: offset1, ease: "power1.out" });
+          gsap.to(target2, { dration: 0.3, y: offset2 });
+        });
 
         requestAnimationFrame(scroll);
       }
