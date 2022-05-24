@@ -44,8 +44,8 @@
           </div>
           <div
             class="t2"
-            data-0="transform: translate(0%,0%) scale(1);"
-            data-800="transform: translate(50%,0%) scale(2);"
+            data-0="transform: translate(0%,0%);"
+            data-800="transform: translate(50%,0%);"
           >
             welcome
           </div>
@@ -215,12 +215,42 @@
       <!-- scriptCont -->
       <section id="scriptCont">
         <ul>
-          <li><a href="#">tetris game</a></li>
-          <li><a href="#">music player</a></li>
-          <li><a href="#">typing game</a></li>
-          <li><a href="#">quiz game</a></li>
-          <li><a href="#">search game</a></li>
-          <li><a href="#">memory game</a></li>
+          <li>
+            <img
+              src="assets/img/effectCont/effect01-tetris.jpg"
+              alt="tetris"
+            /><a href="#">tetris game</a>
+          </li>
+          <li>
+            <img src="assets/img/effectCont/effect02-music.jpg" alt="music" /><a
+              href="#"
+              >music player</a
+            >
+          </li>
+          <li>
+            <img
+              src="assets/img/effectCont/effect03-typing.jpg"
+              alt="typing"
+            /><a href="#">typing game</a>
+          </li>
+          <li>
+            <img src="assets/img/effectCont/effect04-quiz.jpg" alt="quiz" /><a
+              href="#"
+              >quiz game</a
+            >
+          </li>
+          <li>
+            <img
+              src="assets/img/effectCont/effect05-search.jpg"
+              alt="search"
+            /><a href="#">search game</a>
+          </li>
+          <li>
+            <img
+              src="assets/img/effectCont/effect06-memory.jpg"
+              alt="memory"
+            /><a href="#">memory game</a>
+          </li>
         </ul>
       </section>
       <!-- //scriptCont -->
@@ -463,9 +493,62 @@
     <!-- //main -->
 
     <!-- script -->
+    <script src="../javascript/effect/js/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
-    <script src="../javascript/effect/js/gsap.min.js"></script>
+    <script>
+      const mouseImg = document.querySelectorAll("#scriptCont ul li");
+
+      mouseImg.forEach((item) => {
+        const imageWrap = item.querySelector("#scriptCont ul li img");
+        const imageWrapBounds = imageWrap.getBoundingClientRect();
+        let itemBounds = item.getBoundingClientRect();
+        const onMouseEnter = () => {
+          gsap.set(imageWrap, {
+            xPercent: -50,
+            yPercent: 50,
+            rotation: -15,
+            scale: 0.3,
+            opacity: 0,
+          });
+          gsap.to(imageWrap, {
+            xPercent: -50,
+            yPercent: -50,
+            rotation: 0,
+            scale: 1,
+            opacity: 1,
+          });
+        };
+        const onMouseLeave = () => {
+          gsap.to(imageWrap, {
+            xPercent: -50,
+            yPercent: -100,
+            rotation: 15,
+            scale: 0.3,
+            opacity: 0,
+          });
+        };
+        const onMouseMove = ({ x, y }) => {
+          gsap.to(imageWrap, {
+            duration: 1.25,
+            x: Math.abs(x - itemBounds.left),
+            y: Math.abs(y - itemBounds.top),
+          });
+        };
+        item.addEventListener("mouseenter", onMouseEnter);
+        item.addEventListener("mouseleave", onMouseLeave);
+        item.addEventListener("mousemove", onMouseMove);
+      });
+    </script>
+    <script>
+      let studyCont = document.querySelectorAll("#studyCont ul li");
+      studyCont.forEach((el) => {
+        el.addEventListener("click", (event) => {
+          console.log("ddd");
+          el.classList.toggle("flip");
+        });
+      });
+    </script>
     <script>
       var s = skrollr.init();
 
@@ -662,30 +745,28 @@
         //   }
         // });
 
-        let D4 = document.querySelector(".siteDesc.D4");
+        let D4 = document.querySelector(".D4");
         if (scrollTop >= D4.offsetTop) {
-          console.log(D4.offsetTop);
+          // console.log(D4.offsetTop);
           document
-            .querySelectorAll(".siteDesc.D4 .siteTitle span")
+            .querySelectorAll(".D4 .siteTitle span")
             .forEach((span, index) => {
               setTimeout(() => {
                 span.classList.add("show");
               }, 100 * (index + 1));
             });
           document
-            .querySelectorAll(".siteDesc.D4 .siteInfo p .infoText")
+            .querySelectorAll(".D4 .siteInfo p .infoText")
             .forEach((span, index) => {
               setTimeout(() => {
                 span.classList.add("show");
               }, 100 * (index + 1));
             });
-          document
-            .querySelectorAll(".siteDesc.D4 button")
-            .forEach((btn, index) => {
-              setTimeout(() => {
-                btn.classList.add("show");
-              }, 100 * (index + 1));
-            });
+          document.querySelectorAll(".D4 button").forEach((btn, index) => {
+            setTimeout(() => {
+              btn.classList.add("show");
+            }, 100 * (index + 1));
+          });
         }
         // 4
 
@@ -706,25 +787,25 @@
         }
 
         document.querySelectorAll(".effectCont").forEach((item) => {
-          let offset1 = (scrollTop - item.offsetTop) * 0.1;
-          let offset2 = (scrollTop - item.offsetTop) * 0.1;
+          let offset1 = (scrollTop - item.offsetTop) * 0.05;
+          let offset2 = (scrollTop - item.offsetTop) * 0.05;
 
           const target1 = item.querySelectorAll(".effectImg");
           const target2 = item.querySelectorAll(".effectInfo");
 
-          gsap.to(target1, { dration: 0.3, y: offset1, ease: "power1.out" });
-          gsap.to(target2, { dration: 0.3, y: offset2 });
+          gsap.to(target1, { duration: 0.3, y: offset1, ease: "power1.out" });
+          gsap.to(target2, { duration: 0.3, y: offset2 });
         });
 
         document.querySelectorAll(".effectCont.center").forEach((item) => {
-          let offset1 = (scrollTop - item.offsetTop) * 0.2;
-          let offset2 = (scrollTop - item.offsetTop) * 0.2;
+          let offset1 = (scrollTop - item.offsetTop) * 0.15;
+          let offset2 = (scrollTop - item.offsetTop) * 0.15;
 
           const target1 = item.querySelectorAll(".effectImg");
           const target2 = item.querySelectorAll(".effectInfo");
 
-          gsap.to(target1, { dration: 0.3, y: offset1, ease: "power1.out" });
-          gsap.to(target2, { dration: 0.3, y: offset2 });
+          gsap.to(target1, { duration: 0.3, y: offset1, ease: "power1.out" });
+          gsap.to(target2, { duration: 0.3, y: offset2 });
         });
 
         requestAnimationFrame(scroll);

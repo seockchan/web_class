@@ -3,7 +3,6 @@ body {
   height: 20000px;
   background: #000;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -592,8 +591,16 @@ main {
 
 #scriptCont ul li {
   list-style: none;
+  position: relative;
 }
-
+#scriptCont ul li img {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  transform: translate(-50%);
+  width: 30vw;
+  opacity: 0;
+}
 #scriptCont ul li a {
   text-decoration: none;
   font-size: 5.5vw;
@@ -650,6 +657,11 @@ main {
   margin: 1vw;
   border-radius: 1vw;
   text-align: center;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+}
+#studyCont ul li.flip {
+  transform: rotateY(180deg);
 }
 
 #studyCont ul li a {
