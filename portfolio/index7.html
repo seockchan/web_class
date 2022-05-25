@@ -574,8 +574,8 @@
       <!-- //effectCont -->
 
       <!-- banner2 -->
-      <section id="banner" class="banner2">
-        <div class="bannerTitle">contact</div>
+      <section id="banner" class="banner2 reveal">
+        <div class="title2">contact</div>
       </section>
       <!-- banner2 -->
 
@@ -914,6 +914,11 @@
         let banner = document.querySelector("#banner");
         if (scrollTop >= banner.offsetTop - 300) {
           document.querySelector(".bannerTitle").classList.add("show");
+        }
+
+        let banner2 = document.querySelector(".banner2");
+        if (scrollTop >= banner2.offsetTop - 300) {
+          document.querySelector(".title2").classList.add("show");
         }
 
         document.querySelectorAll(".effectCont").forEach((item) => {

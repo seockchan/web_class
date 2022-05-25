@@ -37,7 +37,8 @@ main {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url(https://images.unsplash.com/photo-1543083115-638c32cd3d58?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632) center center no-repeat,
+  background: url(https://images.unsplash.com/photo-1543083115-638c32cd3d58?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632)
+      center center no-repeat,
     linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde);
   background-size: cover;
   z-index: 2;
@@ -251,7 +252,8 @@ main {
   }
 
   80% {
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0)
+      rotateY(0deg);
     animation-timing-function: ease-in;
   }
 
@@ -597,6 +599,21 @@ main {
   transition: all 1s;
 }
 
+.title2 {
+  color: #fff;
+  font-size: 8.5vw;
+  text-transform: uppercase;
+  font-family: "Orbitron";
+  text-align: center;
+  padding-top: 5vw;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.title2.show {
+  opacity: 1;
+  transform: translateX(0%);
+}
 .bannerTitle.show {
   opacity: 1;
   transform: translateX(0%);
@@ -669,7 +686,6 @@ main {
 
 #studyCont ul {
   display: flex;
- 
 }
 
 #studyCont ul li {
@@ -686,7 +702,6 @@ main {
   perspective: 1000px;
   transform-style: preserve-3d;
   position: relative;
-  
 }
 #studyCont ul li .view {
   position: absolute;
@@ -699,7 +714,7 @@ main {
   pointer-events: none;
 }
 #studyCont ul li .view.front {
-  z-index: 10;       
+  z-index: 10;
   transform: rotateY(0deg);
 }
 #studyCont ul li .view.back {
