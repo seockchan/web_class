@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/locomotive.css" />
     <style>
       /* layout */
+
       #section1 {
         background-color: #000;
       }
@@ -31,9 +32,11 @@
       }
       .sec1-3 {
         background-color: #000;
+        width: 100%;
       }
       .sec1-4 {
         background-color: #000;
+        height: 100vh;
       }
       #section2 {
         height: 100vh;
@@ -119,7 +122,7 @@
           <div class="sec1-3">
             <!-- banner -->
             <section id="banner">
-              <div class="bannerTitle">standard site</div>
+              <div class="bannerTitle">site work</div>
             </section>
             <!-- //banner -->
             <div id="contents" class="ContLeft">
@@ -148,9 +151,7 @@
                 </div>
               </div>
             </div>
-            <section id="banner">
-              <div class="bannerTitle">responsive site</div>
-            </section>
+
             <div id="contents" class="ContRight">
               <div class="contBox">
                 <div class="contInfo">
@@ -177,9 +178,6 @@
                 </div>
               </div>
             </div>
-            <section id="banner">
-              <div class="bannerTitle">php site</div>
-            </section>
             <div id="contents" class="ContLeft">
               <div class="contBox">
                 <div class="contInfo">
@@ -207,9 +205,6 @@
                 </div>
               </div>
             </div>
-            <section id="banner">
-              <div class="bannerTitle">react site</div>
-            </section>
             <div id="contents" class="ContRight">
               <div class="contBox">
                 <div class="contInfo">
@@ -236,7 +231,59 @@
               </div>
             </div>
           </div>
-          <div class="sec1-4"></div>
+          <div class="sec1-4">
+            <div id="banner">
+              <div class="bannerTitle">javascript</div>
+            </div>
+            <!-- scriptCont -->
+            <div id="scriptCont">
+              <ul>
+                <li>
+                  <img
+                    src="assets/img/effectCont/effect01-tetris.jpg"
+                    alt="tetris"
+                  />
+                  <p>tetris game</p>
+                </li>
+                <li>
+                  <img
+                    src="assets/img/effectCont/effect02-music.jpg"
+                    alt="music"
+                  />
+                  <p>music player</p>
+                </li>
+                <li>
+                  <img
+                    src="assets/img/effectCont/effect03-typing.jpg"
+                    alt="typing"
+                  />
+                  <p>typing game</p>
+                </li>
+                <li>
+                  <img
+                    src="assets/img/effectCont/effect04-quiz.jpg"
+                    alt="quiz"
+                  />
+                  <p>quiz game</p>
+                </li>
+                <li>
+                  <img
+                    src="assets/img/effectCont/effect05-search.jpg"
+                    alt="search"
+                  />
+                  <p>search game</p>
+                </li>
+                <li>
+                  <img
+                    src="assets/img/effectCont/effect06-memory.jpg"
+                    alt="memory"
+                  />
+                  <p>memory game</p>
+                </li>
+              </ul>
+            </div>
+            <!-- //scriptCont -->
+          </div>
         </div>
       </section>
       <section id="section2" class="horizontal">
@@ -250,7 +297,53 @@
     </main>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="/javascript/effect/js/gsap.min.js"></script>
+    <script>
+      const mouseImg = document.querySelectorAll("#scriptCont ul li");
+
+      mouseImg.forEach((item) => {
+        const imageWrap = item.querySelector("#scriptCont ul li img");
+        const imageWrapBounds = imageWrap.getBoundingClientRect();
+        let itemBounds = item.getBoundingClientRect();
+        const onMouseEnter = () => {
+          gsap.set(imageWrap, {
+            xPercent: -50,
+            yPercent: 50,
+            rotation: -15,
+            scale: 0.3,
+            opacity: 0,
+          });
+          gsap.to(imageWrap, {
+            xPercent: -50,
+            yPercent: -50,
+            rotation: 0,
+            scale: 1,
+            opacity: 1,
+          });
+        };
+        const onMouseLeave = () => {
+          gsap.to(imageWrap, {
+            xPercent: -50,
+            yPercent: -100,
+            rotation: 15,
+            scale: 0.3,
+            opacity: 0,
+          });
+        };
+        const onMouseMove = ({ x, y }) => {
+          gsap.to(imageWrap, {
+            duration: 1.25,
+            x: Math.abs(x - itemBounds.left),
+            y: Math.abs(y - itemBounds.top),
+          });
+        };
+        item.addEventListener("mouseenter", onMouseEnter);
+        item.addEventListener("mouseleave", onMouseLeave);
+        item.addEventListener("mousemove", onMouseMove);
+      });
+    </script>
     <script>
       gsap.registerPlugin(ScrollTrigger);
       const pageContents = document.getElementById("main");
