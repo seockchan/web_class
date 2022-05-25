@@ -17,6 +17,7 @@
       }
       #section2 {
         background-color: #7d7565;
+        height: 100vh;
       }
       #section3 {
         background-color: #b9b3a9;
@@ -24,7 +25,6 @@
       }
       .sec1-1 {
         background-color: #000;
-        height: 100vh;
       }
       .sec1-2 {
         background-color: #000;
@@ -36,7 +36,6 @@
       }
       .sec1-4 {
         background-color: #000;
-        height: 100vh;
       }
       #section2 {
         height: 100vh;
@@ -122,13 +121,17 @@
           <div class="sec1-3">
             <!-- banner -->
             <section id="banner">
-              <div class="bannerTitle">site work</div>
+              <div class="bannerTitle" data-scroll data-scroll-speed="1">
+                site work
+              </div>
             </section>
             <!-- //banner -->
             <div id="contents" class="ContLeft">
               <div class="contBox">
                 <div class="contInfo">
-                  <div class="siteImg img1"></div>
+                  <div class="siteImg img1">
+                    <a class="view" href="#"><span></span></a>
+                  </div>
                   <div class="siteDesc D1">
                     <p class="siteTitle">WEBSTANDARD SITE</p>
                     <div class="siteInfo">
@@ -155,7 +158,9 @@
             <div id="contents" class="ContRight">
               <div class="contBox">
                 <div class="contInfo">
-                  <div class="siteImg img2"></div>
+                  <div class="siteImg img2">
+                    <a class="view" href="#"><span></span></a>
+                  </div>
                   <div class="siteDesc D2">
                     <div class="siteTitle">WEB RESPONSIVE SITE</div>
                     <div class="siteInfo">
@@ -181,7 +186,9 @@
             <div id="contents" class="ContLeft">
               <div class="contBox">
                 <div class="contInfo">
-                  <div class="siteImg img3"></div>
+                  <div class="siteImg img3">
+                    <a class="view" href="#"><span></span></a>
+                  </div>
                   <div class="siteDesc D3">
                     <div class="siteTitle">PHP SITE</div>
                     <div class="siteInfo">
@@ -208,7 +215,9 @@
             <div id="contents" class="ContRight">
               <div class="contBox">
                 <div class="contInfo">
-                  <div class="siteImg img4"></div>
+                  <div class="siteImg img4">
+                    <a class="view" href="#"><span></span></a>
+                  </div>
                   <div class="siteDesc D4">
                     <div class="siteTitle">REACT SITE</div>
                     <div class="siteInfo">
@@ -222,7 +231,7 @@
                         >
                       </p>
                     </div>
-                    <button class="btn-animate">VIE W</button>
+                    <button class="btn-animate">VIEW</button>
                     <button class="btn-animate">CODE</button>
                     <button class="htmlIcon"></button>
                     <button class="cssIcon"></button>
@@ -233,7 +242,9 @@
           </div>
           <div class="sec1-4">
             <div id="banner">
-              <div class="bannerTitle">javascript</div>
+              <div class="bannerTitle" data-scroll data-scroll-speed="100">
+                javascript
+              </div>
             </div>
             <!-- scriptCont -->
             <div id="scriptCont">
@@ -336,7 +347,7 @@
           gsap.to(imageWrap, {
             duration: 1.25,
             x: Math.abs(x - itemBounds.left),
-            y: Math.abs(y - itemBounds.top),
+            // y: Math.abs(y - itemBounds.top),
           });
         };
         item.addEventListener("mouseenter", onMouseEnter);
