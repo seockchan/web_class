@@ -96,7 +96,8 @@ html {
 }
 .sec2About {
   position: relative;
-  padding: 10vw 0;
+  margin-top: 10vw;
+  margin-bottom: 20vw;
   height: 10vw;
 }
 .sec2AboutBg {
@@ -217,7 +218,7 @@ html {
   height: 3vw;
 }
 #contents.ContRight .siteImg .view {
-  left: 40%;
+  left: 38%;
   top: 30%;
   border: 0.5vw solid #4c348e;
 }
