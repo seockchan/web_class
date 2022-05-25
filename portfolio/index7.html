@@ -1,975 +1,1168 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포폴 틀</title>
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style2.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>포폴 틀</title>
-  <link rel="stylesheet" href="assets/css/font.css" />
-  <link rel="stylesheet" href="assets/css/reset.css" />
-  <link rel="stylesheet" href="assets/css/style2.css" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
+  <body>
+    <!-- info -->
+    <div id="scrollTop"><span>0</span></div>
+    <div id="scrollTop" class="s1"><span>0</span></div>
+    <div id="scrollTop" class="s2"><span>0</span></div>
+    <div id="scrollTop" class="s3"><span>0</span></div>
+    <!-- //info -->
 
-<body>
-  <!-- info -->
-  <div id="scrollTop"><span>0</span></div>
-  <div id="scrollTop" class="s1"><span>0</span></div>
-  <div id="scrollTop" class="s2"><span>0</span></div>
-  <div id="scrollTop" class="s3"><span>0</span></div>
-  <!-- //info -->
+    <!-- header -->
+    <header id="header">
+      <h1>portfolio</h1>
+    </header>
+    <!-- header -->
 
-  <!-- header -->
-  <header id="header">
-    <h1>portfolio</h1>
-  </header>
-  <!-- header -->
-
-  <!-- main -->
-  <main>
-    <!-- mainCont -->
-    <section id="mainCont">
-      <canvas id="mainContBg"></canvas>
-      <div class="mainContText">
-        <div class="t1" data-0="transform: translate(0%,0%);" data-800="transform: translate(-50%,0%);">
-          portfolio
-        </div>
-        <div class="t2" data-0="transform: translate(0%,0%);" data-800="transform: translate(50%,0%);">
-          welcome
-        </div>
-      </div>
-    </section>
-    <!-- //mainCont -->
-
-    <!-- siteCont -->
-    <section id="siteCont">
-      <div class="siteContText">
-        <p data-300="opacity:0;" data-700="opacity:1;">
-          어떤 일이라도 <span class="green">노력</span>하고
-          <span class="green">즐기면</span> 그 결과는
-          <span class="green">빛</span>을 바란다고 생각합니다.
-        </p>
-        <p data-350="opacity:0;" data-750="opacity:1;">
-          신입의 <span class="green">열정</span>과
-          <span class="green">도전정신</span>을 깊숙히 새기며 배움에 있어
-          <span class="green">겸손함</span>을 유지하며
-        </p>
-        <p data-400="opacity:0;" data-800="opacity:1;">
-          세부적인 곳까지 파고드는 <span class="green">개발자</span>가
-          되겠습니다.
-        </p>
-      </div>
-      <div id="contents" class="ContLeft">
-        <div class="contBox">
-          <div class="bgText" data-400="transform: translate(0%,0%);" data-1600="transform: translate(-40%,0%);">
-            STANDARD SITE
+    <!-- main -->
+    <main>
+      <!-- mainCont -->
+      <section id="mainCont">
+        <canvas id="mainContBg"></canvas>
+        <div class="mainContText">
+          <div
+            class="t1"
+            data-0="transform: translate(0%,0%);"
+            data-800="transform: translate(-50%,0%);"
+          >
+            portfolio
           </div>
-          <div class="contInfo">
-            <div class="siteImg img1"></div>
-            <div class="siteDesc D1">
-              <p class="siteTitle">WEBSTANDARD SITE</p>
-              <div class="siteInfo">
-                <p>
-                  <span class="infoText"><span class="green">웹표준형</span> 사이트입니다.
-                    <span class="green">웹접근성</span>에 근거하여 모든
-                    사용자가</span>
-                  <span class="infoText">사용함에 있어 불편함없이 설계된 사이트입니다.</span>
-                </p>
+          <div
+            class="t2"
+            data-0="transform: translate(0%,0%);"
+            data-800="transform: translate(50%,0%);"
+          >
+            welcome
+          </div>
+        </div>
+      </section>
+      <!-- //mainCont -->
+
+      <!-- siteCont -->
+      <section id="siteCont">
+        <div class="siteContText">
+          <p data-300="opacity:0;" data-700="opacity:1;">
+            어떤 일이라도 <span class="green">노력</span>하고
+            <span class="green">즐기면</span> 그 결과는
+            <span class="green">빛</span>을 바란다고 생각합니다.
+          </p>
+          <p data-350="opacity:0;" data-750="opacity:1;">
+            신입의 <span class="green">열정</span>과
+            <span class="green">도전정신</span>을 깊숙히 새기며 배움에 있어
+            <span class="green">겸손함</span>을 유지하며
+          </p>
+          <p data-400="opacity:0;" data-800="opacity:1;">
+            세부적인 곳까지 파고드는 <span class="green">개발자</span>가
+            되겠습니다.
+          </p>
+        </div>
+        <div id="contents" class="ContLeft">
+          <div class="contBox">
+            <div
+              class="bgText"
+              data-400="transform: translate(0%,0%);"
+              data-1600="transform: translate(-40%,0%);"
+            >
+              STANDARD SITE
+            </div>
+            <div class="contInfo">
+              <div class="siteImg img1"></div>
+              <div class="siteDesc D1">
+                <p class="siteTitle">WEBSTANDARD SITE</p>
+                <div class="siteInfo">
+                  <p>
+                    <span class="infoText"
+                      ><span class="green">웹표준형</span> 사이트입니다.
+                      <span class="green">웹접근성</span>에 근거하여 모든
+                      사용자가</span
+                    >
+                    <span class="infoText"
+                      >사용함에 있어 불편함없이 설계된 사이트입니다.</span
+                    >
+                  </p>
+                </div>
+                <button class="btn-animate">VIEW</button>
+                <button class="btn-animate">CODE</button>
+                <button class="htmlIcon"></button>
+                <button class="cssIcon"></button>
               </div>
-              <button class="btn-animate">VIEW</button>
-              <button class="btn-animate">CODE</button>
-              <button class="htmlIcon"></button>
-              <button class="cssIcon"></button>
             </div>
           </div>
         </div>
-      </div>
-      <div id="contents" class="ContRight">
-        <div class="contBox">
-          <div class="bgText" data-1500="transform: translate(0%,0%);" data-2700="transform: translate(-40%,0%);">
-            responsive SITE
-          </div>
-          <div class="contInfo">
-            <div class="siteImg img2"></div>
-            <div class="siteDesc D2">
-              <div class="siteTitle">WEB RESPONSIVE SITE</div>
-              <div class="siteInfo">
-                <p>
-                  <span class="infoText"><span class="purple">반응형</span> 웹 사이트입니다.
-                    웹표준을 준수하며</span>
-                  <span class="infoText"><span class="purple">스크립트요소들을 활용</span>하여
-                    반응형까지 지원하는 페이지입니다.</span>
-                </p>
+        <div id="contents" class="ContRight">
+          <div class="contBox">
+            <div
+              class="bgText"
+              data-1500="transform: translate(0%,0%);"
+              data-2700="transform: translate(-40%,0%);"
+            >
+              responsive SITE
+            </div>
+            <div class="contInfo">
+              <div class="siteImg img2"></div>
+              <div class="siteDesc D2">
+                <div class="siteTitle">WEB RESPONSIVE SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="infoText"
+                      ><span class="purple">반응형</span> 웹 사이트입니다.
+                      웹표준을 준수하며</span
+                    >
+                    <span class="infoText"
+                      ><span class="purple">스크립트요소들을 활용</span>하여
+                      반응형까지 지원하는 페이지입니다.</span
+                    >
+                  </p>
+                </div>
+                <button class="btn-animate">VIEW</button>
+                <button class="btn-animate">CODE</button>
+                <button class="htmlIcon"></button>
+                <button class="cssIcon"></button>
               </div>
-              <button class="btn-animate">VIEW</button>
-              <button class="btn-animate">CODE</button>
-              <button class="htmlIcon"></button>
-              <button class="cssIcon"></button>
             </div>
           </div>
         </div>
-      </div>
-      <div id="contents" class="ContLeft">
-        <div class="contBox">
-          <div class="bgText" data-2700="transform: translate(0%,0%);" data-3800="transform: translate(30%,0%);">
-            PHP SITE
-          </div>
-          <div class="contInfo">
-            <div class="siteImg img3"></div>
-            <div class="siteDesc D3">
-              <div class="siteTitle">PHP SITE</div>
-              <div class="siteInfo">
-                <p>
-                  <span class="infoText"><span class="green">PHP</span> 사이트입니다. 닷홈을
-                    이용하여 서버를</span><span class="infoText">만들고
-                    <span class="green">회원가입, 로그인, 로그아웃, 글쓰기 등</span>을 만든 사이트입니다.</span>
-                </p>
+        <div id="contents" class="ContLeft">
+          <div class="contBox">
+            <div
+              class="bgText"
+              data-2700="transform: translate(0%,0%);"
+              data-3800="transform: translate(30%,0%);"
+            >
+              PHP SITE
+            </div>
+            <div class="contInfo">
+              <div class="siteImg img3"></div>
+              <div class="siteDesc D3">
+                <div class="siteTitle">PHP SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="infoText"
+                      ><span class="green">PHP</span> 사이트입니다. 닷홈을
+                      이용하여 서버를</span
+                    ><span class="infoText"
+                      >만들고
+                      <span class="green"
+                        >회원가입, 로그인, 로그아웃, 글쓰기 등</span
+                      >을 만든 사이트입니다.</span
+                    >
+                  </p>
+                </div>
+                <button class="btn-animate">VIEW</button>
+                <button class="btn-animate">CODE</button>
+                <button class="htmlIcon"></button>
+                <button class="cssIcon"></button>
               </div>
-              <button class="btn-animate">VIEW</button>
-              <button class="btn-animate">CODE</button>
-              <button class="htmlIcon"></button>
-              <button class="cssIcon"></button>
             </div>
           </div>
         </div>
-      </div>
-      <div id="contents" class="ContRight">
-        <div class="contBox">
-          <div class="bgText" data-3800="transform: translate(0%,0%);" data-5100="transform: translate(30%,0%);">
-            REACT SITE
-          </div>
-          <div class="contInfo">
-            <div class="siteImg img4"></div>
-            <div class="siteDesc D4">
-              <div class="siteTitle">REACT SITE</div>
-              <div class="siteInfo">
-                <p>
-                  <span class="infoText"><span class="purple">REACT</span> 사이트입니다.</span>
-                  <span class="infoText"><span class="purple">컴퍼넌트</span>를 활용하여
-                    반응형까지 지원하는 페이지입니다.</span>
-                </p>
+        <div id="contents" class="ContRight">
+          <div class="contBox">
+            <div
+              class="bgText"
+              data-3800="transform: translate(0%,0%);"
+              data-5100="transform: translate(30%,0%);"
+            >
+              REACT SITE
+            </div>
+            <div class="contInfo">
+              <div class="siteImg img4"></div>
+              <div class="siteDesc D4">
+                <div class="siteTitle">REACT SITE</div>
+                <div class="siteInfo">
+                  <p>
+                    <span class="infoText"
+                      ><span class="purple">REACT</span> 사이트입니다.</span
+                    >
+                    <span class="infoText"
+                      ><span class="purple">컴퍼넌트</span>를 활용하여
+                      반응형까지 지원하는 페이지입니다.</span
+                    >
+                  </p>
+                </div>
+                <button class="btn-animate">VIEW</button>
+                <button class="btn-animate">CODE</button>
+                <button class="htmlIcon"></button>
+                <button class="cssIcon"></button>
               </div>
-              <button class="btn-animate">VIEW</button>
-              <button class="btn-animate">CODE</button>
-              <button class="htmlIcon"></button>
-              <button class="cssIcon"></button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- //siteCont -->
+      </section>
+      <!-- //siteCont -->
 
-    <!-- banner -->
-    <section id="banner" class="reveal">
-      <div class="bannerTitle">javascript</div>
-    </section>
-    <!-- //banner -->
+      <!-- banner -->
+      <section id="banner" class="reveal">
+        <div class="bannerTitle">javascript</div>
+      </section>
+      <!-- //banner -->
 
-    <!-- scriptCont -->
-    <section id="scriptCont">
-      <ul>
-        <li>
-          <img src="assets/img/effectCont/effect01-tetris.jpg" alt="tetris" /><a href="#">tetris game</a>
-        </li>
-        <li>
-          <img src="assets/img/effectCont/effect02-music.jpg" alt="music" /><a href="#">music player</a>
-        </li>
-        <li>
-          <img src="assets/img/effectCont/effect03-typing.jpg" alt="typing" /><a href="#">typing game</a>
-        </li>
-        <li>
-          <img src="assets/img/effectCont/effect04-quiz.jpg" alt="quiz" /><a href="#">quiz game</a>
-        </li>
-        <li>
-          <img src="assets/img/effectCont/effect05-search.jpg" alt="search" /><a href="#">search game</a>
-        </li>
-        <li>
-          <img src="assets/img/effectCont/effect06-memory.jpg" alt="memory" /><a href="#">memory game</a>
-        </li>
-      </ul>
-    </section>
-    <!-- //scriptCont -->
+      <!-- scriptCont -->
+      <section id="scriptCont">
+        <ul>
+          <li>
+            <img
+              src="assets/img/effectCont/effect01-tetris.jpg"
+              alt="tetris"
+            /><a href="#">tetris game</a>
+          </li>
+          <li>
+            <img src="assets/img/effectCont/effect02-music.jpg" alt="music" /><a
+              href="#"
+              >music player</a
+            >
+          </li>
+          <li>
+            <img
+              src="assets/img/effectCont/effect03-typing.jpg"
+              alt="typing"
+            /><a href="#">typing game</a>
+          </li>
+          <li>
+            <img src="assets/img/effectCont/effect04-quiz.jpg" alt="quiz" /><a
+              href="#"
+              >quiz game</a
+            >
+          </li>
+          <li>
+            <img
+              src="assets/img/effectCont/effect05-search.jpg"
+              alt="search"
+            /><a href="#">search game</a>
+          </li>
+          <li>
+            <img
+              src="assets/img/effectCont/effect06-memory.jpg"
+              alt="memory"
+            /><a href="#">memory game</a>
+          </li>
+        </ul>
+      </section>
+      <!-- //scriptCont -->
 
-    <!-- studyCont -->
-    <section id="studyCont">
-      <ul>
-        <li><a href="../javascript/javascript01.html#sample1" class="view front">if</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-        <li><a href="#studyCont" class="view front">some</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-        <li><a href="#studyCont" class="view front">semantic</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-        <li><a href="#studyCont" class="view front">break</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-        <li><a href="#studyCont" class="view front">grid</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-        <li><a href="#studyCont" class="view front">window</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-        <li><a href="#studyCont" class="view front">defer</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-        <li><a href="#studyCont" class="view front">let</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-        <li><a href="#studyCont" class="view front">css</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-        <li><a href="#studyCont" class="view front">const</a>
-          <a href="#studyCont" class="view back">뒤</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">if</a></li>
-        <li><a href="#">some</a></li>
-        <li><a href="#">semantic</a></li>
-        <li><a href="#">break</a></li>
-        <li><a href="#">grid</a></li>
-        <li><a href="#">window</a></li>
-        <li><a href="#">defer</a></li>
-        <li><a href="#">let</a></li>
-        <li><a href="#">css</a></li>
-        <li><a href="#">const</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">if</a></li>
-        <li><a href="#">some</a></li>
-        <li><a href="#">semantic</a></li>
-        <li><a href="#">break</a></li>
-        <li><a href="#">grid</a></li>
-        <li><a href="#">window</a></li>
-        <li><a href="#">defer</a></li>
-        <li><a href="#">let</a></li>
-        <li><a href="#">css</a></li>
-        <li><a href="#">const</a></li>
-      </ul>
-      <ul>
-        <li><a href="#">if</a></li>
-        <li><a href="#">some</a></li>
-        <li><a href="#">semantic</a></li>
-        <li><a href="#">break</a></li>
-        <li><a href="#">grid</a></li>
-        <li><a href="#">window</a></li>
-        <li><a href="#">defer</a></li>
-        <li><a href="#">let</a></li>
-        <li><a href="#">css</a></li>
-        <li><a href="#">const</a></li>
-      </ul>
-    </section>
-    <!-- studyCont -->
+      <!-- studyCont -->
+      <section id="studyCont">
+        <ul>
+          <li>
+            <a href="../javascript/javascript01.html#sample1" class="view front"
+              >if</a
+            >
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">some</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">semantic</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">break</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">grid</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">window</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">defer</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">let</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">css</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">const</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="../javascript/javascript01.html#sample1" class="view front"
+              >if</a
+            >
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">some</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">semantic</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">break</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">grid</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">window</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">defer</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">let</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">css</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">const</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+        </ul>
+        </ul>
+        <ul>
+          <li>
+            <a href="../javascript/javascript01.html#sample1" class="view front"
+              >if</a
+            >
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">some</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">semantic</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">break</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">grid</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">window</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">defer</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">let</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">css</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">const</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+        </ul>
+        </ul>
+        <ul>
+          <li>
+            <a href="../javascript/javascript01.html#sample1" class="view front"
+              >if</a
+            >
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">some</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">semantic</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">break</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">grid</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">window</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">defer</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">let</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">css</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+          <li>
+            <a href="#studyCont" class="view front">const</a>
+            <a href="#studyCont" class="view back">뒤</a>
+          </li>
+        </ul>
+        </ul>
+      </section>
+      <!-- studyCont -->
 
-    <!-- effectCont -->
-    <section id="effectCont">
-      <div class="effectCont">
-        <div class="effectBox">
-          <div class="effectImg">
-            <img src="assets/img/effectCont/effect01-tetris.jpg" alt="tetris" />
+      <!-- effectCont -->
+      <section id="effectCont">
+        <div class="effectCont">
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect01-tetris.jpg"
+                alt="tetris"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">테트리스 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">테트리스 게임</span>입니다.
+              </div>
+            </div>
           </div>
-          <div class="effectInfo">
-            <div class="effectTitle">테트리스 게임</div>
-            <div class="effectDesc">
-              자바스크립트로 만든<br />
-              <span class="green">테트리스 게임</span>입니다.
+          <div class="effectBox">
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect02-music.jpg" alt="music" />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">뮤직 플레이어</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">뮤직 플레이어</span>입니다.
+              </div>
+            </div>
+          </div>
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect03-typing.jpg"
+                alt="typing"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">타자 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">타이핑 게임</span>입니다.
+              </div>
             </div>
           </div>
         </div>
-        <div class="effectBox">
-          <div class="effectImg">
-            <img src="assets/img/effectCont/effect02-music.jpg" alt="music" />
+        <div class="effectCont center">
+          <div class="effectBox">
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect04-quiz.jpg" alt="quiz" />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">퀴즈 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">퀴즈 게임</span>입니다.
+              </div>
+            </div>
           </div>
-          <div class="effectInfo">
-            <div class="effectTitle">뮤직 플레이어</div>
-            <div class="effectDesc">
-              자바스크립트로 만든<br />
-              <span class="green">뮤직 플레이어</span>입니다.
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect05-search.jpg"
+                alt="search"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">검색 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">검색 게임</span>입니다.
+              </div>
+            </div>
+          </div>
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect06-memory.jpg"
+                alt="memory"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">메모리 게임</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">같은 그림 찾기 게임</span>입니다.
+              </div>
             </div>
           </div>
         </div>
-        <div class="effectBox">
-          <div class="effectImg">
-            <img src="assets/img/effectCont/effect03-typing.jpg" alt="typing" />
+        <div class="effectCont">
+          <div class="effectBox">
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect07-mouse.jpg" alt="mouse" />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">마우스 이펙트</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">마우스 이펙트</span>입니다.
+              </div>
+            </div>
           </div>
-          <div class="effectInfo">
-            <div class="effectTitle">타자 게임</div>
-            <div class="effectDesc">
-              자바스크립트로 만든<br />
-              <span class="green">타이핑 게임</span>입니다.
+          <div class="effectBox">
+            <div class="effectImg">
+              <img src="assets/img/effectCont/effect08-slide.jpg" alt="slide" />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">슬라이드 이펙트</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">슬라이드 이펙트</span>입니다.
+              </div>
+            </div>
+          </div>
+          <div class="effectBox">
+            <div class="effectImg">
+              <img
+                src="assets/img/effectCont/effect09-parallax.jpg"
+                alt="parallax"
+              />
+            </div>
+            <div class="effectInfo">
+              <div class="effectTitle">패럴랙스 이펙트</div>
+              <div class="effectDesc">
+                자바스크립트로 만든<br />
+                <span class="green">패럴랙스 이펙트</span>입니다.
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="effectCont center">
-        <div class="effectBox">
-          <div class="effectImg">
-            <img src="assets/img/effectCont/effect04-quiz.jpg" alt="quiz" />
-          </div>
-          <div class="effectInfo">
-            <div class="effectTitle">퀴즈 게임</div>
-            <div class="effectDesc">
-              자바스크립트로 만든<br />
-              <span class="green">퀴즈 게임</span>입니다.
-            </div>
-          </div>
-        </div>
-        <div class="effectBox">
-          <div class="effectImg">
-            <img src="assets/img/effectCont/effect05-search.jpg" alt="search" />
-          </div>
-          <div class="effectInfo">
-            <div class="effectTitle">검색 게임</div>
-            <div class="effectDesc">
-              자바스크립트로 만든<br />
-              <span class="green">검색 게임</span>입니다.
-            </div>
-          </div>
-        </div>
-        <div class="effectBox">
-          <div class="effectImg">
-            <img src="assets/img/effectCont/effect06-memory.jpg" alt="memory" />
-          </div>
-          <div class="effectInfo">
-            <div class="effectTitle">메모리 게임</div>
-            <div class="effectDesc">
-              자바스크립트로 만든<br />
-              <span class="green">같은 그림 찾기 게임</span>입니다.
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="effectCont">
-        <div class="effectBox">
-          <div class="effectImg">
-            <img src="assets/img/effectCont/effect07-mouse.jpg" alt="mouse" />
-          </div>
-          <div class="effectInfo">
-            <div class="effectTitle">마우스 이펙트</div>
-            <div class="effectDesc">
-              자바스크립트로 만든<br />
-              <span class="green">마우스 이펙트</span>입니다.
-            </div>
-          </div>
-        </div>
-        <div class="effectBox">
-          <div class="effectImg">
-            <img src="assets/img/effectCont/effect08-slide.jpg" alt="slide" />
-          </div>
-          <div class="effectInfo">
-            <div class="effectTitle">슬라이드 이펙트</div>
-            <div class="effectDesc">
-              자바스크립트로 만든<br />
-              <span class="green">슬라이드 이펙트</span>입니다.
-            </div>
-          </div>
-        </div>
-        <div class="effectBox">
-          <div class="effectImg">
-            <img src="assets/img/effectCont/effect09-parallax.jpg" alt="parallax" />
-          </div>
-          <div class="effectInfo">
-            <div class="effectTitle">패럴랙스 이펙트</div>
-            <div class="effectDesc">
-              자바스크립트로 만든<br />
-              <span class="green">패럴랙스 이펙트</span>입니다.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- //effectCont -->
+      </section>
+      <!-- //effectCont -->
 
-    <!-- banner2 -->
-    <section id="banner" class="banner2">
-      <div class="bannerTitle">contact</div>
-    </section>
-    <!-- banner2 -->
+      <!-- banner2 -->
+      <section id="banner" class="banner2">
+        <div class="bannerTitle">contact</div>
+      </section>
+      <!-- banner2 -->
 
-    <!-- contact -->
-    <section id="contact">
-      <div class="contact">
-        <div class="contactImg">
-          <img src="assets/img/face.jpg" alt="프로필" />
+      <!-- contact -->
+      <section id="contact">
+        <div class="contact">
+          <div class="contactImg">
+            <img src="assets/img/face.jpg" alt="프로필" />
+          </div>
+          <div class="contactInfo">
+            <div class="info">
+              <h3>name :</h3>
+              <p class="name">배석찬</p>
+            </div>
+            <div class="info">
+              <h3>e-mail :</h3>
+              <p>sna12345@naver.com</p>
+            </div>
+            <div class="info">
+              <h3>phone :</h3>
+              <p>010-3312-5279</p>
+            </div>
+          </div>
         </div>
-        <div class="contactInfo">
-          <div class="info">
-            <h3>name :</h3>
-            <p class="name">배석찬</p>
-          </div>
-          <div class="info">
-            <h3>e-mail :</h3>
-            <p>sna12345@naver.com</p>
-          </div>
-          <div class="info">
-            <h3>phone :</h3>
-            <p>010-3312-5279</p>
-          </div>
+      </section>
+      <!-- //contact -->
+
+      <!-- send -->
+      <section id="send">
+        <div class="leftImg">
+          <img class="small1" src="assets/img/left2.jpg" alt="" />
+          <img src="assets/img/left.jpg" alt="" />
         </div>
-      </div>
-    </section>
-    <!-- //contact -->
+        <div class="sendDesc">
+          <h4>Thank you for viewing my portfolio</h4>
+          <h3>Do you want to contact me?</h3>
+          <a href="#">SEND</a>
+        </div>
+        <div class="rightImg">
+          <img src="assets/img/right.jpg" alt="" />
+          <img class="small2" src="assets/img/right2.jpg" alt="" />
+        </div>
+      </section>
+      <!-- //send -->
+    </main>
+    <!-- //main -->
 
-    <!-- send -->
-    <section id="send">
-      <div class="leftImg">
-        <img class="small1" src="assets/img/left2.jpg" alt="" />
-        <img src="assets/img/left.jpg" alt="" />
-      </div>
-      <div class="sendDesc">
-        <h4>Thank you for viewing my portfolio</h4>
-        <h3>Do you want to contact me?</h3>
-        <a href="#">SEND</a>
-      </div>
-      <div class="rightImg">
-        <img src="assets/img/right.jpg" alt="" />
-        <img class="small2" src="assets/img/right2.jpg" alt="" />
-      </div>
-    </section>
-    <!-- //send -->
-  </main>
-  <!-- //main -->
+    <!-- script -->
+    <script src="../javascript/effect/js/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script>
+      const mouseImg = document.querySelectorAll("#scriptCont ul li");
 
-  <!-- script -->
-  <script src="../javascript/effect/js/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <script src="assets/js/skrollr.min.js"></script>
-  <script>
-    const mouseImg = document.querySelectorAll("#scriptCont ul li");
-
-    mouseImg.forEach((item) => {
-      const imageWrap = item.querySelector("#scriptCont ul li img");
-      const imageWrapBounds = imageWrap.getBoundingClientRect();
-      let itemBounds = item.getBoundingClientRect();
-      const onMouseEnter = () => {
-        gsap.set(imageWrap, {
-          xPercent: -50,
-          yPercent: 50,
-          rotation: -15,
-          scale: 0.3,
-          opacity: 0,
-        });
-        gsap.to(imageWrap, {
-          xPercent: -50,
-          yPercent: -50,
-          rotation: 0,
-          scale: 1,
-          opacity: 1,
-        });
-      };
-      const onMouseLeave = () => {
-        gsap.to(imageWrap, {
-          xPercent: -50,
-          yPercent: -100,
-          rotation: 15,
-          scale: 0.3,
-          opacity: 0,
-        });
-      };
-      const onMouseMove = ({
-        x,
-        y
-      }) => {
-        gsap.to(imageWrap, {
-          duration: 1.25,
-          x: Math.abs(x - itemBounds.left),
-          y: Math.abs(y - itemBounds.top),
-        });
-      };
-      item.addEventListener("mouseenter", onMouseEnter);
-      item.addEventListener("mouseleave", onMouseLeave);
-      item.addEventListener("mousemove", onMouseMove);
-    });
-  </script>
-  <script>
-    let studyCont = document.querySelectorAll("#studyCont ul li");
-    studyCont.forEach((el) => {
-      el.addEventListener("click", (event) => {
-        console.log("ddd");
-        el.classList.toggle("flip");
+      mouseImg.forEach((item) => {
+        const imageWrap = item.querySelector("#scriptCont ul li img");
+        const imageWrapBounds = imageWrap.getBoundingClientRect();
+        let itemBounds = item.getBoundingClientRect();
+        const onMouseEnter = () => {
+          gsap.set(imageWrap, {
+            xPercent: -50,
+            yPercent: 50,
+            rotation: -15,
+            scale: 0.3,
+            opacity: 0,
+          });
+          gsap.to(imageWrap, {
+            xPercent: -50,
+            yPercent: -50,
+            rotation: 0,
+            scale: 1,
+            opacity: 1,
+          });
+        };
+        const onMouseLeave = () => {
+          gsap.to(imageWrap, {
+            xPercent: -50,
+            yPercent: -100,
+            rotation: 15,
+            scale: 0.3,
+            opacity: 0,
+          });
+        };
+        const onMouseMove = ({ x, y }) => {
+          gsap.to(imageWrap, {
+            duration: 1.25,
+            x: Math.abs(x - itemBounds.left),
+            y: Math.abs(y - itemBounds.top),
+          });
+        };
+        item.addEventListener("mouseenter", onMouseEnter);
+        item.addEventListener("mouseleave", onMouseLeave);
+        item.addEventListener("mousemove", onMouseMove);
       });
-    });
-  </script>
-  <script>
-    var s = skrollr.init();
+    </script>
+    <script>
+      let studyCont = document.querySelectorAll("#studyCont ul li");
+      studyCont.forEach((el) => {
+        el.addEventListener("click", (event) => {
+          el.classList.toggle("flip");
+        });
+      });
+    </script>
+    <script>
+      var s = skrollr.init();
 
-    document.querySelectorAll(".siteTitle").forEach((desc) => {
-      let splitText = desc.innerText;
-      let splitWrap = splitText
-        .split("")
-        .join("</span><span aria-hidden='true'>");
-      splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
-      desc.innerHTML = splitWrap;
-      desc.setAttribute("aria-label", splitText);
-    });
-
-    document.querySelectorAll("#scriptCont ul li a").forEach((desc) => {
-      let splitText = desc.innerText;
-      let splitWrap = splitText
-        .split("")
-        .join("</span><span aria-hidden='true'>");
-      splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
-      desc.innerHTML = splitWrap;
-      desc.setAttribute("aria-label", splitText);
-    });
-
-    function scroll() {
-      let scrollTop =
-        //   window.screenY ||
-        //   window.pageYOffset ||
-        document.documentElement.scrollTop;
-
-      document.querySelectorAll("#scrollTop span").forEach((el) => {
-        //   console.log(scrollTop);
-        el.innerText = Math.round(scrollTop);
+      document.querySelectorAll(".siteTitle").forEach((desc) => {
+        let splitText = desc.innerText;
+        let splitWrap = splitText
+          .split("")
+          .join("</span><span aria-hidden='true'>");
+        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+        desc.innerHTML = splitWrap;
+        desc.setAttribute("aria-label", splitText);
       });
 
-      document.querySelectorAll("#contents").forEach((el) => {
-        if (scrollTop >= el.offsetTop) {
-          // console.log(el.offsetTop);
-          el.classList.add("show");
-        }
+      document.querySelectorAll("#scriptCont ul li a").forEach((desc) => {
+        let splitText = desc.innerText;
+        let splitWrap = splitText
+          .split("")
+          .join("</span><span aria-hidden='true'>");
+        splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+        desc.innerHTML = splitWrap;
+        desc.setAttribute("aria-label", splitText);
       });
 
-      // console.log(document.querySelectorAll(".siteDesc"));
+      function scroll() {
+        let scrollTop =
+          //   window.screenY ||
+          //   window.pageYOffset ||
+          document.documentElement.scrollTop;
 
-      // 1
-      document.querySelectorAll(".siteDesc.D1").forEach((el) => {
-        if (scrollTop >= el.offsetTop) {
+        document.querySelectorAll("#scrollTop span").forEach((el) => {
+          //   console.log(scrollTop);
+          el.innerText = Math.round(scrollTop);
+        });
+
+        document.querySelectorAll("#contents").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            // console.log(el.offsetTop);
+            el.classList.add("show");
+          }
+        });
+
+        // console.log(document.querySelectorAll(".siteDesc"));
+
+        // 1
+        document.querySelectorAll(".siteDesc.D1").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            document
+              .querySelectorAll(".siteDesc.D1 .siteTitle span")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 100 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D1").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            document
+              .querySelectorAll(".siteDesc.D1 .siteInfo p .infoText")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 50 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D1").forEach((item) => {
+          if (scrollTop >= item.offsetTop) {
+            item
+              .querySelectorAll(".siteDesc.D1 button")
+              .forEach((btn, index) => {
+                setTimeout(() => {
+                  btn.classList.add("show");
+                }, 700 * (index + 1));
+              });
+          }
+        });
+        // 1
+
+        // 2
+        document.querySelectorAll(".siteDesc.D2").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            document
+              .querySelectorAll(".siteDesc.D2 .siteTitle span")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 100 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D2").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            document
+              .querySelectorAll(".siteDesc.D2 .siteInfo p .infoText")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 50 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D2").forEach((item) => {
+          if (scrollTop >= item.offsetTop) {
+            item
+              .querySelectorAll(".siteDesc.D2 button")
+              .forEach((btn, index) => {
+                setTimeout(() => {
+                  btn.classList.add("show");
+                }, 700 * (index + 1));
+              });
+          }
+        });
+        // 2
+
+        // 3
+        document.querySelectorAll(".siteDesc.D3").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            document
+              .querySelectorAll(".siteDesc.D3 .siteTitle span")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 100 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D3").forEach((el) => {
+          if (scrollTop >= el.offsetTop) {
+            document
+              .querySelectorAll(".siteDesc.D3 .siteInfo p .infoText")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 50 * (index + 1));
+              });
+          }
+        });
+
+        document.querySelectorAll(".siteDesc.D3").forEach((item) => {
+          if (scrollTop >= item.offsetTop) {
+            item
+              .querySelectorAll(".siteDesc.D3 button")
+              .forEach((btn, index) => {
+                setTimeout(() => {
+                  btn.classList.add("show");
+                }, 700 * (index + 1));
+              });
+          }
+        });
+        // 3
+
+        // 4
+        // document.querySelectorAll(".siteDesc.D4").forEach((el) => {
+        //   if (scrollTop >= el.offsetTop) {
+        //     console.log(el.offsetTop);
+        //     document
+        //       .querySelectorAll(".siteDesc.D4 .siteTitle span")
+        //       .forEach((span, index) => {
+        //         setTimeout(() => {
+        //           span.classList.add("show");
+        //         }, 100 * (index + 1));
+        //       });
+        //   }
+        // });
+
+        // document.querySelectorAll(".siteDesc.D4").forEach((el) => {
+        //   if (scrollTop >= el.offsetTop) {
+        //     document
+        //       .querySelectorAll(".siteDesc.D4 .siteInfo p .infoText")
+        //       .forEach((span, index) => {
+        //         setTimeout(() => {
+        //           span.classList.add("show");
+        //         }, 50 * (index + 1));
+        //       });
+        //   }
+        // });
+
+        // document.querySelectorAll(".siteDesc.D4").forEach((item) => {
+        //   if (scrollTop >= item.offsetTop) {
+        //     console.log(item.offsetTop);
+        //     item
+        //       .querySelectorAll(".siteDesc.D4 button")
+        //       .forEach((btn, index) => {
+        //         setTimeout(() => {
+        //           btn.classList.add("show");
+        //         }, 700 * (index + 1));
+        //       });
+        //   }
+        // });
+
+        let D4 = document.querySelector(".D4");
+        if (scrollTop >= D4.offsetTop) {
+          // console.log(D4.offsetTop);
           document
-            .querySelectorAll(".siteDesc.D1 .siteTitle span")
+            .querySelectorAll(".D4 .siteTitle span")
             .forEach((span, index) => {
               setTimeout(() => {
                 span.classList.add("show");
               }, 100 * (index + 1));
             });
-        }
-      });
-
-      document.querySelectorAll(".siteDesc.D1").forEach((el) => {
-        if (scrollTop >= el.offsetTop) {
           document
-            .querySelectorAll(".siteDesc.D1 .siteInfo p .infoText")
-            .forEach((span, index) => {
-              setTimeout(() => {
-                span.classList.add("show");
-              }, 50 * (index + 1));
-            });
-        }
-      });
-
-      document.querySelectorAll(".siteDesc.D1").forEach((item) => {
-        if (scrollTop >= item.offsetTop) {
-          item
-            .querySelectorAll(".siteDesc.D1 button")
-            .forEach((btn, index) => {
-              setTimeout(() => {
-                btn.classList.add("show");
-              }, 700 * (index + 1));
-            });
-        }
-      });
-      // 1
-
-      // 2
-      document.querySelectorAll(".siteDesc.D2").forEach((el) => {
-        if (scrollTop >= el.offsetTop) {
-          document
-            .querySelectorAll(".siteDesc.D2 .siteTitle span")
+            .querySelectorAll(".D4 .siteInfo p .infoText")
             .forEach((span, index) => {
               setTimeout(() => {
                 span.classList.add("show");
               }, 100 * (index + 1));
             });
-        }
-      });
-
-      document.querySelectorAll(".siteDesc.D2").forEach((el) => {
-        if (scrollTop >= el.offsetTop) {
-          document
-            .querySelectorAll(".siteDesc.D2 .siteInfo p .infoText")
-            .forEach((span, index) => {
-              setTimeout(() => {
-                span.classList.add("show");
-              }, 50 * (index + 1));
-            });
-        }
-      });
-
-      document.querySelectorAll(".siteDesc.D2").forEach((item) => {
-        if (scrollTop >= item.offsetTop) {
-          item
-            .querySelectorAll(".siteDesc.D2 button")
-            .forEach((btn, index) => {
-              setTimeout(() => {
-                btn.classList.add("show");
-              }, 700 * (index + 1));
-            });
-        }
-      });
-      // 2
-
-      // 3
-      document.querySelectorAll(".siteDesc.D3").forEach((el) => {
-        if (scrollTop >= el.offsetTop) {
-          document
-            .querySelectorAll(".siteDesc.D3 .siteTitle span")
-            .forEach((span, index) => {
-              setTimeout(() => {
-                span.classList.add("show");
-              }, 100 * (index + 1));
-            });
-        }
-      });
-
-      document.querySelectorAll(".siteDesc.D3").forEach((el) => {
-        if (scrollTop >= el.offsetTop) {
-          document
-            .querySelectorAll(".siteDesc.D3 .siteInfo p .infoText")
-            .forEach((span, index) => {
-              setTimeout(() => {
-                span.classList.add("show");
-              }, 50 * (index + 1));
-            });
-        }
-      });
-
-      document.querySelectorAll(".siteDesc.D3").forEach((item) => {
-        if (scrollTop >= item.offsetTop) {
-          item
-            .querySelectorAll(".siteDesc.D3 button")
-            .forEach((btn, index) => {
-              setTimeout(() => {
-                btn.classList.add("show");
-              }, 700 * (index + 1));
-            });
-        }
-      });
-      // 3
-
-      // 4
-      // document.querySelectorAll(".siteDesc.D4").forEach((el) => {
-      //   if (scrollTop >= el.offsetTop) {
-      //     console.log(el.offsetTop);
-      //     document
-      //       .querySelectorAll(".siteDesc.D4 .siteTitle span")
-      //       .forEach((span, index) => {
-      //         setTimeout(() => {
-      //           span.classList.add("show");
-      //         }, 100 * (index + 1));
-      //       });
-      //   }
-      // });
-
-      // document.querySelectorAll(".siteDesc.D4").forEach((el) => {
-      //   if (scrollTop >= el.offsetTop) {
-      //     document
-      //       .querySelectorAll(".siteDesc.D4 .siteInfo p .infoText")
-      //       .forEach((span, index) => {
-      //         setTimeout(() => {
-      //           span.classList.add("show");
-      //         }, 50 * (index + 1));
-      //       });
-      //   }
-      // });
-
-      // document.querySelectorAll(".siteDesc.D4").forEach((item) => {
-      //   if (scrollTop >= item.offsetTop) {
-      //     console.log(item.offsetTop);
-      //     item
-      //       .querySelectorAll(".siteDesc.D4 button")
-      //       .forEach((btn, index) => {
-      //         setTimeout(() => {
-      //           btn.classList.add("show");
-      //         }, 700 * (index + 1));
-      //       });
-      //   }
-      // });
-
-      let D4 = document.querySelector(".D4");
-      if (scrollTop >= D4.offsetTop) {
-        // console.log(D4.offsetTop);
-        document
-          .querySelectorAll(".D4 .siteTitle span")
-          .forEach((span, index) => {
+          document.querySelectorAll(".D4 button").forEach((btn, index) => {
             setTimeout(() => {
-              span.classList.add("show");
+              btn.classList.add("show");
             }, 100 * (index + 1));
           });
-        document
-          .querySelectorAll(".D4 .siteInfo p .infoText")
-          .forEach((span, index) => {
-            setTimeout(() => {
-              span.classList.add("show");
-            }, 100 * (index + 1));
-          });
-        document.querySelectorAll(".D4 button").forEach((btn, index) => {
-          setTimeout(() => {
-            btn.classList.add("show");
-          }, 100 * (index + 1));
-        });
-      }
-      // 4
-
-      document.querySelectorAll("#scriptCont ul li a").forEach((item) => {
-        if (scrollTop >= item.offsetTop - 500) {
-          item
-            .querySelectorAll("#scriptCont ul li a span")
-            .forEach((span, index) => {
-              setTimeout(() => {
-                span.classList.add("show");
-              }, 50 * (index + 1));
-            });
         }
-      });
-      let banner = document.querySelector("#banner");
-      if (scrollTop >= banner.offsetTop - 300) {
-        document.querySelector(".bannerTitle").classList.add("show");
-      }
+        // 4
 
-      document.querySelectorAll(".effectCont").forEach((item) => {
-        let offset1 = (scrollTop - item.offsetTop) * 0.05;
-        let offset2 = (scrollTop - item.offsetTop) * 0.05;
-
-        const target1 = item.querySelectorAll(".effectImg");
-        const target2 = item.querySelectorAll(".effectInfo");
-
-        gsap.to(target1, {
-          duration: 0.3,
-          y: offset1,
-          ease: "power1.out"
+        document.querySelectorAll("#scriptCont ul li a").forEach((item) => {
+          if (scrollTop >= item.offsetTop - 500) {
+            item
+              .querySelectorAll("#scriptCont ul li a span")
+              .forEach((span, index) => {
+                setTimeout(() => {
+                  span.classList.add("show");
+                }, 50 * (index + 1));
+              });
+          }
         });
-        gsap.to(target2, {
-          duration: 0.3,
-          y: offset2
-        });
-      });
+        let banner = document.querySelector("#banner");
+        if (scrollTop >= banner.offsetTop - 300) {
+          document.querySelector(".bannerTitle").classList.add("show");
+        }
 
-      document.querySelectorAll(".effectCont.center").forEach((item) => {
-        let offset1 = (scrollTop - item.offsetTop) * 0.15;
-        let offset2 = (scrollTop - item.offsetTop) * 0.15;
+        document.querySelectorAll(".effectCont").forEach((item) => {
+          let offset1 = (scrollTop - item.offsetTop) * 0.05;
+          let offset2 = (scrollTop - item.offsetTop) * 0.05;
 
-        const target1 = item.querySelectorAll(".effectImg");
-        const target2 = item.querySelectorAll(".effectInfo");
+          const target1 = item.querySelectorAll(".effectImg");
+          const target2 = item.querySelectorAll(".effectInfo");
 
-        gsap.to(target1, {
-          duration: 0.3,
-          y: offset1,
-          ease: "power1.out"
-        });
-        gsap.to(target2, {
-          duration: 0.3,
-          y: offset2
-        });
-      });
-
-      requestAnimationFrame(scroll);
-    }
-    scroll();
-  </script>
-  <script>
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.9,
-    };
-
-    let revealCallback = (entries, self) => {
-      entries.forEach((entry) => {
-        let container = entry.target;
-        let img = entry.target.querySelector("img");
-        const easeInOut = "power3.out";
-        const revealAnim = gsap.timeline({
-          ease: easeInOut
-        });
-
-        if (entry.isIntersecting) {
-          revealAnim.set(container, {
-            visibility: "visible",
+          gsap.to(target1, {
+            duration: 0.3,
+            y: offset1,
+            ease: "power1.out",
           });
-          revealAnim.fromTo(
-            container, {
-              clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-              webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-            }, {
-              clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-              webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-              duration: 1,
-              ease: easeInOut,
-            }
-          );
-          revealAnim.from(img, 4, {
-            scale: 1.4,
+          gsap.to(target2, {
+            duration: 0.3,
+            y: offset2,
+          });
+        });
+
+        document.querySelectorAll(".effectCont.center").forEach((item) => {
+          let offset1 = (scrollTop - item.offsetTop) * 0.15;
+          let offset2 = (scrollTop - item.offsetTop) * 0.15;
+
+          const target1 = item.querySelectorAll(".effectImg");
+          const target2 = item.querySelectorAll(".effectInfo");
+
+          gsap.to(target1, {
+            duration: 0.3,
+            y: offset1,
+            ease: "power1.out",
+          });
+          gsap.to(target2, {
+            duration: 0.3,
+            y: offset2,
+          });
+        });
+
+        requestAnimationFrame(scroll);
+      }
+      scroll();
+    </script>
+    <script>
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.9,
+      };
+
+      let revealCallback = (entries, self) => {
+        entries.forEach((entry) => {
+          let container = entry.target;
+          let img = entry.target.querySelector("img");
+          const easeInOut = "power3.out";
+          const revealAnim = gsap.timeline({
             ease: easeInOut,
-            delay: -1,
           });
-          self.unobserve(entry.target);
-        }
+
+          if (entry.isIntersecting) {
+            revealAnim.set(container, {
+              visibility: "visible",
+            });
+            revealAnim.fromTo(
+              container,
+              {
+                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                webkitClipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+              },
+              {
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                webkitClipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                duration: 1,
+                ease: easeInOut,
+              }
+            );
+            revealAnim.from(img, 4, {
+              scale: 1.4,
+              ease: easeInOut,
+              delay: -1,
+            });
+            self.unobserve(entry.target);
+          }
+        });
+      };
+
+      let revealObserver = new IntersectionObserver(revealCallback, options);
+
+      document.querySelectorAll(".reveal").forEach((reveal) => {
+        revealObserver.observe(reveal);
       });
-    };
-
-    let revealObserver = new IntersectionObserver(revealCallback, options);
-
-    document.querySelectorAll(".reveal").forEach((reveal) => {
-      revealObserver.observe(reveal);
-    });
-  </script>
-  <script type="x-shader/x-vertex" id="vertexshader">
-    varying vec2 vUv;
-      void main() {
-          vUv = uv;
-          gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-      }
     </script>
-
-  <script type="x-shader/x-fragment" id="fragmentshader">
-    uniform sampler2D baseTexture;
-      uniform sampler2D bloomTexture;
+    <script type="x-shader/x-vertex" id="vertexshader">
       varying vec2 vUv;
-      void main() {
-          gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
-      }
+        void main() {
+            vUv = uv;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+        }
     </script>
 
-  <script id="noiseFS" type="x-shader/x-fragment">
-    vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
-      vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
-      vec4 fade(vec4 t) {return t*t*t*(t*(t*6.0-15.0)+10.0);}
-
-      float cnoise(vec4 P){
-          vec4 Pi0 = floor(P);
-          vec4 Pi1 = Pi0 + 1.0;
-          Pi0 = mod(Pi0, 289.0);
-          Pi1 = mod(Pi1, 289.0);
-          vec4 Pf0 = fract(P);
-          vec4 Pf1 = Pf0 - 1.0;
-          vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
-          vec4 iy = vec4(Pi0.yy, Pi1.yy);
-          vec4 iz0 = vec4(Pi0.zzzz);
-          vec4 iz1 = vec4(Pi1.zzzz);
-          vec4 iw0 = vec4(Pi0.wwww);
-          vec4 iw1 = vec4(Pi1.wwww);
-
-          vec4 ixy = permute(permute(ix) + iy);
-          vec4 ixy0 = permute(ixy + iz0);
-          vec4 ixy1 = permute(ixy + iz1);
-          vec4 ixy00 = permute(ixy0 + iw0);
-          vec4 ixy01 = permute(ixy0 + iw1);
-          vec4 ixy10 = permute(ixy1 + iw0);
-          vec4 ixy11 = permute(ixy1 + iw1);
-
-          vec4 gx00 = ixy00 / 7.0;
-          vec4 gy00 = floor(gx00) / 7.0;
-          vec4 gz00 = floor(gy00) / 6.0;
-          gx00 = fract(gx00) - 0.5;
-          gy00 = fract(gy00) - 0.5;
-          gz00 = fract(gz00) - 0.5;
-          vec4 gw00 = vec4(0.75) - abs(gx00) - abs(gy00) - abs(gz00);
-          vec4 sw00 = step(gw00, vec4(0.0));
-          gx00 -= sw00 * (step(0.0, gx00) - 0.5);
-          gy00 -= sw00 * (step(0.0, gy00) - 0.5);
-
-          vec4 gx01 = ixy01 / 7.0;
-          vec4 gy01 = floor(gx01) / 7.0;
-          vec4 gz01 = floor(gy01) / 6.0;
-          gx01 = fract(gx01) - 0.5;
-          gy01 = fract(gy01) - 0.5;
-          gz01 = fract(gz01) - 0.5;
-          vec4 gw01 = vec4(0.75) - abs(gx01) - abs(gy01) - abs(gz01);
-          vec4 sw01 = step(gw01, vec4(0.0));
-          gx01 -= sw01 * (step(0.0, gx01) - 0.5);
-          gy01 -= sw01 * (step(0.0, gy01) - 0.5);
-
-          vec4 gx10 = ixy10 / 7.0;
-          vec4 gy10 = floor(gx10) / 7.0;
-          vec4 gz10 = floor(gy10) / 6.0;
-          gx10 = fract(gx10) - 0.5;
-          gy10 = fract(gy10) - 0.5;
-          gz10 = fract(gz10) - 0.5;
-          vec4 gw10 = vec4(0.75) - abs(gx10) - abs(gy10) - abs(gz10);
-          vec4 sw10 = step(gw10, vec4(0.0));
-          gx10 -= sw10 * (step(0.0, gx10) - 0.5);
-          gy10 -= sw10 * (step(0.0, gy10) - 0.5);
-
-          vec4 gx11 = ixy11 / 7.0;
-          vec4 gy11 = floor(gx11) / 7.0;
-          vec4 gz11 = floor(gy11) / 6.0;
-          gx11 = fract(gx11) - 0.5;
-          gy11 = fract(gy11) - 0.5;
-          gz11 = fract(gz11) - 0.5;
-          vec4 gw11 = vec4(0.75) - abs(gx11) - abs(gy11) - abs(gz11);
-          vec4 sw11 = step(gw11, vec4(0.0));
-          gx11 -= sw11 * (step(0.0, gx11) - 0.5);
-          gy11 -= sw11 * (step(0.0, gy11) - 0.5);
-
-          vec4 g0000 = vec4(gx00.x,gy00.x,gz00.x,gw00.x);
-          vec4 g1000 = vec4(gx00.y,gy00.y,gz00.y,gw00.y);
-          vec4 g0100 = vec4(gx00.z,gy00.z,gz00.z,gw00.z);
-          vec4 g1100 = vec4(gx00.w,gy00.w,gz00.w,gw00.w);
-          vec4 g0010 = vec4(gx10.x,gy10.x,gz10.x,gw10.x);
-          vec4 g1010 = vec4(gx10.y,gy10.y,gz10.y,gw10.y);
-          vec4 g0110 = vec4(gx10.z,gy10.z,gz10.z,gw10.z);
-          vec4 g1110 = vec4(gx10.w,gy10.w,gz10.w,gw10.w);
-          vec4 g0001 = vec4(gx01.x,gy01.x,gz01.x,gw01.x);
-          vec4 g1001 = vec4(gx01.y,gy01.y,gz01.y,gw01.y);
-          vec4 g0101 = vec4(gx01.z,gy01.z,gz01.z,gw01.z);
-          vec4 g1101 = vec4(gx01.w,gy01.w,gz01.w,gw01.w);
-          vec4 g0011 = vec4(gx11.x,gy11.x,gz11.x,gw11.x);
-          vec4 g1011 = vec4(gx11.y,gy11.y,gz11.y,gw11.y);
-          vec4 g0111 = vec4(gx11.z,gy11.z,gz11.z,gw11.z);
-          vec4 g1111 = vec4(gx11.w,gy11.w,gz11.w,gw11.w);
-
-          vec4 norm00 = taylorInvSqrt(vec4(dot(g0000, g0000), dot(g0100, g0100), dot(g1000, g1000), dot(g1100, g1100)));
-          g0000 *= norm00.x;
-          g0100 *= norm00.y;
-          g1000 *= norm00.z;
-          g1100 *= norm00.w;
-
-          vec4 norm01 = taylorInvSqrt(vec4(dot(g0001, g0001), dot(g0101, g0101), dot(g1001, g1001), dot(g1101, g1101)));
-          g0001 *= norm01.x;
-          g0101 *= norm01.y;
-          g1001 *= norm01.z;
-          g1101 *= norm01.w;
-
-          vec4 norm10 = taylorInvSqrt(vec4(dot(g0010, g0010), dot(g0110, g0110), dot(g1010, g1010), dot(g1110, g1110)));
-          g0010 *= norm10.x;
-          g0110 *= norm10.y;
-          g1010 *= norm10.z;
-          g1110 *= norm10.w;
-
-          vec4 norm11 = taylorInvSqrt(vec4(dot(g0011, g0011), dot(g0111, g0111), dot(g1011, g1011), dot(g1111, g1111)));
-          g0011 *= norm11.x;
-          g0111 *= norm11.y;
-          g1011 *= norm11.z;
-          g1111 *= norm11.w;
-
-          float n0000 = dot(g0000, Pf0);
-          float n1000 = dot(g1000, vec4(Pf1.x, Pf0.yzw));
-          float n0100 = dot(g0100, vec4(Pf0.x, Pf1.y, Pf0.zw));
-          float n1100 = dot(g1100, vec4(Pf1.xy, Pf0.zw));
-          float n0010 = dot(g0010, vec4(Pf0.xy, Pf1.z, Pf0.w));
-          float n1010 = dot(g1010, vec4(Pf1.x, Pf0.y, Pf1.z, Pf0.w));
-          float n0110 = dot(g0110, vec4(Pf0.x, Pf1.yz, Pf0.w));
-          float n1110 = dot(g1110, vec4(Pf1.xyz, Pf0.w));
-          float n0001 = dot(g0001, vec4(Pf0.xyz, Pf1.w));
-          float n1001 = dot(g1001, vec4(Pf1.x, Pf0.yz, Pf1.w));
-          float n0101 = dot(g0101, vec4(Pf0.x, Pf1.y, Pf0.z, Pf1.w));
-          float n1101 = dot(g1101, vec4(Pf1.xy, Pf0.z, Pf1.w));
-          float n0011 = dot(g0011, vec4(Pf0.xy, Pf1.zw));
-          float n1011 = dot(g1011, vec4(Pf1.x, Pf0.y, Pf1.zw));
-          float n0111 = dot(g0111, vec4(Pf0.x, Pf1.yzw));
-          float n1111 = dot(g1111, Pf1);
-
-          vec4 fade_xyzw = fade(Pf0);
-          vec4 n_0w = mix(vec4(n0000, n1000, n0100, n1100), vec4(n0001, n1001, n0101, n1101), fade_xyzw.w);
-          vec4 n_1w = mix(vec4(n0010, n1010, n0110, n1110), vec4(n0011, n1011, n0111, n1111), fade_xyzw.w);
-          vec4 n_zw = mix(n_0w, n_1w, fade_xyzw.z);
-          vec2 n_yzw = mix(n_zw.xy, n_zw.zw, fade_xyzw.y);
-          float n_xyzw = mix(n_yzw.x, n_yzw.y, fade_xyzw.x);
-          return 2.2 * n_xyzw;
-      }
+    <script type="x-shader/x-fragment" id="fragmentshader">
+      uniform sampler2D baseTexture;
+        uniform sampler2D bloomTexture;
+        varying vec2 vUv;
+        void main() {
+            gl_FragColor = ( texture2D( baseTexture, vUv ) + vec4( 1.0 ) * texture2D( bloomTexture, vUv ) );
+        }
     </script>
 
-  <script type="module">
-    import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
+    <script id="noiseFS" type="x-shader/x-fragment">
+      vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
+        vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
+        vec4 fade(vec4 t) {return t*t*t*(t*(t*6.0-15.0)+10.0);}
+
+        float cnoise(vec4 P){
+            vec4 Pi0 = floor(P);
+            vec4 Pi1 = Pi0 + 1.0;
+            Pi0 = mod(Pi0, 289.0);
+            Pi1 = mod(Pi1, 289.0);
+            vec4 Pf0 = fract(P);
+            vec4 Pf1 = Pf0 - 1.0;
+            vec4 ix = vec4(Pi0.x, Pi1.x, Pi0.x, Pi1.x);
+            vec4 iy = vec4(Pi0.yy, Pi1.yy);
+            vec4 iz0 = vec4(Pi0.zzzz);
+            vec4 iz1 = vec4(Pi1.zzzz);
+            vec4 iw0 = vec4(Pi0.wwww);
+            vec4 iw1 = vec4(Pi1.wwww);
+
+            vec4 ixy = permute(permute(ix) + iy);
+            vec4 ixy0 = permute(ixy + iz0);
+            vec4 ixy1 = permute(ixy + iz1);
+            vec4 ixy00 = permute(ixy0 + iw0);
+            vec4 ixy01 = permute(ixy0 + iw1);
+            vec4 ixy10 = permute(ixy1 + iw0);
+            vec4 ixy11 = permute(ixy1 + iw1);
+
+            vec4 gx00 = ixy00 / 7.0;
+            vec4 gy00 = floor(gx00) / 7.0;
+            vec4 gz00 = floor(gy00) / 6.0;
+            gx00 = fract(gx00) - 0.5;
+            gy00 = fract(gy00) - 0.5;
+            gz00 = fract(gz00) - 0.5;
+            vec4 gw00 = vec4(0.75) - abs(gx00) - abs(gy00) - abs(gz00);
+            vec4 sw00 = step(gw00, vec4(0.0));
+            gx00 -= sw00 * (step(0.0, gx00) - 0.5);
+            gy00 -= sw00 * (step(0.0, gy00) - 0.5);
+
+            vec4 gx01 = ixy01 / 7.0;
+            vec4 gy01 = floor(gx01) / 7.0;
+            vec4 gz01 = floor(gy01) / 6.0;
+            gx01 = fract(gx01) - 0.5;
+            gy01 = fract(gy01) - 0.5;
+            gz01 = fract(gz01) - 0.5;
+            vec4 gw01 = vec4(0.75) - abs(gx01) - abs(gy01) - abs(gz01);
+            vec4 sw01 = step(gw01, vec4(0.0));
+            gx01 -= sw01 * (step(0.0, gx01) - 0.5);
+            gy01 -= sw01 * (step(0.0, gy01) - 0.5);
+
+            vec4 gx10 = ixy10 / 7.0;
+            vec4 gy10 = floor(gx10) / 7.0;
+            vec4 gz10 = floor(gy10) / 6.0;
+            gx10 = fract(gx10) - 0.5;
+            gy10 = fract(gy10) - 0.5;
+            gz10 = fract(gz10) - 0.5;
+            vec4 gw10 = vec4(0.75) - abs(gx10) - abs(gy10) - abs(gz10);
+            vec4 sw10 = step(gw10, vec4(0.0));
+            gx10 -= sw10 * (step(0.0, gx10) - 0.5);
+            gy10 -= sw10 * (step(0.0, gy10) - 0.5);
+
+            vec4 gx11 = ixy11 / 7.0;
+            vec4 gy11 = floor(gx11) / 7.0;
+            vec4 gz11 = floor(gy11) / 6.0;
+            gx11 = fract(gx11) - 0.5;
+            gy11 = fract(gy11) - 0.5;
+            gz11 = fract(gz11) - 0.5;
+            vec4 gw11 = vec4(0.75) - abs(gx11) - abs(gy11) - abs(gz11);
+            vec4 sw11 = step(gw11, vec4(0.0));
+            gx11 -= sw11 * (step(0.0, gx11) - 0.5);
+            gy11 -= sw11 * (step(0.0, gy11) - 0.5);
+
+            vec4 g0000 = vec4(gx00.x,gy00.x,gz00.x,gw00.x);
+            vec4 g1000 = vec4(gx00.y,gy00.y,gz00.y,gw00.y);
+            vec4 g0100 = vec4(gx00.z,gy00.z,gz00.z,gw00.z);
+            vec4 g1100 = vec4(gx00.w,gy00.w,gz00.w,gw00.w);
+            vec4 g0010 = vec4(gx10.x,gy10.x,gz10.x,gw10.x);
+            vec4 g1010 = vec4(gx10.y,gy10.y,gz10.y,gw10.y);
+            vec4 g0110 = vec4(gx10.z,gy10.z,gz10.z,gw10.z);
+            vec4 g1110 = vec4(gx10.w,gy10.w,gz10.w,gw10.w);
+            vec4 g0001 = vec4(gx01.x,gy01.x,gz01.x,gw01.x);
+            vec4 g1001 = vec4(gx01.y,gy01.y,gz01.y,gw01.y);
+            vec4 g0101 = vec4(gx01.z,gy01.z,gz01.z,gw01.z);
+            vec4 g1101 = vec4(gx01.w,gy01.w,gz01.w,gw01.w);
+            vec4 g0011 = vec4(gx11.x,gy11.x,gz11.x,gw11.x);
+            vec4 g1011 = vec4(gx11.y,gy11.y,gz11.y,gw11.y);
+            vec4 g0111 = vec4(gx11.z,gy11.z,gz11.z,gw11.z);
+            vec4 g1111 = vec4(gx11.w,gy11.w,gz11.w,gw11.w);
+
+            vec4 norm00 = taylorInvSqrt(vec4(dot(g0000, g0000), dot(g0100, g0100), dot(g1000, g1000), dot(g1100, g1100)));
+            g0000 *= norm00.x;
+            g0100 *= norm00.y;
+            g1000 *= norm00.z;
+            g1100 *= norm00.w;
+
+            vec4 norm01 = taylorInvSqrt(vec4(dot(g0001, g0001), dot(g0101, g0101), dot(g1001, g1001), dot(g1101, g1101)));
+            g0001 *= norm01.x;
+            g0101 *= norm01.y;
+            g1001 *= norm01.z;
+            g1101 *= norm01.w;
+
+            vec4 norm10 = taylorInvSqrt(vec4(dot(g0010, g0010), dot(g0110, g0110), dot(g1010, g1010), dot(g1110, g1110)));
+            g0010 *= norm10.x;
+            g0110 *= norm10.y;
+            g1010 *= norm10.z;
+            g1110 *= norm10.w;
+
+            vec4 norm11 = taylorInvSqrt(vec4(dot(g0011, g0011), dot(g0111, g0111), dot(g1011, g1011), dot(g1111, g1111)));
+            g0011 *= norm11.x;
+            g0111 *= norm11.y;
+            g1011 *= norm11.z;
+            g1111 *= norm11.w;
+
+            float n0000 = dot(g0000, Pf0);
+            float n1000 = dot(g1000, vec4(Pf1.x, Pf0.yzw));
+            float n0100 = dot(g0100, vec4(Pf0.x, Pf1.y, Pf0.zw));
+            float n1100 = dot(g1100, vec4(Pf1.xy, Pf0.zw));
+            float n0010 = dot(g0010, vec4(Pf0.xy, Pf1.z, Pf0.w));
+            float n1010 = dot(g1010, vec4(Pf1.x, Pf0.y, Pf1.z, Pf0.w));
+            float n0110 = dot(g0110, vec4(Pf0.x, Pf1.yz, Pf0.w));
+            float n1110 = dot(g1110, vec4(Pf1.xyz, Pf0.w));
+            float n0001 = dot(g0001, vec4(Pf0.xyz, Pf1.w));
+            float n1001 = dot(g1001, vec4(Pf1.x, Pf0.yz, Pf1.w));
+            float n0101 = dot(g0101, vec4(Pf0.x, Pf1.y, Pf0.z, Pf1.w));
+            float n1101 = dot(g1101, vec4(Pf1.xy, Pf0.z, Pf1.w));
+            float n0011 = dot(g0011, vec4(Pf0.xy, Pf1.zw));
+            float n1011 = dot(g1011, vec4(Pf1.x, Pf0.y, Pf1.zw));
+            float n0111 = dot(g0111, vec4(Pf0.x, Pf1.yzw));
+            float n1111 = dot(g1111, Pf1);
+
+            vec4 fade_xyzw = fade(Pf0);
+            vec4 n_0w = mix(vec4(n0000, n1000, n0100, n1100), vec4(n0001, n1001, n0101, n1101), fade_xyzw.w);
+            vec4 n_1w = mix(vec4(n0010, n1010, n0110, n1110), vec4(n0011, n1011, n0111, n1111), fade_xyzw.w);
+            vec4 n_zw = mix(n_0w, n_1w, fade_xyzw.z);
+            vec2 n_yzw = mix(n_zw.xy, n_zw.zw, fade_xyzw.y);
+            float n_xyzw = mix(n_yzw.x, n_yzw.y, fade_xyzw.x);
+            return 2.2 * n_xyzw;
+        }
+    </script>
+
+    <script type="module">
+      import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
       import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls";
       import { EffectComposer } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/postprocessing/EffectComposer.js";
       import { RenderPass } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/postprocessing/RenderPass.js";
@@ -1205,6 +1398,5 @@
         return new THREE.CubeTextureLoader().load(images);
       }
     </script>
-</body>
-
+  </body>
 </html>
