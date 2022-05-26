@@ -96,8 +96,8 @@ html {
 }
 .sec2About {
   position: relative;
-  margin-top: 10vw;
-  margin-bottom: 20vw;
+  margin-top: 5vw;
+  margin-bottom: 15vw;
   height: 10vw;
 }
 .sec2AboutBg {
@@ -106,9 +106,9 @@ html {
   top: 50%;
   transform: translate(-50%, -50%);
   display: inline-block;
-  width: 20vw;
-  height: 20vw;
-  background: url(../img/contactIMG.jpg) no-repeat center center;
+  width: 25vw;
+  height: 25vw;
+  background: url(../img/bird.jpg) no-repeat center center;
   background-size: cover;
   border-radius: 50%;
 }
@@ -120,9 +120,9 @@ html {
   background-size: cover;
   width: 100%;
   height: 23vw;
-  margin-bottom: 5vw;
   background-blend-mode: hard-light;
   animation: hue-rotate 8s linear infinite;
+  margin-bottom: 10vw;
 }
 
 .reveal {
@@ -147,9 +147,10 @@ html {
 
 #contents {
   font-family: "GmarketSans";
-  overflow: hidden;
   padding-bottom: 5vw;
   color: #fff;
+  margin-bottom: 10vw;
+  height: 50vw;
 }
 #contents .contBox {
   position: relative;
@@ -200,8 +201,8 @@ html {
   width: 10vw;
   height: 10vw;
   border-radius: 50%;
-  left: 20%;
-  top: 20%;
+  left: 39%;
+  top: 33%;
   text-align: center;
   padding-top: 5vw;
   font-size: 2.5vw;
@@ -223,7 +224,8 @@ html {
   border: 0.5vw solid #4c348e;
 }
 #contents .contBox .siteDesc {
-  padding: 1.5vw 0 0 4vw;
+  margin-top: -5vw;
+  padding: 0 4vw;
 }
 .siteDesc .siteTitle {
   font-size: 2.5vw;
@@ -464,7 +466,7 @@ html {
 /* siteCont */
 
 #scriptCont {
-  height: 100vw;
+  height: 60vw;
   padding-left: 9vw;
   margin-bottom: 10vw;
 }
