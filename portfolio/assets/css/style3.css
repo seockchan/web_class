@@ -525,5 +525,7 @@ html {
     font-size: 7vw;
   }
 }
-
+main {
+  overflow-y: hidden !important;
+}
 /* scriptCont */
