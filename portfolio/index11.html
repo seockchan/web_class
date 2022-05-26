@@ -132,6 +132,7 @@
             <!-- //banner -->
             <div id="contents" class="ContLeft">
               <div class="contBox">
+                <div class="bgText">STANDARD SITE</div>
                 <div class="contInfo">
                   <div class="siteImg img1">
                     <a class="view" href="#"><span></span></a>
@@ -161,6 +162,7 @@
 
             <div id="contents" class="ContRight">
               <div class="contBox">
+                <div class="bgText">responsive SITE</div>
                 <div class="contInfo">
                   <div class="siteImg img2">
                     <a class="view" href="#"><span></span></a>
@@ -189,6 +191,7 @@
             </div>
             <div id="contents" class="ContLeft">
               <div class="contBox">
+                <div class="bgText">php SITE</div>
                 <div class="contInfo">
                   <div class="siteImg img3">
                     <a class="view" href="#"><span></span></a>
@@ -218,6 +221,7 @@
             </div>
             <div id="contents" class="ContRight last">
               <div class="contBox">
+                <div class="bgText">react SITE</div>
                 <div class="contInfo">
                   <div class="siteImg img4">
                     <a class="view" href="#"><span></span></a>
@@ -322,27 +326,17 @@
         let scrollTop = document.documentElement.scrollTop;
 
         document.querySelectorAll(".contInfo").forEach((item) => {
-          let offset1 = (scrollTop - item.offsetTop) * 0.15;
-          let offset2 = (scrollTop - item.offsetTop) * 0.2;
-          let offset3 = (scrollTop - item.offsetTop) * 0.2;
-          let offset4 = (scrollTop - item.offsetTop) * 0.2;
+          let offset1 = (scrollTop - item.offsetTop) * 0.1;
+          let offset2 = (scrollTop - item.offsetTop) * 0.15;
 
           console.log(item.offsetTop);
 
           const target1 = item.querySelector(".siteImg");
-          const target2 = item.querySelector(".siteTitle");
-          const target3 = item.querySelector(".siteInfo");
-          const target4 = item.querySelectorAll("button");
-
-          // target1.style.transform=`translateY(${offset1}px)`;
-          // target2.style.transform=`translateY(${offset2}px)`;
-          // target3.style.transform=`translateY(${-offset2}px)`;
+          const target2 = item.querySelector(".siteDesc");
 
           // gsap.to(".cursor", {dration: .3,left: e.pageX-circle.width/2,top: e.pageY-circle.height/2});
           gsap.to(target1, { dration: 0.3, y: offset1 });
           gsap.to(target2, { dration: 0.3, y: offset2 });
-          gsap.to(target3, { dration: 0.3, y: offset3 });
-          gsap.to(target4, { dration: 0.3, y: offset4 });
         });
 
         requestAnimationFrame(scroll);

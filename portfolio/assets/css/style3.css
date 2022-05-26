@@ -224,7 +224,7 @@ html {
   border: 0.5vw solid #4c348e;
 }
 #contents .contBox .siteDesc {
-  margin-top: -5vw;
+  margin-top: -3vw;
   padding: 0 4vw;
 }
 .siteDesc .siteTitle {
@@ -373,6 +373,24 @@ html {
   position: relative;
   top: 1.45vw;
   margin: 0;
+}
+#contents .contBox .bgText {
+  position: absolute;
+  left: -50vw;
+  top: -3vw;
+  font-size: 20vw;
+  opacity: 0.15;
+  font-family: "Orbitron";
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: -1;
+}
+
+.ContLeft .contBox .bgText {
+  left: -20vw !important;
+}
+.ContRight .contBox .bgText {
+  left: -40vw;
 }
 @media (max-width: 1200px) {
   #contents .contInfo {
