@@ -115,7 +115,8 @@ html {
 /* sec2 */
 
 #banner {
-  background: url(../img/banner.jpg) center center no-repeat,
+  background: url(https://images.unsplash.com/photo-1641579281152-e5d633aa3775?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632)
+      center center no-repeat,
     linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde);
   background-size: cover;
   width: 100%;
