@@ -156,6 +156,9 @@ html {
   position: relative;
   opacity: 1;
 }
+#contents .contInfo {
+  margin-top: 20vw;
+}
 .ContLeft .contBox {
   margin-left: 10vw;
   z-index: 1;
@@ -224,7 +227,7 @@ html {
   border: 0.5vw solid #4c348e;
 }
 #contents .contBox .siteDesc {
-  padding: 3vw 4vw;
+  padding: 4vw;
 }
 .siteDesc .siteTitle {
   font-size: 2.5vw;
@@ -376,7 +379,7 @@ html {
 #contents .contBox .bgText {
   position: absolute;
   left: -50vw;
-  top: -3vw;
+  top: -16vw;
   font-size: 20vw;
   opacity: 0.15;
   font-family: "Orbitron";
@@ -485,7 +488,6 @@ html {
 #scriptCont {
   height: 60vw;
   padding-left: 9vw;
-  margin-bottom: 10vw;
 }
 
 #scriptCont ul li {
