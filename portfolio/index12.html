@@ -20,8 +20,7 @@
         height: 100vh;
       }
       #section3 {
-        background-color: #b9b3a9;
-        height: 100vh;
+        background-color: #000;
       }
       .sec1-1 {
         background-color: #000;
@@ -34,9 +33,10 @@
         background-color: #000;
         width: 100%;
       }
-      .sec1-4 {
+      /* .sec1-4 {
         background-color: #000;
-      }
+        width: 100%;
+      } */
       #section2 {
         height: 100vh;
         overflow: hidden;
@@ -54,16 +54,13 @@
         height: 100vh;
       }
       .sec2-1 {
-        background-color: #51442b;
+        background-color: #000;
       }
       .sec2-2 {
-        background-color: #b9b3a9;
+        background-color: #000;
       }
       .sec2-3 {
-        background-color: #51442b;
-      }
-      .sec3_wrap {
-        height: 100vh;
+        background-color: #000;
       }
     </style>
   </head>
@@ -123,7 +120,7 @@
           </div>
           <div class="sec1-3">
             <!-- banner -->
-            <section id="banner">
+            <section id="banner" class="reveal">
               <div class="bannerTitle" data-scroll data-scroll-speed="1">
                 site work
               </div>
@@ -276,7 +273,7 @@
             </div>
           </div>
           <div class="sec1-4">
-            <div id="banner">
+            <div id="banner" class="reveal">
               <div class="bannerTitle" data-scroll data-scroll-speed="1">
                 javascript
               </div>
@@ -335,34 +332,95 @@
       <section id="section2" class="horizontal">
         <div class="sec2_wrap">
           <div class="sec2-1">
-            <div id="contents" class="ContLeft">
-              <div class="contBox">
-                <div class="bgText">STANDARD SITE</div>
-                <div class="contInfo">
-                  <div class="siteImg img1">
-                    <a class="view" href="#"><span></span></a>
-                  </div>
-                  <div class="siteDesc D1">
-                    <p class="siteTitle">WEBSTANDARD SITE</p>
-                    <div class="siteInfo">
-                      <p>
-                        <span class="infoText"
-                          ><span class="green">웹표준형</span> 사이트입니다.
-                          <span class="green">웹접근성</span>에 근거하여<br />
-                          모든 사용자가</span
-                        >
-                        <span class="infoText"
-                          >사용함에 있어 불편함없이 설계된 사이트입니다.</span
-                        >
-                      </p>
-                    </div>
-                    <button class="btn-animate">VIEW</button>
-                    <button class="btn-animate">CODE</button>
-                    <button class="htmlIcon"></button>
-                    <button class="cssIcon"></button>
-                  </div>
-                </div>
-              </div>
+            <section id="studyCont">
+              <ul>
+                <li>
+                  <a href="../javascript/javascript01.html#sample1" class="view front"
+                    >if</a
+                  >
+                  <a href="#studyCont" class="view back"><img src="assets/img/bird.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">some</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect01-tetris.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">semantic</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect02-music.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">break</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect03-typing.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">grid</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect04-quiz.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">window</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect05-search.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">defer</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect06-memory.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">let</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect07-mouse.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">css</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect08-slide.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">const</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect09-parallax.jpg" alt=""></a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="../javascript/javascript01.html#sample1" class="view front"
+                    >if</a
+                  >
+                  <a href="#studyCont" class="view back"><img src="assets/img/bird.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">some</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect01-tetris.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">semantic</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect02-music.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">break</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect03-typing.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">grid</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect04-quiz.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">window</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect05-search.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">defer</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect06-memory.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">let</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect07-mouse.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">css</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect08-slide.jpg" alt=""></a>
+                </li>
+                <li>
+                  <a href="#studyCont" class="view front">const</a>
+                  <a href="#studyCont" class="view back"><img src="assets/img/effectCont/effect09-parallax.jpg" alt=""></a>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="sec2-2">sec2-2</div>
@@ -370,7 +428,209 @@
         </div>
       </section>
       <section id="section3" class="vertical">
-        <div class="sec3_wrap"></div>
+        <div class="sec3_wrap">
+          <div class="sec3-1">
+            <!-- effectCont -->
+            <div id="effectCont">
+              <div class="effectCont">
+                <div class="effectBox">
+                  <div class="effectImg">
+                    <img
+                      src="assets/img/effectCont/effect01-tetris.jpg"
+                      alt="tetris"
+                    />
+                  </div>
+                  <div class="effectInfo">
+                    <div class="effectTitle">테트리스 게임</div>
+                    <div class="effectDesc">
+                      자바스크립트로 만든<br />
+                      <span class="green">테트리스 게임</span>입니다.
+                    </div>
+                  </div>
+                </div>
+                <div class="effectBox">
+                  <div class="effectImg">
+                    <img
+                      src="assets/img/effectCont/effect02-music.jpg"
+                      alt="music"
+                    />
+                  </div>
+                  <div class="effectInfo">
+                    <div class="effectTitle">뮤직 플레이어</div>
+                    <div class="effectDesc">
+                      자바스크립트로 만든<br />
+                      <span class="green">뮤직 플레이어</span>입니다.
+                    </div>
+                  </div>
+                </div>
+                <div class="effectBox">
+                  <div class="effectImg">
+                    <img
+                      src="assets/img/effectCont/effect03-typing.jpg"
+                      alt="typing"
+                    />
+                  </div>
+                  <div class="effectInfo">
+                    <div class="effectTitle">타자 게임</div>
+                    <div class="effectDesc">
+                      자바스크립트로 만든<br />
+                      <span class="green">타이핑 게임</span>입니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="effectCont center" data-scroll data-scroll-speed="1">
+                <div class="effectBox">
+                  <div class="effectImg">
+                    <img
+                      src="assets/img/effectCont/effect04-quiz.jpg"
+                      alt="quiz"
+                    />
+                  </div>
+                  <div class="effectInfo">
+                    <div class="effectTitle">퀴즈 게임</div>
+                    <div class="effectDesc">
+                      자바스크립트로 만든<br />
+                      <span class="green">퀴즈 게임</span>입니다.
+                    </div>
+                  </div>
+                </div>
+                <div class="effectBox">
+                  <div class="effectImg">
+                    <img
+                      src="assets/img/effectCont/effect05-search.jpg"
+                      alt="search"
+                    />
+                  </div>
+                  <div class="effectInfo">
+                    <div class="effectTitle">검색 게임</div>
+                    <div class="effectDesc">
+                      자바스크립트로 만든<br />
+                      <span class="green">검색 게임</span>입니다.
+                    </div>
+                  </div>
+                </div>
+                <div class="effectBox">
+                  <div class="effectImg">
+                    <img
+                      src="assets/img/effectCont/effect06-memory.jpg"
+                      alt="memory"
+                    />
+                  </div>
+                  <div class="effectInfo">
+                    <div class="effectTitle">메모리 게임</div>
+                    <div class="effectDesc">
+                      자바스크립트로 만든<br />
+                      <span class="green">같은 그림 찾기 게임</span>입니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="effectCont">
+                <div class="effectBox">
+                  <div class="effectImg">
+                    <img
+                      src="assets/img/effectCont/effect07-mouse.jpg"
+                      alt="mouse"
+                    />
+                  </div>
+                  <div class="effectInfo">
+                    <div class="effectTitle">마우스 이펙트</div>
+                    <div class="effectDesc">
+                      자바스크립트로 만든<br />
+                      <span class="green">마우스 이펙트</span>입니다.
+                    </div>
+                  </div>
+                </div>
+                <div class="effectBox">
+                  <div class="effectImg">
+                    <img
+                      src="assets/img/effectCont/effect08-slide.jpg"
+                      alt="slide"
+                    />
+                  </div>
+                  <div class="effectInfo">
+                    <div class="effectTitle">슬라이드 이펙트</div>
+                    <div class="effectDesc">
+                      자바스크립트로 만든<br />
+                      <span class="green">슬라이드 이펙트</span>입니다.
+                    </div>
+                  </div>
+                </div>
+                <div class="effectBox">
+                  <div class="effectImg">
+                    <img
+                      src="assets/img/effectCont/effect09-parallax.jpg"
+                      alt="parallax"
+                    />
+                  </div>
+                  <div class="effectInfo">
+                    <div class="effectTitle">패럴랙스 이펙트</div>
+                    <div class="effectDesc">
+                      자바스크립트로 만든<br />
+                      <span class="green">패럴랙스 이펙트</span>입니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //effectCont -->
+          </div>
+          <div class="sec3-2">
+            <div id="banner" class="reveal">
+              <div class="bannerTitle" data-scroll data-scroll-speed="1">
+                contact
+              </div>
+            </div>
+
+      <!-- contact -->
+      <section id="contact">
+        <div class="contact">
+          <div class="contactImg">
+            <img src="assets/img/face.jpg" alt="프로필" />
+          </div>
+          <div class="contactInfo">
+            <div class="info">
+              <h3>name :</h3>
+              <p class="name">배석찬</p>
+            </div>
+            <div class="info">
+              <h3>e-mail :</h3>
+              <p>sna12345@naver.com</p>
+            </div>
+            <div class="info">
+              <h3>phone :</h3>
+              <p>010-3312-5279</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- //contact -->
+
+     
+          </div>
+          <div class="sec3-3">
+             <!-- send -->
+   <section>
+    <div id="send">
+      <div class="leftImg">
+        <img class="small1" src="assets/img/left2.jpg" alt="" data-scroll data-scroll-speed="1"/>
+        <img src="assets/img/left.jpg" alt="" data-scroll data-scroll-speed="-2"/>
+      </div>
+      <div class="sendDesc">
+        <h4>Thank you for viewing my portfolio</h4>
+        <h3>Do you want to contact me?</h3>
+        <a href="#">SEND</a>
+      </div>
+      <div class="rightImg">
+        <img src="assets/img/right.jpg" alt="" data-scroll data-scroll-speed="2"/>
+        <img class="small2" src="assets/img/right2.jpg" alt="" data-scroll data-scroll-speed="-1" />
+      </div>
+    </div>
+   </section>
+      <!-- //send -->
+          </div>
+        </div>
       </section>
     </main>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
@@ -456,7 +716,8 @@
             pin: true,
             start: "top top",
             markers: false,
-            end: sec2WrapWidth,
+            // end: sec2WrapWidth,
+            end: "+=5000",
           },
           x: -horizontal2,
           ease: "none",
