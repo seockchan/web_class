@@ -1,0 +1,108 @@
+#studyCont {
+  background: #000;
+  height: 52vw;
+  /* margin-bottom: 1vw; */
+}
+
+#studyCont ul {
+  display: flex;
+}
+
+#studyCont ul li {
+  background: #262628;
+  list-style: none;
+  color: #76c0b3;
+  font-size: 3vw;
+  border: none;
+  min-width: 20vw;
+  height: 20vw;
+  margin: 2vw;
+  border-radius: 1vw;
+  text-align: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+#studyCont ul li {
+  position: absolute;
+  transition: transform 0.5s linear;
+  backface-visibility: hidden;
+  left: 50%;
+  top: 50%;
+  min-width: 20vw;
+  height: 20vw;
+  user-select: none;
+  pointer-events: none;
+}
+#studyCont ul li .front {
+  z-index: 10;
+  transform: translate(-50%, -50%) rotateY(0deg);
+}
+#studyCont ul li .front img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 1vw;
+}
+#studyCont ul li .back {
+  transform: rotateY(180deg);
+  left: 0%;
+  top: 0%;
+}
+#studyCont li:hover .front {
+  transform: rotateY(-180deg);
+}
+#studyCont li:hover .back {
+  transform: rotateY(0deg);
+  left: 0%;
+  top: 0%;
+}
+#studyCont li:hover .back img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 1vw;
+}
+
+#studyCont ul li a {
+  display: inline-block;
+  color: #76c0b3;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Orbitron";
+}
+#studyCont ul li .back {
+  margin: 0;
+  padding: 0;
+}
+
+#studyCont ul:nth-child(2) {
+  margin-left: 10vw;
+}
+
+#studyCont ul:nth-child(3) {
+  margin-left: -35vw;
+}
+
+#studyCont ul:nth-child(4) {
+  margin-left: -60vw;
+}
+
+@media (max-width: 800px) {
+  #studyCont {
+    height: 60vw;
+  }
+
+  #studyCont ul li {
+    font-size: 3.5vw;
+    min-width: 24vw;
+    height: 24vw;
+    margin: 1.5vw;
+  }
+
+  #studyCont ul li a {
+    margin-top: 10vw;
+  }
+}
+
+/* studyCont */
