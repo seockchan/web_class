@@ -751,7 +751,7 @@
 #contact .contactImg img {
   height: 30vw;
   border-radius: 2vw;
-  background-size: cover;
+  object-fit: cover;
 }
 
 #contact .contactInfo {
