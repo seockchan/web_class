@@ -635,11 +635,9 @@
 }
 
 #studyCont ul li {
-  background: #262628;
   list-style: none;
   color: #76c0b3;
   font-size: 3vw;
-  border: none;
   min-width: 20vw;
   height: 20vw;
   margin: 2vw;
@@ -648,10 +646,12 @@
   perspective: 1000px;
   transform-style: preserve-3d;
   position: relative;
+  border: 1px solid #fff;
+  box-sizing: content-box;
 }
 #studyCont ul li .view {
   position: absolute;
-  transition: transform 0.5s linear;
+  transition: transform 1s linear;
   backface-visibility: hidden;
   left: 50%;
   top: 50%;
@@ -659,35 +659,29 @@
   height: 20vw;
   user-select: none;
   pointer-events: none;
+  transition: transform 1s;
+  z-index: 1;
 }
 #studyCont ul li .view.front {
   z-index: 10;
   transform: translate(-50%, -50%) rotateY(0deg);
 }
-#studyCont ul li .view.front img {
+#studyCont ul li .view.back {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+#studyCont ul li .view.front img,
+#studyCont ul li .view.back img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 1vw;
 }
-#studyCont ul li .view.back {
-  transform: rotateY(180deg);
-  left: 0%;
-  top: 0%;
-}
+
 #studyCont li:hover .view.front {
-  transform: rotateY(-180deg);
+  transform: translate(-50%, -50%) rotateY(-180deg);
 }
 #studyCont li:hover .view.back {
-  transform: rotateY(0deg);
-  left: 0%;
-  top: 0%;
-}
-#studyCont li:hover .view.back img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 1vw;
+  transform: translate(-50%, -50%) rotateY(0deg);
 }
 
 #studyCont ul li a {
@@ -698,8 +692,6 @@
   font-family: "Orbitron";
 }
 #studyCont ul li a.view.back {
-  margin: 0;
-  padding: 0;
 }
 
 #studyCont ul:nth-child(2) {
