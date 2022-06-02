@@ -646,29 +646,16 @@
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 
     <script>
-      function scroll() {
-        let scrollTop =
-          window.screenY ||
-          window.pageYOffset ||
-          document.documentElement.scrollTop;
-
         let sec2 = document.querySelector(".sec2Text");
         let sec2Text = document.querySelectorAll(".sec2Text p");
         
-        if(937>=sec2.offsetTop){
-          sec2Text.forEach((el,index)=>{
+        sec2Text.forEach((el,index)=>{
             setTimeout(() => {
                   el.classList.add("show");
                 }, 1500* (index + 1));
           })
-        }
-        console.log(sec2.offsetTop)
-        requestAnimationFrame(scroll);
+         
         
-      }
-      scroll();
-      
-
 
     </script>
     <script>
