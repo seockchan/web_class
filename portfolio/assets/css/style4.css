@@ -218,7 +218,15 @@
   padding-top: 5vw;
   font-size: 2.5vw;
   border: 0.5vw solid #76c0b3;
+  transition: all 0.5s;
 }
+
+#contents .siteImg .view:hover {
+  background: #76c0b3;
+  border: 0.2vw dashed #fff;
+  transform: scale(1.2);
+}
+
 #contents .siteImg .view span {
   position: absolute;
   left: 55%;
@@ -233,6 +241,11 @@
   left: 38%;
   top: 30%;
   border: 0.5vw solid #4c348e;
+}
+
+#contents.ContRight .siteImg .view:hover {
+  background: #4c348e;
+  border: 0.2vw dashed #000;
 }
 #contents .contBox .siteDesc {
   padding: 4vw;
@@ -567,7 +580,7 @@
 }
 #effectCont .effectImg .effectView {
   position: absolute;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   width: 10vw;
   height: 10vw;
   border-radius: 50%;
@@ -577,6 +590,7 @@
   padding-top: 5vw;
   font-size: 2.5vw;
   border: 0.1vw dashed #76c0b3;
+  transition: all 0.5s;
 }
 #effectCont .effectImg .effectView span {
   position: absolute;
@@ -587,6 +601,11 @@
   background-size: cover;
   width: 2.5vw;
   height: 3vw;
+}
+#effectCont .effectImg .effectView:hover {
+  transform: scale(1.5);
+  background: rgba(0, 0, 0, 0.8);
+  border: 0.1vw dashed #fff;
 }
 
 #effectCont .effectCont .effectTitle {
@@ -842,8 +861,15 @@
   border-radius: 100px;
   text-decoration: none;
   color: #000;
+  transition: all 0.3s;
 }
-
+#send a:hover {
+  padding: 1.5vw 3vw;
+  font-size: 3vw;
+  background: #fff;
+  color: #76c0b3;
+  font-weight: 900;
+}
 #send .sendDesc {
   white-space: nowrap;
   margin-left: 5vw;
