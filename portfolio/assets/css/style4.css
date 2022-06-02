@@ -94,6 +94,13 @@
   font-family: "GmarketSans";
   line-height: 1.6;
 }
+.sec2Text p {
+  opacity: 0;
+  transition: all 1s;
+}
+.sec2Text p.show {
+  opacity: 1;
+}
 .sec2About {
   position: relative;
   margin-top: 5vw;
@@ -550,25 +557,50 @@
 #effectCont .effectCont .effectBox {
   margin: 1vw 1vw 2vw 1vw;
 }
-
+#effectCont .effectImg {
+  position: relative;
+}
 #effectCont .effectImg img {
   width: 25vw;
   border-radius: 1vw;
   object-fit: cover;
+}
+#effectCont .effectImg .effectView {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  left: 30%;
+  top: 35%;
+  text-align: center;
+  padding-top: 5vw;
+  font-size: 2.5vw;
+  border: 0.1vw dashed #76c0b3;
+}
+#effectCont .effectImg .effectView span {
+  position: absolute;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/right.svg) no-repeat center center;
+  background-size: cover;
+  width: 2.5vw;
+  height: 3vw;
 }
 
 #effectCont .effectCont .effectTitle {
   font-size: 2vw;
   margin-top: 1vw;
   margin-bottom: 1.5vw;
+  position: relative;
 }
-
-#effectCont .effectCont .effectTitle::after {
-  content: "";
-  display: inline-block;
-  background: url(assets/img/arrow.jpg) no-repeat;
+#effectCont .effectCont .effectTitle .arrow {
+  position: absolute;
+  background: url(../img/arrow.jpg) no-repeat;
   background-size: cover;
   border-radius: 50%;
+  top: 0.3vw;
   width: 1.7vw;
   height: 1.7vw;
   vertical-align: -0.2vw;
@@ -604,12 +636,6 @@
     font-size: 4vw;
     margin-top: 2vw;
     margin-bottom: 1.5vw;
-  }
-
-  #effectCont .effectCont .effectTitle::after {
-    width: 3.4vw;
-    height: 3.4vw;
-    margin-left: 1vw;
   }
 
   #effectCont .effectCont .effectDesc {
