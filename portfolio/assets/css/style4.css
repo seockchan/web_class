@@ -81,6 +81,12 @@
 #mainCont .mainContText .t1 {
   color: #94feea;
 }
+@media (max-width: 800px) {
+  canvas {
+    pointer-events: none;
+  }
+}
+
 /* mainCont */
 #sec1-2 {
   margin-bottom: 10vw;
