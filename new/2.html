@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+      @font-face {
+        font-family: "GmarketSans";
+        font-weight: 300;
+        font-style: normal;
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot");
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2")
+            format("woff2"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff")
+            format("woff"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf")
+            format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "GmarketSans";
+        font-weight: 500;
+        font-style: normal;
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot");
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2")
+            format("woff2"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff")
+            format("woff"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf")
+            format("truetype");
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "GmarketSans";
+        font-weight: 700;
+        font-style: normal;
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot");
+        src: url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix")
+            format("embedded-opentype"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2")
+            format("woff2"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff")
+            format("woff"),
+          url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf")
+            format("truetype");
+        font-display: swap;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .front-card {
+        margin: 100px;
+        width: 500px;
+        height: 300px;
+        background: rgb(236, 78, 67);
+      }
+      .front-card .logo {
+        text-align: center;
+        color: #fff;
+        font-family: "GmarketSans";
+      }
+      .front-card .logo h1 {
+        padding-top: 90px;
+        font-size: 60px;
+        text-transform: uppercase;
+        font-family: "Orbitron";
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      .front-card .logo p {
+        font-weight: 300;
+        font-size: 16px;
+      }
+      .back-card {
+        margin: 100px;
+        width: 500px;
+        height: 300px;
+        background: #f5f5f5;
+        padding: 30px;
+        font-family: "GmarketSans";
+      }
+      .back-card .logo {
+        text-align-last: left;
+        color: rgb(236, 78, 67);
+        font-size: 50px;
+        font-family: "Orbitron";
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .card-info {
+        display: flex;
+        margin-top: 100px;
+      }
+      .card-info h2 {
+        font-weight: 500;
+        font-size: 24px;
+      }
+      .card-info .left p {
+        margin-top: 10px;
+        font-size: 28px;
+        font-weight: 700;
+      }
+      .card-info .right {
+        margin-left: 90px;
+        text-align: left;
+      }
+      .card-info .right p {
+        font-size: 14px;
+      }
+      .card-info .right span {
+        font-weight: 700;
+        margin-right: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="front-card">
+      <div class="logo">
+        <h1>-asnet-</h1>
+        <p>안녕하세요 배석찬입니다. sna12345@naver.com</p>
+      </div>
+    </div>
+
+    <div class="back-card">
+      <div class="logo">asnet</div>
+      <div class="card-info">
+        <div class="left">
+          <h2>사원</h2>
+          <p>배석찬</p>
+        </div>
+        <div class="right">
+          <p class="address"><span>Address</span>경기도 안산시 단원구</p>
+          <p class="tel"><span>Tel</span>031-000-000</p>
+          <p class="phone"><span>Phone</span>010-3312-5279</p>
+          <p class="email"><span>E-mail</span>sna12345@naver.com</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

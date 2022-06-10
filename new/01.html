@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" name="userFrom" onsubmit="return EmailCheck()">
+      <fieldset>
+        <label for="userEmail">이메일</label>
+        <input
+          type="text"
+          id="userEmail"
+          name="userEmail"
+          placeholder="Sample@naver.com"
+        />
+        <p class="comment" id="userEmailComment"></p>
+        <button class="btn" type="submit">유효성 검사</button>
+      </fieldset>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(".btn").click(function EmailCheck() {
+        let getMail = RegExp(
+          /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/
+        );
+        if (!getMail.test($("#userEmail").val())) {
+          $("#userEmailComment").text("이메일 형식에 맞게 작성해주세요!");
+          $("#userEmail").val("");
+          return false;
+        }
+      });
+      EmailCheck();
+    </script>
+  </body>
+</html>
