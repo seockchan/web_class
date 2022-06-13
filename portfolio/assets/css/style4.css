@@ -537,7 +537,7 @@
     width: 30vw;
     height: 30vw;
     left: 25%;
-    top: 16%;
+    top: 10%;
   }
   #contents.ContRight .siteImg .view {
     left: 25%;
@@ -546,6 +546,19 @@
   #contents .siteImg .view span {
     width: 10vw;
     height: 12vw;
+  }
+  #contents button {
+    font-size: 4.5vw;
+    border-radius: 5vw;
+    padding: 1.6vw 4.8vw;
+    margin-right: 3vw;
+    margin-left: 3vw;
+  }
+  #contents .contBox .siteDesc .htmlIcon {
+    display: none;
+  }
+  #contents .contBox .siteDesc .cssIcon {
+    display: none;
   }
 }
 /* siteCont */
@@ -727,12 +740,22 @@
     top: 30%;
   }
 }
-@media (max-width: 800px){
+@media (max-width: 600px){
   #effectCont .effectCont .effectTitle {
     font-size: 6.5vw;
   }
   #effectCont .effectCont .effectDesc {
     font-size: 4vw;
+  }
+  #effectCont .effectImg .effectView {
+    width: 25vw;
+    height: 25vw;
+    left: 25%;
+    top: 21%;
+  }
+  #effectCont .effectImg .effectView span {
+    width: 8vw;
+    height: 9vw;
   }
 }
 
