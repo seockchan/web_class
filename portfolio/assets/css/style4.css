@@ -1,6 +1,12 @@
 /* html {
   scroll-behavior: smooth;
 } */
+@media(max-width:600px) {
+  main {
+    width: 100%;
+    overflow: hidden;
+  }
+}
 
 .green {
   color: #76c0b3;
