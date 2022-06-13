@@ -125,7 +125,13 @@
   background-size: cover;
   border-radius: 50%;
 }
+@media (max-width: 800px) {
+  .sec2Text {
+    font-size: 3vw;
+  }
+}
 /* sec2 */
+
 
 #banner {
   background: url(https://images.unsplash.com/photo-1641579281152-e5d633aa3775?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632)
@@ -259,6 +265,7 @@
 .siteDesc .siteTitle {
   font-size: 2.5vw;
   padding-bottom: 1vw;
+  text-transform: uppercase;
 }
 #contents .contBox .siteDesc .siteInfo p {
   padding-bottom: 1vw;
@@ -474,6 +481,7 @@
   }
   #contents .contInfo {
     display: block;
+    margin-left: 5vw;
   }
   #contents .siteImg {
     width: 60vw;
@@ -520,7 +528,20 @@
 }
 @media (max-width: 600px) {
   #contents .contBox .siteDesc .siteInfo p {
-    font-size: 2.2vw;
+    font-size: 3.5vw;
+  }
+  .siteDesc .siteTitle {
+    font-size: 6vw;
+  }
+  #contents .siteImg .view {
+    width: 30vw;
+    height: 30vw;
+    left: 24%;
+    top: 10%;
+  }
+  #contents .siteImg .view span {
+    width: 10vw;
+    height: 12vw;
   }
 }
 /* siteCont */
