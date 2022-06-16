@@ -20,8 +20,8 @@
         <button class="btn" type="submit">유효성 검사</button>
       </fieldset>
     </form>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- <script>
       $(".btn").click(function EmailCheck() {
         let getMail = RegExp(
           /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/
@@ -33,6 +33,29 @@
         }
       });
       EmailCheck();
+    </script> -->
+    <script>
+      const url = "https://www.naver.com/";
+      const regex =
+        /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+      console.log(regex.test(url));
+    </script>
+    <script>
+      function one() {
+        document.write("hi");
+      }
+      one();
+      function two() {
+        document.write("hello");
+      }
+      two();
+      function three() {
+        document.write("bye");
+      }
+      three();
+      one();
+      two();
+      three();
     </script>
   </body>
 </html>
