@@ -1,6 +1,12 @@
 /* html {
   scroll-behavior: smooth;
 } */
+@media(max-width:600px) {
+  main {
+    width: 100%;
+    overflow: hidden;
+  }
+}
 
 .green {
   color: #76c0b3;
@@ -81,6 +87,12 @@
 #mainCont .mainContText .t1 {
   color: #94feea;
 }
+@media (max-width: 800px) {
+  canvas {
+    pointer-events: none;
+  }
+}
+
 /* mainCont */
 #sec1-2 {
   margin-bottom: 10vw;
@@ -119,7 +131,13 @@
   background-size: cover;
   border-radius: 50%;
 }
+@media (max-width: 800px) {
+  .sec2Text {
+    font-size: 3vw;
+  }
+}
 /* sec2 */
+
 
 #banner {
   background: url(https://images.unsplash.com/photo-1641579281152-e5d633aa3775?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632)
@@ -253,6 +271,7 @@
 .siteDesc .siteTitle {
   font-size: 2.5vw;
   padding-bottom: 1vw;
+  text-transform: uppercase;
 }
 #contents .contBox .siteDesc .siteInfo p {
   padding-bottom: 1vw;
@@ -468,6 +487,7 @@
   }
   #contents .contInfo {
     display: block;
+    margin-left: 5vw;
   }
   #contents .siteImg {
     width: 60vw;
@@ -514,7 +534,37 @@
 }
 @media (max-width: 600px) {
   #contents .contBox .siteDesc .siteInfo p {
-    font-size: 2.2vw;
+    font-size: 3.5vw;
+  }
+  .siteDesc .siteTitle {
+    font-size: 6vw;
+  }
+  #contents .siteImg .view {
+    width: 30vw;
+    height: 30vw;
+    left: 25%;
+    top: 10%;
+  }
+  #contents.ContRight .siteImg .view {
+    left: 25%;
+    top: 17%;
+  }
+  #contents .siteImg .view span {
+    width: 10vw;
+    height: 12vw;
+  }
+  #contents button {
+    font-size: 4.5vw;
+    border-radius: 5vw;
+    padding: 1.6vw 4.8vw;
+    margin-right: 3vw;
+    margin-left: 3vw;
+  }
+  #contents .contBox .siteDesc .htmlIcon {
+    display: none;
+  }
+  #contents .contBox .siteDesc .cssIcon {
+    display: none;
   }
 }
 /* siteCont */
@@ -558,6 +608,17 @@
 
   #scriptCont ul li a {
     font-size: 7vw;
+  }
+}
+@media (max-width: 600px) {
+  #scriptCont {
+    height: 65vw;
+  }
+  #scriptCont ul {
+    margin-bottom: 10vw;
+  }
+  #scriptCont ul li p{
+    font-size: 7.5vw;
   }
 }
 /* scriptCont */
@@ -683,6 +744,24 @@
     height: 15vw;
     left: 35%;
     top: 30%;
+  }
+}
+@media (max-width: 600px){
+  #effectCont .effectCont .effectTitle {
+    font-size: 6.5vw;
+  }
+  #effectCont .effectCont .effectDesc {
+    font-size: 4vw;
+  }
+  #effectCont .effectImg .effectView {
+    width: 25vw;
+    height: 25vw;
+    left: 25%;
+    top: 21%;
+  }
+  #effectCont .effectImg .effectView span {
+    width: 8vw;
+    height: 9vw;
   }
 }
 
@@ -964,78 +1043,3 @@
 }
 
 /* send */
-
-/* body {
-  background: #000;
-} */
-#loading.loading__active {
-  opacity: 1;
-  transition: all 1.6s;
-  z-index: 99999;
-}
-#loading {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  z-index: -1;
-  opacity: 0;
-  transition: all 1.6s;
-}
-.loading__text {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  width: 100%;
-  height: 100px;
-  line-height: 100px;
-}
-.loading__text span {
-  display: inline-block;
-  margin: 0 5px;
-  color: #fff;
-}
-
-.loading__text span:nth-child(1) {
-  filter: blur(0px);
-  animation: blur-text 1.5s 0s infinite alternate;
-}
-.loading__text span:nth-child(2) {
-  filter: blur(0px);
-  animation: blur-text 1.5s 0.2s infinite alternate;
-}
-.loading__text span:nth-child(3) {
-  filter: blur(0px);
-  animation: blur-text 1.5s 0.4s infinite alternate;
-}
-.loading__text span:nth-child(4) {
-  filter: blur(0px);
-  animation: blur-text 1.5s 0.6s infinite alternate;
-}
-.loading__text span:nth-child(5) {
-  filter: blur(0px);
-  animation: blur-text 1.5s 0.8s infinite alternate;
-}
-.loading__text span:nth-child(6) {
-  filter: blur(0px);
-  animation: blur-text 1.5s 1s infinite alternate;
-}
-.loading__text span:nth-child(7) {
-  filter: blur(0px);
-  animation: blur-text 1.5s 1.2s infinite alternate;
-}
-
-@keyframes blur-text {
-  0% {
-    filter: blur(0px);
-  }
-  100% {
-    filter: blur(4px);
-  }
-}
